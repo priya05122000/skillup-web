@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <Section className="bg-(--teal)">
       <div
-        className="py-10 sm:py-20 h-[calc(100vh-80px)] "
+        className="py-10 sm:py-20 h-screen "
         aria-label="About Us"
       >
         <div className="h-full ">
