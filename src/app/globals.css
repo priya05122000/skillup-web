@@ -6,11 +6,12 @@
 :root {
   --background: #0b2351;
   --foreground: #e1e1e4;
-  --text-white: #fff;
+  --white: #fff;
   --text-dark: #323131;
   --text-blue: #0b2351;
   --teal: #49a6a7; /* Medium teal */
   --orange: #f1b148;
+  --black: #000000;
 }
 
 @theme inline {

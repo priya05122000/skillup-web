@@ -1,25 +1,24 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import Span from "./Span";
 import Paragraph from "./Paragraph";
+import { IoMdClose } from "react-icons/io";
+import { HiOutlineBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      className="flex items-center justify-between w-full bg-(--teal) px-8 py-0"
-      style={{ minHeight: "80px" }}
-    >
+    <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50">
       {/* Left: Social Icons */}
-      <div className="hidden md:flex items-center space-x-6 text-(--text-white) ">
-        <a href="#" aria-label="Facebook" className="hover:text-(--text-white)">
+      <div className="hidden md:flex items-center space-x-6 text-(--white) ">
+        <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
           <FaFacebookF className="w-5 h-5" />
-        </a>
-        <a href="#" aria-label="Instagram" className="hover:text-(--text-white)">
+        </Link>
+        <Link href="#" aria-label="Instagram" className="hover:text-(--white)">
           <FaInstagram className="w-5 h-5" />
-        </a>
+        </Link>
       </div>
 
       {/* Center: Logo and Menus */}
@@ -27,7 +26,7 @@ const Navbar = () => {
         {/* Mobile/tab: only logo and hamburger */}
         <div className="flex items-center w-full lg:hidden">
           {/* Mobile: logo left, hamburger right */}
-          <a href="#" className="flex items-center gap-2 h-20 md:hidden">
+          <Link href="#" className="flex items-center gap-2 h-20 md:hidden">
             <span className="flex items-center justify-center">
               <Image
                 src="/logo/logo.svg"
@@ -37,28 +36,18 @@ const Navbar = () => {
                 className="h-[60px] w-auto"
               />
             </span>
-          </a>
+          </Link>
           <div className="flex-1 md:hidden" />
           <button
-            className="ml-4 text-(--text-white) md:hidden"
+            className="ml-4 text-(--white) md:hidden"
             aria-label="Open menu"
             onClick={() => setMenuOpen(true)}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <HiOutlineBars3 className="w-8 h-8" />
           </button>
           {/* Tablet: logo and hamburger centered */}
           <div className="hidden md:flex items-center justify-center w-full lg:hidden">
-            <a href="#" className="flex items-center gap-2 h-20 mx-auto">
+            <Link href="#" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
                   src="/logo/logo.svg"
@@ -68,29 +57,19 @@ const Navbar = () => {
                   className="h-[60px] w-auto"
                 />
               </span>
-            </a>
+            </Link>
             <button
-              className="ml-4 text-(--text-white)"
+              className="ml-4 text-(--white)"
               aria-label="Open menu"
               onClick={() => setMenuOpen(true)}
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <HiOutlineBars3 className="w-8 h-8" />
             </button>
           </div>
         </div>
         {/* Desktop: logo, menu links */}
         <div className="hidden lg:flex items-center gap-8 w-full justify-center">
-          <a href="#" className="flex items-center gap-2 h-20">
+          <Link href="#" className="flex items-center gap-2 h-20">
             <span className=" flex items-center justify-center ">
               <Image
                 src="/logo/logo.svg"
@@ -100,86 +79,72 @@ const Navbar = () => {
                 className="h-[60px] w-auto"
               />
             </span>
-          </a>
+          </Link>
           <nav
-            className={`flex gap-6 text-(--text-white) text-sm font-normal items-center`}
+            className={`flex gap-4 xl:gap-6 text-(--white) text-sm font-normal items-center`}
             aria-label="Main navigation"
           >
-            <a className="hover:underline" href="#">
+            <Link className="hover:underline" href="#">
               Home
-            </a>
-            <a className="hover:underline" href="#">
-              Courses
-            </a>
-            <a className="hover:underline" href="#">
-              About
-            </a>
-            <a className="hover:underline" href="#">
-              Pages
-            </a>
-            <a className="hover:underline" href="#">
-              Blogs
-            </a>
-            <a className="hover:underline" href="#">
-              Contact
-            </a>
+            </Link>
+            <Link className="hover:underline" href="#">
+              About Us
+            </Link>
+            <Link className="hover:underline" href="#">
+              Study Abroad
+            </Link>
+            <Link className="hover:underline" href="#">
+              Contact Us
+            </Link>
+            <Link className="hover:underline" href="#">
+              Services
+            </Link>
           </nav>
         </div>
         {/* Mobile menu overlay */}
-        {menuOpen && (
-          <nav className="fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--text-white) text-lg font-medium">
-            <button
-              className="absolute top-6 right-6 text-(--text-white)"
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <a className="mb-6" href="#">
-              Home
-            </a>
-            <a className="mb-6" href="#">
-              Courses
-            </a>
-            <a className="mb-6" href="#">
-              About
-            </a>
-            <a className="mb-6" href="#">
-              Pages
-            </a>
-            <a className="mb-6" href="#">
-              Blogs
-            </a>
-            <a className="mb-6" href="#">
-              Contact
-            </a>
-          </nav>
-        )}
+        <nav
+          className={`fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--white) text-lg font-medium transition-all duration-500 ease-in-out ${
+            menuOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-8 pointer-events-none"
+          }`}
+          style={{ top: 0, left: 0 }}
+        >
+          <button
+            className="absolute top-6 right-6 sm:right-8 text-(--white)"
+            aria-label="Close menu"
+            onClick={() => setMenuOpen(false)}
+          >
+            <IoMdClose className="w-8 h-8" />
+          </button>
+          <Link className="mb-6" href="#">
+            Home
+          </Link>
+          <Link className="mb-6" href="#">
+            About Us
+          </Link>
+          <Link className="mb-6" href="#">
+            Study Abroad
+          </Link>
+          <Link className="mb-6" href="#">
+            Contact Us
+          </Link>
+          <Link className="mb-6" href="#">
+            Services
+          </Link>
+        </nav>
       </div>
 
       {/* Right: Free consultation */}
-      <div
-        className="hidden lg:flex items-center justify-end  h-full "
-        style={{ height: "56px" }}
-      >
-        <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) cursor-pointer outline-none border-none group">
+      <div className="hidden lg:flex items-center justify-end  h-full ">
+        <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
           <Paragraph
             size="lg"
-            className="relative font-semibold z-10 transition-colors duration-400 group-hover:text-(--teal)"
+            className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
           >
             Free Consultation
           </Paragraph>
-          <div className="absolute top-0 -left-[10%] w-[120%] h-full bg-(--text-white) skew-x-[30deg] -z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
+          <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--white) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
         </button>
       </div>
     </header>
