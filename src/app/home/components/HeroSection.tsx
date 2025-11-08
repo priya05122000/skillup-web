@@ -70,7 +70,7 @@ const HeroSection: React.FC = () => {
               <span className="bg-(--teal)">Skill Up Academy</span> - Level up
               your skills with hands-on courses
             </Heading>
-            <Paragraph size="base" className="mt-4 text-(--white)/70">
+            <Paragraph size="lg" className="mt-4 text-(--white)/70">
               Practical, project-based lessons and mentorship to help you build
               real-world experience.
             </Paragraph>

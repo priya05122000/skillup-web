@@ -7,7 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const AboutUs = () => {
   return (
-    <div className="py-10 sm:py-20  " aria-label="About Us">
+    <div className="py-10 sm:py-20 " aria-label="About Us">
       <Section className="h-full ">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr]   gap-14 h-full">
           <div className="relative flex flex-col items-center justify-center h-full ">
@@ -65,7 +65,7 @@ const AboutUs = () => {
             <Heading level={4} className="font-bold leading-tight mt-4">
               The Larget & Most Diverse Universties in the United Emirates
             </Heading>
-            <Paragraph size="base" className="mt-4">
+            <Paragraph size="lg" className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum
               velit, deleniti voluptates nesciunt quam ut natus hic nobis
               consequatur nam sunt error assumenda nihil quasi aperiam dicta
