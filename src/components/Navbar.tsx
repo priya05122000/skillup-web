@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import Span from "./Span";
 import Paragraph from "./Paragraph";
 import { IoMdClose } from "react-icons/io";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -11,21 +10,13 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20">
+    <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50">
       {/* Left: Social Icons */}
       <div className="hidden md:flex items-center space-x-6 text-(--white) ">
-        <Link
-          href="#"
-          aria-label="Facebook"
-          className="hover:text-(--white)"
-        >
+        <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
           <FaFacebookF className="w-5 h-5" />
         </Link>
-        <Link
-          href="#"
-          aria-label="Instagram"
-          className="hover:text-(--white)"
-        >
+        <Link href="#" aria-label="Instagram" className="hover:text-(--white)">
           <FaInstagram className="w-5 h-5" />
         </Link>
       </div>
@@ -146,14 +137,14 @@ const Navbar = () => {
 
       {/* Right: Free consultation */}
       <div className="hidden lg:flex items-center justify-end  h-full ">
-        <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) cursor-pointer outline-none border-none group">
+        <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
           <Paragraph
             size="lg"
-            className="relative font-semibold z-10 transition-colors duration-400 group-hover:text-(--teal)"
+            className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
           >
             Free Consultation
           </Paragraph>
-          <div className="absolute top-0 -left-[10%] w-[120%] h-full bg-(--white) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
+          <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--white) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
         </button>
       </div>
     </header>
