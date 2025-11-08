@@ -3,63 +3,68 @@
 import React from "react";
 import { BookOpen, GraduationCap, Users } from "lucide-react";
 import Section from "@/components/Section";
+import Paragraph from "@/components/Paragraph";
+import Span from "@/components/Span";
+import Heading from "@/components/Heading";
+import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
 
 const AcademicSupportSection: React.FC = () => {
   return (
-    <Section className="w-full bg-white py-12 px-4 md:px-10 lg:px-20">
+    <Section className="w-full py-12 px-4 md:px-10 lg:px-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
-          <div className="p-3 bg-indigo-100 rounded-full">
-            <BookOpen className="text-indigo-600 w-6 h-6" />
+        <div className="flex items-start gap-4 p-5 bg-(--bg-gray) rounded-xl shadow-sm hover:shadow-md transition">
+          <div className="p-3 bg-(--bg-indigo) rounded-full">
+            <BookOpen className="text-(--indigo) w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
+            <Paragraph size="lg" className="font-semibold">
               Academic Resources
-            </h3>
-            <p className="text-gray-600 text-sm mt-1">
+            </Paragraph>
+            <Span className="text-(--ice-gray) mt-1">
               We offer essential resources.
-            </p>
+            </Span>
           </div>
         </div>
 
         {/* Card 2 */}
         <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
-          <div className="p-3 bg-yellow-100 rounded-full">
-            <GraduationCap className="text-yellow-600 w-6 h-6" />
+          <div className="p-3 bg-(--light-yellow) rounded-full">
+            <GraduationCap className="text-(--gold) w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
+            <Paragraph size="lg" className="font-semibold">
               Aid & Scholarships
-            </h3>
-            <p className="text-gray-600 text-sm mt-1">
+            </Paragraph>
+            <Span className="text-(--ice-gray) mt-1">
               Financial aid & scholarships.
-            </p>
+            </Span>
           </div>
         </div>
 
         {/* Card 3 */}
         <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition">
-          <div className="p-3 bg-orange-100 rounded-full">
-            <Users className="text-orange-600 w-6 h-6" />
+          <div className="p-3 bg-(--light-orange) rounded-full">
+            <Users className="text-(--red) w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">
+            <Paragraph size="lg" className="font-semibold">
               Your Coaching Teacher
-            </h3>
-            <p className="text-gray-600 text-sm mt-1">
+            </Paragraph>
+            <Span className="text-(--ice-gray) mt-1">
               Our teacher is committed to success.
-            </p>
+            </Span>
           </div>
         </div>
       </div>
 
-      <div className="py-8">
-        <p className="italic text-gray-700 mb-2">Our Academic Supports</p>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug mb-4">
+      <div className="pt-8 pb-4">
+        <Paragraph size="base" className="italic text-(--ice-gray) mb-2">Our Academic Supports</Paragraph>
+        <Heading level={6} className="leading-snug mb-4">
           Founded In 1970, EduFord College Is A Global Leader In Education,
           Committed To Quality, Innovation, And Sustainability. We Continue
           Learning.
-        </h2>
+        </Heading>
       </div>
 
       {/* === About Section === */}
@@ -73,10 +78,10 @@ const AcademicSupportSection: React.FC = () => {
         </div>
 
         <div className="">
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          <Paragraph size="xl" className="font-semibold mb-3">
             Innovation and Creativity
-          </h3>
-          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+          </Paragraph>
+          <Paragraph size="base" className="text-(--ice-gray)leading-relaxed mb-4">
             At EduFord College, innovation and creativity are at the heart of
             our educational philosophy. We strive to foster an environment where
             students are encouraged to think outside the box, explore new ideas,
@@ -86,14 +91,18 @@ const AcademicSupportSection: React.FC = () => {
             Our programs are designed to inspire originality and critical
             thinking, equipping students with the skills to innovate and create
             in their chosen fields through hands-on projects.
-          </p>
-          <a
+          </Paragraph>
+          <Link
             href="#"
-            className="inline-flex items-center gap-2 text-indigo-600 font-medium hover:underline"
+            className="group inline-flex flex-col items-start uppercase gap-1 font-medium hover:text-(--indigo) mt-5"
           >
-            More About Us
-            <span className="text-sm">↗</span>
-          </a>
+            <Paragraph size="base" className="inline-flex items-center">
+              More About Us <MdArrowOutward size={20} />
+            </Paragraph>
+            <span
+              className="block h-0.5 w-[95%] bg-black group-hover:bg-(--indigo) mt-1 origin-left transition-all duration-500 group-hover:opacity-0 group-hover:scale-x-0"
+            ></span>
+          </Link>
         </div>
       </div>
     </Section>

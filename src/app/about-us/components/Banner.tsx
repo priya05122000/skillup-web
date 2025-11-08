@@ -1,5 +1,7 @@
 "use client";
 
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 import React from "react";
 
 const Banner: React.FC = () => {
@@ -14,13 +16,13 @@ const Banner: React.FC = () => {
       ></div>
 
       {/* Overlay Text */}
-      <div className="relative text-center text-white px-4">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
+      <div className="relative text-center text-(--white) px-4">
+        <Heading level={3} className="mb-4">
           About Us
-        </h1>
-        <p className="text-base md:text-lg italic font-medium tracking-wide">
+        </Heading>
+        <Paragraph size="lg" className="italic font-medium tracking-wide">
           Empowering Wide Range of Learning Opportunities
-        </p>
+        </Paragraph>
       </div>
     </section>
   );
