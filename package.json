@@ -11,7 +11,9 @@
   "dependencies": {
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "next": "16.0.1"
+    "next": "16.0.1",
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4"
   },
   "devDependencies": {
     "typescript": "^5",
