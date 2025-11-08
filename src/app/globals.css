@@ -9,6 +9,8 @@
   --text-white: #fff;
   --text-dark: #323131;
   --text-blue: #0b2351;
+  --teal: #49a6a7; /* Medium teal */
+  --orange: #f1b148;
 }
 
 @theme inline {
@@ -53,4 +55,8 @@ body {
   min-height: 100vh;
   z-index: 0;
 }
+
+
+
+
 
