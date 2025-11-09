@@ -6,7 +6,7 @@ import React from "react";
 
 const Banner: React.FC<{ countryName: string }> = ({ countryName }) => {
   return (
-    <section className="relative w-full h-[60vh] xl:h-[70vh] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[30vh] xl:h-[40vh] overflow-hidden flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-50"
         style={{
