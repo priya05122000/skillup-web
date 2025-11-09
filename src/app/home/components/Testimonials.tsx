@@ -90,11 +90,11 @@ const Testimonials: React.FC = () => {
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt veritatis vitae assumenda? Quia ipsa incidunt, dolorum earum doloribus provident amet eum praesentium eveniet aperiam tempore explicabo, labore ab dolores magni rem assumenda illum rerum? Nisi, dicta veniam. Labore cumque enim odio amet cupiditate dicta sapiente explicabo, nisi eligendi hic perferendis nostrum temporibus distinctio optio quas maiores, pariatur incidunt modi doloremque! Amet iure nam ipsam consequuntur provident. Vel similique vero hic ex autem. At quaerat labore architecto dolore, magni perferendis ratione eveniet facere. Odit sit, ullam tempora optio quisquam perferendis minus ea, quas culpa eum asperiores explicabo. Dolore, aliquid totam.
                                     </Paragraph>
                                     <div className="flex items-center gap-1 mt-4">
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaRegStar className="text-yellow-400 text-base" />
-                                        <FaRegStar className="text-yellow-400 text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaRegStar className="text-(--orange) text-base" />
+                                        <FaRegStar className="text-(--orange) text-base" />
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="p-6 bg-white rounded-xl shadow flex flex-col gap-4 justify-between h-full">
@@ -111,11 +111,11 @@ const Testimonials: React.FC = () => {
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt veritatis vitae assumenda? Quia ipsa incidunt, dolorum earum doloribus provident amet eum praesentium eveniet aperiam tempore explicabo, labore ab dolores magni rem assumenda illum rerum? Nisi, dicta veniam. Labore cumque enim odio amet cupiditate dicta sapiente explicabo, nisi eligendi hic perferendis nostrum temporibus distinctio optio quas maiores, pariatur incidunt modi doloremque! Amet iure nam ipsam consequuntur provident. Vel similique vero hic ex autem. At quaerat labore architecto dolore, magni perferendis ratione eveniet facere. Odit sit, ullam tempora optio quisquam perferendis minus ea, quas culpa eum asperiores explicabo. Dolore, aliquid totam.
                                     </Paragraph>
                                     <div className="flex items-center gap-1 mt-4">
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaStar className="text-yellow-400 text-base" />
-                                        <FaRegStar className="text-yellow-400 text-base" />
-                                        <FaRegStar className="text-yellow-400 text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaStar className="text-(--orange) text-base" />
+                                        <FaRegStar className="text-(--orange) text-base" />
+                                        <FaRegStar className="text-(--orange) text-base" />
                                     </div>
                                 </SwiperSlide>
 
