@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
             <Paragraph size="lg" className="mt-4 text-(--white)/70">
               Practical, project-based lessons and mentorship to help you build real-world experience.
             </Paragraph>
-            <div className="mt-8 flex gap-4">
+            <div className="my-8 flex gap-4">
               <HeroButton
                 bgColor="bg-(--white)"
                 hoverTextColor="group-hover:text-(--teal)"
@@ -93,8 +93,8 @@ const HeroSection: React.FC = () => {
           </div>
         </Section>
       </div>
-      <div className="absolute max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10">
-        <div className="flex justify-evenly z-50">
+      <div className="absolute max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10">
+        <div className="flex  flex-col sm:flex-row justify-evenly z-50">
           {heroButtons.map((btn, idx) => (
             <HeroButton key={idx} icon={btn.icon}>{btn.children}</HeroButton>
           ))}

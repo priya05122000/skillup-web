@@ -55,15 +55,21 @@ const ServiceCard: React.FC<ServiceItem> = ({ src, alt, label }) => (
 const Services: React.FC = () => {
   return (
     <Section className="bg-(--teal)">
-      <div className="py-10 sm:py-20 h-screen" aria-label="About Us">
+      <div className="py-10 sm:py-20" aria-label="About Us">
         <div className="h-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 h-full">
             <div className="flex flex-col justify-center h-full py-8 max-w-lg">
-              <Heading level={4} className="font-bold leading-tight mt-4 text-white">
+              <Heading
+                level={4}
+                className="font-bold leading-tight mt-4 text-white"
+              >
                 Navigate
               </Heading>
               <Paragraph size="lg" className="mt-4 text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum velit, deleniti voluptates nesciunt quam ut natus hic nobis consequatur nam sunt error assumenda nihil quasi aperiam dicta blanditiis porro.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                cum velit, deleniti voluptates nesciunt quam ut natus hic nobis
+                consequatur nam sunt error assumenda nihil quasi aperiam dicta
+                blanditiis porro.
               </Paragraph>
             </div>
             <div className="relative flex flex-col items-center justify-center h-full">
@@ -72,7 +78,7 @@ const Services: React.FC = () => {
                   <ServiceCard {...serviceItems[0]} />
                   <ServiceCard {...serviceItems[1]} />
                 </div>
-                <div className="flex flex-col gap-4 justify-end">
+                <div className="flex flex-col gap-4 mt-10">
                   <ServiceCard {...serviceItems[2]} />
                   <ServiceCard {...serviceItems[3]} />
                 </div>
