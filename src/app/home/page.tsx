@@ -9,13 +9,13 @@ import Testimonials from "./components/Testimonials";
 const HomePage = () => {
   return (
     <div>
-      <HeroSection />
-      {/* <AboutUs /> */}
+      {/* <HeroSection /> */}
+      <AboutUs />
       {/* <Services /> */}
       {/* <Destination /> */}
-      {/* <Testimonials /> */}
-      {/* <Partners /> */}
-      {/* <EnquireForm /> */}
+      <Testimonials />
+      {/* <Partners />
+      <EnquireForm /> */}
     </div>
   );
 };

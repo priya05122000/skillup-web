@@ -4,11 +4,12 @@ import React from 'react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import Span from './Span';
 import Paragraph from './Paragraph';
+import Section from './Section';
 
 const Footer = () => {
     return (
         <footer className="bg-(--teal) text-white text-center pt-10 sm:pt-20 pb-10 relative ">
-            <div className="max-w-6xl mx-auto px-4">
+            <Section>
                 {/* Logo and Social Icons */}
                 <div className="flex flex-col md:flex-row items-center justify-between mb-6">
                     <div className="mb-4 md:mb-0 flex items-center gap-2">
@@ -52,7 +53,7 @@ const Footer = () => {
                         <Span className="flex items-center gap-1"><i className="fas fa-envelope"></i> info@leadzedu.com</Span>
                     </div>
                 </div>
-            </div>
+            </Section>
             {/* WhatsApp Floating Icon */}
             {/* <a href="https://wa.me/918893270050" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 right-4 bg-green-500 rounded-full p-2 shadow-lg">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="h-8 w-8" />

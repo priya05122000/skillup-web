@@ -58,10 +58,10 @@ const Services: React.FC = () => {
       <div className="py-10 sm:py-20" aria-label="About Us">
         <div className="h-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 h-full">
-            <div className="flex flex-col justify-center h-full py-8 max-w-lg">
+            <div className="flex flex-col justify-center h-full lg:py-8 max-w-lg">
               <Heading
                 level={4}
-                className="font-bold leading-tight mt-4 text-white"
+                className="font-bold leading-tight lg:mt-4 text-white"
               >
                 Navigate
               </Heading>
@@ -73,12 +73,12 @@ const Services: React.FC = () => {
               </Paragraph>
             </div>
             <div className="relative flex flex-col items-center justify-center h-full">
-              <div className="grid grid-cols-2 gap-8 w-full h-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 w-full h-full">
                 <div className="flex flex-col gap-4">
                   <ServiceCard {...serviceItems[0]} />
                   <ServiceCard {...serviceItems[1]} />
                 </div>
-                <div className="flex flex-col gap-4 mt-10">
+                <div className="flex flex-col gap-4 mt-4 sm:mt-10">
                   <ServiceCard {...serviceItems[2]} />
                   <ServiceCard {...serviceItems[3]} />
                 </div>
