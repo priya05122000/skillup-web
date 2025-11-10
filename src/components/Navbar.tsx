@@ -10,7 +10,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50">
+    <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50 shadow-lg">
       {/* Left: Social Icons */}
       <div className="hidden md:flex items-center space-x-6 text-(--white) ">
         <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
@@ -84,30 +84,29 @@ const Navbar = () => {
             className={`flex gap-4 xl:gap-6 text-(--white) text-sm font-normal items-center`}
             aria-label="Main navigation"
           >
-            <Link className="hover:underline" href="#">
-              Home
+            <Link className="hover:underline" href="/">
+              <Paragraph size="base">Home</Paragraph>
             </Link>
-            <Link className="hover:underline" href="#">
-              About Us
+            <Link className="hover:underline" href="/about-us">
+              <Paragraph size="base">About Us</Paragraph>
             </Link>
-            <Link className="hover:underline" href="#">
-              Study Abroad
+            <Link className="hover:underline" href="/study-abroad">
+              <Paragraph size="base" >Study Abroad</Paragraph>
             </Link>
-            <Link className="hover:underline" href="#">
-              Contact Us
+            <Link className="hover:underline" href="/contact-us">
+              <Paragraph size="base">Contact Us</Paragraph>
             </Link>
-            <Link className="hover:underline" href="#">
-              Services
+            <Link className="hover:underline" href="/services">
+              <Paragraph size="base">Services</Paragraph>
             </Link>
           </nav>
         </div>
         {/* Mobile menu overlay */}
         <nav
-          className={`fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--white) text-lg font-medium transition-all duration-500 ease-in-out ${
-            menuOpen
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-8 pointer-events-none"
-          }`}
+          className={`fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--white) text-lg font-medium transition-all duration-500 ease-in-out ${menuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-8 pointer-events-none"
+            }`}
           style={{ top: 0, left: 0 }}
         >
           <button
@@ -117,20 +116,20 @@ const Navbar = () => {
           >
             <IoMdClose className="w-8 h-8" />
           </button>
-          <Link className="mb-6" href="#">
-            Home
+          <Link className="mb-6" href="/">
+            <Paragraph size="base">Home</Paragraph>
           </Link>
-          <Link className="mb-6" href="#">
-            About Us
+          <Link className="mb-6" href="/about-us">
+            <Paragraph size="base">About Us</Paragraph>
           </Link>
-          <Link className="mb-6" href="#">
-            Study Abroad
+          <Link className="mb-6" href="/study-abroad">
+            <Paragraph size="base" >Study Abroad</Paragraph>
           </Link>
-          <Link className="mb-6" href="#">
-            Contact Us
+          <Link className="mb-6" href="/contact-us">
+            <Paragraph size="base">Contact Us</Paragraph>
           </Link>
-          <Link className="mb-6" href="#">
-            Services
+          <Link className="mb-6" href="/services">
+            <Paragraph size="base">Services</Paragraph>
           </Link>
         </nav>
       </div>
@@ -139,7 +138,7 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center justify-end  h-full ">
         <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
           <Paragraph
-            size="lg"
+            size="base"
             className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
           >
             Free Consultation
