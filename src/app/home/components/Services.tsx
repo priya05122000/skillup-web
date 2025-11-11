@@ -35,17 +35,20 @@ const serviceItems: ServiceItem[] = [
 ];
 
 const ServiceCard: React.FC<ServiceItem> = ({ src, alt, label }) => (
-  <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+  <div className="relative">
     <Image
       src={src}
       alt={alt}
       width={300}
       height={200}
-      className="rounded-lg object-cover w-full h-40 sm:h-56 transition-transform duration-300 group-hover:scale-105"
+      className="rounded-t-lg object-cover w-full h-52"
     />
-    <div className="absolute bottom-0 left-0 w-full bg-black/40 text-white p-2 text-center">
-      {label}
-    </div>
+    <Paragraph
+      size="lg"
+      className="text-white px-3 py-2 rounded font-bold flex justify-between items-center gap-2"
+    >
+      <span>{label}</span> <MdArrowOutward />
+    </Paragraph>
   </div>
 );
 
