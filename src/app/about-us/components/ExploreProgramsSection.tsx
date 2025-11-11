@@ -14,7 +14,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Span from "@/components/Span";
 
-const programs = [
+
+type Program = {
+  id: number;
+  title: string;
+  image: string;
+  lessons: string;
+  students: string;
+};
+
+const programs: Program[] = [
   {
     id: 1,
     title: "Arts In Communication",
@@ -51,6 +60,67 @@ const programs = [
     students: "200 students",
   },
 ];
+
+type ProgramCardProps = {
+  program: Program;
+  isActive: boolean;
+};
+
+const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
+  <div className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+    <Image
+      src={program.image}
+      alt={program.title}
+      height={1000}
+      width={1000}
+      className="w-full h-[350px] object-cover"
+    />
+    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
+    <div className="absolute bottom-4 left-5 right-5 text-(--white) flex justify-between items-end">
+      {isActive ? (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex justify-between w-full"
+        >
+          <div>
+            <Heading level={6} className="font-semibold mb-2">
+              {program.title}
+            </Heading>
+            <div className="flex items-center gap-6 text-(--white) mb-4">
+              <div className="flex items-center gap-1">
+                <BookOpen className="w-4 h-4" />
+                <Span>{program.lessons}</Span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Users className="w-4 h-4" />
+                <Span>{program.students}</Span>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="bg-(--white) text-(--black) rounded-full p-2 shadow hover:scale-110 transition w-10 h-10 cursor-pointer"
+            >
+              <ArrowRight />
+            </motion.button>
+          </div>
+        </motion.div>
+      ) : (
+        <Heading
+          level={6}
+          className="text-(--white) font-semibold mb-2 w-full"
+        >
+          {program.title}
+        </Heading>
+      )}
+    </div>
+  </div>
+);
 
 const ExploreProgramsSection: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -107,63 +177,8 @@ const ExploreProgramsSection: React.FC = () => {
       >
         {programs.map((program) => (
           <SwiperSlide key={program.id}>
-            {({ isActive }) => (
-              <div
-                className={`relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300`}
-              >
-                <Image
-                  src={program.image}
-                  alt={program.title}
-                  height={1000}
-                  width={1000}
-                  className="w-full h-[350px] object-cover"
-                />
-
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-                <div className="absolute bottom-4 left-5 right-5 text-(--white) flex justify-between items-end">
-                  {isActive ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, ease: "easeOut" }}
-                      className="flex justify-between w-full"
-                    >
-                      <div>
-                        <Heading level={6} className="font-semibold mb-2">
-                          {program.title}
-                        </Heading>
-                        <div className="flex items-center gap-6 text-(--white) mb-4">
-                          <div className="flex items-center gap-1">
-                            <BookOpen className="w-4 h-4" />
-                            <Span>{program.lessons}</Span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Users className="w-4 h-4" />
-                            <Span>{program.students}</Span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-center">
-                        <motion.button
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3 }}
-                          className="bg-(--white) text-(--black) rounded-full p-2 shadow hover:scale-110 transition w-10 h-10 cursor-pointer"
-                        >
-                          <ArrowRight />
-                        </motion.button>
-                      </div>
-                    </motion.div>
-                  ) : (
-                    <Heading
-                      level={6}
-                      className="text-(--white) font-semibold mb-2 w-full"
-                    >
-                      {program.title}
-                    </Heading>
-                  )}
-                </div>
-              </div>
+            {({ isActive }: { isActive: boolean }) => (
+              <ProgramCard program={program} isActive={isActive} />
             )}
           </SwiperSlide>
         ))}

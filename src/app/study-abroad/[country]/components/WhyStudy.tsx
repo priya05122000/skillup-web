@@ -5,17 +5,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-
 import Section from "@/components/Section";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { FC } from "react";
 
-type Topic = { id: number; title: string; icon: string };
+type Topic = {
+  id: number;
+  title: string;
+  icon: string;
+};
+
+type WhyStudyProps = {
+  topics: Topic[];
+  name: string;
+};
 
 const DynamicIcon = dynamic(
   async () => {
     const lucide = await import("lucide-react");
-    // React Icons: You can add more packs as needed
     const reactIconsFa = await import("react-icons/fa");
     const reactIconsMd = await import("react-icons/md");
     const reactIconsAi = await import("react-icons/ai");
@@ -32,14 +40,21 @@ const DynamicIcon = dynamic(
       library?: "lucide" | "fa" | "md" | "ai";
     }) {
       let IconComp;
-      if (library === "lucide") {
-        IconComp = (lucide as any)[iconName];
-      } else if (library === "fa") {
-        IconComp = (reactIconsFa as any)[iconName];
-      } else if (library === "md") {
-        IconComp = (reactIconsMd as any)[iconName];
-      } else if (library === "ai") {
-        IconComp = (reactIconsAi as any)[iconName];
+      switch (library) {
+        case "lucide":
+          IconComp = (lucide as any)[iconName];
+          break;
+        case "fa":
+          IconComp = (reactIconsFa as any)[iconName];
+          break;
+        case "md":
+          IconComp = (reactIconsMd as any)[iconName];
+          break;
+        case "ai":
+          IconComp = (reactIconsAi as any)[iconName];
+          break;
+        default:
+          IconComp = null;
       }
       if (!IconComp) {
         console.warn(`⚠️ Icon "${iconName}" not found in ${library}.`);
@@ -51,17 +66,24 @@ const DynamicIcon = dynamic(
   { ssr: false }
 );
 
-const WhyStudy = ({ topics, name }: { topics: Topic[]; name: string }) => {
-  if (topics.length === 0) {
-    return null;
-  }
+const TopicSlide: FC<{ topic: Topic }> = ({ topic }) => (
+  <div className="px-2 py-4 flex flex-col items-center text-center">
+    <div className="mb-4 text-orange-500">
+      <DynamicIcon iconName={topic.icon} size={32} library="lucide" />
+    </div>
+    <Paragraph size="lg" className="font-semibold mb-1">
+      {topic.title}
+    </Paragraph>
+  </div>
+);
 
+const WhyStudy: FC<WhyStudyProps> = ({ topics, name }) => {
+  if (!topics?.length) return null;
   return (
     <Section className="pt-8 relative overflow-hidden">
       <Heading level={5} className="font-bold mb-10">
         Why Study in {name}
       </Heading>
-
       <Swiper
         modules={[Navigation, Autoplay]}
         loop
@@ -78,14 +100,7 @@ const WhyStudy = ({ topics, name }: { topics: Topic[]; name: string }) => {
       >
         {topics.map((topic) => (
           <SwiperSlide key={topic.id}>
-            <div className="px-2 py-4 flex flex-col items-center text-center">
-              <div className="mb-4 text-orange-500">
-                <DynamicIcon iconName={topic.icon} size={32} library="lucide" />
-              </div>
-              <Paragraph size="lg" className="font-semibold mb-1">
-                {topic.title}
-              </Paragraph>
-            </div>
+            <TopicSlide topic={topic} />
           </SwiperSlide>
         ))}
       </Swiper>

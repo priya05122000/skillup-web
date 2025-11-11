@@ -31,7 +31,7 @@ const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (
       alt={alt}
       width={120}
       height={80}
-      className="object-contain h-full w-28 ransition-transform duration-300 group-hover:scale-105"
+      className="object-contain h-full w-28 transition-transform duration-300 group-hover:scale-105"
     />
   </div>
 );
