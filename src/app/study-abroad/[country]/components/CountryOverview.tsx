@@ -11,7 +11,7 @@ import { CountryData } from "../countryData";
 
 const CountryOverview: React.FC<{ data: CountryData }> = ({ data }) => {
   return (
-    <Section className="py-8 lg:py-12">
+    <Section className="pt-8 lg:pt-12">
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
         <div className="w-full lg:w-3/5">
           <Image

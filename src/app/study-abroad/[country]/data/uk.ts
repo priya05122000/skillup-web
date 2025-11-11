@@ -104,6 +104,67 @@ const uk: CountryData = {
       ],
     },
   ],
+  universities: [
+    { id: 1, name: "Partner 1", logo: "/home/partner13.png" },
+    { id: 2, name: "Partner 2", logo: "/home/partner2.png" },
+    { id: 3, name: "Partner 3", logo: "/home/partner3.png" },
+    { id: 4, name: "Partner 4", logo: "/home/partner4.png" },
+    { id: 5, name: "Partner 5", logo: "/home/partner5.png" },
+    { id: 6, name: "Partner 6", logo: "/home/partner6.png" },
+    { id: 7, name: "Partner 7", logo: "/home/partner7.png" },
+    { id: 8, name: "Partner 8", logo: "/home/partner8.png" },
+    { id: 9, name: "Partner 9", logo: "/home/partner9.png" },
+    { id: 10, name: "Partner 10", logo: "/home/partner10.png" },
+    { id: 11, name: "Partner 11", logo: "/home/partner11.png" },
+    { id: 12, name: "Partner 12", logo: "/home/partner12.png" },
+  ],
+  topics: [
+    {
+      id: 1,
+      title: "Education system",
+      icon: "BookOpen",
+    },
+    {
+      id: 2,
+      title: "Immigration friendly country",
+      icon: "Code",
+    },
+    {
+      id: 3,
+      title: "Large number of prestigious universities",
+      icon: "BarChart",
+    },
+    {
+      id: 4,
+      title: "Low tuition fees",
+      icon: "PenTool",
+    },
+    {
+      id: 5,
+      title: "Range of job focused programmes",
+      icon: "Briefcase",
+    },
+    {
+      id: 6,
+      title: "Strong growing economy",
+      icon: "BarChart",
+    },
+    {
+      id: 7,
+      title: "Opportunity to gain Canadian work experience",
+      icon: "PenTool",
+    },
+    {
+      id: 8,
+      title: "Nomination for immigration to Canada",
+      icon: "Briefcase",
+    },
+    {
+      id: 9,
+      title: "Spouse accompaniment/work right",
+      icon: "Code",
+    }
+  ],
 };
 
 export default uk;

@@ -13,8 +13,10 @@ export interface CountryData {
   tabData: {
     id: string;
     label: string;
-    title: string;
-    subtitle: string;
+    title?: string;
+    subtitle?: string;
     paragraphs: string[];
   }[];
+  universities?: { id: number; name: string; logo: string }[];
+  topics?: { id: number; title: string; icon: string }[];
 }

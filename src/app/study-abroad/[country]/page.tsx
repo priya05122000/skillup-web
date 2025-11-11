@@ -5,6 +5,8 @@ import Banner from "./components/Banner";
 import CountryOverview from "./components/CountryOverview";
 import TabsData from "./components/TabsData";
 import countryData from "./data";
+import University from "./components/University";
+import WhyStudy from "./components/WhyStudy";
 
 interface PageProps {
   params: Promise<{ country: string }>;
@@ -23,6 +25,8 @@ export default function Page({ params }: PageProps) {
     <>
       <Banner countryName={data.name} />
       <CountryOverview data={data} />
+      <WhyStudy topics={data.topics ?? []} name={data.name} />
+      <University universities={data.universities ?? []} />
       <TabsData tabData={data.tabData} />
     </>
   );
