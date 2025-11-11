@@ -61,7 +61,7 @@ const Destination = () => {
                         <span className="text-(--teal)">Explore</span> MBBS, Nursing and More in HealthCare
                     </Heading>
                 </div>
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {destinations.map((item, idx) => (
                         <DestinationCard key={idx} {...item} />
                     ))}
