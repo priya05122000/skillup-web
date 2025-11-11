@@ -59,9 +59,9 @@ const ExploreProgramsSection: React.FC = () => {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full py-16 relative overflow-hidden">
+    <section className="w-full py-8 md:py-16 relative overflow-hidden">
       <Section>
-        <div className="mb-10 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        <div className="mb-6 sm:mb-10 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div>
             <Paragraph size="lg" className="italic text-(--ice-gray) mb-2">
               Our Academics Offerings
@@ -69,7 +69,7 @@ const ExploreProgramsSection: React.FC = () => {
             <Heading level={4}>Explore Our Programs</Heading>
           </div>
 
-          <div className="flex gap-3 mt-2 md:mt-0">
+          <div className="flex justify-end gap-3 mt-2 md:mt-0">
             <button
               className="bg-(--teal) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
               onClick={handlePrev}
