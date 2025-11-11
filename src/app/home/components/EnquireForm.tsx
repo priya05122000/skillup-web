@@ -22,7 +22,7 @@ const FormInput: FC<FormInputProps> = ({
     type={type}
     name={name}
     placeholder={placeholder}
-    className="w-full px-4 py-2 bg-white text-black focus:outline-none"
+    className="w-full px-4 py-2 bg-white text-black focus:outline-none rounded-md"
     {...rest}
   />
 );
@@ -35,7 +35,7 @@ type FormSelectProps = {
 const FormSelect: FC<FormSelectProps> = ({ options, name, ...rest }) => (
   <select
     name={name}
-    className="w-full px-4 py-2 bg-white text-black focus:outline-none"
+    className="w-full px-4 py-2 bg-white text-black focus:outline-none rounded-md"
     {...rest}
   >
     <option value="">Please choose an option</option>
