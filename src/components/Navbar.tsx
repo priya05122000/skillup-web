@@ -158,15 +158,15 @@ const Navbar = () => {
           >
             <IoMdClose className="w-8 h-8" />
           </button>
-          <Link className="mb-6" href="/">
+          <Link className="mb-4" href="/" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">Home</Paragraph>
           </Link>
-          <Link className="mb-6" href="/about-us">
+          <Link className="mb-4" href="/about-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">About Us</Paragraph>
           </Link>
-          <div className="mb-6 w-full flex flex-col items-center">
+          <div className="mb-4 w-full flex flex-col items-center">
             <button
-              className="w-full flex justify-center items-center  gap-1 px-4 py-2 bg-transparent text-(--white) font-semibold rounded focus:outline-none"
+              className={`w-full flex justify-center items-center  gap-1 px-4 ${menuOpen.studyAbroad ? "pb-2" : "pb-0"}  bg-transparent text-(--white) font-semibold rounded focus:outline-none`}
               onClick={() => setMenuOpen((prev) => ({ ...prev, studyAbroad: !prev.studyAbroad }))}
               aria-expanded={!!menuOpen.studyAbroad}
               aria-controls="study-abroad-list"
@@ -176,23 +176,24 @@ const Navbar = () => {
             </button>
             <div
               id="study-abroad-list"
-              className={`flex flex-col gap-2 w-full items-center overflow-hidden transition-all duration-300 ${menuOpen.studyAbroad ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`grid grid-cols-2  bg-white items-center overflow-hidden transition-all duration-300 ${menuOpen.studyAbroad ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
             >
               {studyAbroadCountries.map((country) => (
                 <Link
                   key={country.code}
                   href={`/study-abroad/${country.code}`}
-                  className="flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center"
+                  className="flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--teal)"
+                  onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
                 >
                   <span>{country.name}</span>
                 </Link>
               ))}
             </div>
           </div>
-          <Link className="mb-6" href="/contact-us">
+          <Link className="mb-4" href="/contact-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">Contact Us</Paragraph>
           </Link>
-          <Link className="mb-6" href="/services">
+          <Link className="mb-4" href="/services" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">Services</Paragraph>
           </Link>
         </nav>
