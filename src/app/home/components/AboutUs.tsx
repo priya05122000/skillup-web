@@ -56,19 +56,19 @@ const AboutUs: React.FC = () => {
                   layout="responsive"
                   width={500}
                   height={350}
-                  className="object-cover h-full!"
+                  className="object-cover h-full! rounded-md"
                 />
               </div>
             </div>
-            <div className="absolute bottom-0 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5  border-t-8 border-l-8 border-foreground ">
-              <div className="relative h-full">
+            <div className="absolute bottom-0 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5  bg-foreground p-2 rounded-md">
+              <div className="relative h-full ">
                 <Image
                   src="/home/aboutus-2.jpg"
                   alt="Student talking with professor outside"
                   layout="responsive"
                   width={500}
                   height={350}
-                  className="object-cover h-full!"
+                  className="object-cover h-full! rounded-md"
                 />
               </div>
             </div>
@@ -95,7 +95,7 @@ const AboutUs: React.FC = () => {
             >
               About Us
             </Paragraph>
-            <Heading level={4} className="font-bold leading-tight mt-4">
+            <Heading level={4} className="font-bold leading-tight mt-2">
               The Larget & Most Diverse Universties in the United Emirates
             </Heading>
             <Paragraph size="lg" className="mt-4">

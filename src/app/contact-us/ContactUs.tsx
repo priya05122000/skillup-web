@@ -8,7 +8,7 @@ import React from 'react'
 const ContactUs = () => {
     return (
         <Section className='py-10 sm:py-20 '>
-            <div className='border-4 border-(--teal) rounded-lg overflow-hidden'>
+            <div className='border-4 border-(--teal) rounded-md overflow-hidden'>
                 <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
                     <div className='bg-white flex items-center justify-center p-6 lg:p-12 xl:p-16'>
                         <div className=''>

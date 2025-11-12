@@ -67,7 +67,7 @@ type ProgramCardProps = {
 };
 
 const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
-  <div className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+  <div className="relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition-all duration-300">
     <Image
       src={program.image}
       alt={program.title}
@@ -104,7 +104,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="bg-(--white) text-(--black) rounded-full p-2 shadow hover:scale-110 transition w-10 h-10 cursor-pointer"
+              className="bg-(--teal) text-(--white) rounded-full p-2 shadow hover:scale-110 transition w-10 h-10 cursor-pointer"
             >
               <ArrowRight />
             </motion.button>
@@ -129,26 +129,28 @@ const ExploreProgramsSection: React.FC = () => {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full py-8 md:py-16 relative overflow-hidden">
+    <section className="w-full py-10 sm:py-20 relative overflow-hidden">
       <Section>
-        <div className="mb-6 sm:mb-10 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        <div className="mb-10  flex flex-col md:flex-row md:justify-between md:items-end gap-4 ">
           <div>
-            <Paragraph size="lg" className="italic text-(--ice-gray) mb-2">
+            <Paragraph size="lg" className="uppercase text-(--teal) font-bold leading-tight">
               Our Academics Offerings
             </Paragraph>
-            <Heading level={4}>Explore Our Programs</Heading>
+            <Heading level={4} className="leading-tight mt-2">
+              Explore Our Programs
+            </Heading>
           </div>
 
           <div className="flex justify-end gap-3 mt-2 md:mt-0">
             <button
-              className="bg-(--teal) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
+              className="bg-(--orange) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
               onClick={handlePrev}
               aria-label="Previous"
             >
               <ArrowLeft className="w-5 h-5" />
             </button>
             <button
-              className="bg-(--teal) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
+              className="bg-(--orange) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
               onClick={handleNext}
               aria-label="Next"
             >
@@ -170,7 +172,7 @@ const ExploreProgramsSection: React.FC = () => {
           640: { slidesPerView: 2, centeredSlides: false },
           1024: { slidesPerView: 3, centeredSlides: true },
         }}
-        className="pb-10"
+        className="py-10"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}

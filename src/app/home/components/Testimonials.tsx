@@ -100,7 +100,7 @@ const Testimonials: React.FC = () => {
                 style={{ maxWidth: "600px", maxHeight: "500px" }}
               >
                 {testimonials.map((t, idx) => (
-                  <SwiperSlide key={idx} className="p-6 bg-white rounded-xl shadow flex flex-col gap-4 justify-between h-full">
+                  <SwiperSlide key={idx} className="p-6 bg-white rounded-md shadow flex flex-col gap-4 justify-between h-full">
                     <div className="flex items-center gap-3">
                       <Image
                         src={t.image}

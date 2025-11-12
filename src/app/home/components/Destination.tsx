@@ -32,19 +32,19 @@ const destinations: DestinationItem[] = [
 ];
 
 const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
-    <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+    <div className="relative group cursor-pointer overflow-hidden rounded-md">
         <Image
             src={src}
             alt={alt}
             width={300}
             height={200}
-            className="rounded-lg object-cover w-full h-56 transition-transform duration-300 group-hover:scale-105"
+            className="rounded-md object-cover w-full h-56 transition-transform duration-300 group-hover:scale-105"
         />
         <div
             className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/70"
             aria-hidden="true"
         />
-        <div className="absolute bottom-4 rounded-lg flex items-center justify-start w-full">
+        <div className="absolute bottom-4 rounded-md flex items-center justify-start w-full">
             <Heading level={6} className="text-white text-lg font-semibold text-center px-4">
                 {label}
             </Heading>

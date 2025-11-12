@@ -135,11 +135,12 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <Link className={`hover:text-(--orange) ${pathname === "/contact-us" ? "text-(--orange)" : ""}`} href="/contact-us">
-              <Paragraph size="base">Contact Us</Paragraph>
-            </Link>
+
             <Link className={`hover:text-(--orange) ${pathname === "/services" ? "text-(--orange)" : ""}`} href="/services">
               <Paragraph size="base">Services</Paragraph>
+            </Link>
+            <Link className={`hover:text-(--orange) ${pathname === "/contact-us" ? "text-(--orange)" : ""}`} href="/contact-us">
+              <Paragraph size="base">Contact Us</Paragraph>
             </Link>
           </nav>
         </div>
@@ -190,11 +191,11 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <Link className="mb-4" href="/contact-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
-            <Paragraph size="base">Contact Us</Paragraph>
-          </Link>
           <Link className="mb-4" href="/services" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">Services</Paragraph>
+          </Link>
+          <Link className="mb-4" href="/contact-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
+            <Paragraph size="base">Contact Us</Paragraph>
           </Link>
         </nav>
       </div>
