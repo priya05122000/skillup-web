@@ -97,7 +97,7 @@ const Testimonials: React.FC = () => {
                 grabCursor={true}
                 loop={true}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                style={{ maxWidth: "600px", maxHeight: "500px" }}
+                style={{ maxWidth: "600px", maxHeight: "600px" }}
               >
                 {testimonials.map((t, idx) => (
                   <SwiperSlide key={idx} className="p-6 bg-white rounded-md shadow flex flex-col gap-4 justify-between h-full">
