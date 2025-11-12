@@ -18,5 +18,5 @@ export interface CountryData {
     paragraphs: string[];
   }[];
   universities?: { id: number; name: string; logo: string }[];
-  topics?: { id: number; title: string; icon: string }[];
+  topics?: { id: number; title: string; icon: string; library?: "lucide" | "fa" | "md" | "ai" }[]; //Use Lucide icon names
 }

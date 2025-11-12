@@ -14,6 +14,7 @@ type Topic = {
   id: number;
   title: string;
   icon: string;
+  library?: "lucide" | "fa" | "md" | "ai";
 };
 
 type WhyStudyProps = {
@@ -69,7 +70,7 @@ const DynamicIcon = dynamic(
 const TopicSlide: FC<{ topic: Topic }> = ({ topic }) => (
   <div className="px-2 py-4 flex flex-col items-center text-center">
     <div className="mb-4 text-orange-500">
-      <DynamicIcon iconName={topic.icon} size={32} library="lucide" />
+      <DynamicIcon iconName={topic.icon} size={32} library={topic.library ?? "lucide"} />
     </div>
     <Paragraph size="lg" className="font-semibold mb-1">
       {topic.title}
