@@ -25,7 +25,7 @@ const partnerItems: PartnerItem[] = [
 ];
 
 const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (
-  <div className="flex items-center cursor-pointer group justify-center h-20 p-2 border border-(--orange) rounded-lg">
+  <div className="flex items-center cursor-pointer group justify-center h-20 p-2 border border-(--orange) rounded-md">
     <Image
       src={src}
       alt={alt}

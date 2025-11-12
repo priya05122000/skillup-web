@@ -9,6 +9,7 @@ import Span from "@/components/Span";
 import Heading from "@/components/Heading";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
+import Image from "next/image";
 
 
 type CardProps = {
@@ -26,29 +27,29 @@ const cards: CardProps[] = [
     title: "Academic Resources",
     description: "We offer essential resources.",
     bgColor: "bg-(--bg-gray)",
-    iconBg: "bg-(--bg-indigo)",
-    iconColor: "text-(--indigo)",
+    iconBg: "bg-(--teal)/20",
+    iconColor: "text-(--orange)",
   },
   {
     icon: <GraduationCap />,
     title: "Aid & Scholarships",
     description: "Financial aid & scholarships.",
     bgColor: "bg-gray-50",
-    iconBg: "bg-(--light-yellow)",
-    iconColor: "text-(--gold)",
+    iconBg: "bg-(--teal)/20",
+    iconColor: "text-(--orange)",
   },
   {
     icon: <Users />,
     title: "Your Coaching Teacher",
     description: "Our teacher is committed to success.",
     bgColor: "bg-gray-50",
-    iconBg: "bg-(--light-orange)",
-    iconColor: "text-(--red)",
+    iconBg: "bg-(--teal)/20",
+    iconColor: "text-(--orange)",
   },
 ];
 
 const InfoCard: React.FC<CardProps> = ({ icon, title, description, bgColor, iconBg, iconColor }) => (
-  <div className={`flex items-start gap-4 p-5 ${bgColor} rounded-xl shadow-sm hover:shadow-md transition`}>
+  <div className={`flex items-start gap-4 p-5 ${bgColor} rounded-md shadow-sm hover:shadow-md transition`}>
     <div className={`p-3 ${iconBg} rounded-full`}>
       {React.isValidElement(icon)
         ? React.cloneElement(icon, { className: `${iconColor} w-6 h-6` })
@@ -64,41 +65,43 @@ const InfoCard: React.FC<CardProps> = ({ icon, title, description, bgColor, icon
 );
 
 const AcademicSupportSection: React.FC = () => (
-  <section className="pt-12">
-    <section className="px-6 md:px-8 xl:px-0 xl:max-w-7xl xl:mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <section className="py-10 sm:py-20 ">
+    <Section className="mb-10 sm:mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">
         {cards.map((card, idx) => (
           <InfoCard key={card.title} {...card} />
         ))}
       </div>
-    </section>
+    </Section>
 
     <Section>
-      <div className="pt-8 pb-4">
-        <Paragraph size="base" className="italic text-(--ice-gray) mb-2">
+      <div className="">
+        <Paragraph size="lg" className="uppercase text-(--teal) font-bold leading-tight">
           Our Academic Supports
         </Paragraph>
-        <Heading level={6} className="leading-snug mb-4">
+        <Heading level={4} className="leading-tight mt-2">
           Founded In 1970, EduFord College Is A Global Leader In Education,
           Committed To Quality, Innovation, And Sustainability. We Continue
           Learning.
         </Heading>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div>
-          <img
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-10 ">
+        <div className="h-full">
+          <Image
             src="/about-us/study.jpg"
             alt="Students studying on campus"
-            className="rounded-xl shadow-md w-full object-cover"
+            width={600}
+            height={400}
+            className="rounded-md shadow-md w-full h-full object-cover"
           />
         </div>
         <div>
-          <Paragraph size="xl" className="font-semibold mb-3">
+          <Heading level={6} className="font-semibold ">
             Innovation and Creativity
-          </Paragraph>
+          </Heading>
           <Paragraph
-            size="base"
-            className="text-(--ice-gray) leading-relaxed mb-4"
+            size="lg"
+            className="text-(--ice-gray) leading-relaxed mt-4"
           >
             At EduFord College, innovation and creativity are at the heart of
             our educational philosophy. We strive to foster an environment
@@ -110,7 +113,7 @@ const AcademicSupportSection: React.FC = () => (
             thinking, equipping students with the skills to innovate and
             create in their chosen fields through hands-on projects.
           </Paragraph>
-          <Link
+          {/* <Link
             href="#"
             className="group inline-flex flex-col items-start uppercase gap-1 font-medium hover:text-(--indigo) mt-5"
           >
@@ -118,7 +121,16 @@ const AcademicSupportSection: React.FC = () => (
               More About Us <MdArrowOutward size={20} />
             </Paragraph>
             <span className="block h-0.5 w-[95%] bg-black group-hover:bg-(--indigo) mt-1 origin-left transition-all duration-500 group-hover:opacity-0 group-hover:scale-x-0"></span>
-          </Link>
+          </Link> */}
+          <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
+            <Paragraph
+              size="base"
+              className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--white)"
+            >
+              More About Us <MdArrowOutward />
+            </Paragraph>
+            <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
+          </button>
         </div>
       </div>
     </Section>

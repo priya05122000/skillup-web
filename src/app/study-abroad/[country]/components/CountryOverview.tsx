@@ -13,7 +13,7 @@ type CountryOverviewProps = {
 };
 
 const InfoRow: FC<{ label: string; value: ReactNode }> = ({ label, value }) => (
-  <div className="mt-4 bg-(--bg-grey) p-4 rounded-lg flex items-center gap-2">
+  <div className="mt-4 bg-(--bg-grey) p-4 rounded-md flex items-center gap-2">
     <Paragraph size="lg" className="font-bold">
       {label}:
     </Paragraph>
@@ -32,7 +32,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
           <Image
             src={data.overviewImage}
             alt={`${data.name} Skyline`}
-            className="w-full h-auto md:h-[60vh] rounded-xl shadow-md object-cover"
+            className="w-full h-auto md:h-[60vh] rounded-md shadow-md object-cover"
             width={800}
             height={800}
           />
@@ -74,11 +74,11 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
         </div>
 
         {/* Sidebar */}
-        <div className="w-full lg:w-2/5 bg-white p-5 rounded-xl shadow-md">
+        <div className="w-full lg:w-2/5 bg-white p-5 rounded-md shadow-md">
           <Image
             src={data.overviewImage}
             alt={`${data.name} Overview`}
-            className="w-full h-auto md:h-[30vh] rounded-xl shadow-md object-cover"
+            className="w-full h-auto md:h-[30vh] rounded-md shadow-md object-cover"
             width={800}
             height={800}
           />

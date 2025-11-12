@@ -41,7 +41,7 @@ const ServiceCard: React.FC<ServiceItem> = ({ src, alt, label }) => (
       alt={alt}
       width={300}
       height={200}
-      className="rounded-t-lg object-cover w-full h-52"
+      className="rounded-t-md object-cover w-full h-52"
     />
     <Paragraph
       size="lg"
