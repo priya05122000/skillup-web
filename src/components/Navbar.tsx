@@ -119,7 +119,7 @@ const Navbar = () => {
             <div className="relative group">
               <button className={`hover:text-(--orange)  flex items-center gap-1 ${pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""}`}>
                 <Paragraph size="base">Study Abroad</Paragraph>
-                <span className=""><IoIosArrowDown /></span>
+                <span className=""><IoIosArrowDown className={`transition-transform   ${menuOpen.studyAbroad ? "rotate-180" : ""}`} /></span>
               </button>
               <div className="absolute left-0 top-full min-w-[400px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
                 <div className="grid grid-cols-2 gap-0">
@@ -159,44 +159,47 @@ const Navbar = () => {
           >
             <IoMdClose className="w-8 h-8" />
           </button>
-          <Link className="mb-4" href="/" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
+          <Link className={`hover:text-(--orange) mb-4 ${pathname === "/" ? "text-(--orange)" : ""}`} href="/" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">Home</Paragraph>
           </Link>
-          <Link className="mb-4" href="/about-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
+          <Link className={`hover:text-(--orange) mb-4 ${pathname === "/about-us" ? "text-(--orange)" : ""}`} href="/about-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
             <Paragraph size="base">About Us</Paragraph>
           </Link>
           <div className="mb-4 w-full flex flex-col items-center">
             <button
-              className={`w-full flex justify-center items-center  gap-1 px-4 ${menuOpen.studyAbroad ? "pb-2" : "pb-0"}  bg-transparent text-(--white) font-semibold rounded focus:outline-none`}
+              className={`w-full flex justify-center items-center  gap-1 px-4  ${menuOpen.studyAbroad ? "pb-2" : "pb-0"}  bg-transparent text-(--white)  rounded focus:outline-none ${pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""}`}
               onClick={() => setMenuOpen((prev) => ({ ...prev, studyAbroad: !prev.studyAbroad }))}
               aria-expanded={!!menuOpen.studyAbroad}
               aria-controls="study-abroad-list"
             >
-              <Paragraph size="base" className="font-semibold ">Study Abroad</Paragraph>
+              <Paragraph size="base" className={`${pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""}`}>Study Abroad</Paragraph>
               <IoIosArrowDown className={`transition-transform   ${menuOpen.studyAbroad ? "rotate-180" : ""}`} />
             </button>
             <div
               id="study-abroad-list"
-              className={`grid grid-cols-2  bg-white items-center overflow-hidden transition-all duration-300 ${menuOpen.studyAbroad ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`grid grid-cols-1 items-center overflow-y-auto transition-all duration-300 ${menuOpen.studyAbroad ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"} `}
+              style={{ scrollbarWidth: 'thin' }}
             >
               {studyAbroadCountries.map((country) => (
                 <Link
                   key={country.code}
                   href={`/study-abroad/${country.code}`}
-                  className="flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--teal)"
+                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${pathname === `/study-abroad/${country.code}` ? "text-(--orange)" : ""}`}
                   onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
                 >
-                  <span>{country.name}</span>
+                  <span className={`${pathname === `/study-abroad/${country.code}` ? "text-(--orange)" : ""}`}>{country.name}</span>
                 </Link>
               ))}
             </div>
           </div>
-          <Link className="mb-4" href="/services" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
-            <Paragraph size="base">Services</Paragraph>
-          </Link>
-          <Link className="mb-4" href="/contact-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
-            <Paragraph size="base">Contact Us</Paragraph>
-          </Link>
+          <div className="w-full flex flex-col items-center">
+            <Link className={`hover:text-(--orange) mb-4 ${pathname === "/services" ? "text-(--orange)" : ""}`} href="/services" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
+              <Paragraph size="base">Services</Paragraph>
+            </Link>
+            <Link className={`hover:text-(--orange) mb-4 ${pathname === "/contact-us" ? "text-(--orange)" : ""}`} href="/contact-us" onClick={() => setMenuOpen({ main: false, studyAbroad: false })}>
+              <Paragraph size="base">Contact Us</Paragraph>
+            </Link>
+          </div>
         </nav>
       </div>
 

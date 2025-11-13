@@ -11,7 +11,8 @@
   --text-dark: #323131;
   --text-blue: #0b2351;
   --teal: #49a6a7; /* Medium teal */
-  --orange: #f1b148;
+  /* --orange: #f1b148; */
+  --orange: #FCB53B;
   --bg-gray:#F9FAFB;
   --bg-grey:#e8e8e8b3;
   --bg-indigo:#E0E7FF;
@@ -33,7 +34,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #e1e1e4;
+    --foreground: #eef6f6;
   }
 }
 
