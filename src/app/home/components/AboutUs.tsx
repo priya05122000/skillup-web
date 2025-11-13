@@ -46,7 +46,7 @@ const AboutUs: React.FC = () => {
   return (
     <div className="py-10 sm:py-20 " aria-label="About Us">
       <Section className="h-full ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_1.5fr] gap-10 lg:gap-14 h-full mt-10 sm:mt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_1.2fr] gap-10 lg:gap-14 h-full mt-10 sm:mt-0 sm:px-10 xl:px-20">
           <div className="relative flex flex-col h-[60vh]  sm:h-full ">
             <div className="w-[80%] h-[80%]  lg:h-3/4 relative   overflow-hidden ">
               <div className="relative h-full">

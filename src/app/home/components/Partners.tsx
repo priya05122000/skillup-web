@@ -39,7 +39,7 @@ const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (
 const Partners: React.FC = () => {
   return (
     <Section>
-      <div className="py-10 sm:py-20 " aria-label="About Us">
+      <div className="py-10 sm:py-20 sm:px-10 xl:px-20" aria-label="About Us">
         <div className="h-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 h-full">
             <div className="flex flex-col justify-center h-full ">

@@ -55,7 +55,7 @@ const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
 const Destination = () => {
     return (
         <Section>
-            <div className="py-10 sm:py-20">
+            <div className="py-10 sm:py-20 sm:px-10 xl:px-20">
                 <div className="max-w-3xl mx-auto">
                     <Heading level={4} className="font-bold leading-tight text-center">
                         <span className="text-(--teal)">Explore</span> MBBS, Nursing and More in HealthCare

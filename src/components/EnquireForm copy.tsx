@@ -1,10 +1,8 @@
-"use client";
 import React, { FC, InputHTMLAttributes, SelectHTMLAttributes } from "react";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import { FaGraduationCap } from "react-icons/fa";
 import Image from "next/image";
-import Section from "./Section";
 
 const options = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 
@@ -29,18 +27,30 @@ const FormInput: FC<FormInputProps> = ({
   />
 );
 
+type FormSelectProps = {
+  options: string[];
+  name: string;
+} & SelectHTMLAttributes<HTMLSelectElement>;
+
+const FormSelect: FC<FormSelectProps> = ({ options, name, ...rest }) => (
+  <select
+    name={name}
+    className="w-full px-4 py-2 bg-white text-black focus:outline-none rounded-md"
+    {...rest}
+  >
+    <option value="">Please choose an option</option>
+    {options.map((opt) => (
+      <option key={opt} value={opt}>
+        {opt}
+      </option>
+    ))}
+  </select>
+);
+
 const EnquireForm: FC = () => {
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
-  const [selectedProgram, setSelectedProgram] = React.useState("");
-
-  const handleSelect = (option: string) => {
-    setSelectedProgram(option);
-    setDropdownOpen(false);
-  };
-
   return (
-    <Section className="flex items-center justify-center min-h-[550px] py-10 sm:py-20 relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full rounded-md overflow-hidden relative">
+    <div className="flex items-center justify-center min-h-[550px] relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full overflow-hidden relative">
         {/* LEFT IMAGE */}
         <div className="block relative h-full">
           <Image
@@ -50,10 +60,11 @@ const EnquireForm: FC = () => {
             width={600}
             height={550}
           />
+          <div className="absolute inset-0 bg-linear-to-l from-(--orange) via-(--orange)/30 to-transparent hidden md:block"></div>
         </div>
 
         {/* RIGHT FORM */}
-        <div className="flex flex-col justify-center items-center w-full bg-(--teal) py-10 relative z-10">
+        <div className="flex flex-col justify-center items-center w-full bg-(--orange) py-10 relative z-10">
           <div className="flex flex-col items-center mb-6">
             <span className="text-6xl mb-2 text-white">
               <FaGraduationCap />
@@ -70,49 +81,7 @@ const EnquireForm: FC = () => {
             <FormInput type="text" name="fullName" placeholder="Full Name" />
             <FormInput type="email" name="email" placeholder="Email" />
             <FormInput type="tel" name="mobile" placeholder="Mobile Number" />
-            {/* Manual Dropdown */}
-            <div className="relative">
-              <button
-                type="button"
-                className="w-full px-4 py-2 bg-white text-black rounded-md text-left focus:outline-none border border-gray-300 relative flex items-center justify-between"
-                onClick={() => setDropdownOpen((open) => !open)}
-              >
-                <span>{selectedProgram || "Please choose an option"}</span>
-                {/* Dropdown Icon */}
-                <span className="pointer-events-none ml-2">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 8L10 12L14 8"
-                      stroke="#333"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-              {dropdownOpen && (
-                <div className="absolute left-0 w-full mt-1 bg-white rounded-md shadow-lg z-20">
-                  {options.map((opt) => (
-                    <div
-                      key={opt}
-                      className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleSelect(opt)}
-                    >
-                      {opt}
-                    </div>
-                  ))}
-                </div>
-              )}
-              <input type="hidden" name="program" value={selectedProgram} />
-            </div>
-            {/* End Manual Dropdown */}
+            <FormSelect name="program" options={options} />
 
             <div className="flex flex-col gap-2">
               <label className="flex items-center gap-2 text-xs text-white">
@@ -131,12 +100,12 @@ const EnquireForm: FC = () => {
               >
                 Submit
               </Paragraph>
-              <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--orange) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
+              <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
             </button>
           </form>
         </div>
       </div>
-    </Section>
+    </div>
   );
 };
 
