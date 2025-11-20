@@ -99,7 +99,7 @@ const AboutUs: React.FC = () => {
             <Heading level={4} className="font-bold leading-tight mt-2">
               Your Proven Ally in Overseas Education
             </Heading>
-            <Paragraph size="lg" className="mt-4">
+            <Paragraph size="lg" className="mt-4 text-justify">
               As the best study abroad consultancy in Mumbai, we provide
               comprehensive guidance from international education counseling to
               university admission. Our expert overseas education consultants

@@ -61,10 +61,7 @@ const Services: React.FC = () => {
           Our Services
         </Heading>
         <Paragraph size="lg" className="mt-4 text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum
-          velit, deleniti voluptates nesciunt quam ut natus hic nobis
-          consequatur nam sunt error assumenda nihil quasi aperiam dicta
-          blanditiis porro.
+          Skill Up Study Abroad Agency offers comprehensive overseas education services, guiding students seamlessly from university selection to admission. Our expert team specializes in student visa services, ensuring smooth processing and compliance with immigration requirements. With dedicated university admission assistance, Skill Up helps students craft compelling applications, prepare for interviews, and secure scholarships, making global education accessible and stress-free for every aspirant.
         </Paragraph>
       </div>
       <div className=" mx-auto flex flex-col lg:flex-row lg:gap-10  mt-10">
@@ -73,9 +70,8 @@ const Services: React.FC = () => {
             <div
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${
-                activeIndex === index ? "md:w-1/3" : "md:w-1/6"
-              }`}
+              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${activeIndex === index ? "md:w-1/3" : "md:w-1/6"
+                }`}
             >
               <Image
                 src={`/${doctor.profile_photo_url}`}
@@ -89,11 +85,10 @@ const Services: React.FC = () => {
                 aria-hidden="true"
               />
               <div
-                className={`absolute bottom-0 left-0 w-full text-white p-6 transition-all duration-500 ease-in-out transform ${
-                  activeIndex === index
+                className={`absolute bottom-0 left-0 w-full text-white p-6 transition-all duration-500 ease-in-out transform ${activeIndex === index
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5 pointer-events-none"
-                }`}
+                  }`}
               >
                 <Heading
                   level={6}
@@ -106,11 +101,10 @@ const Services: React.FC = () => {
                 </Span> */}
               </div>
               <span
-                className={`absolute top-6 right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${
-                  activeIndex === index
+                className={`absolute top-6 right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${activeIndex === index
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5 pointer-events-none"
-                }`}
+                  }`}
               >
                 <MdArrowOutward className="text-white text-2xl" />
               </span>

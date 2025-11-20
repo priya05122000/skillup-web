@@ -100,7 +100,7 @@ const Footer = () => {
                 className="h-16 w-auto"
               />
               <Paragraph size="base" className=" my-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus consectetur nulla adipisci ipsam?
+                We offer personalized guidance, visa help, and complete assistance for students wanting to study abroad, ensuring they select the best universities and courses.
               </Paragraph>
               <div className="flex gap-3 mt-2">
                 <Link
@@ -132,10 +132,10 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
             <Span className="flex items-center gap-1">
-              <i className="fas fa-phone-alt"></i> +91 8893 2700 50
+              <i className="fas fa-phone-alt"></i> +91-9820588082
             </Span>
             <Span className="flex items-center gap-1">
-              <i className="fas fa-envelope"></i> info@leadzedu.com
+              <i className="fas fa-envelope"></i> seawoods.skillup@gmail.com
             </Span>
           </div>
         </div>

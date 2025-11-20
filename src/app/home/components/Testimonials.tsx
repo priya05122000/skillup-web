@@ -18,7 +18,7 @@ import { BiSolidQuoteRight } from "react-icons/bi";
 // Testimonial type and data array
 interface Testimonial {
   name: string;
-  batch: string;
+  country: string;
   image: string;
   text: string;
   rating: number;
@@ -26,20 +26,68 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Marvin McKinney",
-    batch: "15th Batch Students",
+    name: "Priya Menon",
+    country: "London",
     image: "/home/aboutus-1.jpg",
     text:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt veritatis vitae assumenda? Quia ipsa incidunt, dolorum earum doloribus provident amet eum praesentium eveniet aperiam tempore explicabo, labore ab dolores magni rem assumenda illum rerum? Nisi, dicta veniam. Labore cumque enim odio amet cupiditate dicta sapiente explicabo, nisi eligendi hic perferendis nostrum temporibus distinctio optio quas maiores, pariatur incidunt modi doloremque! Amet iure nam ipsam consequuntur provident.",
-    rating: 3,
+      "Skill Up Study Abroad Agency provided exceptional guidance throughout my admission and visa process. Their expert team answered every query quickly, going above and beyond to support me at each step. From the initial counseling to landing in the UK, their dedication turned my dream into reality. Thanks to Skill Up, studying in the UK became a truly memorable journey.",
+    rating: 5,
   },
   {
-    name: "Marvin McKinney",
-    batch: "15th Batch Students",
+    name: "Varun Patel",
+    country: "Canada",
     image: "/home/aboutus-1.jpg",
     text:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim incidunt veritatis vitae assumenda? Quia ipsa incidunt, dolorum earum doloribus provident amet eum praesentium eveniet aperiam tempore explicabo, labore ab dolores magni rem assumenda illum rerum? Nisi, dicta veniam. Labore cumque enim odio amet cupiditate dicta sapiente explicabo, nisi eligendi hic perferendis nostrum temporibus distinctio optio quas maiores, pariatur incidunt modi doloremque! Amet iure nam ipsam consequuntur provident.",
-    rating: 3,
+      "I received outstanding guidance from the Skill Up Study Abroad Agency when applying to Canadian universities and for scholarships. Their team made the entire journey from Mumbai to Canada effortless and stress-free. Every step, from course selection to visa, was handled with care and expertise. Thanks to their support, my transition was smooth, allowing me to focus on building my future in Canada.",
+    rating: 5,
+  },
+  {
+    name: "Riya Jain",
+    country: "Australia",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "Skill Up Study Abroad Agency made my entire study abroad process seamless, from picking the right course to securing my visa. Their detailed approach and quick communication gave me confidence at every step. The team genuinely cared about my future and always offered honest guidance. I’m truly grateful for their expertise and the personal attention they provided throughout my journey.",
+    rating: 5,
+  },
+  {
+    name: "Aarav Singh",
+    country: "Germany",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "Skill Up’s counseling made choosing the right study program effortless and took the stress out of application paperwork. Their team’s honesty and transparency created a sense of security for both me and my family. I could always trust their advice, and every recommendation felt tailored to my goals. With their reliable support, we confidently embarked on my overseas education journey.",
+    rating: 5,
+  },
+  {
+    name: "Sana Ahmed",
+    country: "India",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "The entire application process became simple and smooth with Skill Up handling my university submissions. Through each stage, Skill Up kept me updated and promptly informed about my application status. Even during stressful waits for admission, their team members offered uplifting advice and reassurance. Because of their encouragement and commitment, it helped me stay positive and focused on my study abroad goals.",
+    rating: 5,
+  },
+  {
+    name: "Deepak Kumar",
+    country: "Ireland",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "Admission and travel arrangements were smooth and effortless, thanks to Skill Up’s organized process. Their team’s prompt communication made a genuine difference every step of the way with Skill Up. Professionalism was clear in every interaction and advice, providing enormous confidence. From start to finish, every detail was handled with care and precision, all made possible with Skill Up.",
+    rating: 5,
+  },
+  {
+    name: "Ananya Roy",
+    country: "India",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "Pre-departure was a breeze with detailed briefing sessions, giving me total confidence. Their thorough guidance helped me get ready for every aspect of my move with Skill Up. No travel hiccups or paperwork issues, all thanks to the care and efficiency of Skill Up. My entire journey to Canada went smoothly, as every step was expertly organized.",
+    rating: 5,
+  },
+  {
+    name: "Mihir Joshi",
+    country: "France",
+    image: "/home/aboutus-1.jpg",
+    text:
+      "Skill Up’s scholarship guidance made a significant impact on my study abroad journey. They helped me discover and apply for scholarships that perfectly matched my profile and needs. Their expert assistance eased the financial burden and opened doors to excellent opportunities. I wholeheartedly recommend Skill Up to anyone dreaming of higher education overseas.",
+    rating: 5,
   },
 ];
 
@@ -56,10 +104,7 @@ const Testimonials: React.FC = () => {
               Start Your Journey With Us
             </Heading>
             <Paragraph size="lg" className="mt-4 text-white text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum
-              velit, deleniti voluptates nesciunt quam ut natus hic nobis
-              consequatur nam sunt error assumenda nihil quasi aperiam dicta
-              blanditiis porro.
+              Skill Up Study Abroad Agency has empowered countless students to reach their global education goals with expert support every step of the way. Don’t just take our word for it—check out our testimonials and see how we’ve helped others unlock international success.
             </Paragraph>
           </div>
 
@@ -120,7 +165,7 @@ const Testimonials: React.FC = () => {
                       />
                       <div className="border-l-3 border-(--orange) pl-3">
                         <Paragraph size="lg" className="font-bold ">{t.name}</Paragraph>
-                        <Span>{t.batch}</Span>
+                        <Span>{t.country}</Span>
                       </div>
                       <span className="ml-auto text-4xl text-black/20 font-bold select-none">
                         <BiSolidQuoteRight />

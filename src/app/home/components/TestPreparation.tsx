@@ -73,9 +73,13 @@ const TestPreparation: React.FC = () => {
       style={{ backgroundImage: "url('/home/exam-prep.jpg')" }}
     >
       <div
-        className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black/70"
+        className="absolute inset-0 bg-black/60"
         aria-hidden="true"
       />
+      {/* <div
+        className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black/70"
+        aria-hidden="true"
+      /> */}
       <Section>
         <div className="max-w-3xl mx-auto">
           <Heading
@@ -85,10 +89,7 @@ const TestPreparation: React.FC = () => {
             Test Preparation
           </Heading>
           <Paragraph size="lg" className="mt-4 text-white text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum
-            velit, deleniti voluptates nesciunt quam ut natus hic nobis
-            consequatur nam sunt error assumenda nihil quasi aperiam dicta
-            blanditiis porro.
+            Excel in TOEFL, OET, IELTS, GRE, and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.
           </Paragraph>
         </div>
         <div className="max-w-4xl mx-auto">
