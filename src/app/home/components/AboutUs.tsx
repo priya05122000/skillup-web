@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import AnimatedButton from "@/components/AnimatedButton";
 
 interface ProgramInfo {
   title: string;
@@ -105,15 +106,16 @@ const AboutUs: React.FC = () => {
               blanditiis porro.
             </Paragraph>
             <ProgramList />
-            <button className="relative overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
-              <Paragraph
-                size="base"
-                className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--white)"
-              >
-                Free Consultation <MdArrowOutward />
-              </Paragraph>
-              <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
-            </button>
+            <AnimatedButton
+              bgColor="bg-(--orange)"
+              textColor="text-(--white)"
+              hoverTextColor="group-hover:text-(--white)"
+              skewColor="bg-(--teal)"
+              className="mt-4"
+              icon={<MdArrowOutward />}
+            >
+              Free Consultation
+            </AnimatedButton>
           </div>
         </div>
       </Section>
