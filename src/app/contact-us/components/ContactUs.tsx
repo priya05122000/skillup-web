@@ -3,7 +3,9 @@ import Paragraph from '@/components/Paragraph'
 import Section from '@/components/Section'
 import Span from '@/components/Span'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 const ContactUs = () => {
     return (
@@ -18,42 +20,51 @@ const ContactUs = () => {
 
                                     <div>
                                         <Paragraph size='base' className=" mb-10">
-                                            For any enquiries, or just to say hello, get in touch and contact us.
+                                            Whether you have questions, require details, or simply want to connect, reach out to us—we’re always here to help and listen.
                                         </Paragraph>
                                     </div>
-                                    <div className='grid sm:grid-cols-2 gap-4'>
-
-                                        <div className="mb-4">
-                                            <Span className="font-semibold text-black/50">New projects</Span>
-                                            <Paragraph size='base' className="mt-1">Katarine Goldstein</Paragraph>
-                                            <Paragraph size='base' className="">kg@normcph.com</Paragraph>
-                                        </div>
-                                        <div className='mb-4'>
-                                            <Span className="font-semibold text-black/50">Address</Span>
-                                            <Paragraph size='base' className="mt-1">Snaregade 14,<br />1205 København,<br />Denmark</Paragraph>
-                                        </div>
-                                        <div className="mb-4">
-                                            <Span className="font-semibold text-black/50">Address</Span>
-                                            <Paragraph size='base' className="mt-1">Snaregade 14,<br />1205 København,<br />Denmark</Paragraph>
-                                        </div>
-
+                                    <div className='grid sm:grid-cols-1 '>
                                         <div className="mb-4">
                                             <Span className="font-semibold text-black/50">General enquiries</Span>
-                                            <Paragraph size='base' className="mt-1">info@normcph.com</Paragraph>
-                                            <Paragraph size='base' className="">+45 28 87 93 09</Paragraph>
+                                            <Paragraph size='base' className="mt-1">seawoods.skillup@gmail.com</Paragraph>
+                                            <Paragraph size='base' className="">+91-9820588082</Paragraph>
                                         </div>
-                                        <div className="mb-4">
-                                            <Span className="font-semibold text-black/50">Careers & Internships</Span>
-                                            <Paragraph size='base' className="mt-1">info@normcph.com</Paragraph>
+
+                                        <div className='mb-4'>
+                                            <Span className="font-semibold text-black/50">Address (Seawoods)</Span>
+                                            <Paragraph size='base' className="mt-1">
+                                                Office No. 10, Shah Heritage,<br />
+                                                Plot No. 9, Sector 42/A,<br />
+                                                Opp. D-Mart, Seawoods (W),<br />
+                                                Navi Mumbai-400706
+                                            </Paragraph>
+                                        </div>
+                                        <div className='mb-4'>
+                                            <Span className="font-semibold text-black/50">Address (Koparkhairane)</Span>
+                                            <Paragraph size='base' className="mt-1">
+                                                Shop no 3, Anmol Terrace CHS Ltd,<br />
+                                                Sector 5, Koparkhairane Rd,<br />
+                                                Opposite Lokmanya Tilak college,<br />
+                                                Navi Mumbai -400709
+                                            </Paragraph>
                                         </div>
                                         <div>
                                             <Span className="font-semibold text-black/50">Follow us</Span>
-                                            <div className="mt-1 flex gap-4">
-                                                <Paragraph size='base'>Tw</Paragraph>
-                                                <Paragraph size='base'>Tw</Paragraph>
-                                                <Paragraph size='base'>Tw</Paragraph>
-                                                <Paragraph size='base'>Tw</Paragraph>
-
+                                            <div className="mt-2 flex gap-2">
+                                                <Link
+                                                    href="#"
+                                                    aria-label="Facebook"
+                                                    className="hover:text-(--white)"
+                                                >
+                                                    <FaFacebookF className="w-5 h-5" />
+                                                </Link>
+                                                <Link
+                                                    href="#"
+                                                    aria-label="Instagram"
+                                                    className="hover:text-(--white)"
+                                                >
+                                                    <FaInstagram className="w-5 h-5" />
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -79,14 +90,14 @@ const ContactUs = () => {
                 For the embed, you can only change the container's styling. */}
             <div>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.803091251145!2d12.57331231601113!3d55.67609698053737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530c2b6e1e7b%3A0x7e6e8e6b89347568!2sSnaregade%2014%2C%201205%20K%C3%B8benhavn%2C%20Denmark!5e0!3m2!1sen!2sdk!4v1717690000000!5m2!1sen!2sdk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.253993367129!2d73.01331777520397!3d19.01806428217047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c397f30d1ed1%3A0x60b36d6304bf2fb8!2sShah%20Heritage%20Chs%20Limited%20Jairam%20Tukaram%20Tandel%20Marg%2C%20Seawoods%20West%2C%20Karave%20Nagar%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706!5e0!3m2!1sen!2sin!4v1717690000000!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Norm CPH Location"
+                    title="Shah Heritage Seawoods Location"
                 />
             </div>
         </>
