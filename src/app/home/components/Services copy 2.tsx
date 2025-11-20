@@ -32,6 +32,16 @@ const serviceItems: ServiceItem[] = [
     alt: "Sports & Fitness",
     label: "Sports & Fitness",
   },
+  {
+    src: "/home/service3.jpg",
+    alt: "Recreations & Wellness",
+    label: "Recreations & Wellness",
+  },
+  {
+    src: "/home/service4.jpg",
+    alt: "Sports & Fitness",
+    label: "Sports & Fitness",
+  },
 ];
 
 const ServiceCard: React.FC<ServiceItem> = ({ src, alt, label }) => (
