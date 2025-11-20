@@ -126,8 +126,8 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between text-xs">
           <Span className="mb-2 md:mb-0">
-            @ 2025 - All Rights Reserved by{" "}
-            <Span className="font-semibold">leadzstudyabroad.com</Span>
+            Copyright @ 2024 Skill Up Academy All Rights and Reserved. Powered by {" "}
+            <Span className="font-semibold text-(--orange)">Itarsia India Limited</Span>
           </Span>
 
           <div className="flex items-center gap-4">
