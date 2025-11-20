@@ -42,40 +42,40 @@ const Stats: React.FC = () => {
   }, []);
 
   return (
-      <Section className="py-10">
-        <div className="grid grid-cols-1 lg:gap-8 message-content bg-(--teal) rounded-2xl">
-          <div className="flex flex-col sm:flex-row justify-evenly text-(--white) gap-6 sm:gap-2 py-4 sm:py-8">
-            {stats.map((stat, i) => (
-              <div key={stat.label} className="text-center lg:py-6">
-                <Heading level={3} className="hidden sm:flex justify-center">
-                  <span className="flex items-baseline">
-                    {animatedValues[i]}
-                    <span className="ml-1">+</span>
-                  </span>
-                </Heading>
-                <Heading level={6} className="flex sm:hidden justify-center">
-                  <span className="flex items-baseline">
-                    {animatedValues[i]}
-                    <span className="ml-1">+</span>
-                  </span>
-                </Heading>
-                <Paragraph
-                  size="xl"
-                  className="font-normal hidden sm:block text-center"
-                >
-                  {stat.label}
-                </Paragraph>
-                <Paragraph
-                  size="lg"
-                  className="font-normal block sm:hidden text-center"
-                >
-                  {stat.label}
-                </Paragraph>
-              </div>
-            ))}
-          </div>
+    <Section className="py-10">
+      <div className="grid grid-cols-1 lg:gap-8 message-content bg-(--teal) rounded-md">
+        <div className="flex flex-col sm:flex-row justify-evenly text-(--white) gap-6 sm:gap-2 py-4 sm:py-8">
+          {stats.map((stat, i) => (
+            <div key={stat.label} className="text-center lg:py-6">
+              <Heading level={3} className="hidden sm:flex justify-center">
+                <span className="flex items-baseline">
+                  {animatedValues[i]}
+                  <span className="ml-1">+</span>
+                </span>
+              </Heading>
+              <Heading level={6} className="flex sm:hidden justify-center">
+                <span className="flex items-baseline">
+                  {animatedValues[i]}
+                  <span className="ml-1">+</span>
+                </span>
+              </Heading>
+              <Paragraph
+                size="xl"
+                className="font-normal hidden sm:block text-center"
+              >
+                {stat.label}
+              </Paragraph>
+              <Paragraph
+                size="lg"
+                className="font-normal block sm:hidden text-center"
+              >
+                {stat.label}
+              </Paragraph>
+            </div>
+          ))}
         </div>
-      </Section>
+      </div>
+    </Section>
   );
 };
 
