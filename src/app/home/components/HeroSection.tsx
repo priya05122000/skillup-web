@@ -4,52 +4,32 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import { MdArrowOutward, MdOutlineWhatsapp } from "react-icons/md";
 import React from "react";
-
-interface HeroButtonProps {
-  children: React.ReactNode;
-  bgColor?: string;
-  hoverTextColor?: string;
-  skewColor?: string;
-  icon?: React.ReactNode;
-  onClick?: () => void;
-}
-
-const HeroButton: React.FC<HeroButtonProps> = ({
-  children,
-  bgColor = "bg-(--white)",
-  hoverTextColor = "group-hover:text-(--teal)",
-  skewColor = "bg-(--teal)",
-  icon,
-  onClick,
-}) => (
-  <button
-    className={`relative overflow-hidden px-4 py-3 text-(--white) ${bgColor} rounded-md cursor-pointer outline-none border-none group`}
-    onClick={onClick}
-  >
-    <Paragraph
-      size="base"
-      className={`relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 ${hoverTextColor}`}
-    >
-      {children} {icon}
-    </Paragraph>
-    <div
-      className={`absolute top-0 -left-[10%] w-[120%] h-full ${skewColor} skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full`}
-    />
-  </button>
-);
+import AnimatedButton from "@/components/AnimatedButton";
 
 const heroButtons = [
   {
     children: "Apply Now",
     icon: <MdArrowOutward />,
+    bgColor: "bg-(--white)",
+    textColor: "text-(--white)",
+    hoverTextColor: "group-hover:text-(--teal)",
+    skewColor: "bg-(--teal)",
   },
   {
     children: "Chat with Us",
     icon: <MdOutlineWhatsapp />,
+    bgColor: "bg-(--white)",
+    textColor: "text-(--white)",
+    hoverTextColor: "group-hover:text-(--teal)",
+    skewColor: "bg-(--teal)",
   },
   {
     children: "Brochure",
     icon: <MdArrowOutward />,
+    bgColor: "bg-(--white)",
+    textColor: "text-(--white)",
+    hoverTextColor: "group-hover:text-(--teal)",
+    skewColor: "bg-(--teal)",
   },
 ];
 
@@ -89,14 +69,16 @@ const HeroSection: React.FC = () => {
               real-world experience.
             </Paragraph>
             <div className="my-8 flex gap-4">
-              <HeroButton
+              <AnimatedButton
                 bgColor="bg-(--white)"
+                textColor="text-(--white)"
                 hoverTextColor="group-hover:text-(--teal)"
                 skewColor="bg-(--orange)"
                 icon={<MdArrowOutward />}
+                className="px-4 py-3"
               >
                 View Our Program
-              </HeroButton>
+              </AnimatedButton>
             </div>
           </div>
         </Section>
@@ -104,9 +86,17 @@ const HeroSection: React.FC = () => {
       <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
           {heroButtons.map((btn, idx) => (
-            <HeroButton key={idx} icon={btn.icon}>
+            <AnimatedButton
+              key={idx}
+              bgColor={btn.bgColor}
+              textColor={btn.textColor}
+              hoverTextColor={btn.hoverTextColor}
+              skewColor={btn.skewColor}
+              icon={btn.icon}
+              className="px-4 py-3"
+            >
               {btn.children}
-            </HeroButton>
+            </AnimatedButton>
           ))}
         </div>
       </div>
