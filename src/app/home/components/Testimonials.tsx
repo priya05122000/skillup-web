@@ -117,7 +117,7 @@ const Testimonials: React.FC = () => {
                     alt="Students high-fiving in front of university"
                     width={400}
                     height={300}
-                    className="object-cover w-full h-full rounded-tr-[150px] rounded-bl-[150px]"
+                    className="object-cover w-full h-full rounded-tr-[100px] rounded-bl-[100px] sm:rounded-tr-[150px] sm:rounded-bl-[150px]"
                   />
                 </div>
                 <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/3 z-50">
@@ -126,11 +126,11 @@ const Testimonials: React.FC = () => {
                     alt="Students high-fiving in front of university"
                     width={200}
                     height={250}
-                    className="object-cover w-[120px] sm:w-[200px] h-[200px] sm:h-[250px] rounded-tl-[80px] rounded-br-[80px]"
+                    className="object-cover w-[120px] sm:w-[200px] h-[200px] sm:h-[250px] rounded-tl-[60px] rounded-br-[60px] sm:rounded-tl-[80px] sm:rounded-br-[80px]"
                   />
                 </div>
-                <div className="absolute top-0 left-0  -translate-x-1/2 translate-y-10 z-50">
-                  <div className="bg-white px-8 py-2 rounded-md">
+                <div className="absolute top-0 left-0  -translate-x-1/2 lg:-translate-x-1/4 xl:-translate-x-1/2 translate-y-10 z-50">
+                  <div className="bg-white px-4 sm:px-8 py-2 rounded-md">
                     <Heading level={5} className="text-(--teal) font-bold text-center">
                       +500
                     </Heading>

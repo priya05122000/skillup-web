@@ -64,14 +64,17 @@ const Services: React.FC = () => {
           Skill Up Study Abroad Agency offers comprehensive overseas education services, guiding students seamlessly from university selection to admission. Our expert team specializes in student visa services, ensuring smooth processing and compliance with immigration requirements. With dedicated university admission assistance, Skill Up helps students craft compelling applications, prepare for interviews, and secure scholarships, making global education accessible and stress-free for every aspirant.
         </Paragraph>
       </div>
-      <div className=" mx-auto flex flex-col lg:flex-row lg:gap-10  mt-10 px-20">
-        <div className="w-full h-[250px] md:h-[300px] lg:h-[350px]  flex flex-row gap-3 overflow-x-hidden scrollbar-hidden snap-x snap-mandatory px-2 md:px-0">
+      <div className=" mx-auto flex flex-col lg:flex-row lg:gap-10  mt-10 xl:px-20">
+        <div className="w-full h-[250px] sm:h-[270px] md:h-[300px] lg:h-[350px] flex flex-row gap-3 overflow-x-auto scrollbar-hidden snap-x snap-mandatory px-2 md:px-0">
           {doctorProfile.map((doctor, index) => (
             <div
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${activeIndex === index ? "md:w-1/2" : "md:w-1/6"
-                }`}
+              className={`shrink-0 sm:shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start
+                ${activeIndex === index
+                  ? "md:w-1/2 sm:w-2/3 w-4/5"
+                  : "md:w-1/6 sm:w-1/3 w-3/5"}
+                w-full max-w-[250px] sm:max-w-sm ${index === 0 ? 'ml-2 sm:ml-0' : ''}`}
             >
               <Image
                 src={`/${doctor.profile_photo_url}`}
@@ -85,7 +88,7 @@ const Services: React.FC = () => {
                 aria-hidden="true"
               />
               <div
-                className={`absolute bottom-0 left-0 w-full text-white p-6 transition-all duration-500 ease-in-out transform ${activeIndex === index
+                className={`absolute bottom-0 left-0 w-full text-white p-4 sm:p-6 transition-all duration-500 ease-in-out transform ${activeIndex === index
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-5 pointer-events-none"
                   }`}
@@ -99,7 +102,7 @@ const Services: React.FC = () => {
 
               </div>
               <span
-                className={`absolute top-6 right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${activeIndex === index
+                className={`absolute top-4 sm:top-6 right-4 sm:right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${activeIndex === index
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-5 pointer-events-none"
                   }`}

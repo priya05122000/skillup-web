@@ -60,11 +60,11 @@ const Services: React.FC = () => {
         <div>
             <Section>
                 <div className="py-10 sm:py-20">
-                    <div>
+                    {/* <div>
                         <Heading level={4} className="font-bold leading-tight">
                             Services
                         </Heading>
-                    </div>
+                    </div> */}
                     <div>
                         {services.map((service, idx) => (
                             <div key={idx} className="grid grid-cols-1 md:grid-cols-6 mt-10 border-b border-teal-500 pb-10 gap-6">
