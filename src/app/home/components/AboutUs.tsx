@@ -94,16 +94,19 @@ const AboutUs: React.FC = () => {
               size="lg"
               className="font-bold leading-tight uppercase text-(--teal)"
             >
-              About Us
+              About Skill Up Study Abroad Agency
             </Paragraph>
             <Heading level={4} className="font-bold leading-tight mt-2">
-              The Larget & Most Diverse Universties in the United Emirates
+              Your Proven Ally in Overseas Education
             </Heading>
             <Paragraph size="lg" className="mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cum
-              velit, deleniti voluptates nesciunt quam ut natus hic nobis
-              consequatur nam sunt error assumenda nihil quasi aperiam dicta
-              blanditiis porro.
+              As the best study abroad consultancy in Mumbai, we provide
+              comprehensive guidance from international education counseling to
+              university admission. Our expert overseas education consultants
+              assist you through every step, including visa processing and
+              personalized scholarship support. Trust us for a seamless journey
+              to your global academic aspirations with end-to-end support and
+              care
             </Paragraph>
             <ProgramList />
             <AnimatedButton
