@@ -5,12 +5,14 @@ import HeroSection from "./components/HeroSection";
 import Partners from "./components/Partners";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
+import Stats from "./components/Stats";
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
       <AboutUs />
+      <Stats />
       <Services />
       <Destination />
       <Testimonials />
