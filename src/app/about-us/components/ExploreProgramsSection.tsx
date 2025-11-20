@@ -10,10 +10,9 @@ import "swiper/css/navigation";
 import Section from "@/components/Section";
 import Paragraph from "@/components/Paragraph";
 import Heading from "@/components/Heading";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image from "next/image";
-import Span from "@/components/Span";
-
+// import Span from "@/components/Span";
 
 type Program = {
   id: number;
@@ -26,37 +25,30 @@ type Program = {
 const programs: Program[] = [
   {
     id: 1,
-    title: "Arts In Communication",
+    title: "Proven Global Expertise",
     image: "/about-us/course1.png",
     lessons: "10 lessons",
     students: "300 students",
   },
   {
     id: 2,
-    title: "Computer Science - CS",
+    title: "Personalized Student Guidance",
     image: "/about-us/course2.png",
     lessons: "8 lessons",
     students: "450 students",
   },
   {
     id: 3,
-    title: "Graduate Programs",
+    title: "Vast University Network",
     image: "/about-us/course3.png",
     lessons: "12 lessons",
     students: "200 students",
   },
   {
     id: 4,
-    title: "Welcome Programs",
+    title: "End-to-End Support",
     image: "/about-us/course4.png",
     lessons: "5 lessons",
-    students: "200 students",
-  },
-  {
-    id: 5,
-    title: "Final Programs",
-    image: "/about-us/course5.png",
-    lessons: "15 lessons",
     students: "200 students",
   },
 ];
@@ -76,8 +68,8 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
       className="w-full h-[350px] object-cover"
     />
     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-    <div className="absolute bottom-4 left-5 right-5 text-(--white) flex justify-between items-end">
-      {isActive ? (
+    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border border-(--white)/30 bg-(--teal)/70">
+      {/* {isActive ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,13 +103,15 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
           </div>
         </motion.div>
       ) : (
-        <Heading
-          level={6}
-          className="text-(--white) font-semibold mb-2 w-full"
-        >
+        <Heading level={6} className="text-(--white) font-semibold mb-2 w-full">
           {program.title}
         </Heading>
-      )}
+      )} */}
+      {/* <div className="backdrop-blur-md px-2 py-1 border border-(--white)/30 bg-(--teal)/70"> */}
+        <Paragraph size="xl" className="text-(--white) font-semibold mb-2 w-full">
+          {program.title}
+        </Paragraph>
+      {/* </div> */}
     </div>
   </div>
 );
@@ -129,15 +123,18 @@ const ExploreProgramsSection: React.FC = () => {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full py-10 sm:py-20 relative overflow-hidden">
+    <section className="w-full pb-10 sm:pb-20 relative overflow-hidden">
       <Section>
-        <div className="mb-10  flex flex-col md:flex-row md:justify-between md:items-end gap-4 ">
+        <div className="mb-4 md:mb-10 flex flex-col md:flex-row md:justify-between md:items-end gap-4 ">
           <div>
-            <Paragraph size="lg" className="uppercase text-(--teal) font-bold leading-tight">
-              Our Academics Offerings
+            <Paragraph
+              size="lg"
+              className="uppercase text-(--teal) font-bold leading-tight"
+            >
+              WHY CHOOSE OUR STUDY ABROAD CONSULTANCY
             </Paragraph>
             <Heading level={4} className="leading-tight mt-2">
-              Explore Our Programs
+              SkillUp: Your Trusted Partner in Global Education Success
             </Heading>
           </div>
 
@@ -164,13 +161,13 @@ const ExploreProgramsSection: React.FC = () => {
       <Swiper
         modules={[Navigation, Autoplay]}
         loop={true}
-        centeredSlides={true}
+        centeredSlides={false}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         spaceBetween={32}
         slidesPerView={1}
         breakpoints={{
           640: { slidesPerView: 2, centeredSlides: false },
-          1024: { slidesPerView: 3, centeredSlides: true },
+          1024: { slidesPerView: 3, centeredSlides: false },
         }}
         className="py-10"
         onSwiper={(swiper) => {
@@ -178,10 +175,13 @@ const ExploreProgramsSection: React.FC = () => {
         }}
       >
         {programs.map((program) => (
+          // <SwiperSlide key={program.id}>
+          //   {({ isActive }: { isActive: boolean }) => (
+          //     <ProgramCard program={program} isActive={isActive} />
+          //   )}
+          // </SwiperSlide>
           <SwiperSlide key={program.id}>
-            {({ isActive }: { isActive: boolean }) => (
-              <ProgramCard program={program} isActive={isActive} />
-            )}
+            <ProgramCard program={program} isActive={false} />
           </SwiperSlide>
         ))}
       </Swiper>

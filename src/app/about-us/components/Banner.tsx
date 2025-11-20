@@ -33,7 +33,7 @@ const Banner: React.FC = () => {
               About Us
             </Heading>
             <Paragraph size="lg" className="mt-4 text-(--white)/70">
-              Empowering Wide Range of Learning Opportunities
+              Empowering Your International Education Journey
             </Paragraph>
 
           </div>

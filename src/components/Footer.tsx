@@ -100,7 +100,7 @@ const Footer = () => {
                 className="h-16 w-auto"
               />
               <Paragraph size="base" className=" my-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus necessitatibus consectetur nulla adipisci ipsam?
+                We offer personalized guidance, visa help, and complete assistance for students wanting to study abroad, ensuring they select the best universities and courses.
               </Paragraph>
               <div className="flex gap-3 mt-2">
                 <Link
@@ -126,16 +126,16 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between text-xs">
           <Span className="mb-2 md:mb-0">
-            @ 2025 - All Rights Reserved by{" "}
-            <Span className="font-semibold">leadzstudyabroad.com</Span>
+            Copyright @ 2024 Skill Up Academy All Rights and Reserved. Powered by {" "}
+            <Span className="font-semibold text-(--orange)">Itarsia India Limited</Span>
           </Span>
 
           <div className="flex items-center gap-4">
             <Span className="flex items-center gap-1">
-              <i className="fas fa-phone-alt"></i> +91 8893 2700 50
+              <i className="fas fa-phone-alt"></i> +91-9820588082
             </Span>
             <Span className="flex items-center gap-1">
-              <i className="fas fa-envelope"></i> info@leadzedu.com
+              <i className="fas fa-envelope"></i> seawoods.skillup@gmail.com
             </Span>
           </div>
         </div>

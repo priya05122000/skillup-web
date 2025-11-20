@@ -31,7 +31,7 @@ const Stats: React.FC = () => {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="text-center lg:py-6">
-                <Heading level={3} className="hidden sm:flex justify-center">
+                <Heading level={4} className="hidden sm:flex justify-center mb-2">
                   <span className="flex items-baseline">
                     {inView ? (
                       <CountUp end={parseInt(stat.value, 10)} duration={2} />

@@ -7,32 +7,37 @@ interface DestinationItem {
   src: string;
   alt: string;
   label: string;
+  desc?: string;
 }
 
 const destinations: DestinationItem[] = [
   {
     src: "/home/destination1.jpg",
     alt: "MBBS Programs",
-    label: "Georgia",
+    label: "Canada",
+    desc: "World-class education and  diverse cultural experiences."
   },
   {
     src: "/home/destination2.jpg",
     alt: "Nursing Courses",
-    label: "Georgia",
+    label: "Ireland",
+    desc: "Vibrant culture and excellent global career opportunities."
   },
   {
     src: "/home/destination3.jpg",
     alt: "Pharmacy Studies",
-    label: "Georgia",
+    label: "UK",
+    desc: "Diverse course options and strong student support. "
   },
   {
     src: "/home/destination4.jpg",
     alt: "Dental Programs",
-    label: "Georgia",
+    label: "Australia",
+    desc: "Vibrant multicultural experiences for international students."
   },
 ];
 
-const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
+const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label, desc }) => (
   <div className="relative group cursor-pointer rounded-md">
     <Image
       src={src}
@@ -40,13 +45,13 @@ const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
       width={300}
       height={200}
       className="rounded-md object-cover w-full h-64 transition-transform duration-300 "
-      // className="rounded-md object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105"
+    // className="rounded-md object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105"
     />
     <div
       className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/70 rounded-md"
       aria-hidden="true"
     >
-      <div className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-28 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/30 backdrop-blur-md">
+      <div className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-32 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/30 backdrop-blur-md">
         <div className="flex flex-col gap-2 justify-center h-full w-full">
           <Paragraph
             size="xl"
@@ -58,7 +63,7 @@ const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
             size="base"
             className="text-white leading-tight px-4 text-center"
           >
-            Lorem ipsum dolor sit amet consectetur
+            {desc}
           </Paragraph>
         </div>
       </div>
@@ -95,7 +100,7 @@ const Destination = () => {
               </div>
             ))}
           </div>
-         
+
         </Section>
       </div>
     </div>

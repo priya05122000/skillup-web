@@ -15,26 +15,18 @@ export type Country = {
 };
 
 export const STUDY_ABROAD_COUNTRIES: Country[] = [
+  { name: "United Kingdom", code: "uk" },
   { name: "Canada", code: "canada" },
+  { name: "United States", code: "usa" },
   { name: "Australia", code: "australia" },
   { name: "Ireland", code: "ireland" },
-  { name: "Germany", code: "germany" },
-  { name: "United States", code: "usa" },
-  { name: "Denmark", code: "denmark" },
-  { name: "Bulgaria", code: "bulgaria" },
-  { name: "Malaysia", code: "malaysia" },
-  { name: "Russia", code: "russia" },
-  { name: "Singapore", code: "singapore" },
-  { name: "United Kingdom", code: "uk" },
-  { name: "New Zealand", code: "new-zealand" },
-  { name: "Sweden", code: "sweden" },
-  { name: "Switzerland", code: "switzerland" },
-  { name: "Italy", code: "italy" },
-  { name: "South Korea", code: "south-korea" },
-  { name: "France", code: "france" },
   { name: "Netherlands", code: "netherlands" },
-  { name: "UAE", code: "uae" },
-  { name: "Phillipines", code: "phillipines" },
+  { name: "Germany", code: "germany" },
+  { name: "Italy", code: "italy" },
+  { name: "Malta", code: "malta" },
+  { name: "Finland", code: "finland" },
+  { name: "France", code: "france" },
+  { name: "New Zealand", code: "new-zealand" },
 ];
 
 const Navbar = () => {
