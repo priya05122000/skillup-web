@@ -1,6 +1,5 @@
 "use client";
 
-
 import React from "react";
 import { BookOpen, GraduationCap, Users } from "lucide-react";
 import Section from "@/components/Section";
@@ -10,7 +9,6 @@ import Heading from "@/components/Heading";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
-
 
 type CardProps = {
   icon: React.ReactElement<{ className?: string }>;
@@ -24,32 +22,43 @@ type CardProps = {
 const cards: CardProps[] = [
   {
     icon: <BookOpen />,
-    title: "Academic Resources",
-    description: "We offer essential resources.",
+    title: "Educational Materials",
+    description: "We provide top-notch study materials for students.",
     bgColor: "bg-(--bg-gray)",
     iconBg: "bg-(--teal)/20",
     iconColor: "text-(--orange)",
   },
   {
     icon: <GraduationCap />,
-    title: "Aid & Scholarships",
-    description: "Financial aid & scholarships.",
+    title: "Financial Assistance & Grant",
+    description:
+      "Grants and financial aid offer essential support to students.",
     bgColor: "bg-gray-50",
     iconBg: "bg-(--teal)/20",
     iconColor: "text-(--orange)",
   },
   {
     icon: <Users />,
-    title: "Your Coaching Teacher",
-    description: "Our teacher is committed to success.",
+    title: "Academic Coach",
+    description:
+      "Our personalized guidance helps students achieve academic success.",
     bgColor: "bg-gray-50",
     iconBg: "bg-(--teal)/20",
     iconColor: "text-(--orange)",
   },
 ];
 
-const InfoCard: React.FC<CardProps> = ({ icon, title, description, bgColor, iconBg, iconColor }) => (
-  <div className={`flex items-start gap-4 p-5 ${bgColor} rounded-md shadow-sm hover:shadow-md transition`}>
+const InfoCard: React.FC<CardProps> = ({
+  icon,
+  title,
+  description,
+  bgColor,
+  iconBg,
+  iconColor,
+}) => (
+  <div
+    className={`flex items-start gap-4 p-5 ${bgColor} rounded-md shadow-sm hover:shadow-md transition`}
+  >
     <div className={`p-3 ${iconBg} rounded-full`}>
       {React.isValidElement(icon)
         ? React.cloneElement(icon, { className: `${iconColor} w-6 h-6` })
@@ -76,42 +85,54 @@ const AcademicSupportSection: React.FC = () => (
 
     <Section>
       <div className="">
-        <Paragraph size="lg" className="uppercase text-(--teal) font-bold leading-tight">
-          Our Academic Supports
+        <Paragraph
+          size="lg"
+          className="uppercase text-(--teal) font-bold leading-tight"
+        >
+          WHO WE ARE STUDY ABROAD AGENCY
         </Paragraph>
         <Heading level={4} className="leading-tight mt-2">
-          Founded In 1970, EduFord College Is A Global Leader In Education,
-          Committed To Quality, Innovation, And Sustainability. We Continue
-          Learning.
+          Skill Up Study Abroad Agency: Guiding Success in Overseas Education
+          Consultancy
         </Heading>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-10 ">
-        <div className="h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
+        <div className="h-full w-full lg:h-[550px] xl:h-full">
           <Image
             src="/about-us/study.jpg"
             alt="Students studying on campus"
-            width={600}
-            height={400}
+            width={1600}
+            height={800}
             className="rounded-md shadow-md w-full h-full object-cover"
           />
         </div>
         <div>
           <Heading level={6} className="font-semibold ">
-            Innovation and Creativity
+            Decade of Expertise in International Academic Coaching
           </Heading>
           <Paragraph
-            size="lg"
+            size="base"
             className="text-(--ice-gray) leading-relaxed mt-4"
           >
-            At EduFord College, innovation and creativity are at the heart of
-            our educational philosophy. We strive to foster an environment
-            where students are encouraged to think outside the box, explore
-            new ideas, and push the boundaries of conventional learning.
+            Skill Up Study Abroad Agency has established itself as a leading
+            overseas education consultancy, leveraging ten years of hands-on
+            experience to guide students toward their academic dreams. Our
+            comprehensive consultancy services are tailored to individual
+            aspirations, providing up-to-date information on top universities,
+            courses, scholarships, and visa processes. With an expert team
+            well-versed in global education systems, Skill Up ensures a smooth
+            transition, from initial counseling and course selection to
+            admissions, accommodation, and ongoing support. This depth of
+            knowledge not only saves time but also protects students from common
+            pitfalls and costly missteps during their journey abroad..
             <br />
             <br />
-            Our programs are designed to inspire originality and critical
-            thinking, equipping students with the skills to innovate and
-            create in their chosen fields through hands-on projects.
+            The agency’s personalized coaching approach has benefited thousands,
+            focusing on holistic student development, including academics,
+            career planning, and personal growth. Skill Up Study Abroad Agency
+            is committed to building lasting success through constant
+            mentorship, post-arrival support, and financial guidance, including
+            access to grants and scholarships.
           </Paragraph>
           {/* <Link
             href="#"
