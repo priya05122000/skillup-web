@@ -51,7 +51,7 @@ const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label, desc }) =
       className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/70 rounded-md"
       aria-hidden="true"
     >
-      <div className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-32 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/30 backdrop-blur-md">
+      <div className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-32 lg:h-40 xl:h-32 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/30 backdrop-blur-md">
         <div className="flex flex-col gap-2 justify-center h-full w-full">
           <Paragraph
             size="xl"
@@ -93,9 +93,9 @@ const Destination = () => {
 
       <div className="bg-linear-to-t from-(--teal) to-transparent">
         <Section>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-20 pb-20">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-6 lg:gap-y-6 xl:px-20 pb-20">
             {destinations.map((item, idx) => (
-              <div key={idx} className={idx % 2 === 0 ? "" : " mt-10"}>
+              <div key={idx} className={idx % 2 === 0 ? "" : " sm:mt-10"}>
                 <DestinationCard {...item} />
               </div>
             ))}

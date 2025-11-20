@@ -93,7 +93,7 @@ const TestPreparation: React.FC = () => {
           </Paragraph>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 mt-10 gap-1 text-white">
+          <div className="grid grid-cols-1 sm:grid-cols-3 mt-10 gap-1 text-white">
             {testItems.map((item, idx) => (
               <TestCard key={idx} {...item} />
             ))}
