@@ -26,19 +26,19 @@ const cards: CardProps[] = [
     icon: <Info className="w-10 h-10 mb-4 text-(--orange)" />,
     title: "Our Vision",
     description:
-      "To be a leading institution in providing quality education that empowers individuals to achieve their full potential and contribute positively to society.",
+      "We provide every student with the opportunity to study abroad while maintaining the highest standards in international education counseling. We are committed to unlocking human potential and fostering personal and global growth through quality education and cultural experiences.",
   },
   {
     icon: <BookOpen className="w-10 h-10 mb-4 text-(--orange)" />,
     title: "Our Mission",
     description:
-      "To deliver innovative and inclusive educational programs that foster critical thinking, creativity, and lifelong learning, preparing students for success in a dynamic world.",
+      "Skill Up Study Abroad Agency is committed to guiding students worldwide with comprehensive resources and personalized support. We ensure a smooth transition into international academics and life, empowering each student to achieve their educational goals confidently.",
   },
   {
     icon: <GraduationCap className="w-10 h-10 mb-4 text-(--orange)" />,
     title: "Our Commitment",
     description:
-      "We are committed to creating a supportive and engaging learning environment that nurtures personal growth, academic excellence, and community involvement.",
+      "Our commitment is to support each student through every phase of their overseas journey, from application to post-arrival, making the entire process effortless. With a hands-on, dedicated approach, we ensure every transition abroad is seamless—helping students achieve success and peace of mind.",
   },
 ];
 
