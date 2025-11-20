@@ -1,6 +1,12 @@
 "use client";
 
-import React, { ReactNode, useState, useEffect, ChangeEvent, FormEvent } from "react";
+import React, {
+  ReactNode,
+  useState,
+  useEffect,
+  ChangeEvent,
+  FormEvent,
+} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import toast from "react-hot-toast";
@@ -128,10 +134,19 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
           <Link
             key={btn.label}
             href={btn.href}
-            target={btn.href.startsWith('http') ? '_blank' : undefined}
-            rel={btn.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            target={btn.href.startsWith("http") ? "_blank" : undefined}
+            rel={
+              btn.href.startsWith("http") ? "noopener noreferrer" : undefined
+            }
             className="group relative w-12 hover:w-36 h-12 bg-(--orange) shadow-xl text-(--white) rounded-l-md font-bold flex justify-start items-center p-2 pr-6 duration-700 overflow-hidden cursor-pointer no-underline"
-            onClick={btn.label === 'Enquiry' ? (e => { e.preventDefault(); setShowEnquiryForm(true); }) : undefined}
+            onClick={
+              btn.label === "Enquiry"
+                ? (e) => {
+                    e.preventDefault();
+                    setShowEnquiryForm(true);
+                  }
+                : undefined
+            }
           >
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
@@ -151,7 +166,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       <AnimatePresence>
         {showPopup && (
           <motion.div
-            className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/70 p-6"
+            className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/60 p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -181,16 +196,17 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                 className="w-48 md:w-72"
               />
               </div> */}
-              <Heading level={5} className="font-bold leading-tight text-center text-(--white) uppercase">
+              <Heading
+                level={5}
+                className="font-bold leading-tight text-center text-(--white) uppercase"
+              >
                 Subscribe
               </Heading>
               <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Subscribe with your email for exclusive updates and insights about our services.
+                Subscribe with your email for exclusive updates and insights
+                about our services.
               </Paragraph>
-              <form
-                onSubmit={handleSubscribe}
-                className="space-y-2 mt-5"
-              >
+              <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
                 <div className="flex flex-row gap-2  items-center">
                   <input
                     type="email"
@@ -213,7 +229,6 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                     {popupSubmitting ? "Subscribing..." : "Subscribe"}
                   </AnimatedButton>
                 </div>
-
               </form>
             </motion.div>
           </motion.div>
@@ -223,7 +238,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       <AnimatePresence>
         {showEnquiryForm && (
           <motion.div
-            className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/70 p-6"
+            className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/60 p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -249,15 +264,26 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                 <span className="text-5xl mb-2 text-white">
                   <FaGraduationCap />
                 </span>
-                <Heading level={5} className="text-white font-bold text-center mb-2">
+                <Heading
+                  level={5}
+                  className="text-white font-bold text-center mb-2"
+                >
                   Join With Us
                 </Heading>
               </div>
 
               <form className="w-full flex flex-col gap-4">
-                <FormInput type="text" name="fullName" placeholder="Full Name" />
+                <FormInput
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                />
                 <FormInput type="email" name="email" placeholder="Email" />
-                <FormInput type="tel" name="mobile" placeholder="Mobile Number" />
+                <FormInput
+                  type="tel"
+                  name="mobile"
+                  placeholder="Mobile Number"
+                />
                 <Dropdown
                   options={courseOptions}
                   selected={selectedProgram}
@@ -275,7 +301,11 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                   openName={openDropdownName}
                 />
                 <label className="flex items-center gap-2 text-xs text-white">
-                  <input type="checkbox" required className="accent-(--orange)" />
+                  <input
+                    type="checkbox"
+                    required
+                    className="accent-(--orange)"
+                  />
                   You authorize us to call, email, or SMS you at any time.
                 </label>
                 <AnimatedButton
