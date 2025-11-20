@@ -73,7 +73,7 @@ const Services: React.FC = () => {
             <div
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`shrink-0 md:shrink md:h-full border-(--teal) rounded-md border-2 relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${
+              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${
                 activeIndex === index ? "md:w-1/3" : "md:w-1/6"
               }`}
             >
