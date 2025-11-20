@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceItem> = ({ src, alt, label }) => (
       alt={alt}
       width={300}
       height={200}
-      className="rounded-t-md object-cover w-full h-52"
+      className="rounded-tl-[80px] rounded-br-[80px] object-cover w-full h-64"
     />
     <Paragraph
       size="lg"
@@ -67,8 +67,8 @@ const Services: React.FC = () => {
     <Section className="bg-(--teal)">
       <div className="py-10 sm:py-20" aria-label="About Us">
         <div className="h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 h-full">
-            <div className="flex flex-col justify-center h-full lg:py-8 max-w-lg">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 h-full"> */}
+          {/* <div className="flex flex-col justify-center h-full lg:py-8 max-w-lg">
               <Heading
                 level={4}
                 className="font-bold leading-tight lg:mt-4 text-white"
@@ -81,20 +81,40 @@ const Services: React.FC = () => {
                 consequatur nam sunt error assumenda nihil quasi aperiam dicta
                 blanditiis porro.
               </Paragraph>
-            </div>
-            <div className="relative flex flex-col items-center justify-center h-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 w-full h-full">
-                <div className="flex flex-col gap-4">
-                  <ServiceCard {...serviceItems[0]} />
-                  <ServiceCard {...serviceItems[1]} />
-                </div>
-                <div className="flex flex-col gap-4 mt-4 sm:mt-10">
-                  <ServiceCard {...serviceItems[2]} />
-                  <ServiceCard {...serviceItems[3]} />
-                </div>
+            </div> */}
+          {/* <div className="relative flex flex-col items-center justify-center h-full"> */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 w-full h-full">
+            <div className="flex flex-col gap-4 ">
+              <div className="mb-4">
+                <Heading
+                  level={4}
+                  className="font-bold leading-tight lg:mt-4 text-white"
+                >
+                  Navigate
+                </Heading>
+                <Paragraph size="lg" className="mt-4 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                  cum velit, deleniti voluptates nesciunt quam ut natus hic nobis
+                  consequatur nam sunt error assumenda nihil quasi aperiam dicta
+                  blanditiis porro.
+                </Paragraph>
+
               </div>
+
+              <ServiceCard {...serviceItems[0]} />
+              <ServiceCard {...serviceItems[1]} />
+            </div>
+            <div className="flex flex-col gap-4 mt-4 sm:mt-20">
+              <ServiceCard {...serviceItems[0]} />
+              <ServiceCard {...serviceItems[1]} />
+            </div>
+            <div className="flex flex-col gap-4 ">
+              <ServiceCard {...serviceItems[2]} />
+              <ServiceCard {...serviceItems[3]} />
             </div>
           </div>
+          {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     </Section>
