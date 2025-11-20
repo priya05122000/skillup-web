@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
                     alt="Students high-fiving in front of university"
                     width={200}
                     height={250}
-                    className="object-cover w-[120px] sm:w-[200px] h-[200px] sm:h-[250px] rounded-tl-[90px] rounded-br-[90px]"
+                    className="object-cover w-[120px] sm:w-[200px] h-[200px] sm:h-[250px] rounded-tl-[80px] rounded-br-[80px]"
                   />
                 </div>
                 <div className="absolute top-0 left-0  -translate-x-1/2 translate-y-10 z-50">

@@ -47,7 +47,7 @@ const DestinationCard: React.FC<DestinationItem> = ({ src, alt, label }) => (
             aria-hidden="true"
         >
             <div
-                className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-28 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/10 backdrop-blur-md"
+                className="absolute inset-x-0 bottom-0 mx-auto translate-y-1/2 w-4/5 h-28 bg-(--white)/10 shadow-lg rounded-tl-md rounded-md flex items-center justify-center border border-(--white)/30 backdrop-blur-md"
             >
                 <div className="flex flex-col gap-2 justify-center h-full w-full">
                     <Paragraph size="xl" className="text-white font-semibold px-4 text-center">

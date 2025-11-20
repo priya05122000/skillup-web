@@ -74,7 +74,7 @@ const Navbar = () => {
           <Link href="#" className="flex items-center gap-2 h-20 md:hidden">
             <span className="flex items-center justify-center">
               <Image
-                src="/logo/logo.svg"
+                src="/logo/navbar-logo.svg"
                 alt="Logo"
                 width={500}
                 height={500}
@@ -95,7 +95,7 @@ const Navbar = () => {
             <Link href="#" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
-                  src="/logo/logo.svg"
+                  src="/logo/navbar-logo.svg"
                   alt="Logo"
                   width={500}
                   height={500}
@@ -117,11 +117,11 @@ const Navbar = () => {
           <Link href="#" className="flex items-center gap-2 h-full ">
             <span className=" flex items-center justify-center ">
               <Image
-                src="/logo/logo.svg"
+                src="/logo/navbar-logo.svg"
                 alt="Logo"
                 width={500}
                 height={500}
-                className="h-[60px] w-auto"
+                className="h-20 w-auto"
               />
             </span>
           </Link>
@@ -207,7 +207,7 @@ const Navbar = () => {
 
       {/* Right: Free consultation */}
       <div className="hidden lg:flex items-center justify-end  h-full ">
-        <button className="relative overflow-hidden px-4 py-2  text-(--orange)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
+        <button className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
           <Paragraph
             size="base"
             className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
