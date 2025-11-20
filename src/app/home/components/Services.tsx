@@ -106,7 +106,7 @@ const Services: React.FC = () => {
                 </Span> */}
               </div>
               <span
-                className={`absolute top-6 right-6 bg-(--teal)/60 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${
+                className={`absolute top-6 right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${
                   activeIndex === index
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5 pointer-events-none"

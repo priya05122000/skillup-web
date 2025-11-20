@@ -42,7 +42,7 @@ const Stats: React.FC = () => {
   }, []);
 
   return (
-    <Section className="py-10">
+    <Section className="">
       <div className="grid grid-cols-1 lg:gap-8 message-content bg-(--teal) rounded-md">
         <div className="flex flex-col sm:flex-row justify-evenly text-(--white) gap-6 sm:gap-2 py-4 sm:py-8">
           {stats.map((stat, i) => (
