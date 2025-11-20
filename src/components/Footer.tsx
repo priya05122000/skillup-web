@@ -35,7 +35,7 @@ const countries: string[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10 relative">
+    <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10  relative">
       <Section>
         {/* ---- GRID FIXED ---- */}
         <div className="grid grid-cols-1 md:grid-cols-[140px_220px_400px_auto] gap-y-12 gap-x-8 mb-8 items-start">

@@ -52,7 +52,7 @@ const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   return (
-    <Section className="relative py-10 sm:py-20 px-6  overflow-hidden">
+    <Section className="relative py-10 sm:py-20 overflow-hidden">
       <div className="max-w-3xl mx-auto">
         <Heading
           level={4}
@@ -64,13 +64,13 @@ const Services: React.FC = () => {
           Skill Up Study Abroad Agency offers comprehensive overseas education services, guiding students seamlessly from university selection to admission. Our expert team specializes in student visa services, ensuring smooth processing and compliance with immigration requirements. With dedicated university admission assistance, Skill Up helps students craft compelling applications, prepare for interviews, and secure scholarships, making global education accessible and stress-free for every aspirant.
         </Paragraph>
       </div>
-      <div className=" mx-auto flex flex-col lg:flex-row lg:gap-10  mt-10">
+      <div className=" mx-auto flex flex-col lg:flex-row lg:gap-10  mt-10 px-20">
         <div className="w-full h-[250px] md:h-[300px] lg:h-[350px]  flex flex-row gap-3 overflow-x-hidden scrollbar-hidden snap-x snap-mandatory px-2 md:px-0">
           {doctorProfile.map((doctor, index) => (
             <div
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${activeIndex === index ? "md:w-1/3" : "md:w-1/6"
+              className={`shrink-0 md:shrink md:h-full border-(--orange) rounded-md border relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer snap-start ${activeIndex === index ? "md:w-1/2" : "md:w-1/6"
                 }`}
             >
               <Image
@@ -86,8 +86,8 @@ const Services: React.FC = () => {
               />
               <div
                 className={`absolute bottom-0 left-0 w-full text-white p-6 transition-all duration-500 ease-in-out transform ${activeIndex === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-5 pointer-events-none"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5 pointer-events-none"
                   }`}
               >
                 <Heading
@@ -96,14 +96,12 @@ const Services: React.FC = () => {
                 >
                   <span dangerouslySetInnerHTML={{ __html: doctor.name }} />
                 </Heading>
-                {/* <Span className="transition-all duration-300">
-                  {doctor.description}
-                </Span> */}
+
               </div>
               <span
                 className={`absolute top-6 right-6 bg-(--teal)/70 rounded-full p-2 transition-all duration-500 ease-in-out transform backdrop-blur-md ${activeIndex === index
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-5 pointer-events-none"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5 pointer-events-none"
                   }`}
               >
                 <MdArrowOutward className="text-white text-2xl" />
