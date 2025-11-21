@@ -7,12 +7,12 @@ import React from "react";
 const Banner: React.FC = () => {
   return (
     <section
-      className="relative h-[50vh] w-full"
+      className="relative h-[250px] md:h-[300px] lg:h-[400px] w-full"
       aria-label="Hero"
     >
       <div className="absolute inset-0">
         <Image
-          src="/home/hero-image.jpg"
+          src="/about-us/about-banner.jpg"
           alt="Students collaborating in a modern classroom with laptops"
           fill
           sizes="100vw"

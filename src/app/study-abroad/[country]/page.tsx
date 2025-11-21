@@ -7,6 +7,7 @@ import TabsData from "./components/TabsData";
 import countryData from "./data";
 import University from "./components/University";
 import WhyStudy from "./components/WhyStudy";
+import EnquireForm from "@/components/EnquireForm";
 
 interface PageProps {
   params: Promise<{ country: string }>;
@@ -23,11 +24,12 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-      <Banner countryName={data.name} />
+      <Banner bannerTitle={data.bannerTitle} bannerSubtitle={data.bannerSubtitle} banner={data.banner} />
       <CountryOverview data={data} />
       <WhyStudy topics={data.topics ?? []} name={data.name} />
       <University universities={data.universities ?? []} />
       <TabsData tabData={data.tabData} />
+      <EnquireForm imageSrc="/home/enquireform.jpg"/> 
     </>
   );
 }

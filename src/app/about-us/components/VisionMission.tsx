@@ -45,9 +45,9 @@ const cards: CardProps[] = [
 const VisionMission: React.FC = () => (
   <section
     className="relative w-full bg-cover bg-center bg-no-repeat py-10 sm:py-20"
-    style={{ backgroundImage: "url('/home/hero-image.jpg')" }}
+    style={{ backgroundImage: "url('/about-us/vision-mission.jpg')" }}
   >
-    <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+    <div className="absolute inset-0 bg-black/60"></div>
     <Section className="relative">
       <Heading level={4} className=" text-white text-center">Our Vision & Mission</Heading>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 mt-10">

@@ -74,10 +74,10 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
         </div>
 
         {/* Sidebar */}
-        <div className="w-full lg:w-2/5 bg-white p-5 rounded-md shadow-md">
+        <div className="w-full lg:w-2/5 md:bg-white md:p-5 rounded-md md:shadow-md">
           <Image
-            src={data.overviewImage}
-            alt={`${data.name} Overview`}
+            src={data.studentImage}
+            alt={`${data.name} Students`}
             className="w-full h-auto md:h-[30vh] rounded-md shadow-md object-cover"
             width={800}
             height={800}

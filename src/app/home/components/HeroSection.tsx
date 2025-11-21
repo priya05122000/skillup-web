@@ -42,40 +42,40 @@ const heroButtons = [
 
 const slides = [
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider1.jpg",
     title: "Skill Up Study Abroad Mumbai",
-    heading: "Leading You to Premier Universities Across the Globe",
+    heading: "Leading You to Global Universities",
     paragraph:
       "Expand your future at 500+ top-rated universities and colleges worldwide.",
-    buttonText: "Reserve your spot for a consultation",
+    buttonText: "Reserve your spot",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider2.jpg",
     title: "Skill Up Study Abroad Agency",
     heading: "Study in CANADA",
     paragraph: "Pursue your education in Canada’s world-class institutions",
-    buttonText: "Book your consultation now",
+    buttonText: "Book your consultation",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider3.png",
     title: "Skill Up Study Abroad Mumbai",
     heading: "Study in IRELAND",
     paragraph: "Choose from Ireland’s elite group of 9 leading universities.",
-    buttonText: "Set up your appointment today",
+    buttonText: "Set up your appointment",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider4.png",
     title: "Skill Up Study Abroad Agency",
     heading: "Rise To The Top By Learning Smarter!",
     paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
-    buttonText: "Reserve your spot for a consultation",
+    buttonText: "Reserve your spot ",
   },
 ];
 
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="relative h-screen sm:h-[calc(90vh-80px)] w-full mb-20"
+      className="relative h-[65vh] sm:h-[calc(90vh-80px)] w-full mb-20"
       aria-label="Hero"
     >
       <Swiper
@@ -107,7 +107,7 @@ const HeroSection: React.FC = () => {
                 aria-hidden="true"
               />
             </div>
-            <div className="relative z-10 flex h-full items-center justify-center">
+            <div className="relative z-10 flex h-full items-start sm:items-center justify-center pt-12 sm:pt-0">
               <Section className="text-left text-(--white) w-full ">
                 <div className="max-w-lg lg:max-w-2xl">
                   <Paragraph
@@ -123,14 +123,14 @@ const HeroSection: React.FC = () => {
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">
                     {slide.paragraph}
                   </Paragraph>
-                  <div className="my-8 flex gap-4">
+                  <div className="my-8  gap-4 hidden sm:flex">
                     <AnimatedButton
                       bgColor="bg-(--white)"
                       textColor="text-(--white)"
                       hoverTextColor="group-hover:text-(--teal)"
                       skewColor="bg-(--orange)"
                       icon={<MdArrowOutward />}
-                      className="px-4 py-3"
+                      className="px-4 py-3 "
                     >
                       {slide.buttonText}
                     </AnimatedButton>
@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
+      <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
           {heroButtons.map((btn, idx) => (
             <AnimatedButton

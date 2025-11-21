@@ -2,6 +2,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import AnimatedButton from "@/components/AnimatedButton";
@@ -52,11 +53,11 @@ const AboutUs: React.FC = () => {
             <div className="w-[80%] h-[80%]  lg:h-3/4 relative   overflow-hidden ">
               <div className="relative h-full">
                 <Image
-                  src="/home/aboutus-1.jpg"
+                  src="/home/about-us-1.png"
                   alt="Students high-fiving in front of university"
                   layout="responsive"
                   width={500}
-                  height={350}
+                  height={500}
                   className="object-cover h-full! rounded-md"
                 />
               </div>
@@ -64,7 +65,7 @@ const AboutUs: React.FC = () => {
             <div className="absolute bottom-0 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5  bg-foreground p-2 rounded-md">
               <div className="relative h-full ">
                 <Image
-                  src="/home/aboutus-2.jpg"
+                  src="/home/about-us-2.jpg"
                   alt="Student talking with professor outside"
                   layout="responsive"
                   width={500}
@@ -84,7 +85,7 @@ const AboutUs: React.FC = () => {
                     WebkitTextStroke: "1px #000",
                   }}
                 >
-                  EST 1995
+                  EST 2020
                 </Heading>
               </div>
             </div>
@@ -109,15 +110,17 @@ const AboutUs: React.FC = () => {
               care
             </Paragraph>
             <ProgramList />
-            <AnimatedButton
-              bgColor="bg-(--orange)"
-              textColor="text-(--white)"
-              hoverTextColor="group-hover:text-(--white)"
-              skewColor="bg-(--teal)"
-              icon={<MdArrowOutward />}
-            >
-              Free Consultation
-            </AnimatedButton>
+            <Link href="/about-us">
+              <AnimatedButton
+                bgColor="bg-(--orange)"
+                textColor="text-(--white)"
+                hoverTextColor="group-hover:text-(--white)"
+                skewColor="bg-(--teal)"
+                icon={<MdArrowOutward />}
+              >
+                About Us
+              </AnimatedButton>
+            </Link>
           </div>
         </div>
       </Section>

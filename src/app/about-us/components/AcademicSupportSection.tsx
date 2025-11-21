@@ -97,9 +97,9 @@ const AcademicSupportSection: React.FC = () => (
         </Heading>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
-        <div className="h-full w-full lg:h-[550px] xl:h-full">
+        <div className="h-full w-full lg:h-[550px]">
           <Image
-            src="/about-us/study.jpg"
+            src="/about-us/study.png"
             alt="Students studying on campus"
             width={1600}
             height={800}

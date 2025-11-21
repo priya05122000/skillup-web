@@ -34,7 +34,12 @@ const countryOptions: CountryOption[] = [
   { name: "Phillipines", code: "phillipines" },
 ];
 
-const EnquireForm: FC = () => {
+
+interface EnquireFormProps {
+  imageSrc: string;
+}
+
+const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
   const [selectedProgram, setSelectedProgram] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState("");
   const [openDropdownName, setOpenDropdownName] = React.useState("");
@@ -45,7 +50,7 @@ const EnquireForm: FC = () => {
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
-            src="/home/enquireform.jpg"
+            src={imageSrc}
             alt="Join with Us"
             fill
             className="object-cover w-full h-full rounded-md"

@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   images: {
-    qualities: [100],
+    disableStaticImages: true,
+    qualities: [100, 80],
     remotePatterns: [
       {
         protocol: "http",
@@ -16,6 +17,5 @@ const nextConfig: NextConfig = {
     ],
   },
 };
-
 
 export default nextConfig;

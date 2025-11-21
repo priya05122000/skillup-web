@@ -1,108 +1,146 @@
-import Heading from '@/components/Heading'
-import Paragraph from '@/components/Paragraph'
-import Section from '@/components/Section'
-import Span from '@/components/Span'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
+import Section from "@/components/Section";
+import Span from "@/components/Span";
+import Image from "next/image";
+import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const ContactUs = () => {
-    return (
-        <>
-            <Section className='py-10 sm:py-20 '>
-                <div className='rounded-md overflow-hidden'>
-                    <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr]'>
-                        <div className='bg-(--teal) text-white flex items-center justify-center p-6 lg:p-12 xl:p-16'>
-                            <div className=''>
-                                <Heading level={1} className="font-extrabold mb-8 xl:mb-14 text-(--orange)">CONTACT</Heading>
-                                <div className="grid grid-cols-1 xl:grid-cols-2  xl:gap-10 text-sm">
-
-                                    <div>
-                                        <Paragraph size='base' className=" mb-10">
-                                            Whether you have questions, require details, or simply want to connect, reach out to us—we’re always here to help and listen.
-                                        </Paragraph>
-                                    </div>
-                                    <div className='grid sm:grid-cols-1 '>
-                                        <div className="mb-4">
-                                            <Span className="font-semibold text-black/50">General enquiries</Span>
-                                            <Paragraph size='base' className="mt-1">seawoods.skillup@gmail.com</Paragraph>
-                                            <Paragraph size='base' className="">+91-9820588082</Paragraph>
-                                        </div>
-
-                                        <div className='mb-4'>
-                                            <Span className="font-semibold text-black/50">Address (Seawoods)</Span>
-                                            <Paragraph size='base' className="mt-1">
-                                                Office No. 10, Shah Heritage,<br />
-                                                Plot No. 9, Sector 42/A,<br />
-                                                Opp. D-Mart, Seawoods (W),<br />
-                                                Navi Mumbai-400706
-                                            </Paragraph>
-                                        </div>
-                                        <div className='mb-4'>
-                                            <Span className="font-semibold text-black/50">Address (Koparkhairane)</Span>
-                                            <Paragraph size='base' className="mt-1">
-                                                Shop no 3, Anmol Terrace CHS Ltd,<br />
-                                                Sector 5, Koparkhairane Rd,<br />
-                                                Opposite Lokmanya Tilak college,<br />
-                                                Navi Mumbai -400709
-                                            </Paragraph>
-                                        </div>
-                                        <div>
-                                            <Span className="font-semibold text-black/50">Follow us</Span>
-                                            <div className="mt-2 flex gap-2">
-                                                <Link
-                                                    href="#"
-                                                    aria-label="Facebook"
-                                                    className="hover:text-(--white)"
-                                                >
-                                                    <FaFacebookF className="w-5 h-5" />
-                                                </Link>
-                                                <Link
-                                                    href="#"
-                                                    aria-label="Instagram"
-                                                    className="hover:text-(--white)"
-                                                >
-                                                    <FaInstagram className="w-5 h-5" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <Image
-                                src="/contact/contact.jpg"
-                                alt="Students high-fiving in front of university"
-                                width={1000}
-                                height={1000}
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
+  return (
+    <>
+      <Section className="py-10 sm:py-20 ">
+        <div className="rounded-md overflow-hidden xl:h-[550px]">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
+            <div className="bg-(--teal) text-white flex p-6 lg:p-12 xl:p-16">
+              <div className="">
+                <Heading
+                  level={1}
+                  className="font-extrabold mb-8 xl:mb-14 text-(--orange)"
+                >
+                  CONTACT
+                </Heading>
+                <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10 text-sm">
+                  <div>
+                    <div>
+                      <Paragraph size="base" className=" mb-5">
+                        Whether you have questions, require details, or simply
+                        want to connect, reach out to us—we’re always here to
+                        help and listen.
+                      </Paragraph>
                     </div>
+                    <div>
+                      <Span className="font-semibold text-black/50">
+                        Follow us
+                      </Span>
+                      <div className="mt-2 flex gap-2">
+                        <Link
+                          href="#"
+                          aria-label="Facebook"
+                          className="hover:text-(--white)"
+                        >
+                          <FaFacebookF className="w-5 h-5" />
+                        </Link>
+                        <Link
+                          href="#"
+                          aria-label="Instagram"
+                          className="hover:text-(--white)"
+                        >
+                          <FaInstagram className="w-5 h-5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-1 ">
+                    <div className="mb-4">
+                      <Span className="font-semibold text-black/50">
+                        Address (Seawoods)
+                      </Span>
+                      <Paragraph size="base" className="mt-1">
+                        Office No. 10, Shah Heritage,
+                        <br />
+                        Plot No. 9, Sector 42/A,
+                        <br />
+                        Opp. D-Mart, Seawoods (W),
+                        <br />
+                        Navi Mumbai-400706
+                      </Paragraph>
+                    </div>
+                    {/* <div className="mb-4">
+                      <Span className="font-semibold text-black/50">
+                        Address (Koparkhairane)
+                      </Span>
+                      <Paragraph size="base" className="mt-1">
+                        Shop no 3, Anmol Terrace CHS Ltd,
+                        <br />
+                        Sector 5, Koparkhairane Rd,
+                        <br />
+                        Opposite Lokmanya Tilak college,
+                        <br />
+                        Navi Mumbai -400709
+                      </Paragraph>
+                    </div> */}
+                  </div>
                 </div>
-            </Section>
+                <div className="mt-6">
+                  <Paragraph size="lg" className="font-semibold text-black/50">
+                    General enquiries
+                  </Paragraph>
+                </div>
+                <div className="mb-4 grid sm:grid-cols-2 font-semibold">
+                  <Paragraph size="xl" className="mt-1">
+                    seawoods.skillup@gmail.com
+                  </Paragraph>
+                  <Paragraph size="xl" className="mt-1">
+                    +91-99304 94883
+                  </Paragraph>
+                </div>
 
-            {/* Google Maps embed does not support direct color customization via iframe.
+                <div className="grid grid-cols-2 mt-8">
+                  <div className="mb-4">
+                    <Span className="font-semibold">
+                      SeaWoods (W), <br /> Navi Mumbai
+                    </Span>
+                  </div>
+                  <div className="mb-4">
+                    <Span className="font-semibold text-black/50">Working Hours</Span><br />
+                    <Span className="font-semibold">
+                      MON - FRI : 10:00 AM - 7:00 PM <br />
+                    </Span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <Image
+                src="/contact/contact.jpg"
+                alt="Students high-fiving in front of university"
+                width={1000}
+                height={1000}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Google Maps embed does not support direct color customization via iframe.
                 To customize map colors, you need to use Google Maps JavaScript API with custom styles.
                 For the embed, you can only change the container's styling. */}
-            <div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.253993367129!2d73.01331777520397!3d19.01806428217047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c397f30d1ed1%3A0x60b36d6304bf2fb8!2sShah%20Heritage%20Chs%20Limited%20Jairam%20Tukaram%20Tandel%20Marg%2C%20Seawoods%20West%2C%20Karave%20Nagar%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706!5e0!3m2!1sen!2sin!4v1717690000000!5m2!1sen!2sin"
-                    width="100%"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Shah Heritage Seawoods Location"
-                />
-            </div>
-        </>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.253993367129!2d73.01331777520397!3d19.01806428217047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c397f30d1ed1%3A0x60b36d6304bf2fb8!2sShah%20Heritage%20Chs%20Limited%20Jairam%20Tukaram%20Tandel%20Marg%2C%20Seawoods%20West%2C%20Karave%20Nagar%2C%20Seawoods%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706!5e0!3m2!1sen!2sin!4v1717690000000!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Shah Heritage Seawoods Location"
+        />
+      </div>
+    </>
+  );
+};
 
-    )
-}
-
-export default ContactUs
+export default ContactUs;

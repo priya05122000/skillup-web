@@ -173,7 +173,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-(--teal)/40 shadow-2xl p-10 max-w-lg w-full relative backdrop-blur-md rounded-md"
+              className="bg-(--teal)/40 shadow-2xl p-6 sm:p-10 max-w-lg w-full relative backdrop-blur-md rounded-md"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -207,7 +207,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                 about our services.
               </Paragraph>
               <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
-                <div className="flex flex-row gap-2  items-center">
+                <div className="flex flex-col sm:flex-row gap-2  sm:items-center">
                   <input
                     type="email"
                     name="email"

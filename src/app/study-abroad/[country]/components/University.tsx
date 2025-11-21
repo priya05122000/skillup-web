@@ -21,7 +21,7 @@ type UniversityProps = {
 const UniversityLogo: FC<{ university: University }> = ({ university }) => (
   <div
     key={university.id}
-    className="w-24 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
+    className="w-24 h-20 flex items-center justify-center transition-all duration-300 border border-(--bg-grey) rounded-md shadow-sm p-2"
   >
     <Image
       src={university.logo}
@@ -39,7 +39,7 @@ const University: FC<UniversityProps> = ({ universities }) => {
   return (
     <Section className="bg-(--teal) mt-8 md:mt-8 py-8">
       <div className="flex flex-col md:flex-row md:space-x-4 lg:space-x-6">
-        <div className="mb-10 md:w-2/7">
+        <div className="mb-10 md:w-2/7 text-(--white)">
           <Heading level={5} className="font-bold mb-3">
             Who Will You Learn With?
           </Heading>
@@ -51,7 +51,7 @@ const University: FC<UniversityProps> = ({ universities }) => {
           </Paragraph>
         </div>
         <div className="md:w-5/7">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
             {universities.map((university) => (
               <UniversityLogo university={university} key={university.id} />
             ))}

@@ -8,7 +8,7 @@ const page = () => {
         <div>
             <Banner />
             <Services />
-            <EnquireForm />
+            <EnquireForm imageSrc="/home/enquireform.jpg"/>
         </div>
     )
 }
