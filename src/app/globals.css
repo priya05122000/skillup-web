@@ -63,6 +63,10 @@
 /* -----------------------------------
    Body & Background
 ----------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--foreground);
   position: relative;
