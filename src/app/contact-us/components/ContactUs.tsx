@@ -20,7 +20,7 @@ const ContactUs = () => {
                 >
                   CONTACT
                 </Heading>
-                <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10 text-sm">
+                <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-20 text-sm">
                   <div>
                     <div>
                       <Paragraph size="base" className=" mb-5">
@@ -87,7 +87,7 @@ const ContactUs = () => {
                     General enquiries
                   </Paragraph>
                 </div>
-                <div className="mb-4 grid sm:grid-cols-2 font-semibold">
+                <div className="mb-4 grid sm:grid-cols-2 xl:gap-20 font-semibold">
                   <Paragraph size="xl" className="mt-1">
                     seawoods.skillup@gmail.com
                   </Paragraph>
@@ -96,9 +96,9 @@ const ContactUs = () => {
                   </Paragraph>
                 </div>
 
-                <div className="grid grid-cols-2 mt-8">
+                <div className="grid grid-cols-2 xl:gap-20 mt-8">
                   <div className="mb-4">
-                    <Span className="font-semibold">
+                    <Span className="font-semibold uppercase">
                       SeaWoods (W), <br /> Navi Mumbai
                     </Span>
                   </div>
@@ -113,7 +113,7 @@ const ContactUs = () => {
             </div>
             <div>
               <Image
-                src="/contact/contact.jpg"
+                src="/contact/contact.webp"
                 alt="Students high-fiving in front of university"
                 width={1000}
                 height={1000}

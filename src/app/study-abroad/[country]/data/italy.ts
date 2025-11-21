@@ -2,6 +2,8 @@ import { CountryData } from "../countryData";
 
 const italy: CountryData = {
   name: "New Zealand",
+  bannerSubtitle: "Explore education opportunities in New Zealand",
+  bannerTitle: "Study in New Zealand",
   capital: "Wellington",
   banner: "/study-abroad/newzealand-banner.jpg",
   overview:

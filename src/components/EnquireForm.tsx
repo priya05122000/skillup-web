@@ -66,7 +66,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 <FaGraduationCap />
               </span>
               <Heading level={4} className="text-white font-bold text-center mb-2">
-                Join With Us
+                Connect with us
               </Heading>
             </div>
             {/* FORM */}
