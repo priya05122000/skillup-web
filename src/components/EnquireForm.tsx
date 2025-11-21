@@ -41,7 +41,7 @@ const EnquireForm: FC = () => {
 
   return (
     <Section className="py-10 sm:py-20">
-      <div className="relative p-10 flex justify-center items-center rounded-md">
+      <div className="relative sm:p-10 flex justify-center items-center rounded-md">
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
@@ -53,7 +53,7 @@ const EnquireForm: FC = () => {
           />
         </div>
         {/* RIGHT FORM CONTAINER */}
-        <div className="relative z-10 w-full max-w-7xl flex justify-end">
+        <div className="relative z-10 w-full max-w-7xl flex justify-center lg:justify-end">
           <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
             <div className="flex flex-col items-center mb-6">

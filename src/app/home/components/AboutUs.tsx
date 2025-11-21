@@ -45,7 +45,7 @@ const ProgramList: React.FC = () => (
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="py-10 sm:py-20 " aria-label="About Us">
+    <div className="pt-20 pb-10 sm:pt-20 sm:pb-20" aria-label="About Us">
       <Section className="h-full ">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_1.2fr] gap-10 lg:gap-14 h-full mt-10 sm:mt-0 sm:px-10 xl:px-20">
           <div className="relative flex flex-col h-[60vh]  sm:h-full ">
@@ -114,7 +114,6 @@ const AboutUs: React.FC = () => {
               textColor="text-(--white)"
               hoverTextColor="group-hover:text-(--white)"
               skewColor="bg-(--teal)"
-              className="mt-4"
               icon={<MdArrowOutward />}
             >
               Free Consultation
