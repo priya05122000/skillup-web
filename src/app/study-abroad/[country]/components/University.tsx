@@ -34,9 +34,9 @@ const UniversityLogo: FC<{ university: University }> = ({ university }) => (
 const University: FC<UniversityProps> = ({ universities }) => {
   if (!universities?.length) return null;
   return (
-    <Section className="bg-(--teal) mt-8 md:mt-8 py-8">
+    <Section className="bg-(--teal) py-10 my-12 lg:my-14 ">
       <div className="flex flex-col md:flex-row md:space-x-4 lg:space-x-6">
-        <div className="mb-10 md:w-2/7 text-(--white)">
+        <div className="md:w-2/7 text-(--white)">
           <Heading level={5} className="font-bold mb-3">
             Study Across Global Universities
           </Heading>

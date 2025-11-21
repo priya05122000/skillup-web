@@ -85,7 +85,7 @@ const TabsData: FC<TabsDataProps> = ({ tabData }) => {
   // };
 
   return (
-    <Section className="py-10">
+    <Section className="">
       <div className="flex flex-col md:flex-row gap-8">
         {/* Sidebar Tabs */}
         <div className="w-full md:w-1/5 grid grid-cols-2 sm:flex sm:flex-col shadow-xs h-fit rounded-md border border-(--light-gray)">

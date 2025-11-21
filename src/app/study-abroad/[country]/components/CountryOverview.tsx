@@ -25,7 +25,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
   const quickFacts = data.quickFacts ?? [];
   const educationSystem = data.educationSystem ?? [];
   return (
-    <Section className="pt-8 lg:pt-12">
+    <Section className="pt-8 lg:pt-14">
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
         {/* Main Content */}
         <div className="w-full lg:w-3/5">
