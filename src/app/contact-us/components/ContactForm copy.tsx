@@ -1,15 +1,14 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, InputHTMLAttributes } from "react";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import { FaGraduationCap } from "react-icons/fa";
 import Image from "next/image";
-import Section from "./Section";
+import Section from "@/components/Section";
 import AnimatedButton from "@/components/AnimatedButton";
 import Dropdown from "@/components/Dropdown";
 import FormInput from "@/components/FormInput";
 import { CountryOption } from "@/types/forms";
-import { toast } from "react-hot-toast";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -35,59 +34,11 @@ const countryOptions: CountryOption[] = [
   { name: "Phillipines", code: "phillipines" },
 ];
 
-interface EnquireFormProps {
-  imageSrc: string;
-}
 
-const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
-  const [selectedProgram, setSelectedProgram] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState("");
-  const [openDropdownName, setOpenDropdownName] = useState("");
-
-  // Form state
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [agree, setAgree] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setSuccess(null);
-    setError(null);
-    try {
-      const res = await fetch("/api/send-enquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName,
-          email,
-          mobile,
-          course: selectedProgram,
-          country: selectedCountry,
-        }),
-      });
-      if (res.ok) {
-        toast.success("Your enquiry has been sent!");
-        setFullName("");
-        setEmail("");
-        setMobile("");
-        setSelectedProgram("");
-        setSelectedCountry("");
-        setAgree(false);
-      } else {
-        setError("Failed to send enquiry. Please try again.");
-        console.error("Failed to send enquiry:", await res.text());
-        console.error(error); 
-      }
-    } catch {
-      setError("Failed to send enquiry. Please try again.");
-    }
-    setSubmitting(false);
-  };
+const ContactForm: FC = () => {
+  const [selectedProgram, setSelectedProgram] = React.useState("");
+  const [selectedCountry, setSelectedCountry] = React.useState("");
+  const [openDropdownName, setOpenDropdownName] = React.useState("");
 
   return (
     <Section className="py-10 sm:py-20">
@@ -95,7 +46,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
-            src={imageSrc}
+            src="/home/enquireform.jpg"
             alt="Join with Us"
             fill
             className="object-cover w-full h-full rounded-md"
@@ -110,40 +61,15 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
               <span className="text-6xl mb-2 text-white">
                 <FaGraduationCap />
               </span>
-              <Heading
-                level={5}
-                className="text-white font-bold text-center mb-2"
-              >
-                Connect with Us
+              <Heading level={4} className="text-white font-bold text-center mb-2">
+                Join With Us
               </Heading>
             </div>
             {/* FORM */}
-            <form
-              className="w-full flex flex-col gap-4"
-              onSubmit={handleSubmit}
-            >
-              <FormInput
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
-              <FormInput
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <FormInput
-                type="tel"
-                name="mobile"
-                placeholder="Mobile Number"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                required
-              />
+            <form className="w-full flex flex-col gap-4">
+              <FormInput type="text" name="fullName" placeholder="Full Name" />
+              <FormInput type="email" name="email" placeholder="Email" />
+              <FormInput type="tel" name="mobile" placeholder="Mobile Number" />
               <Dropdown
                 options={courseOptions}
                 selected={selectedProgram}
@@ -161,13 +87,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 openName={openDropdownName}
               />
               <label className="flex items-center gap-2 text-xs text-white">
-                <input
-                  type="checkbox"
-                  required
-                  className="accent-(--orange)"
-                  checked={agree}
-                  onChange={(e) => setAgree(e.target.checked)}
-                />
+                <input type="checkbox" required className="accent-(--orange)" />
                 You authorize us to call, email, or SMS you at any time.
               </label>
               <AnimatedButton
@@ -176,16 +96,9 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 textColor="text-(--white)"
                 hoverTextColor="group-hover:text-(--orange)"
                 skewColor="bg-(--orange)"
-                disabled={submitting}
               >
-                {submitting ? "Submitting..." : "Submit"}
+                Submit
               </AnimatedButton>
-              {success && (
-                <Paragraph className="text-green-300 mt-2">{success}</Paragraph>
-              )}
-              {error && (
-                <Paragraph className="text-red-300 mt-2">{error}</Paragraph>
-              )}
             </form>
           </div>
         </div>
@@ -194,4 +107,4 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
   );
 };
 
-export default EnquireForm;
+export default ContactForm;

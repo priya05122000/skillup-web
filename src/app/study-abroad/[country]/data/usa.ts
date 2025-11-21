@@ -1,43 +1,43 @@
 import { CountryData } from "../countryData";
 
-const uk: CountryData = {
-  name: "United Kingdom",
-  bannerTitle: "Study in UK",
-  bannerSubtitle: "Unlock Your Future with a UK Education",
-  capital: "London",
-  banner : "/study-abroad/uk/banner.jpg",
+const usa: CountryData = {
+  name: "United States",
+  bannerTitle: "Study in USA",
+  bannerSubtitle: "Open New Doors with USA Studies",
+  capital: "Washington, D.C.",
+  banner: "/study-abroad/usa/banner.jpg",
   overview:
-    "The United Kingdom is home to some of the world’s oldest and most prestigious universities. Renowned institutions like Oxford, Cambridge, and Imperial College London are celebrated for their academic excellence. Whether you seek a comprehensive undergraduate or postgraduate program, the United Kingdom universities offer a range of options, backed by high rankings and international recognition",
-  overviewImage: "/study-abroad/uk/uk.png",
-  studentImage:"/study-abroad/uk/students.png",
+    "The USA education system is a top choice for international students due to its robust economy, diverse campus life, and wide range of flexible and high-quality academic programs. From dynamic cities to stunning national parks, the U.S. promises an enriching experience beyond academics. This blend of cultural diversity, cutting-edge research, and vibrant student environment makes studying in America truly captivating.",
+  overviewImage: "/study-abroad/usa/us.png",
+  studentImage: "/study-abroad/usa/students.png",
   general:
-    "The country’s rich history, vibrant student cities, and welcoming multicultural atmosphere make it an ideal destination for students seeking academic excellence and global exposure.",
-  noOfUniversities: 45,
-  temp: "5°C in winter to 23°C in summer",
-  languages: ["English"],
-  currency: "British Pound Sterling (GBP)",
+    "The United States of America is a federal republic consisting of 50 states, with its capital in Washington, D.C. It is the world’s third-largest country by land area and population, known for its diverse culture, strong economy, and democratic system of government.",
+  noOfUniversities: 3126,
+  temp: "Cold semi-arid- interior northwest; warm to hot desert & semi-arid-southwest",
+  languages: ["No federal official language"],
+  currency: "United States Dollar (USD)",
   educationSystem: [
-    "The United Kingdom education system offers flexible options for students who wish to study in the UK without IELTS.",
-    "Many universities accept alternative proof of English proficiency, such as medium of instruction certificates, good English marks in previous studies, or their own English tests.",
-    "This makes it easier for international students to pursue quality education in the UK without the hurdle of IELTS, opening doors to world-class learning and career opportunities.",
+    "The USA education system includes 12 years of primary and secondary schooling.",
+    "After high school, students progress to undergraduate programs.",
+    "Further studies include graduate school, post-graduation, and PhD programs.",
   ],
   quickFacts: [
-    { label: "Population", value: "67 million" },
-    { label: "Area", value: "243,610 km²" },
-    { label: "Time Zone", value: "UTC+0 to UTC+1" },
+    { label: "Population", value: "334 million" },
+    { label: "Area", value: "9.83 million km²" },
+    { label: "Time Zone", value: "UTC-5 to UTC-10" },
   ],
   tabData: [
     {
-      id:"programs",
+      id: "programs",
       label: "Programs",
       title: "Popular Programs",
       subtitle: "",
       paragraphs: [
-        "Universities offer degree programs, skill-based training, and diploma options at different levels.",
-        "Sandwich programs run for four years and include a full year of structured industry experience.",
-        "First degree programs usually take three to four years to finish.",
-        "Diplomas and vocational studies last one to two years, with certificates granted by the Vocational and Technical Education Councils.",
-        "Master’s programs run for one or two years and may follow either supervised independent research or a taught academic route.",
+        "Associate degree: Awarded after about two years at a community college, suitable for those seeking a fast-track or affordable study path.",
+        "Bachelor’s degree: A four-year undergraduate qualification from a college or university, offering depth in a selected major.",
+        "Graduate degree: Advanced studies available after a bachelor’s, with choices in arts, sciences, business, and many other fields.​",
+        "Master’s degree: Postgraduate programs usually lasting two years, designed for expertise in specialized disciplines.​",
+        "Doctorate: Research-focused qualification pursued after a master’s, typically taking three to six years to complete depending on the field",
       ],
     },
     {
@@ -46,11 +46,11 @@ const uk: CountryData = {
       title: "Criteria",
       subtitle: "",
       paragraphs: [
-        "Many students think IELTS is required, yet several UK universities offer other ways to prove English ability.",
-        "Studying in an English medium school can help, as some universities accept a Medium of Instruction certificate as proof.",
-        "Strong marks in Class 12 English can serve as evidence of language skills for various institutions.",
-        "A short online interview through platforms like Skype or Teams may be used to check your spoken English.",
-        "Some universities conduct their own language tests instead of asking for IELTS, TOEFL, or PTE.",
+        "Most universities in the USA require an IELTS score of 6.0 to 7.5 or a TOEFL score of 70 to 100, depending on the institution’s standards.​",
+        "Top-tier universities often need a higher score, such as IELTS 7.0-7.5 or TOEFL 100-110, for competitive programs.​",
+        "Some universities offer conditional admission if your scores are slightly below their minimum but may require English language courses first.",
+        "Score validity for IELTS and TOEFL is generally two years, so you must ensure your scores are current for application submissions.​",
+        "Other accepted English proficiency tests include PTE Academic and Duolingo, but IELTS and TOEFL remain the most widely recognized.",
       ],
     },
     {
@@ -59,14 +59,13 @@ const uk: CountryData = {
       title: "Tuition",
       subtitle: "",
       paragraphs: [
-        "Annual tuition usually comes to about 11,400 GBP",
-        "Fees differ from one university to another",
-        "Living costs in Inner London are about 13,347 GBP for nine months",
-        "Living costs in Outer London are about 10,224 GBP for nine months",
-        "Total expenses change based on where you study and stay",
+        "Tuition fees at private institutions generally range between $15,000 and $25,000 per year, while state institutions charge $10,000 to $20,000 annually.",
+        "Public universities often offer lower tuition fees compared to private universities, providing affordable options for students.",
+        "Estimated living expenses, including accommodation, food, transport, and other costs, range from $10,000 to $16,000 per year.",
+        "The overall cost of education varies depending on the university, program, and location within the USA.",
+        "Budget planning should include both tuition and cost of living to prepare for the total expenses of studying abroad.",
       ],
     },
-
   ],
   universities: [
     { id: 1, name: "Partner 1", logo: "/home/partner13.png" },
@@ -84,4 +83,4 @@ const uk: CountryData = {
   ],
 };
 
-export default uk;
+export default usa;

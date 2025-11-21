@@ -130,7 +130,7 @@ const Testimonials: React.FC = () => {
                   />
                 </div>
                 <div className="absolute top-0 left-0  -translate-x-1/2 lg:-translate-x-1/4 xl:-translate-x-1/2 translate-y-10 z-50">
-                  <div className="bg-white px-4 sm:px-8 py-2 rounded-md">
+                  <div className="bg-white px-4 sm:px-8 py-2 rounded-md text-center">
                     <Heading level={5} className="text-(--teal) font-bold text-center">
                       +1200
                     </Heading>

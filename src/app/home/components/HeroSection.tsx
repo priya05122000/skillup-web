@@ -4,7 +4,8 @@ import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import Image from "next/image";
 import { MdArrowOutward, MdOutlineWhatsapp } from "react-icons/md";
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { EnquiryFormContext } from "@/app/ClientLayout";
 import AnimatedButton from "@/components/AnimatedButton";
 import PopupForm from "@/components/PopupForm";
 import { AnimatePresence } from "framer-motion";
@@ -76,13 +77,20 @@ const slides = [
 ];
 
 const HeroSection: React.FC = () => {
-  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
-  // Assign the onClick for 'Apply Now' after state is available
-  const heroButtonsWithClick = heroButtons.map(btn =>
-    btn.children === "Apply Now"
-      ? { ...btn, onClick: () => setShowEnquiryForm(true) }
-      : btn
-  );
+  const enquiryFormContext = useContext(EnquiryFormContext);
+  const setShowEnquiryForm = enquiryFormContext?.setShowEnquiryForm;
+  const heroButtonsWithClick = heroButtons.map((btn) => {
+    if (btn.children === "Apply Now" && setShowEnquiryForm) {
+      return { ...btn, onClick: () => setShowEnquiryForm(true) };
+    }
+    if (btn.children === "Chat with Us") {
+      return {
+        ...btn,
+        onClick: () => window.open("https://wa.me/99304 94883", "_blank"),
+      };
+    }
+    return btn;
+  });
 
   return (
     <section
@@ -142,16 +150,10 @@ const HeroSection: React.FC = () => {
                       skewColor="bg-(--orange)"
                       icon={<MdArrowOutward />}
                       className="px-4 py-3"
-                      onClick={() => setShowEnquiryForm(true)}
+                      onClick={setShowEnquiryForm ? () => setShowEnquiryForm(true) : undefined}
                     >
                       {slide.buttonText}
                     </AnimatedButton>
-
-                    <AnimatePresence>
-                      {showEnquiryForm && (
-                        <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
-                      )}
-                    </AnimatePresence>
                   </div>
                 </div>
               </Section>
@@ -179,6 +181,6 @@ const HeroSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default HeroSection;
