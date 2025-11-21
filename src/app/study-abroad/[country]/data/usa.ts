@@ -3,6 +3,7 @@ import { CountryData } from "../countryData";
 const usa: CountryData = {
   name: "United States",
   capital: "Washington, D.C.",
+  banner: "/study-abroad/usa-banner.jpg",
   overview:
     "The United States is a diverse and dynamic country known for its rich cultural heritage, technological innovation, and world-class educational institutions. It offers a wide range of opportunities for international students seeking quality education and vibrant campus life.",
   overviewImage: "/study-abroad/usa.png",

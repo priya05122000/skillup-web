@@ -76,7 +76,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
         {/* Sidebar */}
         <div className="w-full lg:w-2/5 md:bg-white md:p-5 rounded-md md:shadow-md">
           <Image
-            src={data.image}
+            src={data.studentImage}
             alt={`${data.name} Students`}
             className="w-full h-auto md:h-[30vh] rounded-md shadow-md object-cover"
             width={800}

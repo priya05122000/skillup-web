@@ -41,10 +41,10 @@ const Partners: React.FC = () => {
     <Section>
       <div className="py-10 sm:py-20 sm:px-10 xl:px-20" aria-label="About Us">
         <div className="h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-20 h-full">
             <div className="flex flex-col justify-center h-full ">
               <Heading level={4} className="font-bold leading-tight ">
-                Global network of universities
+                Global Network of Universities
               </Heading>
               <Paragraph size="lg" className="mt-4 text-justify">
                 Our partnering universities and institutions span key destinations across the globe, opening doors for students. Skill Up Study Abroad Agency works closely with top academic institutions to offer wide-ranging choices and expert guidance. These trusted global alliances ensure world-class educational opportunities and personalized student support.

@@ -14,7 +14,7 @@ export default function Intake() {
             <div className="absolute -top-10 sm:-top-15 lg:left-8 xl:left-14 z-10">
               <div className="bg-foreground p-3 md:p-4 rounded-md">
                 <Image
-                  src="/home/destination3.jpg"
+                  src="/about-us/intake.png"
                   alt="Luxury Apartment"
                   width={450}
                   height={600}

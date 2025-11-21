@@ -24,7 +24,7 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-      <Banner bannerTitle={data.bannerTitle} bannerSubtitle={data.bannerSubtitle} />
+      <Banner bannerTitle={data.bannerTitle} bannerSubtitle={data.bannerSubtitle} banner={data.banner} />
       <CountryOverview data={data} />
       <WhyStudy topics={data.topics ?? []} name={data.name} />
       <University universities={data.universities ?? []} />

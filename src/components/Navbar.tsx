@@ -20,13 +20,13 @@ export const STUDY_ABROAD_COUNTRIES: Country[] = [
   { name: "United States", code: "usa" },
   { name: "Australia", code: "australia" },
   { name: "Ireland", code: "ireland" },
-  { name: "Netherlands", code: "netherlands" },
+  { name: "Netherlands", code: "netherland" },
   { name: "Germany", code: "germany" },
   { name: "Italy", code: "italy" },
   { name: "Malta", code: "malta" },
   { name: "Finland", code: "finland" },
   { name: "France", code: "france" },
-  { name: "New Zealand", code: "new-zealand" },
+  { name: "New Zealand", code: "newzealand" },
 ];
 
 const Navbar = () => {

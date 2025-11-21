@@ -3,9 +3,10 @@ export interface CountryData {
   bannerTitle: string;
   bannerSubtitle: string;
   capital: string;
+  banner: string;
   overview: string;
   overviewImage: string;
-  image: string;
+  studentImage: string;
   general: string;
   noOfUniversities: number;
   temp: string;
