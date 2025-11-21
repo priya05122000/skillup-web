@@ -10,6 +10,7 @@ import australia from "./australia";
 import netherland from "./netherland";
 import newzealand from "./newzealand";
 import finland from "./finland";
+import italy from "./italy";
 
 const countryData: Record<string, CountryData> = {
   usa,
@@ -17,6 +18,7 @@ const countryData: Record<string, CountryData> = {
   uk,
   germany,
   ireland,
+  italy,
   france,
   malta,
   australia,

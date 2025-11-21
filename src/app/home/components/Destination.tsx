@@ -84,8 +84,9 @@ const Destination = () => {
         <div className="pt-10 sm:pt-20 sm:px-10 xl:px-20">
           <div className="max-w-3xl mx-auto">
             <Heading level={4} className="font-bold leading-tight text-center">
-              <span className="text-(--teal)">Explore</span> MBBS, Nursing and
-              More in HealthCare
+              {/* <span className="text-(--teal)">Explore</span> MBBS, Nursing and
+              More in HealthCare */}
+              Pick the <span className="text-(--teal)">Place</span> That Speaks to You
             </Heading>
           </div>
         </div>
