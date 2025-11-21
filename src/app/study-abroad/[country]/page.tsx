@@ -24,12 +24,12 @@ export default function Page({ params }: PageProps) {
 
   return (
     <>
-      <Banner countryName={data.name} banner={data.banner} />
+      <Banner bannerTitle={data.bannerTitle} bannerSubtitle={data.bannerSubtitle} banner={data.banner} />
       <CountryOverview data={data} />
       <WhyStudy topics={data.topics ?? []} name={data.name} />
       <University universities={data.universities ?? []} />
       <TabsData tabData={data.tabData} />
-      <EnquireForm /> 
+      <EnquireForm imageSrc="/home/enquireform.jpg"/> 
     </>
   );
 }

@@ -6,7 +6,7 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import React from "react";
 
-const Banner: React.FC<{ countryName: string, banner: string }> = ({ countryName, banner }) => {
+const Banner: React.FC<{ bannerTitle: string; bannerSubtitle: string; banner: string }> = ({ bannerTitle, bannerSubtitle, banner }) => {
   return (
     <section
       className="relative h-[250px] md:h-[300px] lg:h-[400px] w-full"
@@ -28,10 +28,10 @@ const Banner: React.FC<{ countryName: string, banner: string }> = ({ countryName
         <Section className="text-center text-(--white) w-full ">
           <div className="l">
             <Heading level={3} className="mb-4">
-              Study in {countryName}
+              {bannerTitle}
             </Heading>
             <Paragraph size="lg" className="italic font-medium tracking-wide">
-              Empowering Wide Range of Learning Opportunities
+              {bannerSubtitle}
             </Paragraph>
           </div>
         </Section>
