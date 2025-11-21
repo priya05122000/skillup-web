@@ -6,21 +6,30 @@ import React, {
   useEffect,
   ChangeEvent,
   FormEvent,
+  createContext,
+  useMemo,
 } from "react";
+export const EnquiryFormContext = createContext<
+  | {
+      showEnquiryForm: boolean;
+      setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
+    }
+  | undefined
+>(undefined);
 import { AnimatePresence, motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "@/components/Navbar";
 import AOSInit from "@/components/AOSInit";
 import Footer from "@/components/Footer";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaGraduationCap, FaHeadset } from "react-icons/fa";
+import { FaHeadset } from "react-icons/fa";
 import Link from "next/link";
 import Paragraph from "@/components/Paragraph";
 import PopupForm from "@/components/PopupForm";
-import { CountryOption } from "@/types/forms";
 import AnimatedButton from "@/components/AnimatedButton";
 import Heading from "@/components/Heading";
 
@@ -32,42 +41,18 @@ const CTA_BUTTONS = [
   {
     icon: <PiPhoneCallFill className="w-7 h-7 shrink-0" />,
     label: "Call",
-    href: "tel:+1234567890",
+    href: "tel:+99304 94883",
   },
   {
     icon: <IoLogoWhatsapp className="w-7 h-7 shrink-0" />,
     label: "Whatsapp",
-    href: "https://wa.me/1234567890",
+    href: "https://wa.me/99304 94883",
   },
   {
     icon: <FaHeadset className="w-7 h-7 shrink-0" />,
     label: "Enquiry",
     href: "/contact-us",
   },
-];
-
-const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
-const countryOptions: CountryOption[] = [
-  { name: "Canada", code: "canada" },
-  { name: "Australia", code: "australia" },
-  { name: "Ireland", code: "ireland" },
-  { name: "Germany", code: "germany" },
-  { name: "United States", code: "usa" },
-  { name: "Denmark", code: "denmark" },
-  { name: "Bulgaria", code: "bulgaria" },
-  { name: "Malaysia", code: "malaysia" },
-  { name: "Russia", code: "russia" },
-  { name: "Singapore", code: "singapore" },
-  { name: "United Kingdom", code: "uk" },
-  { name: "New Zealand", code: "new-zealand" },
-  { name: "Sweden", code: "sweden" },
-  { name: "Switzerland", code: "switzerland" },
-  { name: "Italy", code: "italy" },
-  { name: "South Korea", code: "south-korea" },
-  { name: "France", code: "france" },
-  { name: "Netherlands", code: "netherlands" },
-  { name: "UAE", code: "uae" },
-  { name: "Phillipines", code: "phillipines" },
 ];
 
 const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
@@ -104,20 +89,33 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const handleSubscribe = async (e: FormEvent) => {
     e.preventDefault();
     setPopupSubmitting(true);
-    // Add your subscribe logic here
-    toast.success("Subscribed successfully!");
-    setEmail("");
-    setShowPopup(false);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        toast.success("Subscribed successfully!");
+        setEmail("");
+        setShowPopup(false);
+      } else {
+        toast.error("Failed to subscribe. Please try again.");
+      }
+    } catch {
+      toast.error("Failed to subscribe. Please try again.");
+    }
     setPopupSubmitting(false);
   };
 
   const handleClosePopup = () => setShowPopup(false);
-  const [selectedProgram, setSelectedProgram] = React.useState("");
-  const [selectedCountry, setSelectedCountry] = React.useState("");
-  const [openDropdownName, setOpenDropdownName] = React.useState("");
 
+  const contextValue = useMemo(
+    () => ({ showEnquiryForm, setShowEnquiryForm }),
+    [showEnquiryForm]
+  );
   return (
-    <>
+    <EnquiryFormContext.Provider value={contextValue}>
       <AOSInit />
 
       <Navbar />
@@ -138,14 +136,17 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
               btn.href.startsWith("http") ? "noopener noreferrer" : undefined
             }
             className="group relative w-12 hover:w-36 h-12 bg-(--orange) shadow-xl text-(--white) rounded-l-md font-bold flex justify-start items-center p-2 pr-6 duration-700 overflow-hidden cursor-pointer no-underline"
-            onClick={
-              btn.label === "Enquiry"
-                ? (e) => {
-                    e.preventDefault();
-                    setShowEnquiryForm(true);
-                  }
-                : undefined
-            }
+            onClick={(e) => {
+              if (btn.label === "Enquiry") {
+                e.preventDefault();
+                setShowEnquiryForm(true);
+              } else if (btn.label === "Call" || btn.label === "Whatsapp") {
+                window.open(
+                  btn.href,
+                  btn.label === "Whatsapp" ? "_blank" : "_self"
+                );
+              }
+            }}
           >
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
@@ -235,9 +236,12 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       </AnimatePresence>
 
       <AnimatePresence>
-        {showEnquiryForm && <PopupForm setShowEnquiryForm={setShowEnquiryForm} />}
+        {showEnquiryForm && (
+          <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
+        )}
       </AnimatePresence>
-    </>
+      <Toaster position="top-right" reverseOrder={false} />
+    </EnquiryFormContext.Provider>
   );
 };
 

@@ -7,6 +7,8 @@ import Paragraph from "./Paragraph";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { usePathname } from "next/navigation";
+import PopupForm from "@/components/PopupForm";
+import { AnimatePresence } from "framer-motion";
 
 // Reusable type and constant for study abroad countries
 export type Country = {
@@ -30,6 +32,7 @@ export const STUDY_ABROAD_COUNTRIES: Country[] = [
 ];
 
 const Navbar = () => {
+  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
   const [menuOpen, setMenuOpen] = useState<{
     main: boolean;
     studyAbroad: boolean;
@@ -153,7 +156,7 @@ const Navbar = () => {
             <div className="relative group">
               <button
                 className={`hover:text-(--orange)  flex items-center gap-1 ${
-                  pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
+                  typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
                 }`}
               >
                 <Paragraph size="base">Study Abroad</Paragraph>
@@ -237,7 +240,7 @@ const Navbar = () => {
               className={`w-full flex justify-center items-center  gap-1 px-4  ${
                 menuOpen.studyAbroad ? "pb-2" : "pb-0"
               }  bg-transparent text-(--white)  rounded focus:outline-none ${
-                pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
+                typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
               }`}
               onClick={() =>
                 setMenuOpen((prev) => ({
@@ -251,7 +254,7 @@ const Navbar = () => {
               <Paragraph
                 size="base"
                 className={`${
-                  pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
+                  typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
                 }`}
               >
                 Study Abroad
@@ -302,7 +305,7 @@ const Navbar = () => {
 
       {/* Right: Free consultation */}
       <div className="hidden lg:flex items-center justify-end  h-full ">
-        <button className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
+        <button className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group" onClick={()=> setShowEnquiryForm(true)}>
           <Paragraph
             size="base"
             className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
@@ -312,6 +315,11 @@ const Navbar = () => {
           <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--white) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
         </button>
       </div>
+      <AnimatePresence>
+        {showEnquiryForm && (
+          <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
+        )}
+      </AnimatePresence>
     </header>
   );
 };
