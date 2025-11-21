@@ -4,7 +4,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import React from "react";
 
-const Banner: React.FC<{ countryName: string }> = ({ countryName }) => {
+const Banner: React.FC<{ bannerTitle: string; bannerSubtitle: string }> = ({ bannerTitle, bannerSubtitle }) => {
   return (
     <section className="relative w-full h-[30vh] xl:h-[40vh] overflow-hidden flex items-center justify-center">
       <div
@@ -18,10 +18,10 @@ const Banner: React.FC<{ countryName: string }> = ({ countryName }) => {
       {/* Overlay Text */}
       <div className="relative text-center text-(--white) px-4">
         <Heading level={3} className="mb-4">
-          Study in {countryName}
+          {bannerTitle}
         </Heading>
         <Paragraph size="lg" className="italic font-medium tracking-wide">
-          Empowering Wide Range of Learning Opportunities
+          {bannerSubtitle}
         </Paragraph>
       </div>
     </section>

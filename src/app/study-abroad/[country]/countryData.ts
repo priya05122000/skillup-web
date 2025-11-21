@@ -1,8 +1,11 @@
 export interface CountryData {
   name: string;
+  bannerTitle: string;
+  bannerSubtitle: string;
   capital: string;
   overview: string;
   overviewImage: string;
+  image: string;
   general: string;
   noOfUniversities: number;
   temp: string;

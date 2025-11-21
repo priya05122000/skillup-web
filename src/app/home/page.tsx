@@ -19,7 +19,7 @@ const HomePage = () => {
       <Destination />
       <Testimonials />
       <Partners />
-      <EnquireForm />
+      <EnquireForm imageSrc="/home/enquireform.jpg"/>
     </div>
   );
 };

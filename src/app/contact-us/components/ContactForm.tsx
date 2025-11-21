@@ -4,7 +4,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import { FaGraduationCap } from "react-icons/fa";
 import Image from "next/image";
-import Section from "./Section";
+import Section from "@/components/Section";
 import AnimatedButton from "@/components/AnimatedButton";
 import Dropdown from "@/components/Dropdown";
 import FormInput from "@/components/FormInput";
@@ -35,11 +35,7 @@ const countryOptions: CountryOption[] = [
 ];
 
 
-interface EnquireFormProps {
-  imageSrc: string;
-}
-
-const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
+const ContactForm: FC = () => {
   const [selectedProgram, setSelectedProgram] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState("");
   const [openDropdownName, setOpenDropdownName] = React.useState("");
@@ -50,7 +46,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
-            src={imageSrc}
+            src="/home/enquireform.jpg"
             alt="Join with Us"
             fill
             className="object-cover w-full h-full rounded-md"
@@ -111,4 +107,4 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
   );
 };
 
-export default EnquireForm;
+export default ContactForm;
