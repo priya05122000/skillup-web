@@ -36,7 +36,7 @@ const services: Service[] = [
   {
     title: "University/College Application Processing",
     briefing: "Expert Guidance For Applications",
-    image: "/home/university.png",
+    image: "/services/university.png",
     description:
       "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
   },
