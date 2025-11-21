@@ -10,22 +10,22 @@ export default function Intake() {
       <section className="flex flex-col lg:flex-row items-center justify-center py-10 sm:py-20 pt-20 sm:pt-30">
         <div className="relative bg-(--teal) w-full rounded-md shadow-lg flex flex-col lg:flex-row">
           {/* Left image section */}
-          <div className="lg:w-2/5 relative flex justify-center items-center p-4 md:p-8 mb-80 sm:mb-90 lg:mb-0">
-            <div className="absolute -top-10 sm:-top-15 lg:left-8 z-10">
+          <div className="lg:w-4/9 xl:w-3/7 relative flex justify-center items-center p-4 md:p-8 mb-80 sm:mb-90 lg:mb-0">
+            <div className="absolute -top-10 sm:-top-15 lg:left-8 xl:left-14 z-10">
               <div className="bg-foreground p-3 md:p-4 rounded-md">
                 <Image
                   src="/home/destination3.jpg"
                   alt="Luxury Apartment"
                   width={450}
                   height={600}
-                  className="object-cover h-[60vh] w-62 sm:h-[70vh] sm:w-[500px] lg:w-md lg:h-screen xl:h-[75vh] rounded-md"
+                  className="object-cover h-[60vh] w-62 sm:h-[70vh] sm:w-[500px] lg:w-md lg:h-screen xl:h-[550px] rounded-md"
                 />
               </div>
             </div>
           </div>
 
           {/* Right info section */}
-          <div className="lg:w-3/5 px-6 md:px-8 py-8 flex flex-col text-(--white)">
+          <div className="lg:w-5/9 xl:w-4/7 px-6 md:px-8 py-8 flex flex-col text-(--white)">
             {/* Title */}
             <Heading level={6} className="mb-2">
               January Intake
