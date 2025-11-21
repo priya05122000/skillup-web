@@ -26,7 +26,7 @@ const programs: Program[] = [
   {
     id: 1,
     title: "Proven Global Expertise",
-    image: "/about-us/course1.png",
+    image: "/about-us/global-expertise.jpg",
     lessons: "10 lessons",
     students: "300 students",
   },
@@ -40,7 +40,7 @@ const programs: Program[] = [
   {
     id: 3,
     title: "Vast University Network",
-    image: "/about-us/course3.png",
+    image: "/about-us/vast-university.png",
     lessons: "12 lessons",
     students: "200 students",
   },

@@ -3,6 +3,7 @@ import { CountryData } from "../countryData";
 const canada: CountryData = {
   name: "Canada",
   capital: "Ottawa",
+  banner: "/study-abroad/canada-banner.jpg",
   overview:
     "Canada is a hugely popular choice as an overseas study destination for a host of reasons. From secure environment to first-rate education system, abundant opportunities to buzzing city life and picturesque locations, Canada offers everything you could possibly want from life.",
   overviewImage: "/study-abroad/canada.png",

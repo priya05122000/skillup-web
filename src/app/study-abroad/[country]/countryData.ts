@@ -1,6 +1,7 @@
 export interface CountryData {
   name: string;
   capital: string;
+  banner: string;
   overview: string;
   overviewImage: string;
   general: string;

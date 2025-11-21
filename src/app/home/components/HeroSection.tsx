@@ -42,40 +42,40 @@ const heroButtons = [
 
 const slides = [
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider1.jpg",
     title: "Skill Up Study Abroad Mumbai",
-    heading: "Leading You to Premier Universities Across the Globe",
+    heading: "Leading You to Global Universities",
     paragraph:
       "Expand your future at 500+ top-rated universities and colleges worldwide.",
-    buttonText: "Reserve your spot for a consultation",
+    buttonText: "Reserve your spot",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider2.jpg",
     title: "Skill Up Study Abroad Agency",
     heading: "Study in CANADA",
     paragraph: "Pursue your education in Canada’s world-class institutions",
-    buttonText: "Book your consultation now",
+    buttonText: "Book your consultation",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider3.png",
     title: "Skill Up Study Abroad Mumbai",
     heading: "Study in IRELAND",
     paragraph: "Choose from Ireland’s elite group of 9 leading universities.",
-    buttonText: "Set up your appointment today",
+    buttonText: "Set up your appointment",
   },
   {
-    img: "/home/hero-image.jpg",
+    img: "/home/slider4.png",
     title: "Skill Up Study Abroad Agency",
     heading: "Rise To The Top By Learning Smarter!",
     paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
-    buttonText: "Reserve your spot for a consultation",
+    buttonText: "Reserve your spot ",
   },
 ];
 
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="relative h-screen sm:h-[calc(90vh-80px)] w-full mb-20"
+      className="relative h-[75vh] sm:h-[calc(90vh-80px)] w-full mb-20"
       aria-label="Hero"
     >
       <Swiper
@@ -107,7 +107,7 @@ const HeroSection: React.FC = () => {
                 aria-hidden="true"
               />
             </div>
-            <div className="relative z-10 flex h-full items-center justify-center">
+            <div className="relative z-10 flex h-full items-start sm:items-center justify-center pt-12 sm:pt-0">
               <Section className="text-left text-(--white) w-full ">
                 <div className="max-w-lg lg:max-w-2xl">
                   <Paragraph

@@ -3,6 +3,7 @@ import { CountryData } from "../countryData";
 const uk: CountryData = {
   name: "United Kingdom",
   capital: "London",
+  banner : "/study-abroad/uk-banner.jpg",
   overview:
     "The United Kingdom is home to some of the world's oldest and most prestigious universities. It offers a rich cultural experience and a diverse range of study programs.",
   overviewImage: "/study-abroad/uk.png",
