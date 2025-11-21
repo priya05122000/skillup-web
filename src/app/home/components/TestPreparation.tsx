@@ -80,6 +80,7 @@ const TestPreparation: React.FC = () => {
         className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black/70"
         aria-hidden="true"
       /> */}
+      
       <Section>
         <div className="max-w-3xl mx-auto">
           <Heading
