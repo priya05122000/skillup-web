@@ -89,7 +89,7 @@ const TestPreparation: React.FC = () => {
             Test Preparation
           </Heading>
           <Paragraph size="lg" className="mt-4 text-white text-center">
-            Excel in TOEFL, OET, IELTS, GRE, and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. 
+            Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. 
           </Paragraph>
         </div>
         <div className="max-w-4xl mx-auto">

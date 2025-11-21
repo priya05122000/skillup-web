@@ -2,6 +2,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import AnimatedButton from "@/components/AnimatedButton";
@@ -68,7 +69,7 @@ const AboutUs: React.FC = () => {
                   alt="Student talking with professor outside"
                   layout="responsive"
                   width={500}
-                  height={350}  
+                  height={350}
                   className="object-cover h-full! rounded-md"
                 />
               </div>
@@ -109,15 +110,17 @@ const AboutUs: React.FC = () => {
               care
             </Paragraph>
             <ProgramList />
-            <AnimatedButton
-              bgColor="bg-(--orange)"
-              textColor="text-(--white)"
-              hoverTextColor="group-hover:text-(--white)"
-              skewColor="bg-(--teal)"
-              icon={<MdArrowOutward />}
-            >
-              Free Consultation
-            </AnimatedButton>
+            <Link href="/about-us">
+              <AnimatedButton
+                bgColor="bg-(--orange)"
+                textColor="text-(--white)"
+                hoverTextColor="group-hover:text-(--white)"
+                skewColor="bg-(--teal)"
+                icon={<MdArrowOutward />}
+              >
+                About Us
+              </AnimatedButton>
+            </Link>
           </div>
         </div>
       </Section>

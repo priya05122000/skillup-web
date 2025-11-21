@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   images: {
+    disableStaticImages: true,
     qualities: [100, 80],
     remotePatterns: [
       {

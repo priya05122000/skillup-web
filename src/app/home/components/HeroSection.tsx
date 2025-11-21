@@ -75,7 +75,7 @@ const slides = [
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="relative h-[75vh] sm:h-[calc(90vh-80px)] w-full mb-20"
+      className="relative h-[65vh] sm:h-[calc(90vh-80px)] w-full mb-20"
       aria-label="Hero"
     >
       <Swiper
@@ -123,14 +123,14 @@ const HeroSection: React.FC = () => {
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">
                     {slide.paragraph}
                   </Paragraph>
-                  <div className="my-8 flex gap-4">
+                  <div className="my-8  gap-4 hidden sm:flex">
                     <AnimatedButton
                       bgColor="bg-(--white)"
                       textColor="text-(--white)"
                       hoverTextColor="group-hover:text-(--teal)"
                       skewColor="bg-(--orange)"
                       icon={<MdArrowOutward />}
-                      className="px-4 py-3"
+                      className="px-4 py-3 "
                     >
                       {slide.buttonText}
                     </AnimatedButton>
@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
+      <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
           {heroButtons.map((btn, idx) => (
             <AnimatedButton
