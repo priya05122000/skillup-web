@@ -4,8 +4,10 @@ import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import Image from "next/image";
 import { MdArrowOutward, MdOutlineWhatsapp } from "react-icons/md";
-import React from "react";
+import React, { useState } from "react";
 import AnimatedButton from "@/components/AnimatedButton";
+import PopupForm from "@/components/PopupForm";
+import { AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -21,6 +23,7 @@ const heroButtons = [
     textColor: "text-(--white)",
     hoverTextColor: "group-hover:text-(--teal)",
     skewColor: "bg-(--teal)",
+    onClick: undefined, // will be set in function
   },
   {
     children: "Chat with Us",
@@ -73,6 +76,14 @@ const slides = [
 ];
 
 const HeroSection: React.FC = () => {
+  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+  // Assign the onClick for 'Apply Now' after state is available
+  const heroButtonsWithClick = heroButtons.map(btn =>
+    btn.children === "Apply Now"
+      ? { ...btn, onClick: () => setShowEnquiryForm(true) }
+      : btn
+  );
+
   return (
     <section
       className="relative h-[75vh] sm:h-[calc(90vh-80px)] w-full mb-20"
@@ -131,9 +142,16 @@ const HeroSection: React.FC = () => {
                       skewColor="bg-(--orange)"
                       icon={<MdArrowOutward />}
                       className="px-4 py-3"
+                      onClick={() => setShowEnquiryForm(true)}
                     >
                       {slide.buttonText}
                     </AnimatedButton>
+
+                    <AnimatePresence>
+                      {showEnquiryForm && (
+                        <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
               </Section>
@@ -143,7 +161,7 @@ const HeroSection: React.FC = () => {
       </Swiper>
       <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
-          {heroButtons.map((btn, idx) => (
+          {heroButtonsWithClick.map((btn, idx) => (
             <AnimatedButton
               key={idx}
               bgColor={btn.bgColor}
@@ -152,6 +170,7 @@ const HeroSection: React.FC = () => {
               skewColor={btn.skewColor}
               icon={btn.icon}
               className="px-4 py-3"
+              onClick={btn.onClick}
             >
               {btn.children}
             </AnimatedButton>
@@ -160,6 +179,6 @@ const HeroSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default HeroSection;

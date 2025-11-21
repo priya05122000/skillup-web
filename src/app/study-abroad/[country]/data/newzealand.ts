@@ -2,11 +2,14 @@ import { CountryData } from "../countryData";
 
 const newzealand: CountryData = {
   name: "New Zealand",
+  bannerSubtitle: "Explore education opportunities in New Zealand",
+  bannerTitle: "Study in New Zealand",
   capital: "Wellington",
   banner: "/study-abroad/newzealand-banner.jpg",
   overview:
     "Australia is a hugely popular choice as an overseas study destination for a host of reasons. From secure environment to first-rate education system, abundant opportunities to buzzing city life and picturesque locations, Australia offers everything you could possibly want from life.",
   overviewImage: "/study-abroad/australia.png",
+  studentImage: "/study-abroad/australia/students.png",
   general:
     "Canada is a Federation of ten provinces (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia, Ontario, Prince Edward Island, Quebec, and Saskatchewan) and three territories (Northwest Territories, Yukon, and Nunavut).",
   noOfUniversities: 98,

@@ -1,12 +1,10 @@
 "use client";
 
-
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import Image from "next/image";
 import { FC } from "react";
-
 
 type University = {
   id: number;
@@ -21,7 +19,7 @@ type UniversityProps = {
 const UniversityLogo: FC<{ university: University }> = ({ university }) => (
   <div
     key={university.id}
-    className="w-24 h-20 flex items-center justify-center transition-all duration-300 border border-(--bg-grey) rounded-md shadow-sm p-2"
+    className="w-34 h-30 flex items-center justify-center transition-all duration-300 border border-(--bg-grey) rounded-md shadow-sm p-2"
   >
     <Image
       src={university.logo}
@@ -33,7 +31,6 @@ const UniversityLogo: FC<{ university: University }> = ({ university }) => (
   </div>
 );
 
-
 const University: FC<UniversityProps> = ({ universities }) => {
   if (!universities?.length) return null;
   return (
@@ -41,13 +38,16 @@ const University: FC<UniversityProps> = ({ universities }) => {
       <div className="flex flex-col md:flex-row md:space-x-4 lg:space-x-6">
         <div className="mb-10 md:w-2/7 text-(--white)">
           <Heading level={5} className="font-bold mb-3">
-            Who Will You Learn With?
+            Study Across Global Universities
           </Heading>
           <Paragraph
             size="base"
             className="text-(--gray) leading-relaxed md:w-[75%] lg:w-[80%]"
           >
-            You can find your partners or fellow learners across these top institutions and organizations that share your goals.
+            Skill Up Study Abroad Agency connects you with global universities,
+            providing tailored advice and full support for international
+            students. Begin your global education journey with expert guidance,
+            visa help, and career boosting services to open doors worldwide.
           </Paragraph>
         </div>
         <div className="md:w-5/7">
