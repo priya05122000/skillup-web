@@ -43,7 +43,7 @@ const ContactForm = () => {
   const [openDropdownName, setOpenDropdownName] = React.useState("");
   return (
     <Section className="py-10 sm:py-20">
-      <div className="contact-form grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-20">
+      <div className="contact-form grid grid-cols-1  xl:grid-cols-[1fr_3fr] gap-20">
         <div className="text-end flex flex-col justify-center">
           <Heading level={3} className="font-bold mb-4 uppercase text-(--teal)">
             Fill our enquiry form today
