@@ -2,11 +2,14 @@ import { CountryData } from "../countryData";
 
 const germany: CountryData = {
   name: "Ireland",
+  bannerTitle: "Study Abroad in Ireland",
+  bannerSubtitle: "Explore Your Future in Ireland",
   capital: "Dublin",
   banner: "/study-abroad/ireland-banner.jpg",
   overview:
     "Germany is known for its rich cultural heritage, technological innovation, and world-class educational institutions. It offers a wide range of opportunities for international students seeking quality education and vibrant campus life.",
   overviewImage: "/study-abroad/germany.png",
+  studentImage: "/study-abroad/germany/students.png",
   general:
     "Germany is a federal republic consisting of 16 states, each with its own government and constitution.",
   noOfUniversities: 100,

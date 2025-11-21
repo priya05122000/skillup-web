@@ -2,11 +2,14 @@ import { CountryData } from "../countryData";
 
 const malta: CountryData = {
   name: "Malta",
+  bannerTitle: "Study Abroad in Malta",
+  bannerSubtitle: "Explore Your Future in Malta",
   capital: "Valletta",
   banner: "/study-abroad/malta-banner.png",
   overview:
     "Malta is a hugely popular choice as an overseas study destination for a host of reasons. From secure environment to first-rate education system, abundant opportunities to buzzing city life and picturesque locations, Malta offers everything you could possibly want from life.",
   overviewImage: "/study-abroad/malta.png",
+  studentImage: "/study-abroad/malta/students.png",
   general:
     "Malta is an archipelago in the central Mediterranean between Sicily and the North African coast. It is known for its historic sites related to a succession of rulers including the Romans, Moors, Knights of Saint John, French and British.",
   noOfUniversities: 98,

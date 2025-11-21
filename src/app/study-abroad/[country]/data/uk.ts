@@ -5,7 +5,7 @@ const uk: CountryData = {
   bannerTitle: "Study in UK",
   bannerSubtitle: "Unlock Your Future with a UK Education",
   capital: "London",
-  banner : "/study-abroad/uk-banner.jpg",
+  banner : "/study-abroad/uk/banner.jpg",
   overview:
     "The United Kingdom is home to some of the world’s oldest and most prestigious universities. Renowned institutions like Oxford, Cambridge, and Imperial College London are celebrated for their academic excellence. Whether you seek a comprehensive undergraduate or postgraduate program, the United Kingdom universities offer a range of options, backed by high rankings and international recognition",
   overviewImage: "/study-abroad/uk/uk.png",
@@ -82,53 +82,6 @@ const uk: CountryData = {
     { id: 11, name: "Partner 11", logo: "/home/partner11.png" },
     { id: 12, name: "Partner 12", logo: "/home/partner12.png" },
   ],
-  // topics: [
-  //   {
-  //     id: 1,
-  //     title: "Education system",
-  //     icon: "BookOpen",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Immigration friendly country",
-  //     icon: "Code",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Large number of prestigious universities",
-  //     icon: "BarChart",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Low tuition fees",
-  //     icon: "PenTool",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Range of job focused programmes",
-  //     icon: "Briefcase",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Strong growing economy",
-  //     icon: "BarChart",
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "Opportunity to gain Canadian work experience",
-  //     icon: "PenTool",
-  //   },
-  //   {
-  //     id: 8,
-  //     title: "Nomination for immigration to Canada",
-  //     icon: "Briefcase",
-  //   },
-  //   {
-  //     id: 9,
-  //     title: "Spouse accompaniment/work right",
-  //     icon: "Code",
-  //   },
-  // ],
 };
 
 export default uk;
