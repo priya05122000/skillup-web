@@ -3,7 +3,7 @@ import { CountryData } from "../countryData";
 const italy: CountryData = {
   name: "New Zealand",
   capital: "Wellington",
-  banner: "/study-abroad/newzealand-banner.jpg",
+  banner: "/study-abroad/italy-banner.png",
   overview:
     "Australia is a hugely popular choice as an overseas study destination for a host of reasons. From secure environment to first-rate education system, abundant opportunities to buzzing city life and picturesque locations, Australia offers everything you could possibly want from life.",
   overviewImage: "/study-abroad/australia.png",
