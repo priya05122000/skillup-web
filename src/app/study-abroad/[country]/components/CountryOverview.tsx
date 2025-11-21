@@ -42,12 +42,19 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
                 Quick Facts
               </Heading>
               <div className="grid md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2">
-                {quickFacts.map((fact, index) => (
+                {quickFacts.slice(0, 2).map((fact, index) => (
                   <div key={index} className="flex gap-2 items-center">
                     <Paragraph size="base" className="font-bold">
                       {fact.label}:
                     </Paragraph>
                     <Paragraph size="base">{fact.value}</Paragraph>
+                  </div>
+                ))}
+              </div>
+              <div>
+                {quickFacts.slice(2).map((fact, index) => (
+                  <div key={index} className="flex flex-col sm:flex-row mt-2 w-[90%] sm:w-[75%] lg:w-[80%] xl:w-[75%]">
+                    <Paragraph size="base"><span className="font-bold pr-2">{fact.label}:</span>{fact.value}</Paragraph>
                   </div>
                 ))}
               </div>
@@ -78,7 +85,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
           <Image
             src={data.studentImage}
             alt={`${data.name} Students`}
-            className="w-full h-auto md:h-[30vh] rounded-md shadow-md object-cover"
+            className="w-full h-[30vh] sm:h-[50vh] lg:h-[30vh] rounded-md shadow-md object-cover"
             width={800}
             height={800}
           />
