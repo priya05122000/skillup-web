@@ -68,7 +68,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
       className="w-full h-[350px] object-cover"
     />
     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border border-(--white)/30 bg-(--teal)/70">
+    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border border-(--white)/30 bg-(--orange)/50">
       {/* {isActive ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}

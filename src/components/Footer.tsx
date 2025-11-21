@@ -77,15 +77,11 @@ const Footer = () => {
             </Paragraph>
             <Paragraph size="base" className="mt-2">
               <span className="font-semibold">Navi Mumbai (Seawoods):</span>{" "}
-              Office No. 10, Shah Heritage, Plot No. 9, Sector 42/A, Opp.
-              D-Mart, Seawoods (W), Navi Mumbai-400706
-            </Paragraph>
-            <Paragraph size="base" className="mt-2">
-              <span className="font-semibold">
-                Navi Mumbai (Koparkhairane):
-              </span>{" "}
-              Shop no 3, Anmol Terrace CHS Ltd, sector 5, Koparkhairane Rd,
-              Opposite Lokmanya Tilak college, Navi Mumbai -400709
+              Office No. 201, Shah Heritage CHS Ltd, Plot No. 9, Sec-42/A, Nerul
+              (W), Seawoods, Navi Mumbai, Maharashtra 400706
+              <br />
+              Opposite Seawoods D'mart
+              <br />
             </Paragraph>
           </div>
 
@@ -126,22 +122,44 @@ const Footer = () => {
 
         <hr className="border-t border-white/30 my-4" />
 
-        <div className="flex flex-col xl:flex-row items-center justify-between text-xs w-full">
-          <Span className="mb-2 md:mb-0 text-center md:text-left">
+        <div className="flex flex-col xl:flex-row items-start justify-between text-xs w-full">
+          <Span className="mb-2 md:mb-0 text-center xl:text-left">
             Copyright @ 2024 Skill Up Academy All Rights and Reserved. Powered
             by{" "}
-            <Span className="font-semibold text-(--orange)">
-              Itarsia India Limited
-            </Span>
+            <Link
+              href="https://izhtech.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Span className="font-semibold text-(--orange)">
+                Izhtech Creative Solutions
+              </Span>
+            </Link>
+            <br />
+            <Link
+              href="/terms-and-conditions"
+              className="underline"
+              aria-label="Terms and Conditions"
+            >
+              Terms &amp; Conditions
+            </Link>
           </Span>
 
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-2 xl:mt-0">
-            <Span className="flex items-center gap-1">
-              <i className="fas fa-phone-alt"></i> +91-9820588082
-            </Span>
-            <Span className="flex items-center gap-1">
-              <i className="fas fa-envelope"></i> seawoods.skillup@gmail.com
-            </Span>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-4 xl:mt-0 ">
+            <Link
+              href="tel:09930494883"
+              className="flex items-center gap-1 text-sm"
+              aria-label="Call 09930494883"
+            >
+              099304 94883
+            </Link>
+            <a
+              href="mailto:seawoods.skillup@gmail.com"
+              className="flex items-center gap-1 text-sm"
+              aria-label="Email seawoods.skillup@gmail.com"
+            >
+              seawoods.skillup@gmail.com
+            </a>
           </div>
         </div>
       </Section>

@@ -1,14 +1,17 @@
 "use client";
-import React, { FC, InputHTMLAttributes } from "react";
 import Heading from "@/components/Heading";
-import Paragraph from "@/components/Paragraph";
-import { FaGraduationCap } from "react-icons/fa";
-import Image from "next/image";
 import Section from "@/components/Section";
-import AnimatedButton from "@/components/AnimatedButton";
-import Dropdown from "@/components/Dropdown";
-import FormInput from "@/components/FormInput";
+import React from "react";
 import { CountryOption } from "@/types/forms";
+import { FaFacebookF, FaGraduationCap } from "react-icons/fa";
+import FormInput from "@/components/FormInput";
+import Dropdown from "@/components/Dropdown";
+import AnimatedButton from "@/components/AnimatedButton";
+import Image from "next/image";
+import Paragraph from "@/components/Paragraph";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -34,72 +37,105 @@ const countryOptions: CountryOption[] = [
   { name: "Phillipines", code: "phillipines" },
 ];
 
-
-const ContactForm: FC = () => {
+const ContactForm = () => {
   const [selectedProgram, setSelectedProgram] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState("");
   const [openDropdownName, setOpenDropdownName] = React.useState("");
-
   return (
     <Section className="py-10 sm:py-20">
-      <div className="relative sm:p-10 flex justify-center items-center rounded-md">
-        {/* BACKGROUND IMAGE FULL WIDTH */}
-        <div className="absolute inset-0">
-          <Image
-            src="/home/enquireform.jpg"
-            alt="Join with Us"
-            fill
-            className="object-cover w-full h-full rounded-md"
-            priority
-          />
+      <div className="contact-form grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-20">
+        <div className="text-end flex flex-col justify-center">
+          <Heading level={3} className="font-bold mb-4 uppercase text-(--teal)">
+            Fill our enquiry form today
+          </Heading>
+          <Paragraph size="lg" className="mt-8 mb-6 flex items-center gap-2 justify-end">
+            Facebook <span className="ml-10 text-3xl text-(--teal)"><FaFacebookF /></span>
+          </Paragraph>
+          <Paragraph size="lg" className=" flex mb-6 items-center gap-2 justify-end">
+            Instagram <span className="ml-10 text-3xl text-(--teal)"><FaInstagramSquare  /></span>
+          </Paragraph>
+          <Paragraph size="lg" className=" flex items-center gap-2 justify-end">
+            LinkedIn <span className="ml-10 text-3xl text-(--teal)"><FaLinkedin  /></span>
+          </Paragraph>
         </div>
-        {/* RIGHT FORM CONTAINER */}
-        <div className="relative z-10 w-full max-w-7xl flex justify-center lg:justify-end">
-          <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
-            {/* ICON + HEADING */}
-            <div className="flex flex-col items-center mb-6">
-              <span className="text-6xl mb-2 text-white">
-                <FaGraduationCap />
-              </span>
-              <Heading level={4} className="text-white font-bold text-center mb-2">
-                Join With Us
-              </Heading>
+        <div className=" flex w-full flex-col items-end">
+          <div className="bg-(--teal)/80 backdrop-blur-md relative p-10 w-4/5 flex justify-end ">
+            <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[80%] ">
+              <div className="relative  w-full h-full">
+                <div className="absolute  right-0 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)]    bg-(--teal)"></div>
+                <div className="absolute  left-0 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
+                  <Image
+                    src="/contact/contactform.jpg"
+                    alt="Decorative"
+                    width={500}
+                    height={500}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
             </div>
-            {/* FORM */}
-            <form className="w-full flex flex-col gap-4">
-              <FormInput type="text" name="fullName" placeholder="Full Name" />
-              <FormInput type="email" name="email" placeholder="Email" />
-              <FormInput type="tel" name="mobile" placeholder="Mobile Number" />
-              <Dropdown
-                options={courseOptions}
-                selected={selectedProgram}
-                placeholder="Course"
-                onSelect={setSelectedProgram}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              />
-              <Dropdown
-                options={countryOptions}
-                selected={selectedCountry}
-                placeholder="Country"
-                onSelect={setSelectedCountry}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              />
-              <label className="flex items-center gap-2 text-xs text-white">
-                <input type="checkbox" required className="accent-(--orange)" />
-                You authorize us to call, email, or SMS you at any time.
-              </label>
-              <AnimatedButton
-                type="submit"
-                bgColor="bg-(--white)"
-                textColor="text-(--white)"
-                hoverTextColor="group-hover:text-(--orange)"
-                skewColor="bg-(--orange)"
-              >
-                Submit
-              </AnimatedButton>
-            </form>
+
+            <div className="w-2/3 flex  items-end">
+              <div className="w-full">
+                <div className="flex flex-col items-center mb-6">
+                  <span className="text-6xl mb-2 text-white">
+                    <FaGraduationCap />
+                  </span>
+                  <Heading
+                    level={4}
+                    className="text-white font-bold text-center mb-2"
+                  >
+                    Get in Touch
+                  </Heading>
+                </div>
+                <form className="w-full flex flex-col gap-4">
+                  <FormInput
+                    type="text"
+                    name="fullName"
+                    placeholder="Full Name"
+                  />
+                  <FormInput type="email" name="email" placeholder="Email" />
+                  <FormInput
+                    type="tel"
+                    name="mobile"
+                    placeholder="Mobile Number"
+                  />
+                  <Dropdown
+                    options={courseOptions}
+                    selected={selectedProgram}
+                    placeholder="Course"
+                    onSelect={setSelectedProgram}
+                    openDropdown={setOpenDropdownName}
+                    openName={openDropdownName}
+                  />
+                  <Dropdown
+                    options={countryOptions}
+                    selected={selectedCountry}
+                    placeholder="Country"
+                    onSelect={setSelectedCountry}
+                    openDropdown={setOpenDropdownName}
+                    openName={openDropdownName}
+                  />
+                  <label className="flex items-center gap-2 text-xs text-white">
+                    <input
+                      type="checkbox"
+                      required
+                      className="accent-(--orange)"
+                    />
+                    You authorize us to call, email, or SMS you at any time.
+                  </label>
+                  <AnimatedButton
+                    type="submit"
+                    bgColor="bg-(--white)"
+                    textColor="text-(--white)"
+                    hoverTextColor="group-hover:text-(--orange)"
+                    skewColor="bg-(--orange)"
+                  >
+                    Submit
+                  </AnimatedButton>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
