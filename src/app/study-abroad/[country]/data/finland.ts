@@ -8,8 +8,8 @@ const finland: CountryData = {
   bannerSubtitle: "Discover Innovation and Excellence in Education, the Finnish Way",
   overview:
     "Finland universities are renowned for their world-class education system, innovative teaching methods, and strong research opportunities. Students experience a balance of academic excellence and practical learning in a safe, modern environment. Studying in Finland offers globally recognized degrees and a pathway to rewarding international careers.",
-  overviewImage: "/study-abroad/finland/finland.png",
-  studentImage:"/study-abroad/finland/students.png",
+  overviewImage: "/study-abroad/finland/finland.jpeg",
+  studentImage:"/study-abroad/finland/students.jpeg",
   general:
     "Finland is a Nordic country in Northern Europe known for its vast forests, thousands of lakes, and modern, clean environment. It is a parliamentary republic with Helsinki as its capital, offering a high quality of life and a strong welfare state.",
   noOfUniversities: 40,

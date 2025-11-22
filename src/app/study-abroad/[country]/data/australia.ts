@@ -5,11 +5,11 @@ const australia: CountryData = {
   bannerTitle: "Study in Australia",
   bannerSubtitle: "Shape Your Future with Australian Education",
   capital: "Canberra",
-  banner: "/study-abroad/australia/banner.png",
+  banner: "/study-abroad/australia/banner.jpeg",
   overview:
     "Australia is a youthful and lively destination known for its welcoming environment and top-quality education. Study abroad Australia offers the perfect blend of excellent academics and vibrant lifestyle, providing endless career and personal growth opportunities. With a friendly atmosphere and dynamic cities, Australia ensures an enriching experience for international students.​",
-  overviewImage: "/study-abroad/australia/australia.png",
-  studentImage: "/study-abroad/australia/students.png",
+  overviewImage: "/study-abroad/australia/australia.jpeg",
+  studentImage: "/study-abroad/australia/students.jpeg",
   general:
     "Australia is the world's sixth-largest country, known for its diverse landscapes ranging from deserts to tropical rainforests. It is a democratic federation with a multicultural population concentrated mostly in urban areas along the eastern and southeastern coasts.",
   noOfUniversities: 40,

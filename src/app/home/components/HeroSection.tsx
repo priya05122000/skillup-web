@@ -61,14 +61,14 @@ const slides = [
     buttonText: "Book your consultation",
   },
   {
-    img: "/home/slider3.png",
+    img: "/home/slider3.jpeg",
     title: "Skill Up Study Abroad Mumbai",
     heading: "Study in IRELAND",
     paragraph: "Choose from Ireland’s elite group of 9 leading universities.",
     buttonText: "Set up your appointment",
   },
   {
-    img: "/home/slider4.png",
+    img: "/home/slider4.jpeg",
     title: "Skill Up Study Abroad Agency",
     heading: "Rise To The Top By Learning Smarter!",
     paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
                     {slide.title}
                   </Paragraph>
                   <Heading level={4} className="font-bold leading-tight mt-4">
-                    <span className="bg-(--teal)">Skill Up Academy</span> -{" "}
+                    <span className="bg-(--teal) px-1.5 pb-1.5">Skill Up Academy</span> -{" "}
                     {slide.heading}
                   </Heading>
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">

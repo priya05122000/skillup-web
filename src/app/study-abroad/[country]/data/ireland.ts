@@ -8,8 +8,8 @@ const germany: CountryData = {
   banner: "/study-abroad/ireland/banner.jpg",
   overview:
     "Ireland presents an exceptional academic environment with a reputation for quality education and skill-building flexibility. Known as the land of ‘saints and scholars, universities in Ireland emphasize practical knowledge and uphold rigorous evaluation standards. ",
-  overviewImage: "/study-abroad/ireland/ireland.png",
-  studentImage: "/study-abroad/ireland/students.png",
+  overviewImage: "/study-abroad/ireland/ireland.jpeg",
+  studentImage: "/study-abroad/ireland/students.jpeg",
   general:
     "Ireland, officially known as Eire, is a parliamentary republic occupying most of the island of Ireland in Western Europe, with its capital and largest city being Dublin. It has a population of about 5.4 million and is known for its rich cultural heritage, beautiful landscapes, and advanced economy centered around Dublin as a major financial hub.",
   noOfUniversities: 8,

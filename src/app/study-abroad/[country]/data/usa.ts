@@ -8,8 +8,8 @@ const usa: CountryData = {
   banner: "/study-abroad/usa/banner.jpg",
   overview:
     "The USA education system is a top choice for international students due to its robust economy, diverse campus life, and wide range of flexible and high-quality academic programs. From dynamic cities to stunning national parks, the U.S. promises an enriching experience beyond academics. This blend of cultural diversity, cutting-edge research, and vibrant student environment makes studying in America truly captivating.",
-  overviewImage: "/study-abroad/usa/us.png",
-  studentImage: "/study-abroad/usa/students.png",
+  overviewImage: "/study-abroad/usa/us.jpeg",
+  studentImage: "/study-abroad/usa/students.jpeg",
   general:
     "The United States of America is a federal republic consisting of 50 states, with its capital in Washington, D.C. It is the world’s third-largest country by land area and population, known for its diverse culture, strong economy, and democratic system of government.",
   noOfUniversities: 3126,

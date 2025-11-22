@@ -8,8 +8,8 @@ const germany: CountryData = {
   banner: "/study-abroad/germany/banner.jpg",
   overview:
     "German universities, renowned for producing some of history’s greatest intellectual and creative minds, offer world-class education at an affordable cost in the heart of Europe. These institutions provide vast opportunities for career advancement, travel, and cultural experiences, making them a top choice for students worldwide.",
-  overviewImage: "/study-abroad/germany/germany.png",
-  studentImage: "/study-abroad/germany/students.png",
+  overviewImage: "/study-abroad/germany/germany.jpeg",
+  studentImage: "/study-abroad/germany/students.jpeg",
   general:
     "Germany is a highly developed country in Central Europe, renowned for its strong economy, advanced infrastructure, and leadership in renewable energy and green technology. It is the largest economy in Europe and the third largest globally, boasting rich cultural heritage and a federal political system with 16 states.",
   noOfUniversities: 400,

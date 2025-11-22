@@ -29,7 +29,7 @@ export default function Page({ params }: PageProps) {
       <WhyStudy topics={data.topics ?? []} name={data.name} />
       <University universities={data.universities ?? []} />
       <TabsData tabData={data.tabData} />
-      <EnquireForm imageSrc="/study-abroad/enquiry.webp"/> 
+      <EnquireForm imageSrc="/study-abroad/enquiry.jpg"/>
     </>
   );
 }

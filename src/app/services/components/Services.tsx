@@ -17,7 +17,7 @@ const services: Service[] = [
     slug: "test-preparation",
     title: "Test Preparation",
     briefing: "TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE.",
-    image: "/services/test-preparation.png",
+    image: "/services/test-preparation.jpeg",
     description:
       "Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.",
   },
@@ -41,8 +41,9 @@ const services: Service[] = [
     slug: "application-processing",
     title: "University/College Application Processing",
     briefing: "Expert Guidance For Applications",
-    image: "/services/university.png",
-    description: "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
+    image: "/services/university.jpeg",
+    description:
+      "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
   },
   {
     slug: "visa-support",
@@ -72,7 +73,7 @@ const services: Service[] = [
     slug: "language-support",
     title: "Languages",
     briefing: "Spoken English, French & German",
-    image: "/services/languages.png",
+    image: "/services/languages.jpeg",
     description:
       "Skill Up Study Abroad Agency offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
   },
@@ -83,14 +84,14 @@ const Services: React.FC = () => {
     <div>
       <Section>
         <div className="pt-10 sm:pt-20">
-          <div className="bg-(--orange)/10 rounded-md p-10">
+          <div className="bg-(--orange)/10 rounded-md px-4 sm:px-10">
             {services.map((service, idx) => (
               <div
                 key={idx}
                 id={service.slug}
-                className="service-section grid grid-cols-1 md:grid-cols-6 border-b border-(--teal)/20 py-10 gap-6"
+                className="service-section flex flex-col lg:flex-row border-b border-(--teal)/20 py-6 sm:py-10 gap-2 lg:gap-6"
               >
-                <div className="md:col-span-1 flex items-start">
+                <div className="lg:w-2/8 xl:w-1/5 flex items-start">
                   <Heading
                     level={6}
                     className="mb-2 font-bold uppercase text-(--teal)"
@@ -98,24 +99,25 @@ const Services: React.FC = () => {
                     {service.briefing}
                   </Heading>
                 </div>
+                <div className="lg:w-5/7 xl:w-4/5 flex flex-col sm:flex-row gap-6 justify-center">
+                  <div className="w-full md:w-50 xl:w-80 h-52 shrink-0 mt-2">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={500}
+                      height={500}
+                      className="w-full h-full rounded object-cover"
+                    />
+                  </div>
 
-                <div className="md:col-span-2 flex justify-center">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={500}
-                    height={500}
-                    className="w-80 h-52 mb-4 rounded object-cover"
-                  />
-                </div>
-
-                <div className="md:col-span-3">
-                  <Paragraph size="xl" className="font-semibold">
-                    {service.title}
-                  </Paragraph>
-                  <Paragraph size="base" className="text-justify mt-2">
-                    {service.description}
-                  </Paragraph>
+                  <div className="">
+                    <Paragraph size="xl" className="font-semibold">
+                      {service.title}
+                    </Paragraph>
+                    <Paragraph size="base" className="text-justify mt-2">
+                      {service.description}
+                    </Paragraph>
+                  </div>
                 </div>
               </div>
             ))}

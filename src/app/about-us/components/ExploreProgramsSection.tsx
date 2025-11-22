@@ -40,14 +40,14 @@ const programs: Program[] = [
   {
     id: 3,
     title: "Vast University Network",
-    image: "/about-us/vast-university.png",
+    image: "/about-us/vast-university.jpeg",
     lessons: "12 lessons",
     students: "200 students",
   },
   {
     id: 4,
     title: "End-to-End Support",
-    image: "/about-us/course4.png",
+    image: "/about-us/course4.jpeg",
     lessons: "5 lessons",
     students: "200 students",
   },
@@ -59,16 +59,16 @@ type ProgramCardProps = {
 };
 
 const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
-  <div className="relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition-all duration-300">
+  <div className="relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition-all duration-300 mx-6 sm:mx-0">
     <Image
       src={program.image}
       alt={program.title}
       height={1000}
       width={1000}
-      className="w-full h-[350px] object-cover"
+      className="w-full h-[380px] object-cover"
     />
     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border border-(--white)/30 bg-(--orange)/50">
+    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border-t border-(--white)/30 bg-(--orange)/50">
       {/* {isActive ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,9 +108,9 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
         </Heading>
       )} */}
       {/* <div className="backdrop-blur-md px-2 py-1 border border-(--white)/30 bg-(--teal)/70"> */}
-        <Paragraph size="xl" className="text-(--white) font-semibold mb-2 w-full">
-          {program.title}
-        </Paragraph>
+      <Paragraph size="xl" className="text-(--white) font-semibold mb-2 w-full">
+        {program.title}
+      </Paragraph>
       {/* </div> */}
     </div>
   </div>

@@ -53,7 +53,7 @@ const AboutUs: React.FC = () => {
             <div className="w-[80%] h-[80%]  lg:h-3/4 relative   overflow-hidden ">
               <div className="relative h-full">
                 <Image
-                  src="/home/about-us-1.png"
+                  src="/home/about-us-1.jpeg"
                   alt="Students high-fiving in front of university"
                   layout="responsive"
                   width={500}

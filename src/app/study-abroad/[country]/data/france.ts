@@ -8,8 +8,8 @@ const france: CountryData = {
   banner: "/study-abroad/france/banner.jpg",
   overview:
     "French universities are renowned worldwide for their academic excellence and rich research traditions, making France a top destination for international students. Many French universities now offer a wide range of programs in English, ensuring accessibility to students from around the globe.",
-  overviewImage: "/study-abroad/france/france.png",
-  studentImage: "/study-abroad/france/students.png",
+  overviewImage: "/study-abroad/france/france.jpeg",
+  studentImage: "/study-abroad/france/students.jpeg",
   general:
     "France is a Western European country known for its rich history, culture, and significant global influence. Its capital, Paris, is a major cultural and economic center, and the country is recognized for its diverse landscapes, strong economy, and status as a key player in international affairs.",
   noOfUniversities: 70,

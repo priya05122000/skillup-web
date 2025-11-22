@@ -5,11 +5,11 @@ const malta: CountryData = {
   bannerTitle: "Study in Malta",
   bannerSubtitle: "Discover, Learn, and Grow in Sunny Malta",
   capital: "Valletta",
-  banner: "/study-abroad/malta/banner.png",
+  banner: "/study-abroad/malta/banner.jpeg",
   overview:
     "Malta universities offer quality education recognized across Europe, with numerous programs taught in English catering to international students. The University of Malta, the oldest and largest institution, provides over 200 courses in fields like business, engineering, medicine, and arts. ",
-  overviewImage: "/study-abroad/malta/malta.png",
-  studentImage: "/study-abroad/malta/students.png",
+  overviewImage: "/study-abroad/malta/malta.jpeg",
+  studentImage: "/study-abroad/malta/students.jpeg",
   general:
     "Malta is a small island country in the central Mediterranean Sea, known for its rich history and strategic location between Sicily and North Africa. It has a population of about 542,000 people, covers an area of 316 square kilometers, and the official languages are Maltese and English",
   noOfUniversities: 3,

@@ -5,11 +5,11 @@ const italy: CountryData = {
   bannerSubtitle: "The Italian School Of Dreams and Discoveries",
   bannerTitle: "Study in Italy",
   capital: "Rome",
-  banner: "/study-abroad/italy/banner.png",
+  banner: "/study-abroad/italy/banner.jpeg",
   overview:
     "Italian universities are among the most sought-after destinations globally, celebrated for their strong academic reputation and history of excellence. Italy ranks as one of the world’s leading industrial nations with a dynamic manufacturing sector and a widespread network of advanced scientific parks, providing abundant opportunities for pioneering research and diverse career prospects.",
-  overviewImage: "/study-abroad/italy/italy.png",
-  studentImage: "/study-abroad/italy/students.png",
+  overviewImage: "/study-abroad/italy/italy.jpeg",
+  studentImage: "/study-abroad/italy/students.jpeg",
   general:
     "Italy is a southern European country known for its rich history, stunning landscapes, and cultural heritage. It is a parliamentary republic with Rome as its capital, covering about 301,230 square kilometers, and is the third-most populous member state of the European Union with nearly 59 million people.",
   noOfUniversities: 90,
