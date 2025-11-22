@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Priya Menon",
     country: "London",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Skill Up Study Abroad Agency provided exceptional guidance throughout my admission and visa process. Their expert team answered every query quickly, going above and beyond to support me at each step. From the initial counseling to landing in the UK, their dedication turned my dream into reality. Thanks to Skill Up, studying in the UK became a truly memorable journey.",
     rating: 5,
@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Varun Patel",
     country: "Canada",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "I received outstanding guidance from the Skill Up Study Abroad Agency when applying to Canadian universities and for scholarships. Their team made the entire journey from Mumbai to Canada effortless and stress-free. Every step, from course selection to visa, was handled with care and expertise. Thanks to their support, my transition was smooth, allowing me to focus on building my future in Canada.",
     rating: 5,
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Riya Jain",
     country: "Australia",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Skill Up Study Abroad Agency made my entire study abroad process seamless, from picking the right course to securing my visa. Their detailed approach and quick communication gave me confidence at every step. The team genuinely cared about my future and always offered honest guidance. I’m truly grateful for their expertise and the personal attention they provided throughout my journey.",
     rating: 5,
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Aarav Singh",
     country: "Germany",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Skill Up’s counseling made choosing the right study program effortless and took the stress out of application paperwork. Their team’s honesty and transparency created a sense of security for both me and my family. I could always trust their advice, and every recommendation felt tailored to my goals. With their reliable support, we confidently embarked on my overseas education journey.",
     rating: 5,
@@ -60,7 +60,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Sana Ahmed",
     country: "India",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "The entire application process became simple and smooth with Skill Up handling my university submissions. Through each stage, Skill Up kept me updated and promptly informed about my application status. Even during stressful waits for admission, their team members offered uplifting advice and reassurance. Because of their encouragement and commitment, it helped me stay positive and focused on my study abroad goals.",
     rating: 5,
@@ -68,7 +68,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Deepak Kumar",
     country: "Ireland",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Admission and travel arrangements were smooth and effortless, thanks to Skill Up’s organized process. Their team’s prompt communication made a genuine difference every step of the way with Skill Up. Professionalism was clear in every interaction and advice, providing enormous confidence. From start to finish, every detail was handled with care and precision, all made possible with Skill Up.",
     rating: 5,
@@ -76,7 +76,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Ananya Roy",
     country: "India",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Pre-departure was a breeze with detailed briefing sessions, giving me total confidence. Their thorough guidance helped me get ready for every aspect of my move with Skill Up. No travel hiccups or paperwork issues, all thanks to the care and efficiency of Skill Up. My entire journey to Canada went smoothly, as every step was expertly organized.",
     rating: 5,
@@ -84,7 +84,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Mihir Joshi",
     country: "France",
-    image: "/home/aboutus-1.jpg",
+    image: "",
     text:
       "Skill Up’s scholarship guidance made a significant impact on my study abroad journey. They helped me discover and apply for scholarships that perfectly matched my profile and needs. Their expert assistance eased the financial burden and opened doors to excellent opportunities. I wholeheartedly recommend Skill Up to anyone dreaming of higher education overseas.",
     rating: 5,
@@ -157,7 +157,7 @@ const Testimonials: React.FC = () => {
                   <SwiperSlide key={idx} className="p-6 bg-white rounded-md shadow flex flex-col gap-4 justify-between h-full">
                     <div className="flex items-center gap-3">
                       <Image
-                        src={t.image}
+                        src={t.image && t.image !== '' ? t.image : '/home/profile.webp'}
                         alt={t.name}
                         width={48}
                         height={48}
