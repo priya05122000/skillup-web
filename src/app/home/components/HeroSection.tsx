@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
                     {slide.title}
                   </Paragraph>
                   <Heading level={4} className="font-bold leading-tight mt-4">
-                    <span className="bg-(--teal)">Skill Up Academy</span> -{" "}
+                    <span className="bg-(--teal) px-1.5 pb-1.5">Skill Up Academy</span> -{" "}
                     {slide.heading}
                   </Heading>
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">

@@ -114,7 +114,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 level={5}
                 className="text-white font-bold text-center mb-2"
               >
-                Connect with Us
+                Connect with us
               </Heading>
             </div>
             {/* FORM */}
