@@ -1,7 +1,7 @@
 "use client";
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
-import React from "react";
+import React, { useState } from "react";
 import { CountryOption } from "@/types/forms";
 import { FaFacebookF, FaGraduationCap } from "react-icons/fa";
 import FormInput from "@/components/FormInput";
@@ -9,7 +9,7 @@ import Dropdown from "@/components/Dropdown";
 import AnimatedButton from "@/components/AnimatedButton";
 import Image from "next/image";
 import Paragraph from "@/components/Paragraph";
-import { IoLocationSharp } from "react-icons/io5";
+import toast from "react-hot-toast";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -38,9 +38,54 @@ const countryOptions: CountryOption[] = [
 ];
 
 const ContactForm = () => {
-  const [selectedProgram, setSelectedProgram] = React.useState("");
-  const [selectedCountry, setSelectedCountry] = React.useState("");
-  const [openDropdownName, setOpenDropdownName] = React.useState("");
+  const [selectedProgram, setSelectedProgram] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [openDropdownName, setOpenDropdownName] = useState("");
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [agree, setAgree] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSuccess(null);
+    setError(null);
+    try {
+      const res = await fetch("/api/send-enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName,
+          email,
+          mobile,
+          course: selectedProgram,
+          country: selectedCountry,
+        }),
+      });
+      if (res.ok) {
+        toast.success("Your enquiry has been sent!");
+        setFullName("");
+        setEmail("");
+        setMobile("");
+        setSelectedProgram("");
+        setSelectedCountry("");
+        setAgree(false);
+      } else {
+        setError("Failed to send enquiry. Please try again.");
+        console.error("Failed to send enquiry:", await res.text());
+        console.error(error);
+      }
+    } catch {
+      setError("Failed to send enquiry. Please try again.");
+    }
+    setSubmitting(false);
+  };
+
   return (
     <Section className="py-10 sm:py-20">
       <div className="contact-form grid grid-cols-1  xl:grid-cols-[1fr_3fr] gap-20">
@@ -48,14 +93,29 @@ const ContactForm = () => {
           <Heading level={3} className="font-bold mb-4 uppercase text-(--teal)">
             Fill our enquiry form today
           </Heading>
-          <Paragraph size="lg" className="mt-8 mb-6 flex items-center gap-2 justify-end">
-            Facebook <span className="ml-10 text-3xl text-(--teal)"><FaFacebookF /></span>
+          <Paragraph
+            size="lg"
+            className="mt-8 mb-6 flex items-center gap-2 justify-end"
+          >
+            Facebook{" "}
+            <span className="ml-10 text-3xl text-(--teal)">
+              <FaFacebookF />
+            </span>
           </Paragraph>
-          <Paragraph size="lg" className=" flex mb-6 items-center gap-2 justify-end">
-            Instagram <span className="ml-10 text-3xl text-(--teal)"><FaInstagramSquare  /></span>
+          <Paragraph
+            size="lg"
+            className=" flex mb-6 items-center gap-2 justify-end"
+          >
+            Instagram{" "}
+            <span className="ml-10 text-3xl text-(--teal)">
+              <FaInstagramSquare />
+            </span>
           </Paragraph>
           <Paragraph size="lg" className=" flex items-center gap-2 justify-end">
-            LinkedIn <span className="ml-10 text-3xl text-(--teal)"><FaLinkedin  /></span>
+            LinkedIn{" "}
+            <span className="ml-10 text-3xl text-(--teal)">
+              <FaLinkedin />
+            </span>
           </Paragraph>
         </div>
         <div className=" flex w-full flex-col items-end">
@@ -88,17 +148,33 @@ const ContactForm = () => {
                     Get in Touch
                   </Heading>
                 </div>
-                <form className="w-full flex flex-col gap-4">
+                <form
+                  className="w-full flex flex-col gap-4"
+                  onSubmit={handleSubmit}
+                >
                   <FormInput
                     type="text"
                     name="fullName"
                     placeholder="Full Name"
+                    value={fullName}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)}
+                    required
                   />
-                  <FormInput type="email" name="email" placeholder="Email" />
+                  <FormInput
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                    required
+                  />
                   <FormInput
                     type="tel"
                     name="mobile"
                     placeholder="Mobile Number"
+                    value={mobile}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
+                    required
                   />
                   <Dropdown
                     options={courseOptions}
@@ -121,6 +197,8 @@ const ContactForm = () => {
                       type="checkbox"
                       required
                       className="accent-(--orange)"
+                      checked={agree}
+                      onChange={(e) => setAgree(e.target.checked)}
                     />
                     You authorize us to call, email, or SMS you at any time.
                   </label>
@@ -130,8 +208,9 @@ const ContactForm = () => {
                     textColor="text-(--white)"
                     hoverTextColor="group-hover:text-(--orange)"
                     skewColor="bg-(--orange)"
+                    disabled={submitting}
                   >
-                    Submit
+                    {submitting ? "Submitting..." : "Submit"}
                   </AnimatedButton>
                 </form>
               </div>
@@ -142,6 +221,5 @@ const ContactForm = () => {
     </Section>
   );
 };
-
 
 export default ContactForm;
