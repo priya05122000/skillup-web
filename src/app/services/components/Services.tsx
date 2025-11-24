@@ -119,9 +119,9 @@ const Services: React.FC = () => {
               {tabLabels.map((tab) => (
                 <button
                   key={tab.slug}
-                  className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none text-base
+                  className={`px-4 py-2 cursor-pointer rounded-md font-medium transition-colors duration-200 focus:outline-none text-base
           ${activeTab === tab.slug
-                      ? "bg-(--orange) shadow text-(--teal)"
+                      ? "bg-(--orange) shadow text-(--white)"
                       : " text-(--teal) hover:text-(--orange)"}
         `}
                   onClick={() => handleTabClick(tab.slug)}
