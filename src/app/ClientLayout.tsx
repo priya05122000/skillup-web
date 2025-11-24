@@ -11,9 +11,9 @@ import React, {
 } from "react";
 export const EnquiryFormContext = createContext<
   | {
-      showEnquiryForm: boolean;
-      setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
-    }
+    showEnquiryForm: boolean;
+    setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
+  }
   | undefined
 >(undefined);
 import { AnimatePresence, motion } from "framer-motion";
@@ -200,11 +200,10 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                 level={5}
                 className="font-bold leading-tight text-center text-(--white) uppercase"
               >
-                Subscribe
+                Book a Demo
               </Heading>
               <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Subscribe with your email for exclusive updates and insights
-                about our services.
+                Book a demo session to experience expert guidance tailored to your study abroad goals.
               </Paragraph>
               <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
                 <div className="flex flex-col sm:flex-row gap-2  sm:items-center">

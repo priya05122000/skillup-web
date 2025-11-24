@@ -8,8 +8,8 @@ const canada: CountryData = {
   banner: "/study-abroad/canada/banner.jpg",
   overview:
     "Canada is a top choice to study abroad Canada because of its safe and welcoming environment paired with a world-class education system. Students benefit from vibrant city life, beautiful natural landscapes, and abundant opportunities for part-time work and post-graduation careers. This combination makes Canada an ideal destination to pursue higher education while experiencing personal growth and cultural diversity.",
-  overviewImage: "/study-abroad/canada/canada.png",
-  studentImage: "/study-abroad/canada/students.png",
+  overviewImage: "/study-abroad/canada/canada.jpeg",
+  studentImage: "/study-abroad/canada/students.jpeg",
   general:
     "Canada is the second-largest country in the world, known for its diverse landscapes ranging from majestic mountains to vast forests and beautiful lakes. It is a multicultural nation with two official languages, English and French. ",
   noOfUniversities: 98,

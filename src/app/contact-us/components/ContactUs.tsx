@@ -11,7 +11,7 @@ const ContactUs = () => {
     <>
       <Section className="py-10 sm:py-20 ">
         <div className="rounded-md overflow-hidden xl:h-[550px]">
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
+          <div className="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] xl:grid-cols-[2fr_1fr]">
             <div className="bg-(--teal) text-white flex p-6 lg:p-12 xl:p-16">
               <div className="">
                 <Heading
@@ -30,7 +30,7 @@ const ContactUs = () => {
                       </Paragraph>
                     </div>
                     <div>
-                      <Span className="font-semibold text-black/50">
+                      <Span className="font-semibold text-(--orange)">
                         Follow us
                       </Span>
                       <div className="mt-2 flex gap-2">
@@ -51,9 +51,9 @@ const ContactUs = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="grid sm:grid-cols-1 ">
-                    <div className="mb-4">
-                      <Span className="font-semibold text-black/50">
+                  <div className="grid sm:grid-cols-1 mt-4 xl:mt-0">
+                    <div className="xl:mb-4">
+                      <Span className="font-semibold text-(--orange)">
                         Address (Seawoods)
                       </Span>
                       <Paragraph size="base" className="mt-1">
@@ -82,12 +82,12 @@ const ContactUs = () => {
                     </div> */}
                   </div>
                 </div>
-                <div className="mt-6">
-                  <Paragraph size="lg" className="font-semibold text-black/50">
+                <div className="mt-4">
+                  <Paragraph size="base" className="font-semibold text-(--orange)">
                     General enquiries
                   </Paragraph>
                 </div>
-                <div className="mb-4 grid sm:grid-cols-2 xl:gap-20 font-semibold">
+                <div className="mb-4 grid xl:grid-cols-2 xl:gap-20 font-semibold">
                   <Paragraph size="xl" className="mt-1">
                     seawoods.skillup@gmail.com
                   </Paragraph>
@@ -96,14 +96,14 @@ const ContactUs = () => {
                   </Paragraph>
                 </div>
 
-                <div className="grid grid-cols-2 xl:gap-20 mt-8">
+                <div className="grid lg:grid-cols-2 xl:gap-20 xl:mt-8">
                   <div className="mb-4">
                     <Span className="font-semibold uppercase">
                       SeaWoods (W), <br /> Navi Mumbai
                     </Span>
                   </div>
                   <div className="mb-4">
-                    <Span className="font-semibold text-black/50">Working Hours</Span><br />
+                    <Span className="font-semibold text-(--orange)">Working Hours</Span><br />
                     <Span className="font-semibold">
                       MON - FRI : 10:00 AM - 7:00 PM <br />
                     </Span>

@@ -5,11 +5,11 @@ const netherland: CountryData = {
   bannerTitle: "Study Abroad in Netherland",
   bannerSubtitle: "Where Dreams Take Flight with Netherlands Education",
   capital: "Amsterdam",
-  banner: "/study-abroad/netherland/banner.png",
+  banner: "/study-abroad/netherland/banner.jpeg",
   overview:
     "Netherlands Universities such as Delft University of Technology and the University of Amsterdam, rank among the top globally for their excellent scientific and engineering programs taught in English. Known for producing highly employable graduates, the Netherlands balances world-class education with a vibrant lifestyle that goes beyond academics.",
-  overviewImage: "/study-abroad/netherland/netherland.png",
-  studentImage: "/study-abroad/netherland/students.png",
+  overviewImage: "/study-abroad/netherland/netherland.jpeg",
+  studentImage: "/study-abroad/netherland/students.jpeg",
   general:
     "The Netherlands is a vibrant country in Northwestern Europe known for its flat landscape, extensive canal systems, and rich cultural heritage. With a population of around 18 million and a parliamentary constitutional monarchy, it boasts a high standard of living and world-class education.",
   noOfUniversities: 50,

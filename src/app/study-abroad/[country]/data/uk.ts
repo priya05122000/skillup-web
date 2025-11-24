@@ -8,8 +8,8 @@ const uk: CountryData = {
   banner : "/study-abroad/uk/banner.jpg",
   overview:
     "The United Kingdom is home to some of the world’s oldest and most prestigious universities. Renowned institutions like Oxford, Cambridge, and Imperial College London are celebrated for their academic excellence. Whether you seek a comprehensive undergraduate or postgraduate program, the United Kingdom universities offer a range of options, backed by high rankings and international recognition",
-  overviewImage: "/study-abroad/uk/uk.png",
-  studentImage:"/study-abroad/uk/students.png",
+  overviewImage: "/study-abroad/uk/uk.jpeg",
+  studentImage:"/study-abroad/uk/students.jpeg",
   general:
     "The country’s rich history, vibrant student cities, and welcoming multicultural atmosphere make it an ideal destination for students seeking academic excellence and global exposure.",
   noOfUniversities: 45,

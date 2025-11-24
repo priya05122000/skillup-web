@@ -28,7 +28,7 @@ const services = [
   {
     slug: "application-processing",
     name: "University/College<br/>Application<br/>Processing",
-    profile_photo_url: "services/university.png",
+    profile_photo_url: "services/university.jpeg",
     description:
       "Enjoy expert guidance with Skill Up Study Abroad Agency through every step of your university or college application for a smooth, error-free admission experience.",
   },
@@ -56,7 +56,7 @@ const services = [
   {
     slug: "language-support",
     name: "Languages",
-    profile_photo_url: "services/languages.png",
+    profile_photo_url: "services/languages.jpeg",
     description:
       "Benefit from detailed briefing sessions with Skill Up Study Abroad Agency that equip you with essential information before you begin your overseas study journey.",
   },

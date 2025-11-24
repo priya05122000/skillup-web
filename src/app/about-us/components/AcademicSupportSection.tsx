@@ -75,13 +75,7 @@ const InfoCard: React.FC<CardProps> = ({
 
 const AcademicSupportSection: React.FC = () => (
   <section className="py-10 sm:py-20 ">
-    <Section className="mb-10 sm:mb-20">
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">
-        {cards.map((card, idx) => (
-          <InfoCard key={card.title} {...card} />
-        ))}
-      </div>
-    </Section>
+
 
     <Section>
       <div className="">
@@ -99,11 +93,11 @@ const AcademicSupportSection: React.FC = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
         <div className="h-full w-full sm:h-[400px] lg:h-[550px]">
           <Image
-            src="/about-us/study.png"
+            src="/about-us/study.jpeg"
             alt="Students studying on campus"
             width={1600}
             height={800}
-            className="rounded-md shadow-md w-full h-full object-cover"
+            className="rounded-md shadow-md w-full h-full object-cover object-top"
           />
         </div>
         <div>
@@ -153,6 +147,14 @@ const AcademicSupportSection: React.FC = () => (
             <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
           </button>
         </div>
+      </div>
+    </Section>
+
+    <Section className="mt-10 sm:mt-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">
+        {cards.map((card, idx) => (
+          <InfoCard key={card.title} {...card} />
+        ))}
       </div>
     </Section>
   </section>

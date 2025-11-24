@@ -81,7 +81,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
       } else {
         setError("Failed to send enquiry. Please try again.");
         console.error("Failed to send enquiry:", await res.text());
-        console.error(error); 
+        console.error(error);
       }
     } catch {
       setError("Failed to send enquiry. Please try again.");
@@ -103,7 +103,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
           />
         </div>
         {/* RIGHT FORM CONTAINER */}
-        <div className="relative z-10 w-full max-w-7xl flex justify-center lg:justify-end">
+        <div className="relative z-10 w-full max-w-7xl flex justify-center lg:justify-start">
           <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
             <div className="flex flex-col items-center mb-6">
@@ -114,7 +114,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 level={5}
                 className="text-white font-bold text-center mb-2"
               >
-                Connect with Us
+                Connect with us
               </Heading>
             </div>
             {/* FORM */}

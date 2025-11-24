@@ -1,8 +1,10 @@
+"use client";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Span from "@/components/Span";
 
 export type Service = {
   slug: string;
@@ -17,7 +19,7 @@ const services: Service[] = [
     slug: "test-preparation",
     title: "Test Preparation",
     briefing: "TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE.",
-    image: "/services/test-preparation.png",
+    image: "/services/test-preparation.jpeg",
     description:
       "Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.",
   },
@@ -41,8 +43,9 @@ const services: Service[] = [
     slug: "application-processing",
     title: "University/College Application Processing",
     briefing: "Expert Guidance For Applications",
-    image: "/services/university.png",
-    description: "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
+    image: "/services/university.jpeg",
+    description:
+      "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
   },
   {
     slug: "visa-support",
@@ -72,25 +75,72 @@ const services: Service[] = [
     slug: "language-support",
     title: "Languages",
     briefing: "Spoken English, French & German",
-    image: "/services/languages.png",
+    image: "/services/languages.jpeg",
     description:
       "Skill Up Study Abroad Agency offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
+  },
+  {
+    slug: "accommodation",
+    title: "Accommodation",
+    briefing: "Seamless Housing Abroad",
+    image: "/services/accomodation.jpg",
+    description:
+      "Skill Up ensures seamless accommodation arrangements tailored to your needs while you study abroad. Whether you prefer homestays, shared apartments, or university dormitories, we connect you with safe, comfortable, and convenient housing options. Our dedicated support team assists with location selection, budgeting, and settling-in services to make your new environment welcoming and stress-free, allowing you to focus fully on your academic and cultural experience.",
+  },
+  {
+    slug: "loan",
+    title: "Loan",
+    briefing: "Flexible Study Abroad Loans",
+    image: "/services/loan.jpg",
+    description:
+      "Skill Up offers flexible loan arrangements to help students fund their studies abroad seamlessly. Our partnerships with banks and financial institutions assist in securing education loans that cover tuition fees, accommodation, travel, and living expenses. Whether you need unsecured loans with quick approval or collateral-based higher loans, we guide you through the application process, negotiate better terms, and ensure you get the financial support needed to focus entirely on your educational journey.",
   },
 ];
 
 const Services: React.FC = () => {
+  const tabLabels = services.map((s) => ({ title: s.title, slug: s.slug }));
+  const [activeTab, setActiveTab] = useState(tabLabels[0]?.slug || "");
+
+  const handleTabClick = (slug: string) => {
+    setActiveTab(slug);
+    const el = document.getElementById(slug);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div>
       <Section>
         <div className="pt-10 sm:pt-20">
-          <div className="bg-(--orange)/10 rounded-md p-10">
+          {/* Tabs */}
+          <div className="w-full block mb-10 overflow-x-auto touch-pan-x scroll-smooth scrollbar-thin ">
+            <div className="flex rounded-md mb-2 whitespace-nowrap w-max">
+              {tabLabels.map((tab) => (
+                <button
+                  key={tab.slug}
+                  className={`px-4 py-2 cursor-pointer rounded-md font-medium transition-colors duration-200 focus:outline-none text-base
+          ${activeTab === tab.slug
+                      ? "bg-(--orange) shadow text-(--white)"
+                      : " text-(--teal) hover:text-(--orange)"}
+        `}
+                  onClick={() => handleTabClick(tab.slug)}
+                >
+                  <Span>{tab.title}</Span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+
+          <div className="bg-(--orange)/10 rounded-md px-4 sm:px-10">
             {services.map((service, idx) => (
               <div
                 key={idx}
                 id={service.slug}
-                className="service-section grid grid-cols-1 md:grid-cols-6 border-b border-(--teal)/20 py-10 gap-6"
+                className="service-section flex flex-col lg:flex-row border-b border-(--teal)/20 py-6 sm:py-10 gap-2 lg:gap-6"
               >
-                <div className="md:col-span-1 flex items-start">
+                <div className="lg:w-2/8 xl:w-1/5 flex items-start">
                   <Heading
                     level={6}
                     className="mb-2 font-bold uppercase text-(--teal)"
@@ -98,24 +148,25 @@ const Services: React.FC = () => {
                     {service.briefing}
                   </Heading>
                 </div>
+                <div className="lg:w-5/7 xl:w-4/5 flex flex-col sm:flex-row gap-6 justify-center">
+                  <div className="w-full md:w-50 xl:w-80 h-52 shrink-0 mt-2">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={500}
+                      height={500}
+                      className="w-full h-full rounded object-cover"
+                    />
+                  </div>
 
-                <div className="md:col-span-2 flex justify-center">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={500}
-                    height={500}
-                    className="w-80 h-52 mb-4 rounded object-cover"
-                  />
-                </div>
-
-                <div className="md:col-span-3">
-                  <Paragraph size="xl" className="font-semibold">
-                    {service.title}
-                  </Paragraph>
-                  <Paragraph size="base" className="text-justify mt-2">
-                    {service.description}
-                  </Paragraph>
+                  <div className="">
+                    <Paragraph size="xl" className="font-semibold">
+                      {service.title}
+                    </Paragraph>
+                    <Paragraph size="base" className="text-justify mt-2">
+                      {service.description}
+                    </Paragraph>
+                  </div>
                 </div>
               </div>
             ))}

@@ -8,8 +8,8 @@ const NewZealand: CountryData = {
   banner: "/study-abroad/newzealand/banner.jpg",
   overview:
     "New Zealand universities offer world-class education with a strong focus on research, innovation, and practical learning. The country has eight public universities known for their high academic standards and international recognition.",
-  overviewImage: "/study-abroad/newzealand/newzealand.png",
-  studentImage: "/study-abroad/newzealand/students.png",
+  overviewImage: "/study-abroad/newzealand/newzealand.jpeg",
+  studentImage: "/study-abroad/newzealand/students.jpeg",
   general:
     "New Zealand is a picturesque island nation in the South Pacific known for its diverse landscapes, including mountains, forests, and beaches. The capital city is Wellington, and English and Maori are the official languages.",
   noOfUniversities: 8,
