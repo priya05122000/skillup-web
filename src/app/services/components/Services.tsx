@@ -1,8 +1,10 @@
+"use client";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Span from "@/components/Span";
 
 export type Service = {
   slug: string;
@@ -77,13 +79,60 @@ const services: Service[] = [
     description:
       "Skill Up Study Abroad Agency offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
   },
+  {
+    slug: "accommodation",
+    title: "Accommodation",
+    briefing: "Seamless Housing Abroad",
+    image: "/services/accomodation.jpg",
+    description:
+      "Skill Up ensures seamless accommodation arrangements tailored to your needs while you study abroad. Whether you prefer homestays, shared apartments, or university dormitories, we connect you with safe, comfortable, and convenient housing options. Our dedicated support team assists with location selection, budgeting, and settling-in services to make your new environment welcoming and stress-free, allowing you to focus fully on your academic and cultural experience.",
+  },
+  {
+    slug: "loan",
+    title: "Loan",
+    briefing: "Flexible Study Abroad Loans",
+    image: "/services/loan.jpg",
+    description:
+      "Skill Up offers flexible loan arrangements to help students fund their studies abroad seamlessly. Our partnerships with banks and financial institutions assist in securing education loans that cover tuition fees, accommodation, travel, and living expenses. Whether you need unsecured loans with quick approval or collateral-based higher loans, we guide you through the application process, negotiate better terms, and ensure you get the financial support needed to focus entirely on your educational journey.",
+  },
 ];
 
 const Services: React.FC = () => {
+  const tabLabels = services.map((s) => ({ title: s.title, slug: s.slug }));
+  const [activeTab, setActiveTab] = useState(tabLabels[0]?.slug || "");
+
+  const handleTabClick = (slug: string) => {
+    setActiveTab(slug);
+    const el = document.getElementById(slug);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div>
       <Section>
         <div className="pt-10 sm:pt-20">
+          {/* Tabs */}
+          <div className="w-full block mb-10 overflow-x-auto touch-pan-x scroll-smooth scrollbar-thin ">
+            <div className="flex rounded-md mb-2 whitespace-nowrap w-max">
+              {tabLabels.map((tab) => (
+                <button
+                  key={tab.slug}
+                  className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none text-base
+          ${activeTab === tab.slug
+                      ? "bg-(--orange) shadow text-(--teal)"
+                      : " text-(--teal) hover:text-(--orange)"}
+        `}
+                  onClick={() => handleTabClick(tab.slug)}
+                >
+                  <Span>{tab.title}</Span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+
           <div className="bg-(--orange)/10 rounded-md px-4 sm:px-10">
             {services.map((service, idx) => (
               <div
