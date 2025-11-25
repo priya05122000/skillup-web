@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const gre: ExamData = {
   name: "GRE",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/gre-banner.webp",
   bannerSubtitle:
     "Open doors to graduate programs worldwide by excelling in GRE. Sharpen your analytical, verbal, and quantitative skills for a competitive edge.",
   description:
@@ -33,6 +33,7 @@ const gre: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/gre1.webp",
   aboutDescription:
     "The GRE (Graduate Record Examination) is a standardized test commonly required for admission to graduate programs worldwide. It assesses verbal reasoning, quantitative reasoning, analytical writing, and critical thinking skills. Scores are used by admissions committees to evaluate applicants' potential for success in graduate-level studies.",
   tableTitle: "GRE General",
@@ -62,6 +63,7 @@ const gre: ExamData = {
      { title: "Mock-tests", values: "12 hours (4 mock-tests)" },
      { title: "Total training program", values: "84 hours" },
   ],
+  detailsImage:"/test-prep/gre2.webp",
   details: [
       {
         id: "01",

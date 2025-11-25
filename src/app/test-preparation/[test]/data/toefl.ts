@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const toefl: ExamData = {
   name: "TOEFL",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/toefl-banner.webp",
   bannerSubtitle:
     "Demonstrate your English proficiency for academic and professional success with TOEFL. Expand your study and work opportunities internationally.",
   description:
@@ -33,6 +33,7 @@ const toefl: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/toefl1.webp",
   tableTitle: "TOEFL",
   tableData: [
       { title: "Testing authority", values: "ETS, U.S.A" },

@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const gmat: ExamData = {
   name: "GMAT",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/gmat-banner.webp",
   bannerSubtitle:
     "Gain an advantage for business school admissions with a strong GMAT score. Develop strategic thinking and problem-solving skills critical for MBA success.",
   description:
@@ -33,6 +33,7 @@ const gmat: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/gmat1.webp",
   aboutDescription:
     "The GMAT (Graduate Management Admission Test) is a standardized test used for admissions to graduate management programs, such as MBA (Master of Business Administration) programs. Here's some basic information about the GMAT.",
   tableTitle: "GMAT Focus Edition 2024",
@@ -62,6 +63,7 @@ const gmat: ExamData = {
     { title: "Mock-tests", values: "12 hours (4 mock-tests)" },
     { title: "Total training program", values: "84 hours" },
   ],
+  detailsImage:"/test-prep/gmat2.webp",
   details: [
       {
         id: "01",

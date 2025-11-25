@@ -23,7 +23,7 @@ const page = ({ params }: PageProps) => {
   return (
     <div>
       <Banner data={data} />
-      <EnquireForm description={data.description} />
+      <EnquireForm description={data.description} aboutImage={data.aboutImage} />
       <Preparation data={data} />
       <Table data={data} />
       <DetailSection data={data} />

@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const oet: ExamData = {
   name: "OET",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/oet-banner.webp",
   bannerSubtitle:
     "Prove your healthcare communication skills with OET certification. Meet professional language standards required for global healthcare careers.",
   description:
@@ -33,6 +33,7 @@ const oet: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/oet1.webp",
   aboutDescription:
     "The Occupational English Test (OET) is an English language proficiency test specifically designed for healthcare professionals. Here's some information about the OET.",
   tableTitle: "Occupational English Test (OET)",
@@ -63,6 +64,7 @@ const oet: ExamData = {
     { title: "Total training program", values: "50 hours" },
   ],
   purpose:"The OET assesses the language skills of healthcare professionals who wish to work or study in English-speaking environments, such as Australia, New Zealand, the UK, Ireland, the USA, Canada, and Singapore.",
+  detailsImage:"/test-prep/oet2.webp",
   details: [
       {
         id: "01",

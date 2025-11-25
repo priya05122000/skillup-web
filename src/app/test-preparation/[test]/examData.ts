@@ -8,6 +8,7 @@ export interface ExamData {
     id: string;
     title: string;
   }[];
+  aboutImage: string;
   aboutDescription?: string;
   tableTitle: string;
   tableData: {
@@ -20,6 +21,7 @@ export interface ExamData {
   }[];
   note?: string;
   purpose?: string;
+  detailsImage?:string;
   details?:{
     id: string;
     title: string;

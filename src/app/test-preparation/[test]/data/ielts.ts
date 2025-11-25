@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const ielts: ExamData = {
   name: "IELTS",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/ielts-banner.webp",
   bannerSubtitle:
     "Secure your place in English-speaking countries with IELTS scores widely accepted by universities and immigration. Build language confidence for study, work, and migration.",
   description:
@@ -33,6 +33,7 @@ const ielts: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/ielts1.webp",
   tableTitle: "IELTS",
   tableData: [
       { title: "Testing authority", values: "Cambridge ESOL Examinations, U.K." },

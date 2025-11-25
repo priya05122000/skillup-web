@@ -19,8 +19,8 @@ const DetailSection = ({ data }: { data: ExamData }) => {
         {/* Left Section - Image */}
         <div className="relative w-full h-80 md:h-[500px] rounded-md overflow-hidden">
           <Image
-            src="/home/enquireform.jpg"
-            alt="Tattoo artist at work"
+            src={data.detailsImage || "/test-prep/default-detail.jpg"}
+            alt={"Detail Section Image"}
             fill
             className="object-cover" 
           />

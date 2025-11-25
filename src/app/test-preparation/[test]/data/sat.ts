@@ -3,7 +3,7 @@ import { ExamData } from "../examData";
 const sat: ExamData = {
   name: "SAT",
   subName: "Digital SAT",
-  bannerImage: "/about-us/about-banner.jpg",
+  bannerImage: "/test-prep/sat-banner.webp",
   bannerSubtitle:
     "Unlock admission to top global universities with a high SAT score. Boost your chances with focused preparation on critical reading, math, and writing skills.",
   description:
@@ -34,6 +34,7 @@ const sat: ExamData = {
       title: "Solving Doubts",
     },
   ],
+  aboutImage:"/test-prep/sat1.webp",
   aboutDescription:
     "The Digital SAT is a standardized entrance test primarily for undergraduate admissions abroad, notably in the US, Canada, and Singapore. Several Indian universities also consider SAT scores for admissions. It assesses students' readiness for college and covers areas like reading, writing, and mathematics.",
   tableTitle: "Digital SAT",
@@ -67,6 +68,7 @@ const sat: ExamData = {
     { title: "Mock-tests", values: "12 hours (4 mock-tests)" },
     { title: "Total training program", values: "72 hours" },
   ],
+  detailsImage:"/test-prep/sat2.webp",
   details: [
     {
       id: "01",

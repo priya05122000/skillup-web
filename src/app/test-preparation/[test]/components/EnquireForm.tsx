@@ -35,7 +35,7 @@ const countryOptions: CountryOption[] = [
   { name: "Phillipines", code: "phillipines" },
 ];
 
-const EnquireForm = ({ description }: { description: string }) => {
+const EnquireForm = ({ description, aboutImage }: { description: string; aboutImage: string }) => {
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [openDropdownName, setOpenDropdownName] = useState("");
@@ -88,7 +88,7 @@ const EnquireForm = ({ description }: { description: string }) => {
   return (
     <Section className="py-10 md:py-20">
       <div className="flex flex-col sm:flex-row gap-6">
-        <div className="w-full sm:w-3/5">
+        <div className="w-full sm:w-1/2 lg:w-3/5">
           <Paragraph
             size="lg"
             className="font-bold uppercase text-(--teal)"
@@ -100,18 +100,18 @@ const EnquireForm = ({ description }: { description: string }) => {
           </Heading>
 
           <Image
-            src="/home/destination2.jpg"  
+            src={aboutImage}  
             alt="Contact Image"
             width={600}
             height={400}
-            className="rounded-md mt-4 w-full object-cover h-80"
+            className="rounded-md mt-4 w-full object-cover h-70 lg:h-80 xl:h-100"
           />
 
           <Paragraph size="lg" className="mt-4">
             {description}
           </Paragraph>
         </div>
-        <div className="relative z-10 w-full sm:w-2/5 flex">
+        <div className="relative z-10 w-full sm:w-1/2 lg:w-2/5 flex">
           <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
             <div className="flex flex-col items-center mb-6">
