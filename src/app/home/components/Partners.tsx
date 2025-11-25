@@ -21,6 +21,7 @@ const partnerItems: PartnerItem[] = [
   { src: "/study-abroad/finland/university1.png", alt: "Finland University" },
   { src: "/study-abroad/france/university1.png", alt: "France University" },
   { src: "/study-abroad/newzealand/university1.png", alt: "New Zealand University" },
+  { src: "/study-abroad/netherland/university1.png", alt: "Netherlands University" },
 ];
 
 const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (

@@ -61,13 +61,13 @@ const testItems: TestItem[] = [
   {
     slug: "languages",
     title:"French",
-    description: "Test de Connaissance du Français (TCF)",
+    description: "French Language Proficiency Test (DELF/DALF)",
     nav: "/languages#french",
   },
   {
     slug: "languages",
     title: "German",
-    description: "Test d'aptitude en allemand (TestDaF)",
+    description: "German Language Proficiency Test (TestDaF)",
     nav: "/languages#german",
   },
 ];
