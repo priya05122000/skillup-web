@@ -75,6 +75,11 @@ const uk: CountryData = {
     { id: 5, name: "University 5", logo: "/study-abroad/uk/university5.png" },
     { id: 6, name: "University 6", logo: "/study-abroad/uk/university6.png" },
     { id: 7, name: "University 7", logo: "/study-abroad/uk/university7.png" },
+    { id: 8, name: "University 8", logo: "/study-abroad/uk/university8.png" },
+    { id: 9, name: "University 9", logo: "/study-abroad/uk/university9.png" },
+    { id: 10, name: "University 10", logo: "/study-abroad/uk/university10.png" },
+    { id: 11, name: "University 11", logo: "/study-abroad/uk/university11.png" },
+    { id: 12, name: "University 12", logo: "/study-abroad/uk/university12.png" },
   ],
 };
 
