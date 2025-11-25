@@ -9,6 +9,7 @@ type TestItem = {
   slug?: string;
   title: string;
   description?: string;
+  nav: string;
   imageSrc?: string;
   imageAlt?: string;
   isExplore?: boolean;
@@ -19,43 +20,55 @@ const testItems: TestItem[] = [
     slug: "test-preparation",
     title: "IELTS",
     description: "International English Language Testing System (IELTS)",
+    nav: "/test-preparation/ielts",
   },
   {
     slug: "test-preparation",
     title: "PTE",
     description: "Pearson Test of English (PTE)",
+    nav: "/test-preparation/pte",
   },
   {
     slug: "test-preparation",
     title: "OET",
     description: "Occupational English Test (OET)",
+    nav: "/test-preparation/oet",
   },
   {
     slug: "test-preparation",
     title: "TOEFL",
     description: "Test of English as a Foreign Language (TOEFL)",
+    nav: "/test-preparation/toefl",
   },
   {
     slug: "test-preparation",
     title: "GRE",
     description: "Graduate Record Examination (GRE)",
+    nav: "/test-preparation/gre",
   },
   {
     slug: "test-preparation",
     title: "GMAT",
     description: "Graduate Management Admission Test (GMAT)",
+    nav: "/test-preparation/gmat",
   },
   {
     slug: "test-preparation",
     title: "SAT",
     description: "Scholastic Assessment Test (SAT)",
+    nav: "/test-preparation/sat",
   },
   {
-    slug: "test-preparation",
-    title: "Explore",
-    imageSrc: "/home/arrow-right.png",
-    imageAlt: "Aptitude Test",
-    isExplore: true,
+    slug: "languages",
+    title:"French",
+    description: "Test de Connaissance du Français (TCF)",
+    nav: "/languages#french",
+  },
+  {
+    slug: "languages",
+    title: "German",
+    description: "Test d'aptitude en allemand (TestDaF)",
+    nav: "/languages#german",
   },
 ];
 
@@ -65,9 +78,10 @@ const TestCard: React.FC<TestItem> = ({
   imageSrc,
   imageAlt,
   isExplore,
+  nav,
 }) => (
   <Link
-    href="/services/#test-preparation"
+    href={nav}
     scroll={true}
     className={`block bg-(--teal)/70 backdrop-blur-md text-center p-10 hover:bg-(--teal) transition-all duration-200 ${
       isExplore ? "hidden sm:block" : ""

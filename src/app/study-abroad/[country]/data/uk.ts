@@ -12,7 +12,6 @@ const uk: CountryData = {
   studentImage:"/study-abroad/uk/students.jpeg",
   general:
     "The country’s rich history, vibrant student cities, and welcoming multicultural atmosphere make it an ideal destination for students seeking academic excellence and global exposure.",
-  noOfUniversities: 45,
   temp: "5°C in winter to 23°C in summer",
   languages: ["English"],
   currency: "British Pound Sterling (GBP)",
@@ -69,18 +68,13 @@ const uk: CountryData = {
 
   ],
   universities: [
-    { id: 1, name: "Partner 1", logo: "/home/partner13.png" },
-    { id: 2, name: "Partner 2", logo: "/home/partner2.png" },
-    { id: 3, name: "Partner 3", logo: "/home/partner3.png" },
-    { id: 4, name: "Partner 4", logo: "/home/partner4.png" },
-    { id: 5, name: "Partner 5", logo: "/home/partner5.png" },
-    { id: 6, name: "Partner 6", logo: "/home/partner6.png" },
-    { id: 7, name: "Partner 7", logo: "/home/partner7.png" },
-    { id: 8, name: "Partner 8", logo: "/home/partner8.png" },
-    { id: 9, name: "Partner 9", logo: "/home/partner9.png" },
-    { id: 10, name: "Partner 10", logo: "/home/partner10.png" },
-    { id: 11, name: "Partner 11", logo: "/home/partner11.png" },
-    { id: 12, name: "Partner 12", logo: "/home/partner12.png" },
+    { id: 1, name: "University 1", logo: "/study-abroad/uk/university1.png" },
+    { id: 2, name: "University 2", logo: "/study-abroad/uk/university2.png" },
+    { id: 3, name: "University 3", logo: "/study-abroad/uk/university3.png" },
+    { id: 4, name: "University 4", logo: "/study-abroad/uk/university4.png" },
+    { id: 5, name: "University 5", logo: "/study-abroad/uk/university5.png" },
+    { id: 6, name: "University 6", logo: "/study-abroad/uk/university6.png" },
+    { id: 7, name: "University 7", logo: "/study-abroad/uk/university7.png" },
   ],
 };
 

@@ -86,21 +86,21 @@ const EnquireForm = ({ description }: { description: string }) => {
   };
 
   return (
-    <Section className="py-10">
+    <Section className="py-10 md:py-20">
       <div className="flex flex-col sm:flex-row gap-6">
         <div className="w-full sm:w-3/5">
           <Paragraph
             size="lg"
-            className="font-bold leading-tight uppercase text-(--teal)"
+            className="font-bold uppercase text-(--teal)"
           >
-            Grow with us
+            Train Smart, Score High
           </Paragraph>
           <Heading level={4} className="font-bold leading-tight">
-            Contact
+            Expert Prep. Proven Results
           </Heading>
 
           <Image
-            src="/home/destination2.jpg"
+            src="/home/destination2.jpg"  
             alt="Contact Image"
             width={600}
             height={400}

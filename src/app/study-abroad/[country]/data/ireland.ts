@@ -1,6 +1,6 @@
 import { CountryData } from "../countryData";
 
-const germany: CountryData = {
+const ireland: CountryData = {
   name: "Ireland",
   bannerTitle: "Study in Ireland",
   bannerSubtitle: "Discover Excellence Through Irish Education",
@@ -12,7 +12,6 @@ const germany: CountryData = {
   studentImage: "/study-abroad/ireland/students.jpeg",
   general:
     "Ireland, officially known as Eire, is a parliamentary republic occupying most of the island of Ireland in Western Europe, with its capital and largest city being Dublin. It has a population of about 5.4 million and is known for its rich cultural heritage, beautiful landscapes, and advanced economy centered around Dublin as a major financial hub.",
-  noOfUniversities: 8,
   temp: "Temperate maritime, mild and wet",
   languages: ["English", "Irish"],
   currency: "Euro (€)",
@@ -68,19 +67,19 @@ const germany: CountryData = {
     },
   ],
   universities: [
-    { id: 1, name: "Partner 1", logo: "/home/partner13.png" },
-    { id: 2, name: "Partner 2", logo: "/home/partner2.png" },
-    { id: 3, name: "Partner 3", logo: "/home/partner3.png" },
-    { id: 4, name: "Partner 4", logo: "/home/partner4.png" },
-    { id: 5, name: "Partner 5", logo: "/home/partner5.png" },
-    { id: 6, name: "Partner 6", logo: "/home/partner6.png" },
-    { id: 7, name: "Partner 7", logo: "/home/partner7.png" },
-    { id: 8, name: "Partner 8", logo: "/home/partner8.png" },
-    { id: 9, name: "Partner 9", logo: "/home/partner9.png" },
-    { id: 10, name: "Partner 10", logo: "/home/partner10.png" },
-    { id: 11, name: "Partner 11", logo: "/home/partner11.png" },
-    { id: 12, name: "Partner 12", logo: "/home/partner12.png" },
+    { id: 1, name: "University 1", logo: "/study-abroad/ireland/university1.png" },
+    { id: 2, name: "University 2", logo: "/study-abroad/ireland/university2.png" },
+    { id: 3, name: "University 3", logo: "/study-abroad/ireland/university3.png" },
+    { id: 4, name: "University 4", logo: "/study-abroad/ireland/university4.png" },
+    { id: 5, name: "University 5", logo: "/study-abroad/ireland/university5.png" },
+    { id: 6, name: "University 6", logo: "/study-abroad/ireland/university6.png" },
+    { id: 7, name: "University 7", logo: "/study-abroad/ireland/university7.png" },
+    { id: 8, name: "University 8", logo: "/study-abroad/ireland/university8.png" },
+    { id: 9, name: "University 9", logo: "/study-abroad/ireland/university9.png" },
+    { id: 10, name: "University 10", logo: "/study-abroad/ireland/university10.png" },
+    { id: 11, name: "University 11", logo: "/study-abroad/ireland/university11.png" },
+    { id: 12, name: "University 12", logo: "/study-abroad/ireland/university12.png" },
   ],
 };
 
-export default germany;
+export default ireland;

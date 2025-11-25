@@ -12,7 +12,6 @@ const netherland: CountryData = {
   studentImage: "/study-abroad/netherland/students.jpeg",
   general:
     "The Netherlands is a vibrant country in Northwestern Europe known for its flat landscape, extensive canal systems, and rich cultural heritage. With a population of around 18 million and a parliamentary constitutional monarchy, it boasts a high standard of living and world-class education.",
-  noOfUniversities: 50,
   temp: "Temperate maritime climate with mild summers and cool winters",
   languages: ["Dutch"],
   currency: "Euro (EUR)",

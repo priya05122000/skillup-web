@@ -9,8 +9,8 @@ import Paragraph from "@/components/Paragraph";
 
 const Preparation = ({data}: {data: ExamData}) => {
   return (
-    <Section className="py-12 bg-(--teal) text-(--white)">
-      <Heading level={5} className="font-semibold mb-10">
+    <Section className="py-10 md:py-20 bg-(--teal) text-(--white)">
+      <Heading level={4} className="font-semibold mb-10">
         The Digital {data.name} Preparation
       </Heading>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">

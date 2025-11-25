@@ -49,11 +49,11 @@ const CustomTable: React.FC<CustomTableProps> = ({ title, rows }) => (
 
 const Table: React.FC<TableProps> = ({ data }) => {
   return (
-    <Section className="py-10">
-      <Heading level={6} className="mb-2">
+    <Section className="py-10 md:py-20">
+      <Heading level={4} className="mb-2">
         About the {data.subName || data.name}
       </Heading>
-      <Paragraph size="lg" className="mb-4">
+      <Paragraph size="lg" className="my-4">
         {data.aboutDescription}
       </Paragraph>
       <div>

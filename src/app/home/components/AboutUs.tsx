@@ -48,8 +48,8 @@ const AboutUs: React.FC = () => {
   return (
     <div className="pt-20 pb-10 sm:pt-20 sm:pb-20" aria-label="About Us">
       <Section className="h-full ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_1.2fr] gap-10 lg:gap-14 h-full mt-10 sm:mt-0 sm:px-10 xl:px-20">
-          <div className="relative flex flex-col h-[60vh]  sm:h-full ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_1.2fr] gap-10 lg:gap-14 h-full mt-10 sm:mt-0 sm:px-10 xl:px-20 ">
+          <div className="relative flex flex-col h-[60vh]  sm:h-full  ">
             <div className="w-[80%] h-[80%]  lg:h-3/4 relative   overflow-hidden ">
               <div className="relative h-full">
                 <Image
@@ -62,7 +62,7 @@ const AboutUs: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="absolute bottom-0 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5  bg-foreground p-2 rounded-md">
+            <div className="absolute -bottom-4 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5  bg-foreground p-2 rounded-md">
               <div className="relative h-full ">
                 <Image
                   src="/home/about-us-2.jpg"
@@ -97,10 +97,10 @@ const AboutUs: React.FC = () => {
             >
               About Skill Up Study Abroad Agency
             </Paragraph>
-            <Heading level={4} className="font-bold leading-tight mt-2">
+            <Heading level={4} className="font-bold leading-tight">
               Your Proven Ally in Overseas Education
             </Heading>
-            <Paragraph size="lg" className="mt-4 text-justify">
+            <Paragraph size="base" className="mt-4 text-justify">
               As the best study abroad consultancy in Mumbai, we provide
               comprehensive guidance from international education counseling to
               university admission. Our expert overseas education consultants

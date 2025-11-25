@@ -10,18 +10,17 @@ interface PartnerItem {
 }
 
 const partnerItems: PartnerItem[] = [
-  { src: "/home/partner1.png", alt: "Partner 1" },
-  { src: "/home/partner2.png", alt: "Partner 2" },
-  { src: "/home/partner3.png", alt: "Partner 3" },
-  { src: "/home/partner4.png", alt: "Partner 4" },
-  { src: "/home/partner5.png", alt: "Partner 5" },
-  { src: "/home/partner6.png", alt: "Partner 6" },
-  { src: "/home/partner7.png", alt: "Partner 7" },
-  { src: "/home/partner8.png", alt: "Partner 8" },
-  { src: "/home/partner9.png", alt: "Partner 9" },
-  { src: "/home/partner10.png", alt: "Partner 10" },
-  { src: "/home/partner11.png", alt: "Partner 11" },
-  { src: "/home/partner12.png", alt: "Partner 12" },
+  { src: "/study-abroad/uk/university1.png", alt: "UK University" },
+  { src: "/study-abroad/canada/university1.png", alt: "Canada University" },
+  { src: "/study-abroad/usa/university1.png", alt: "US University" },
+  { src: "/study-abroad/australia/university1.png", alt: "Australia University" },
+  { src: "/study-abroad/ireland/university1.png", alt: "Ireland University" },
+  { src: "/study-abroad/germany/university1.png", alt: "Germany University" },
+  { src: "/study-abroad/italy/university1.png", alt: "Italy University" },
+  { src: "/study-abroad/malta/university1.png", alt: "Malta University" },
+  { src: "/study-abroad/finland/university1.png", alt: "Finland University" },
+  { src: "/study-abroad/france/university1.png", alt: "France University" },
+  { src: "/study-abroad/newzealand/university1.png", alt: "New Zealand University" },
 ];
 
 const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (

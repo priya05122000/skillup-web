@@ -39,7 +39,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
           onClick={() => toggle(index)}
         >
           <div className="flex items-center justify-between">
-            <Paragraph size="xl" className="font-semibold">
+            <Paragraph size="lg" className="font-semibold">
               {faq.question}
             </Paragraph>
             <ChevronDown

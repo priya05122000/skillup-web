@@ -25,7 +25,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
   const quickFacts = data.quickFacts ?? [];
   const educationSystem = data.educationSystem ?? [];
   return (
-    <Section className="pt-8 lg:pt-14">
+    <Section className="py-10 md:py-20">
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
         {/* Main Content */}
         <div className="w-full lg:w-3/5">
@@ -89,7 +89,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
             width={800}
             height={800}
           />
-          <Heading level={6} className="mb-2 my-4">
+          <Heading level={6} className="mt-4 my-2">
             Overview
           </Heading>
           <Paragraph size="base" className="text-justify">
@@ -104,10 +104,6 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
           </Paragraph>
 
           <InfoRow label="Capital" value={data.capital} />
-          <InfoRow
-            label="Number of Universities"
-            value={data.noOfUniversities}
-          />
           <InfoRow label="Temperature" value={data.temp} />
           <InfoRow label="Languages" value={data.languages.join(", ")} />
           <InfoRow label="Currency" value={data.currency} />

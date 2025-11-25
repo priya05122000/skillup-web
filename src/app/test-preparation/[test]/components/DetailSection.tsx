@@ -27,18 +27,18 @@ const DetailSection = ({ data }: { data: ExamData }) => {
         </div>
 
         {/* Right Section - Services */}
-        <div className=" flex flex-col justify-center">
+        <div>
           {data.purpose && (
             <div className="mb-8">
-              <Heading level={5} className="tracking-wide">Purpose</Heading>
-              <Paragraph size="lg" className="mt-2 leading-relaxed">{data.purpose}</Paragraph>
+              <Heading level={4} className="tracking-wide">Purpose</Heading>
+              <Paragraph size="lg" className="mt-4 leading-relaxed">{data.purpose}</Paragraph>
             </div>
           )}
-          <Heading level={6} className="mb-5 tracking-wide">
+          <Heading level={4} className="mb-4 tracking-wide">
             The {data.name} Consists of {data.details.length} Main Sections
           </Heading>
 
-          <div className="space-y-8">
+          <div className="space-y-4">
             {(data.details ?? []).map((service, idx) => (
               <div
                 key={service.id}
