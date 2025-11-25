@@ -12,7 +12,7 @@ export default function Intake() {
           {/* Left image section */}
           <div className="lg:w-4/9 xl:w-3/7 relative flex justify-center items-center p-4 md:p-8 mb-86 sm:mb-102 lg:mb-0">
             <div className="absolute -top-10 sm:-top-15 lg:left-8 xl:left-14 z-10">
-              <div className="bg-foreground p-4 md:p-5 rounded-md">
+              <div className="bg-foreground p-3 md:p-4 rounded-md">
                 <Image
                   src="/about-us/intake.jpeg"
                   alt="Luxury Apartment"

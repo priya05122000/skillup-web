@@ -13,11 +13,11 @@ type CountryOverviewProps = {
 };
 
 const InfoRow: FC<{ label: string; value: ReactNode }> = ({ label, value }) => (
-  <div className="mt-4 bg-(--bg-grey) p-4 rounded-md flex items-center gap-2">
+  <div className="mt-4 bg-(--bg-grey) p-4 rounded-md flex gap-2">
     <Paragraph size="lg" className="font-bold">
       {label}:
     </Paragraph>
-    <Paragraph>{value}</Paragraph>
+    <Paragraph className="mt-0.5">{value}</Paragraph>
   </div>
 );
 

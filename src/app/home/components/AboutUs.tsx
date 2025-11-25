@@ -78,17 +78,17 @@ const AboutUs: React.FC = () => {
               <div className="flex items-center justify-center">
                 <Heading
                   level={4}
-                  className="text-transparent font-extrabold text-center tracking-widest"
+                  className="text-transparent font-extrabold text-center tracking-widest uppercase"
                   style={{
                     transform: "rotate(180deg)",
                     writingMode: "vertical-rl",
                     WebkitTextStroke: "1px #000",
                   }}
                 >
-                  EST 2020
+                  Skill up
                 </Heading>
               </div>
-            </div>
+            </div>  
           </div>
           <div className="h-full py-6">
             <Paragraph
