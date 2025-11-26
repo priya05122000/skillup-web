@@ -111,7 +111,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <Image
                 src="/contact/contact.webp"
                 alt="Students high-fiving in front of university"

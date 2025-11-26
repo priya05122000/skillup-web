@@ -29,12 +29,12 @@ const DetailSection = ({ data }: { data: ExamData }) => {
 
         {/* Right Section - Services */}
         <div>
-          {data.purpose && (
+          {/* {data.purpose && (
             <div className="mb-8">
-              <Heading level={4} className="tracking-wide">Purpose</Heading>
-              <Paragraph size="lg" className="mt-4 leading-relaxed">{data.purpose}</Paragraph>
+              <Heading level={5} className="tracking-wide">Purpose</Heading>
+              <Paragraph size="base" className="mt-4 leading-relaxed">{data.purpose}</Paragraph>
             </div>
-          )}
+          )} */}
           <Heading level={5} className="mb-4 tracking-wide">
             The {data.name} Consists of {data.details.length} Main Sections
           </Heading>

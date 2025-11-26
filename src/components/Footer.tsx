@@ -137,7 +137,7 @@ const Footer = () => {
         <hr className="border-t border-white/30 my-4" />
 
         <div className="flex flex-col xl:flex-row items-start justify-between text-xs w-full">
-          <Span className="mb-2 md:mb-0 text-center xl:text-left">
+          <Span className="mb-2 md:mb-0 text-left">
             Copyright @ 2024 Skill Up Academy All Rights and Reserved. Powered
             by{" "}
             <Link
@@ -152,14 +152,14 @@ const Footer = () => {
             <br />
             <Link
               href="/terms-and-conditions"
-              className="underline"
+              className="underline mt-2 inline-block"
               aria-label="Terms and Conditions"
             >
               Terms &amp; Conditions
             </Link>
           </Span>
 
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-4 xl:mt-0 ">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 xl:mt-0 ">
             <Link
               href="tel:09930494883"
               className="flex items-center gap-1 text-sm"

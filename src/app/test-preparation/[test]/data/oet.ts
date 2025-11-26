@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const oet: ExamData = {
   name: "OET",
-  bannerImage: "/test-prep/oet-banner.webp",
+  bannerImage: "/test-prep/oet-banner.jpg",
   bannerSubtitle:
     "Prove your healthcare communication skills with OET certification. Meet professional language standards required for global healthcare careers.",
   description:

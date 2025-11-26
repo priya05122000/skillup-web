@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const gmat: ExamData = {
   name: "GMAT",
-  bannerImage: "/test-prep/gmat-banner.webp",
+  bannerImage: "/test-prep/gmat-banner.jpg",
   bannerSubtitle:
     "Gain an advantage for business school admissions with a strong GMAT score. Develop strategic thinking and problem-solving skills critical for MBA success.",
   description:

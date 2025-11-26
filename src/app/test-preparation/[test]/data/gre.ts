@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const gre: ExamData = {
   name: "GRE",
-  bannerImage: "/test-prep/gre-banner.webp",
+  bannerImage: "/test-prep/gre-banner.jpg",
   bannerSubtitle:
     "Open doors to graduate programs worldwide by excelling in GRE. Sharpen your analytical, verbal, and quantitative skills for a competitive edge.",
   description:
