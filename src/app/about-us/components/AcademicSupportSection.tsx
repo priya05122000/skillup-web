@@ -83,7 +83,7 @@ const AcademicSupportSection: React.FC = () => (
           size="lg"
           className="uppercase text-(--teal) font-bold leading-tight"
         >
-          WHO WE ARE STUDY ABROAD
+          WHO WE ARE
         </Paragraph>
         <Heading level={4} className="leading-tight mt-2">
           Skill Up Study Abroad : Guiding Success in Overseas Education

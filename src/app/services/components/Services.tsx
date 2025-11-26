@@ -141,12 +141,9 @@ const Services: React.FC = () => {
                 className="service-section flex flex-col lg:flex-row border-b border-(--teal)/20 py-6 sm:py-10 gap-2 lg:gap-6"
               >
                 <div className="lg:w-2/8 xl:w-1/5 flex items-start">
-                  <Heading
-                    level={6}
-                    className="mb-2 font-bold uppercase text-(--teal)"
-                  >
-                    {service.briefing}
-                  </Heading>
+                  <Paragraph size="xl" className="font-semibold">
+                    {service.title}
+                  </Paragraph>
                 </div>
                 <div className="lg:w-5/7 xl:w-4/5 flex flex-col sm:flex-row gap-6 justify-center">
                   <div className="w-full md:w-50 xl:w-80 h-52 shrink-0 mt-2">
@@ -160,9 +157,13 @@ const Services: React.FC = () => {
                   </div>
 
                   <div className="">
-                    <Paragraph size="xl" className="font-semibold">
-                      {service.title}
-                    </Paragraph>
+
+                    <Heading
+                      level={6}
+                      className="mb-2 font-bold uppercase text-(--teal)"
+                    >
+                      {service.briefing}
+                    </Heading>
                     <Paragraph size="base" className="text-justify mt-2">
                       {service.description}
                     </Paragraph>

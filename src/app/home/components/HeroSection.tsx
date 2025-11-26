@@ -48,7 +48,8 @@ const slides = [
   {
     img: "/home/slider1.jpg",
     title: "Skill Up Study Abroad Mumbai",
-    heading: "Leading You to Global Universities",
+    heading1: "Build your tomorrow ",
+    heading2: "Leading You to Global Universities.",
     paragraph:
       "Expand your future at 500+ top-rated universities and colleges worldwide.",
     buttonText: "Reserve your spot",
@@ -56,21 +57,24 @@ const slides = [
   {
     img: "/home/slider2.jpg",
     title: "Skill Up Study Abroad",
-    heading: "Study in CANADA",
-    paragraph: "Pursue your education in Canada’s world-class institutions",
+    heading1: "Learn. Rise. Lead",
+    heading2: "Languages made simple",
+    paragraph: "Improve spoken English, Japanese and others with simple guidance and daily practice.",
     buttonText: "Book your consultation",
   },
   {
     img: "/home/slider3.jpeg",
     title: "Skill Up Study Abroad Mumbai",
-    heading: "Study in IRELAND",
-    paragraph: "Choose from Ireland’s elite group of 9 leading universities.",
+    heading1: "Trusted support",
+    heading2: "Guiding your study journey",
+    paragraph: "Services include test preparation, overseas study guidance, university application support, visa assistance and education loan help.",
     buttonText: "Set up your appointment",
   },
   {
     img: "/home/slider4.jpeg",
     title: "Skill Up Study Abroad",
-    heading: "Rise To The Top By Learning Smarter!",
+    heading1: "Smarter Learning Wins",
+    heading2: "Rise To The Top By Learning Smarter",
     paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
     buttonText: "Reserve your spot ",
   },
@@ -129,15 +133,15 @@ const HeroSection: React.FC = () => {
             <div className="relative z-10 flex h-full items-start sm:items-center justify-center pt-12 sm:pt-0">
               <Section className="text-left text-(--white) w-full ">
                 <div className="max-w-lg lg:max-w-2xl">
-                  <Paragraph
+                  {/* <Paragraph
                     size="lg"
                     className="font-bold leading-tight uppercase"
                   >
                     {slide.title}
-                  </Paragraph>
+                  </Paragraph> */}
                   <Heading level={4} className="font-bold leading-tight mt-4">
-                    <span className="bg-(--teal) px-1.5 pb-1.5">Skill Up Academy</span> -{" "}
-                    {slide.heading}
+                    <span className="bg-(--teal) px-1.5 pb-1.5">{slide.heading1}</span> -{" "}
+                    {slide.heading2}
                   </Heading>
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">
                     {slide.paragraph}

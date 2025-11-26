@@ -14,33 +14,33 @@ interface ProgramInfo {
 
 const programs: ProgramInfo[] = [
   {
-    title: "Graduate Program",
-    description: "Browse the Graduate Degrees.",
+    title: "Our Services  ",
+    description: "Discover the services we provide.",
   },
   {
-    title: "Undergraduate Program",
-    description: "Browse the Undergraduate Degrees.",
+    title: "Learn Languages  ",
+    description: "Build your world through new languages.",
   },
 ];
 
 const ProgramList: React.FC = () => (
   <div className="my-8 max-w-sm w-80 px-3 py-1 border-l-4 border-(--orange)">
-    <div className="border-b border-black/10 pb-3">
+    <Link href="/services" className="block border-b border-black/10 pb-3  transition">
       <Paragraph size="xl" className="font-bold leading-tight ">
-        {programs[0].title}
+      {programs[0].title}
       </Paragraph>
       <Paragraph size="base" className="mt-2">
-        {programs[0].description}
+      {programs[0].description}
       </Paragraph>
-    </div>
-    <div className="pt-3">
+    </Link>
+    <Link href="/languages" className="block pt-3 transition">
       <Paragraph size="xl" className="font-bold leading-tight ">
-        {programs[1].title}
+      {programs[1].title}
       </Paragraph>
       <Paragraph size="base" className="mt-2">
-        {programs[1].description}
+      {programs[1].description}
       </Paragraph>
-    </div>
+    </Link>
   </div>
 );
 
@@ -86,14 +86,14 @@ const AboutUs: React.FC = () => {
                   Skill up
                 </Heading>
               </div>
-            </div>  
+            </div>
           </div>
           <div className="h-full py-6">
             <Paragraph
               size="lg"
               className="font-bold leading-tight uppercase text-(--teal)"
             >
-              About Skill Up Study Abroad
+              About
             </Paragraph>
             <Heading level={4} className="font-bold leading-tight">
               Your Proven Ally in Overseas Education

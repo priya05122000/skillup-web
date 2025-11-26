@@ -101,7 +101,7 @@ const Navbar = () => {
         {/* Mobile/tab: only logo and hamburger */}
         <div className="flex items-center w-full xl:hidden">
           {/* Mobile: logo left, hamburger right */}
-          <Link href="#" className="flex items-center gap-2 h-20 md:hidden">
+          <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
             <span className="flex items-center justify-center">
               <Image
                 src="/logo/navbar-logo.svg"
@@ -122,7 +122,7 @@ const Navbar = () => {
           </button>
           {/* Tablet: logo and hamburger centered */}
           <div className="hidden md:flex items-center justify-center w-full xl:hidden">
-            <Link href="#" className="flex items-center gap-2 h-20 mx-auto">
+            <Link href="/" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
                   src="/logo/navbar-logo.svg"
@@ -144,7 +144,7 @@ const Navbar = () => {
         </div>
         {/* Desktop: logo, menu links */}
         <div className="hidden xl:flex items-center gap-8 h-20 w-full justify-center">
-          <Link href="#" className="flex items-center gap-2 h-full ">
+          <Link href="/" className="flex items-center gap-2 h-full ">
             <span className=" flex items-center justify-center ">
               <Image
                 src="/logo/navbar-logo.svg"

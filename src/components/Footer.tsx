@@ -102,13 +102,15 @@ const Footer = () => {
           {/* Logo + Social Icons */}
           <div className="flex flex-col justify-start items-end h-full">
             <div className="flex flex-col items-start">
-              <Image
-                src="/logo/navbar-logo.svg"
-                alt="Logo"
-                width={120}
-                height={60}
-                className="h-16 w-auto"
-              />
+              <Link href="/" aria-label="Home">
+                <Image
+                  src="/logo/navbar-logo.svg"
+                  alt="Logo"
+                  width={120}
+                  height={60}
+                  className="h-16 w-auto"
+                />
+              </Link>
               <Paragraph size="base" className="my-3">
                 We offer personalized guidance, visa help, and complete
                 assistance for students wanting to study abroad, ensuring they
@@ -136,8 +138,8 @@ const Footer = () => {
 
         <hr className="border-t border-white/30 my-4" />
 
-        <div className="flex flex-col xl:flex-row items-start justify-between text-xs w-full">
-          <Span className="mb-2 md:mb-0 text-left">
+        <div className="flex flex-col xl:flex-row items-start sm:items-center xl:items-start justify-between text-xs w-full">
+          <Span className="mb-2 md:mb-0 text-start sm:text-center xl:text-left">
             Copyright @ 2024 Skill Up Academy All Rights and Reserved. Powered
             by{" "}
             <Link
@@ -159,25 +161,46 @@ const Footer = () => {
             </Link>
           </Span>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 xl:mt-0 ">
-            <Link
-              href="tel:09930494883"
-              className="flex items-center gap-1 text-sm"
-              aria-label="Call 09930494883"
-            >
-              099304 94883
-            </Link>
-            <a
-              href="mailto:seawoods.skillup@gmail.com"
-              className="flex items-center gap-1 text-sm"
-              aria-label="Email seawoods.skillup@gmail.com"
-            >
-              seawoods.skillup@gmail.com
-            </a>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 xl:mt-0 ">
+            <div>
+                <Link
+                href="tel:+919820588082"
+                className="flex items-center gap-1 text-sm"
+                aria-label="Call +91-98205 88082"
+                >
+                +91-98205 88082
+                </Link>
+              <Link
+                href="tel:+919930180955"
+                className="flex items-center gap-1 text-sm"
+                aria-label="Call 09930180955"
+              >
+                +91-99301 80955
+              </Link>
+            </div>
+            <div>
+              <a
+                href="mailto:info@skillupstudyabroad.com"
+                className="flex items-center gap-1 text-sm"
+                aria-label="Email info@skillupstudyabroad.com"
+              >
+                info@skillupstudyabroad.com
+              </a>
+              <a
+                href="mailto:admission@skillupstudyabroad.com"
+                className="flex items-center gap-1 text-sm"
+                aria-label="Email admission@skillupstudyabroad.com"
+              >
+                admission@skillupstudyabroad.com
+              </a>
+
+            </div>
           </div>
+
+
         </div>
       </Section>
-    </footer>
+    </footer >
   );
 };
 
