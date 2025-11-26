@@ -30,7 +30,7 @@ const services = [
     name: "University/College<br/>Application<br/>Processing",
     profile_photo_url: "services/university.jpeg",
     description:
-      "Enjoy expert guidance with Skill Up Study Abroad Agency through every step of your university or college application for a smooth, error-free admission experience.",
+      "Enjoy expert guidance with Skill Up Study Abroad  through every step of your university or college application for a smooth, error-free admission experience.",
   },
   {
     slug: "visa-support",
@@ -44,21 +44,21 @@ const services = [
     name: "Scholarship<br/>Guidance",
     profile_photo_url: "services/scholarship.jpg",
     description:
-      "Our experts at Skill Up Study Abroad Agency help you check eligibility and apply for the most suitable scholarships to fund your study abroad visa and admission services for Indian students.",
+      "Our experts at Skill Up Study Abroad help you check eligibility and apply for the most suitable scholarships to fund your study abroad visa and admission services for Indian students.",
   },
   {
     slug: "pre-departure-help",
     name: "Pre-Departure<br/>Help",
     profile_photo_url: "services/pre-departure.jpg",
     description:
-      "Benefit from detailed briefing sessions with Skill Up Study Abroad Agency that equip you with essential information before you begin your overseas study journey.",
+      "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
   },
   {
     slug: "language-support",
     name: "Languages",
     profile_photo_url: "services/languages.jpeg",
     description:
-      "Benefit from detailed briefing sessions with Skill Up Study Abroad Agency that equip you with essential information before you begin your overseas study journey.",
+      "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
   },
 ];
 
@@ -84,8 +84,8 @@ const Services: React.FC = () => {
         >
           Our Services
         </Heading>
-        <Paragraph size="lg" className="mt-4 text-center">
-          Skill Up Study Abroad Agency offers comprehensive overseas education
+        <Paragraph size="base" className="mt-4 text-center">
+          Skill Up Study Abroad offers comprehensive overseas education
           services, guiding students seamlessly from university selection to
           admission. Our expert team specializes in student visa services,
           ensuring smooth processing and compliance with immigration

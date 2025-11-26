@@ -27,11 +27,11 @@ export default async function handler(
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_RECEIVER,
-      subject: "📰 New Newsletter Subscription - Skillup Study Abroad",
+      subject: "📰 New Demo Request - Skillup Study Abroad",
       html: `
     <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
-      <h2 style="color: #030303; margin-bottom: 10px;">New Newsletter Subscription</h2>
-      <p style="font-size: 16px; margin: 8px 0;">A new user has subscribed to your newsletter.</p>
+      <h2 style="color: #030303; margin-bottom: 10px;">New Demo Request</h2>
+      <p style="font-size: 16px; margin: 8px 0;">A new user has requested a demo.</p>
       
       <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 12px 0; border: 1px solid #e0e0e0; width: fit-content;">
         <p style="margin: 0;"><strong>Email:</strong> ${email}</p>

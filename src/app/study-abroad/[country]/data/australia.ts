@@ -12,7 +12,6 @@ const australia: CountryData = {
   studentImage: "/study-abroad/australia/students.jpeg",
   general:
     "Australia is the world's sixth-largest country, known for its diverse landscapes ranging from deserts to tropical rainforests. It is a democratic federation with a multicultural population concentrated mostly in urban areas along the eastern and southeastern coasts.",
-  noOfUniversities: 40,
   temp: "Varied—tropical in the north to temperate in the south",
   languages: ["English"],
   currency: "Australian Dollar (AUD)",
@@ -66,20 +65,66 @@ const australia: CountryData = {
         "These fee ranges are general estimates for guidance and may vary from one institution to another.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["February/March", "July"],
+    },
+    {
+      id:"workrights",
+      label:"Work Rights",
+      title:"Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Temporary Graduate visa (subclass 485) allows 2-4 years work after study",
+        "Full work rights with no employer sponsorship needed initially.",
+        "Eligible to apply for permanent residency after gaining experience.",
+      ],
+    }
   ],
   universities: [
-    { id: 1, name: "Partner 1", logo: "/home/partner13.png" },
-    { id: 2, name: "Partner 2", logo: "/home/partner2.png" },
-    { id: 3, name: "Partner 3", logo: "/home/partner3.png" },
-    { id: 4, name: "Partner 4", logo: "/home/partner4.png" },
-    { id: 5, name: "Partner 5", logo: "/home/partner5.png" },
-    { id: 6, name: "Partner 6", logo: "/home/partner6.png" },
-    { id: 7, name: "Partner 7", logo: "/home/partner7.png" },
-    { id: 8, name: "Partner 8", logo: "/home/partner8.png" },
-    { id: 9, name: "Partner 9", logo: "/home/partner9.png" },
-    { id: 10, name: "Partner 10", logo: "/home/partner10.png" },
-    { id: 11, name: "Partner 11", logo: "/home/partner11.png" },
-    { id: 12, name: "Partner 12", logo: "/home/partner12.png" },
+    {
+      id: 1,
+      name: "University 1",
+      logo: "/study-abroad/australia/university1.png",
+    },
+    {
+      id: 2,
+      name: "University 2",
+      logo: "/study-abroad/australia/university2.png",
+    },
+    {
+      id: 3,
+      name: "University 3",
+      logo: "/study-abroad/australia/university3.png",
+    },
+    {
+      id: 4,
+      name: "University 4",
+      logo: "/study-abroad/australia/university4.png",
+    },
+    {
+      id: 5,
+      name: "University 5",
+      logo: "/study-abroad/australia/university5.png",
+    },
+    {
+      id: 6,
+      name: "University 6",
+      logo: "/study-abroad/australia/university6.png",
+    },
+    {
+      id: 7,
+      name: "University 7",
+      logo: "/study-abroad/australia/university7.png",
+    },
+    {
+      id: 8,
+      name: "University 8",
+      logo: "/study-abroad/australia/university8.png",
+    },
   ],
 };
 

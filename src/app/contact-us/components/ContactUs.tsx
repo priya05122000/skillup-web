@@ -88,12 +88,31 @@ const ContactUs = () => {
                   </Paragraph>
                 </div>
                 <div className="mb-4 grid xl:grid-cols-2 xl:gap-20 font-semibold">
-                  <Paragraph size="xl" className="mt-1">
-                    seawoods.skillup@gmail.com
-                  </Paragraph>
-                  <Paragraph size="xl" className="mt-1">
-                    +91-99304 94883
-                  </Paragraph>
+                  <div className="font-bold">
+                    <Paragraph size="lg" className="mt-1">
+                      <a href="mailto:info@skillupstudyabroad.com" className="hover:underline">
+                        info@skillupstudyabroad.com
+                      </a>
+                    </Paragraph>
+                    <Paragraph size="lg" className="mt-1">
+                      <a href="mailto:admission@skillupstudyabroad.com" className="hover:underline">
+                        admission@skillupstudyabroad.com
+                      </a>
+                    </Paragraph>
+                  </div>
+                  <div className="font-bold">
+                    <Paragraph size="lg" className="mt-1">
+                      <a href="tel:+919820588082" className="hover:underline">
+                        +91-98205 88082
+                      </a>
+                    </Paragraph>
+                    <Paragraph size="lg" className="mt-1">
+                      <a href="tel:+919930180955" className="hover:underline">
+                        +91-99301 80955
+                      </a>
+                    </Paragraph>
+                  </div>
+
                 </div>
 
                 <div className="grid lg:grid-cols-2 xl:gap-20 xl:mt-8">
@@ -111,7 +130,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <Image
                 src="/contact/contact.webp"
                 alt="Students high-fiving in front of university"

@@ -12,17 +12,24 @@ const Dropdown: FC<DropdownProps & DropdownControl> = ({
   openName,
 }) => {
   const isOpen = openName === placeholder;
+  const buttonTextColor = (!selected || selected === placeholder) ? "text-gray-400" : "text-black";
   return (
     <div className="relative">
       <button
         type="button"
-        className={buttonClass}
+        className={`${buttonClass} ${buttonTextColor}`}
         onClick={() => openDropdown(isOpen ? "" : placeholder)}
       >
         <span>{selected || placeholder}</span>
         <span className="pointer-events-none ml-2">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 8L10 12L14 8" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M6 8L10 12L14 8"
+              stroke={(!selected || selected === placeholder) ? "#9ca3af" : "#000"}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </span>
       </button>
@@ -31,10 +38,11 @@ const Dropdown: FC<DropdownProps & DropdownControl> = ({
           {(options as any[]).map((opt) => {
             const value = typeof opt === "string" ? opt : (opt as CountryOption).name;
             const key = typeof opt === "string" ? opt : (opt as CountryOption).code;
+            const textColor = value === placeholder ? "text-gray-400" : "text-black";
             return (
               <div
                 key={key}
-                className={itemClass}
+                className={`${itemClass} ${textColor}`}
                 onClick={() => {
                   onSelect(value);
                   openDropdown("");

@@ -21,7 +21,7 @@ const services: Service[] = [
     briefing: "TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE.",
     image: "/services/test-preparation.jpeg",
     description:
-      "Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad Agency — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.",
+      "Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.",
   },
   {
     slug: "study-abroad-counselling",
@@ -45,7 +45,7 @@ const services: Service[] = [
     briefing: "Expert Guidance For Applications",
     image: "/services/university.jpeg",
     description:
-      "Skill Up Study Abroad Agency provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
+      "Skill Up Study Abroad provides expert guidance throughout the entire university or college application process, ensuring every detail is managed efficiently and accurately. From choosing institutions to preparing and submitting documents, our step-by-step support limits errors and delays, giving you peace of mind and a smoother transition into higher education abroad. This dedicated approach helps you meet deadlines, pass interviews, and fulfill all requirements—making your admission experience seamless and successful.",
   },
   {
     slug: "visa-support",
@@ -61,7 +61,7 @@ const services: Service[] = [
     briefing: "Find Your Scholarship Fit",
     image: "/services/scholarship.jpg",
     description:
-      "Our experts at Skill Up Study Abroad Agency provide dedicated support in checking your eligibility and applying for the best scholarships, making your journey to international education more affordable. By leveraging our extensive experience in study abroad visa and admission services for Indian students, we help you navigate complex funding options and guide you through every application step. This professional assistance gives you the confidence to secure financial aid, reduce costs, and focus on achieving your academic dreams at leading global institutions.",
+      "Our experts at Skill Up Study Abroad provide dedicated support in checking your eligibility and applying for the best scholarships, making your journey to international education more affordable. By leveraging our extensive experience in study abroad visa and admission services for Indian students, we help you navigate complex funding options and guide you through every application step. This professional assistance gives you the confidence to secure financial aid, reduce costs, and focus on achieving your academic dreams at leading global institutions.",
   },
   {
     slug: "pre-departure-help",
@@ -69,7 +69,7 @@ const services: Service[] = [
     briefing: "Essential Help Before Departure",
     image: "/services/pre-departure.jpg",
     description:
-      "Benefit from informative pre-departure briefing sessions with Skill Up Study Abroad Agency, specially designed to prepare you for your overseas study adventure. Our expert team equips you with up-to-date information about travel, cultural adaptation, accommodation, safety, and essential steps—so you start your international journey confidently and well-prepared. These sessions cover everything from packing tips to local customs and emergency contacts, ensuring you transition smoothly and make the most of your global education experience. ",
+      "Benefit from informative pre-departure briefing sessions with Skill Up Study Abroad, specially designed to prepare you for your overseas study adventure. Our expert team equips you with up-to-date information about travel, cultural adaptation, accommodation, safety, and essential steps—so you start your international journey confidently and well-prepared. These sessions cover everything from packing tips to local customs and emergency contacts, ensuring you transition smoothly and make the most of your global education experience. ",
   },
   {
     slug: "language-support",
@@ -77,7 +77,7 @@ const services: Service[] = [
     briefing: "Spoken English, French & German",
     image: "/services/languages.jpeg",
     description:
-      "Skill Up Study Abroad Agency offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
+      "Skill Up Study Abroad offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
   },
   {
     slug: "accommodation",
@@ -141,12 +141,9 @@ const Services: React.FC = () => {
                 className="service-section flex flex-col lg:flex-row border-b border-(--teal)/20 py-6 sm:py-10 gap-2 lg:gap-6"
               >
                 <div className="lg:w-2/8 xl:w-1/5 flex items-start">
-                  <Heading
-                    level={6}
-                    className="mb-2 font-bold uppercase text-(--teal)"
-                  >
-                    {service.briefing}
-                  </Heading>
+                  <Paragraph size="xl" className="font-semibold">
+                    {service.title}
+                  </Paragraph>
                 </div>
                 <div className="lg:w-5/7 xl:w-4/5 flex flex-col sm:flex-row gap-6 justify-center">
                   <div className="w-full md:w-50 xl:w-80 h-52 shrink-0 mt-2">
@@ -160,9 +157,13 @@ const Services: React.FC = () => {
                   </div>
 
                   <div className="">
-                    <Paragraph size="xl" className="font-semibold">
-                      {service.title}
-                    </Paragraph>
+
+                    <Heading
+                      level={6}
+                      className="mb-2 font-bold uppercase text-(--teal)"
+                    >
+                      {service.briefing}
+                    </Heading>
                     <Paragraph size="base" className="text-justify mt-2">
                       {service.description}
                     </Paragraph>

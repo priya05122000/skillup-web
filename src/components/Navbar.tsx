@@ -99,9 +99,9 @@ const Navbar = () => {
       {/* Center: Logo and Menus */}
       <div className="flex flex-1 items-center justify-center">
         {/* Mobile/tab: only logo and hamburger */}
-        <div className="flex items-center w-full lg:hidden">
+        <div className="flex items-center w-full xl:hidden">
           {/* Mobile: logo left, hamburger right */}
-          <Link href="#" className="flex items-center gap-2 h-20 md:hidden">
+          <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
             <span className="flex items-center justify-center">
               <Image
                 src="/logo/navbar-logo.svg"
@@ -121,8 +121,8 @@ const Navbar = () => {
             <HiOutlineBars3 className="w-8 h-8" />
           </button>
           {/* Tablet: logo and hamburger centered */}
-          <div className="hidden md:flex items-center justify-center w-full lg:hidden">
-            <Link href="#" className="flex items-center gap-2 h-20 mx-auto">
+          <div className="hidden md:flex items-center justify-center w-full xl:hidden">
+            <Link href="/" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
                   src="/logo/navbar-logo.svg"
@@ -143,8 +143,8 @@ const Navbar = () => {
           </div>
         </div>
         {/* Desktop: logo, menu links */}
-        <div className="hidden lg:flex items-center gap-8 h-20 w-full justify-center">
-          <Link href="#" className="flex items-center gap-2 h-full ">
+        <div className="hidden xl:flex items-center gap-8 h-20 w-full justify-center">
+          <Link href="/" className="flex items-center gap-2 h-full ">
             <span className=" flex items-center justify-center ">
               <Image
                 src="/logo/navbar-logo.svg"
@@ -413,7 +413,7 @@ const Navbar = () => {
       </div>
 
       {/* Right: Free consultation */}
-      <div className="hidden lg:flex items-center justify-end  h-full ">
+      <div className="hidden xl:flex items-center justify-end h-full ">
         <button className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group" onClick={() => setShowEnquiryForm(true)}>
           <Paragraph
             size="base"

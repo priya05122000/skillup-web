@@ -8,7 +8,6 @@ export interface CountryData {
   overviewImage: string;
   studentImage: string;
   general: string;
-  noOfUniversities: number;
   temp: string;
   languages: string[];
   currency: string;
