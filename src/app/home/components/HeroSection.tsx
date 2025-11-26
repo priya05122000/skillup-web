@@ -55,7 +55,7 @@ const slides = [
   },
   {
     img: "/home/slider2.jpg",
-    title: "Skill Up Study Abroad Agency",
+    title: "Skill Up Study Abroad",
     heading: "Study in CANADA",
     paragraph: "Pursue your education in Canada’s world-class institutions",
     buttonText: "Book your consultation",
@@ -69,7 +69,7 @@ const slides = [
   },
   {
     img: "/home/slider4.jpeg",
-    title: "Skill Up Study Abroad Agency",
+    title: "Skill Up Study Abroad",
     heading: "Rise To The Top By Learning Smarter!",
     paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
     buttonText: "Reserve your spot ",

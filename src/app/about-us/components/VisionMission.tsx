@@ -32,7 +32,7 @@ const cards: CardProps[] = [
     icon: <BookOpen className="w-10 h-10 mb-4 text-(--orange)" />,
     title: "Our Mission",
     description:
-      "Skill Up Study Abroad Agency is committed to guiding students worldwide with comprehensive resources and personalized support. We ensure a smooth transition into international academics and life, empowering each student to achieve their educational goals confidently.",
+      "Skill Up Study Abroad is committed to guiding students worldwide with comprehensive resources and personalized support. We ensure a smooth transition into international academics and life, empowering each student to achieve their educational goals confidently.",
   },
   {
     icon: <GraduationCap className="w-10 h-10 mb-4 text-(--orange)" />,

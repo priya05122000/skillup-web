@@ -68,6 +68,24 @@ const netherland: CountryData = {
         "Scholarships and financial aid options are available to support eligible students and tuition fees must be paid annually for enrollment.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September", "February"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Graduates can stay up to 1 year on an Orientation Year visa to seek employment.",
+        "Full work rights during this period without employer sponsorship.",
+        "Can transition to a highly skilled migrant visa after a job offer.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/netherland/university1.png" },

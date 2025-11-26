@@ -65,7 +65,24 @@ const uk: CountryData = {
         "Total expenses change based on where you study and stay",
       ],
     },
-
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September", "January", "May/June"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Graduates can stay and work for up to 2-3 years under the Graduate Route visa.",
+        "Unlimited work rights during this post-study period.",
+        "Opportunities to switch to skilled work visas after graduation.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/uk/university1.png" },

@@ -65,6 +65,24 @@ const finland: CountryData = {
         "Many universities offer scholarships that can cover 50% or more of the tuition fees, making education more affordable for international students.",
       ],
     },
+    {
+      id:"intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["August/september",],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Graduates get a 1-year residence permit to look for work or start a business.",
+        "Full-time work allowed with no restrictions during this time.",
+        "Can apply for extended residence upon securing a job offer.",
+      ],
+    }
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/finland/university1.png" },

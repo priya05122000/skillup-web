@@ -69,6 +69,24 @@ const NewZealand: CountryData = {
         "Many universities offer scholarships to international students, which can help reduce tuition costs substantially.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["February/March", "July"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Post-study work visa grants 1-3 years work rights, depending on qualification and location of study.",
+        "Opportunity for skilled work and gaining residence points.",
+        "Simplifies path to residence for qualified workers.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/newzealand/university1.png" },

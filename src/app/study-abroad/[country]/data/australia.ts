@@ -65,16 +65,66 @@ const australia: CountryData = {
         "These fee ranges are general estimates for guidance and may vary from one institution to another.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["February/March", "July"],
+    },
+    {
+      id:"workrights",
+      label:"Work Rights",
+      title:"Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Temporary Graduate visa (subclass 485) allows 2-4 years work after study",
+        "Full work rights with no employer sponsorship needed initially.",
+        "Eligible to apply for permanent residency after gaining experience.",
+      ],
+    }
   ],
   universities: [
-    { id: 1, name: "University 1", logo: "/study-abroad/australia/university1.png" },
-    { id: 2, name: "University 2", logo: "/study-abroad/australia/university2.png" },
-    { id: 3, name: "University 3", logo: "/study-abroad/australia/university3.png" },
-    { id: 4, name: "University 4", logo: "/study-abroad/australia/university4.png" },
-    { id: 5, name: "University 5", logo: "/study-abroad/australia/university5.png" },
-    { id: 6, name: "University 6", logo: "/study-abroad/australia/university6.png" },
-    { id: 7, name: "University 7", logo: "/study-abroad/australia/university7.png" },
-    { id: 8, name: "University 8", logo: "/study-abroad/australia/university8.png" },
+    {
+      id: 1,
+      name: "University 1",
+      logo: "/study-abroad/australia/university1.png",
+    },
+    {
+      id: 2,
+      name: "University 2",
+      logo: "/study-abroad/australia/university2.png",
+    },
+    {
+      id: 3,
+      name: "University 3",
+      logo: "/study-abroad/australia/university3.png",
+    },
+    {
+      id: 4,
+      name: "University 4",
+      logo: "/study-abroad/australia/university4.png",
+    },
+    {
+      id: 5,
+      name: "University 5",
+      logo: "/study-abroad/australia/university5.png",
+    },
+    {
+      id: 6,
+      name: "University 6",
+      logo: "/study-abroad/australia/university6.png",
+    },
+    {
+      id: 7,
+      name: "University 7",
+      logo: "/study-abroad/australia/university7.png",
+    },
+    {
+      id: 8,
+      name: "University 8",
+      logo: "/study-abroad/australia/university8.png",
+    },
   ],
 };
 

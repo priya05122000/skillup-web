@@ -65,6 +65,24 @@ const usa: CountryData = {
         "Budget planning should include both tuition and cost of living to prepare for the total expenses of studying abroad.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["August/September", "January", "May"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Optional Practical Training (OPT) permits up to 12 months work post-study (up to 24 months extension for STEM fields).",
+        "Work must be related to the field of study.",
+        "Ability to apply for H-1B work visa during OPT period.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/usa/university1.png" },

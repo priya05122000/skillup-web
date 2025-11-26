@@ -70,37 +70,40 @@ const TabsData: FC<TabsDataProps> = ({ tabData }) => {
   const activeData = tabData.find((tab) => tab.id === activeTab);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // const handleTabClick = (id: string) => {
-  //   setActiveTab(id);
-  //   setTimeout(() => {
-  //     if (contentRef.current) {
-  //       const yOffset = -100;
-  //       const y =
-  //         contentRef.current.getBoundingClientRect().top +
-  //         window.pageYOffset +
-  //         yOffset;
-  //       window.scrollTo({ top: y, behavior: "smooth" });
-  //     }
-  //   }, 0);
-  // };
+  const handleTabClick = (id: string) => {
+    setActiveTab(id);
+    setTimeout(() => {
+      // Only scroll on mobile view
+      if (window.innerWidth < 768 && contentRef.current) {
+        const yOffset = -100;
+        const y =
+          contentRef.current.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 0);
+  };
 
   return (
     <Section className="py-10 md:py-20">
       <div className="flex flex-col md:flex-row gap-8">
         {/* Sidebar Tabs */}
-        <div className="w-full md:w-1/5 grid grid-cols-1 sm:flex sm:flex-col shadow-xs h-fit rounded-md border border-(--light-gray)">
+        <div
+          ref={contentRef}
+          className="w-full md:w-1/5 grid grid-cols-1 sm:flex sm:flex-col shadow-xs h-fit rounded-md border border-(--light-gray)"
+        >
           {tabData.map((tab) => (
             <TabButton
               key={tab.id}
               tab={tab}
               isActive={activeTab === tab.id}
-              // onClick={() => handleTabClick(tab.id)}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
             />
           ))}
         </div>
         {/* Tab Content on right */}
-        <div className="w-full md:w-4/5" ref={contentRef}>
+        <div className="w-full md:w-4/5">
           {activeData && <TabContentDisplay data={activeData} />}
         </div>
       </div>

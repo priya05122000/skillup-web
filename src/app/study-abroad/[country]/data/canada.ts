@@ -65,6 +65,24 @@ const canada: CountryData = {
         "The approximate cost of living for the first year is around CAD 10,000, covering accommodation, food, and other essentials.",
       ],
     },
+    {
+      id:"intake",
+      label:"Intake",
+      title:"Intake",
+      subtitle: "",
+      paragraphs: ["September", "January", "May"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Post-Graduation Work Permit (PGWP) allows work up to 3 years based on study length.",
+        "Full-time work permitted with the same rights as Canadian workers.",
+        "Pathway to Permanent Residency (PR) after work experience.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/canada/university1.png" },

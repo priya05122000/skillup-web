@@ -65,6 +65,24 @@ const ireland: CountryData = {
         "Scholarships and financial aid options are available to help offset tuition costs for eligible students.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September", "January"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Graduates are allowed to stay up to 2 years for work (1 year for undergraduates).",
+        "Full-time work permitted with no restrictions on job type.",
+        "Can apply for employment permits to extend stay.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/ireland/university1.png" },

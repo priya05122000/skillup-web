@@ -7,6 +7,7 @@ import Image from "next/image";
 import React, { FC, ReactNode } from "react";
 import { CircleCheckBig } from "lucide-react";
 import { CountryData } from "../countryData";
+import Span from "@/components/Span";
 
 type CountryOverviewProps = {
   data: CountryData;
@@ -20,6 +21,14 @@ const InfoRow: FC<{ label: string; value: ReactNode }> = ({ label, value }) => (
     <Paragraph className="mt-0.5">{value}</Paragraph>
   </div>
 );
+
+const InfoTemp: FC<{ label: string; value: ReactNode }> = ({ label, value }) => (
+  <div className="mt-4 bg-(--bg-grey) p-4 rounded-md">
+    <Paragraph size="lg">
+      <strong>{label}: </strong> <span className="text-base mt-0.5">{value}</span>
+    </Paragraph>
+  </div>
+);  
 
 const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
   const quickFacts = data.quickFacts ?? [];
@@ -104,7 +113,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
           </Paragraph>
 
           <InfoRow label="Capital" value={data.capital} />
-          <InfoRow label="Temperature" value={data.temp} />
+          <InfoTemp label="Temperature" value={data.temp} />
           <InfoRow label="Languages" value={data.languages.join(", ")} />
           <InfoRow label="Currency" value={data.currency} />
         </div>

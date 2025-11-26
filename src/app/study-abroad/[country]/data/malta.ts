@@ -69,6 +69,24 @@ const malta: CountryData = {
         "MCAST offers scholarships that can cover up to 50% of tuition fees for eligible students, as well as payment plans to ease financial burden.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September", "January"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Graduates can stay up to 1 year to find work after study.",
+        "Work rights allow full-time employment during this period.",
+        "Pathway to extend residence if employed.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/malta/university1.png" },

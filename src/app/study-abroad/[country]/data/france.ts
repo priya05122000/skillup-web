@@ -69,6 +69,24 @@ const france: CountryData = {
         "The French government heavily subsidizes public higher education, keeping costs relatively low compared to other popular study destinations, and many universities offer partial fee exemptions or scholarships.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September/October"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "“APS” allows graduates to stay 12 months for work or entrepreneurial activities.",
+        "Right to work full-time during this period.",
+        "Possible to convert to work permit for longer stay after employment.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/france/university1.png" },

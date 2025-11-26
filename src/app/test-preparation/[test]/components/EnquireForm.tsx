@@ -102,8 +102,8 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
           <Image
             src={aboutImage}  
             alt="Contact Image"
-            width={600}
-            height={400}
+            width={800}
+            height={800}
             className="rounded-md mt-4 w-full object-cover h-70 lg:h-80 xl:h-100"
           />
 

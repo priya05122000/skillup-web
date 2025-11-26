@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     country: "London",
     image: "",
     text:
-      "Skill Up Study Abroad Agency provided exceptional guidance throughout my admission and visa process. Their expert team answered every query quickly, going above and beyond to support me at each step. From the initial counseling to landing in the UK, their dedication turned my dream into reality. Thanks to Skill Up, studying in the UK became a truly memorable journey.",
+      "Skill Up Study Abroad provided exceptional guidance throughout my admission and visa process. Their expert team answered every query quickly, going above and beyond to support me at each step. From the initial counseling to landing in the UK, their dedication turned my dream into reality. Thanks to Skill Up, studying in the UK became a truly memorable journey.",
     rating: 5,
   },
   {
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     country: "Canada",
     image: "",
     text:
-      "I received outstanding guidance from the Skill Up Study Abroad Agency when applying to Canadian universities and for scholarships. Their team made the entire journey from Mumbai to Canada effortless and stress-free. Every step, from course selection to visa, was handled with care and expertise. Thanks to their support, my transition was smooth, allowing me to focus on building my future in Canada.",
+      "I received outstanding guidance from Skill Up Study Abroad when applying to Canadian universities and for scholarships. Their team made the entire journey from Mumbai to Canada effortless and stress-free. Every step, from course selection to visa, was handled with care and expertise. Thanks to their support, my transition was smooth, allowing me to focus on building my future in Canada.",
     rating: 5,
   },
   {
@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
     country: "Australia",
     image: "",
     text:
-      "Skill Up Study Abroad Agency made my entire study abroad process seamless, from picking the right course to securing my visa. Their detailed approach and quick communication gave me confidence at every step. The team genuinely cared about my future and always offered honest guidance. I’m truly grateful for their expertise and the personal attention they provided throughout my journey.",
+      "Skill Up Study Abroad made my entire study abroad process seamless, from picking the right course to securing my visa. Their detailed approach and quick communication gave me confidence at every step. The team genuinely cared about my future and always offered honest guidance. I’m truly grateful for their expertise and the personal attention they provided throughout my journey.",
     rating: 5,
   },
   {
@@ -103,8 +103,8 @@ const Testimonials: React.FC = () => {
             >
               Start Your Journey With Us
             </Heading>
-            <Paragraph size="lg" className="mt-4 text-white text-center">
-              Skill Up Study Abroad Agency has empowered countless students to reach their global education goals with expert support every step of the way. Don’t just take our word for it—check out our testimonials and see how we’ve helped others unlock international success.
+            <Paragraph size="base" className="mt-4 text-white text-center">
+              Skill Up Study Abroad has empowered countless students to reach their global education goals with expert support every step of the way. Don’t just take our word for it—check out our testimonials and see how we’ve helped others unlock international success.
             </Paragraph>
           </div>
 

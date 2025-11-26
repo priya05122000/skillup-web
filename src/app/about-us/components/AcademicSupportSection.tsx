@@ -83,10 +83,10 @@ const AcademicSupportSection: React.FC = () => (
           size="lg"
           className="uppercase text-(--teal) font-bold leading-tight"
         >
-          WHO WE ARE STUDY ABROAD AGENCY
+          WHO WE ARE STUDY ABROAD
         </Paragraph>
         <Heading level={4} className="leading-tight mt-2">
-          Skill Up Study Abroad Agency: Guiding Success in Overseas Education
+          Skill Up Study Abroad : Guiding Success in Overseas Education
           Consultancy
         </Heading>
       </div>
@@ -108,7 +108,7 @@ const AcademicSupportSection: React.FC = () => (
             size="base"
             className="text-(--ice-gray) leading-relaxed mt-4"
           >
-            Skill Up Study Abroad Agency has established itself as a leading
+            Skill Up Study Abroad has established itself as a leading
             overseas education consultancy, leveraging ten years of hands-on
             experience to guide students toward their academic dreams. Our
             comprehensive consultancy services are tailored to individual
@@ -121,9 +121,9 @@ const AcademicSupportSection: React.FC = () => (
             pitfalls and costly missteps during their journey abroad..
             <br />
             <br />
-            The agency’s personalized coaching approach has benefited thousands,
+            The Consultancy's personalized coaching approach has benefited thousands,
             focusing on holistic student development, including academics,
-            career planning, and personal growth. Skill Up Study Abroad Agency
+            career planning, and personal growth. Skill Up Study Abroad
             is committed to building lasting success through constant
             mentorship, post-arrival support, and financial guidance, including
             access to grants and scholarships.

@@ -69,6 +69,24 @@ const italy: CountryData = {
         "Scholarships, assistantships, and financial aid are available at many institutions to help offset tuition costs, especially for master’s and PhD programs.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["September/October"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Post-study residence permit allows 12 months to seek work or start a business.",
+        "Full access to the job market during this period.",
+        "Option to switch to work visa after employment.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/italy/university1.png" },

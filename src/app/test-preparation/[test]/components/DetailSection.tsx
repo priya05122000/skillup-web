@@ -17,12 +17,13 @@ const DetailSection = ({ data }: { data: ExamData }) => {
     <Section className="bg-(--teal) text-white py-10 md:py-16">
       <div className="grid md:grid-cols-2 gap-10">
         {/* Left Section - Image */}
-        <div className="relative w-full h-80 md:h-[500px] rounded-md overflow-hidden">
+        <div className="relative w-full h-80 md:h-[400px] xl:h-[500px] rounded-md overflow-hidden">
           <Image
             src={data.detailsImage || "/test-prep/default-detail.jpg"}
             alt={"Detail Section Image"}
-            fill
-            className="object-cover" 
+            height={600}
+            width={800}
+            className="object-cover h-full w-full" 
           />
         </div>
 
@@ -34,7 +35,7 @@ const DetailSection = ({ data }: { data: ExamData }) => {
               <Paragraph size="lg" className="mt-4 leading-relaxed">{data.purpose}</Paragraph>
             </div>
           )}
-          <Heading level={4} className="mb-4 tracking-wide">
+          <Heading level={5} className="mb-4 tracking-wide">
             The {data.name} Consists of {data.details.length} Main Sections
           </Heading>
 

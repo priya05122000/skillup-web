@@ -61,13 +61,13 @@ const testItems: TestItem[] = [
   {
     slug: "languages",
     title:"French",
-    description: "French Language Proficiency Test (DELF/DALF)",
+    description: "French Language Proficiency Test",
     nav: "/languages#french",
   },
   {
     slug: "languages",
     title: "German",
-    description: "German Language Proficiency Test (TestDaF)",
+    description: "German Language Proficiency Test",
     nav: "/languages#german",
   },
 ];
@@ -124,9 +124,9 @@ const TestPreparation: React.FC = () => {
           >
             Test Preparation
           </Heading>
-          <Paragraph size="lg" className="mt-4 text-white text-center">
+          <Paragraph size="base" className="mt-4 text-white text-center">
             Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up
-            Study Abroad Agency — your trusted partner for global success. Our
+            Study Abroad — your trusted partner for global success. Our
             expert trainers, personalized preparation plans, and interactive
             sessions help you master language skills and test strategies with
             confidence.

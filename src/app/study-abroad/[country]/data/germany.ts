@@ -69,6 +69,24 @@ const germany: CountryData = {
         "Scholarships such as DAAD and merit-based fellowships can help reduce the overall cost for international students.",
       ],
     },
+    {
+      id: "intake",
+      label: "Intake",
+      title: "Intake",
+      subtitle: "",
+      paragraphs: ["October", "April"],
+    },
+    {
+      id: "workrights",
+      label: "Work Rights",
+      title: "Work Rights",
+      subtitle: "",
+      paragraphs: [
+        "Up to 18 months residence permit to find a job matching qualifications.",
+        "Full-time work allowed during the job-seeking period.",
+        "Skilled work visa for longer stay once employed.",
+      ],
+    },
   ],
   universities: [
     { id: 1, name: "University 1", logo: "/study-abroad/germany/university1.png" },

@@ -44,7 +44,7 @@ const University: FC<UniversityProps> = ({ universities }) => {
             size="base"
             className="text-(--gray) leading-relaxed md:w-[75%] lg:w-[95%] text-justify"
           >
-            Skill Up Study Abroad Agency connects you with global universities,
+            Skill Up Study Abroad connects you with global universities,
             providing tailored advice and full support for international
             students. Begin your global education journey with expert guidance,
             visa help, and career boosting services to open doors worldwide.

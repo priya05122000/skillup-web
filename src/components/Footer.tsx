@@ -5,6 +5,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Span from "./Span";
 import Paragraph from "./Paragraph";
 import Section from "./Section";
+import { link } from "fs";
 
 type NavItem = {
   label: string;
@@ -12,25 +13,30 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Name", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/home" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Services", href: "/services" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
-const countries: string[] = [
-  "UK",
-  "Canada",
-  "US",
-  "Australia",
-  "Ireland",
-  "Netherlands",
-  "Germany",
-  "Italy",
-  "Malta",
-  "Finland",
-  "France",
-  "Newzealand",
+type Country = {
+  name: string;
+  href: string;
+};
+
+const countries: Country[] = [
+  { name: "UK", href: "/study-abroad/uk" },
+  { name: "Canada", href: "/study-abroad/canada" },
+  { name: "US", href: "/study-abroad/us" },
+  { name: "Australia", href: "/study-abroad/australia" },
+  { name: "Ireland", href: "/study-abroad/ireland" },
+  { name: "Netherlands", href: "/study-abroad/netherlands" },
+  { name: "Germany", href: "/study-abroad/germany" },
+  { name: "Italy", href: "/study-abroad/italy" },
+  { name: "Malta", href: "/study-abroad/malta" },
+  { name: "Finland", href: "/study-abroad/finland" },
+  { name: "France", href: "/study-abroad/france" },
+  { name: "Newzealand", href: "/study-abroad/newzealand" },
 ];
 
 const Footer = () => {
@@ -60,12 +66,20 @@ const Footer = () => {
             </Paragraph>
             <div className="text-sm flex flex-wrap gap-2">
               {countries.map((country, idx) => (
-                <React.Fragment key={country}>
-                  <Span className="mr-2 mb-1 inline-block">{country}</Span>
-                  {idx < countries.length - 1 && (
-                    <Span className="mx-1">|</Span>
-                  )}
-                </React.Fragment>
+                <Link
+                  href={country.href}
+                  key={idx}
+                  className="hover:underline"
+                >
+                  <React.Fragment>
+                    <Span className="mr-2 mb-1 inline-block">
+                      {country.name}
+                    </Span>
+                    {idx < countries.length - 1 && (
+                      <Span className="mx-1">|</Span>
+                    )}
+                  </React.Fragment>
+                </Link>
               ))}
             </div>
           </div>
@@ -86,8 +100,8 @@ const Footer = () => {
           </div>
 
           {/* Logo + Social Icons */}
-          <div className="flex flex-col justify-start items-end h-full min-w-[120px] ">
-            <div className="max-w-xs flex flex-col items-start  mr-auto">
+          <div className="flex flex-col justify-start items-end h-full">
+            <div className="flex flex-col items-start">
               <Image
                 src="/logo/navbar-logo.svg"
                 alt="Logo"
