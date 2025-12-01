@@ -5,11 +5,12 @@ import Heading from "@/components/Heading";
 import React from "react";
 import { ExamData } from "../examData";
 import Paragraph from "@/components/Paragraph";
+import SectionCenter from "@/components/SectionCenter";
 
 
 const Preparation = ({data}: {data: ExamData}) => {
   return (
-    <Section className="py-10 md:py-20 bg-(--teal) text-(--white)">
+    <SectionCenter className="py-10 md:py-20 bg-(--teal) text-(--white)">
       <Heading level={4} className="font-semibold mb-10">
         The Digital {data.name} Preparation
       </Heading>
@@ -28,7 +29,7 @@ const Preparation = ({data}: {data: ExamData}) => {
           </div>
         ))}
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 

@@ -6,7 +6,7 @@ import { ExamData } from "../examData";
 import Section from "@/components/Section";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
-
+import SectionCenter from "@/components/SectionCenter";
 
 const DetailSection = ({ data }: { data: ExamData }) => {
   if (!data.details || data.details.length === 0) {
@@ -14,17 +14,18 @@ const DetailSection = ({ data }: { data: ExamData }) => {
   }
 
   return (
-    <Section className="bg-(--teal) text-white py-10 md:py-16">
+    <SectionCenter className="bg-(--teal) text-white py-10 md:py-16">
       <div className="grid md:grid-cols-2 gap-10">
-        {/* Left Section - Image */}
-        <div className="relative w-full h-50 md:h-[300px] xl:h-[400px] rounded-md overflow-hidden">
-          <Image
-            src={data.detailsImage || "/test-prep/default-detail.jpg"}
-            alt={"Detail Section Image"}
-            height={600}
-            width={800}
-            className="object-cover h-full w-full" 
-          />
+        <div className="flex justify-center items-center">
+          <div className="relative w-full h-50 md:h-[300px] xl:h-[400px] rounded-md overflow-hidden">
+            <Image
+              src={data.detailsImage || "/test-prep/default-detail.jpg"}
+              alt={"Detail Section Image"}
+              height={600}
+              width={800}
+              className="object-cover h-full w-full"
+            />
+          </div>
         </div>
 
         {/* Right Section - Services */}
@@ -60,7 +61,7 @@ const DetailSection = ({ data }: { data: ExamData }) => {
           </div>
         </div>
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 

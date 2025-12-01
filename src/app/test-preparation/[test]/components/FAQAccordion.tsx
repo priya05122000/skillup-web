@@ -7,6 +7,7 @@ import Section from "@/components/Section";
 import { ExamData } from "../examData";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import SectionCenter from "@/components/SectionCenter";
 
 const FAQAccordion = ({ data }: { data: ExamData }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,7 +32,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
   }
   
   return (
-    <Section className="py-10">
+    <SectionCenter className="py-10">
       {data.faqs.map((faq, index) => (
         <div
           key={index}
@@ -78,7 +79,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
           </div>
         </div>
       ))}
-    </Section>
+    </SectionCenter>
   );
 };
 

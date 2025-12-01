@@ -6,6 +6,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import { ExamData } from "../examData";
+import SectionCenter from "@/components/SectionCenter";
 
 type TableRow = {
   title: string;
@@ -49,7 +50,7 @@ const CustomTable: React.FC<CustomTableProps> = ({ title, rows }) => (
 
 const Table: React.FC<TableProps> = ({ data }) => {
   return (
-    <Section className="py-10 md:py-20">
+    <SectionCenter className="py-10 md:py-20">
       <Heading level={4} className="mb-2">
         About the {data.subName || data.name}
       </Heading>
@@ -67,7 +68,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
           Note: {data.note}
         </Paragraph>
       )}
-    </Section>
+    </SectionCenter>
   );
 };
 

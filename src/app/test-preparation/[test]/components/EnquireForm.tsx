@@ -10,6 +10,7 @@ import FormInput from "@/components/FormInput";
 import { CountryOption } from "@/types/forms";
 import { toast } from "react-hot-toast";
 import Image from "next/image";
+import SectionCenter from "@/components/SectionCenter";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -86,7 +87,7 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
   };
 
   return (
-    <Section className="py-10 md:py-20">
+    <SectionCenter className="py-10 md:py-20">
       <div className="flex flex-col sm:flex-row gap-6">
         <div className="w-full sm:w-1/2 lg:w-3/5">
           <Paragraph
@@ -205,7 +206,7 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
           </div>
         </div>
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 

@@ -10,6 +10,7 @@ import Dropdown from "@/components/Dropdown";
 import FormInput from "@/components/FormInput";
 import { CountryOption } from "@/types/forms";
 import { toast } from "react-hot-toast";
+import SectionCenter from "./SectionCenter";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -90,8 +91,8 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
   };
 
   return (
-    <Section className="py-10 sm:py-20">
-      <div className="relative sm:p-10 flex justify-center items-center rounded-md">
+    <SectionCenter className="py-10 sm:py-20">
+      <div className="relative sm:p-8 flex justify-center items-center rounded-md">
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
@@ -107,12 +108,12 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
           <div className="w-full sm:w-[250px] md:w-[350px] bg-(--teal)/70 blur- bg-opacity-95 p-6 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
             <div className="flex flex-col items-center mb-4">
-              <span className="text-5xl mb-2 text-white">
+              <span className="text-5xl text-white">
                 <FaGraduationCap />
               </span>
               <Heading
                 level={6}
-                className="text-white font-bold text-center mb-2"
+                className="text-white font-bold text-center mb-1"
               >
                 Connect with us
               </Heading>
@@ -197,7 +198,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
           </div>
         </div>
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 
