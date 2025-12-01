@@ -88,7 +88,7 @@ const ContactForm = () => {
 
   return (
     <Section className="py-10 sm:py-20">
-      <div className="contact-form grid grid-cols-1 xl:grid-cols-[1fr_3fr] gap-10 xl:gap-20">
+      <div className="contact-form grid grid-cols-1 xl:grid-cols-[1fr_3fr] gap-10 xl:gap-32">
         <div className="text-end hidden xl:flex flex-col justify-center">
           <Heading level={3} className="font-bold mb-4 uppercase text-(--teal)">
             Fill our enquiry form today
@@ -122,8 +122,8 @@ const ContactForm = () => {
           <div className="bg-(--teal) rounded-md sm:bg-(--teal)/80 backdrop-blur-md relative p-10  sm:w-3/4 xl:w-4/5 flex justify-end ">
             <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-[320px] lg:w-[400px] h-[80%] hidden sm:block">
               <div className="relative  w-full h-full">
-                <div className="absolute  right-0 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)] rounded-md   bg-(--teal)"></div>
-                <div className="absolute  left-0 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
+                <div className="absolute  right-10 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)] rounded-md   bg-(--teal)"></div>
+                <div className="absolute -left-10 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
                   <Image
                     src="/contact/contactform.jpg"
                     alt="Decorative"
@@ -176,14 +176,21 @@ const ContactForm = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
                     required
                   />
-                  <Dropdown
+                  <FormInput
+                    type="text"
+                    name="course"
+                    placeholder="Course"
+                    value={selectedProgram}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSelectedProgram(e.target.value)}
+                  />
+                  {/* <Dropdown
                     options={courseOptions}
                     selected={selectedProgram}
                     placeholder="Course"
                     onSelect={setSelectedProgram}
                     openDropdown={setOpenDropdownName}
                     openName={openDropdownName}
-                  />
+                  /> */}
                   <Dropdown
                     options={countryOptions}
                     selected={selectedCountry}

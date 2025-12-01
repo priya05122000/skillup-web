@@ -44,7 +44,7 @@ const Footer = () => {
     <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10 relative w-full">
       <Section>
         {/* ---- GRID FIXED ---- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[100px_200px_250px_auto] xl:grid-cols-[140px_220px_400px_auto] gap-y-12 gap-x-8 mb-8 items-start w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70px_200px_220px_auto] xl:grid-cols-[100px_280px_280px_auto] gap-y-12 gap-x-8 mb-4 items-start w-full">
           {/* Explore */}
           <div className="flex flex-col min-w-[120px] ">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="text-xs leading-relaxed min-w-[200px] ">
+          <div className="text-xs leading-relaxed min-w-[150px] ">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Address
             </Paragraph>
@@ -116,7 +116,7 @@ const Footer = () => {
                 assistance for students wanting to study abroad, ensuring they
                 select the best universities and courses.
               </Paragraph>
-              <div className="flex gap-3 mt-2">
+              {/* <div className="flex gap-3 mt-2">
                 <Link
                   href="#"
                   aria-label="Facebook"
@@ -131,7 +131,7 @@ const Footer = () => {
                 >
                   <FaInstagram className="w-5 h-5" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -102,24 +102,24 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
           <Image
             src={aboutImage}  
             alt="Contact Image"
-            width={800}
-            height={800}
-            className="rounded-md mt-4 w-full object-cover h-70 lg:h-80 xl:h-100"
+            width={1000}
+            height={1000}
+            className="rounded-md mt-4 w-full object-cover h-50 lg:h-70 xl:h-80"
           />
 
           <Paragraph size="lg" className="mt-4">
             {description}
           </Paragraph>
         </div>
-        <div className="relative z-10 w-full sm:w-1/2 lg:w-2/5 flex">
+        <div className="relative z-10 w-full sm:w-1/2 lg:w-2/5 flex h-fit">
           <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
-            <div className="flex flex-col items-center mb-6">
-              <span className="text-6xl mb-2 text-white">
+            <div className="flex flex-col items-center mb-4">
+              <span className="text-5xl mb-2 text-white">
                 <FaGraduationCap />
               </span>
               <Heading
-                level={5}
+                level={6}
                 className="text-white font-bold text-center mb-2"
               >
                 Connect with us
@@ -152,14 +152,21 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
                 onChange={(e) => setMobile(e.target.value)}
                 required
               />
-              <Dropdown
+              <FormInput
+                type="text"
+                name="course"
+                placeholder="Course"
+                value={selectedProgram}
+                onChange={(e) => setSelectedProgram(e.target.value)}
+              />
+              {/* <Dropdown
                 options={courseOptions}
                 selected={selectedProgram}
                 placeholder="Course"
                 onSelect={setSelectedProgram}
                 openDropdown={setOpenDropdownName}
                 openName={openDropdownName}
-              />
+              /> */}
               <Dropdown
                 options={countryOptions}
                 selected={selectedCountry}

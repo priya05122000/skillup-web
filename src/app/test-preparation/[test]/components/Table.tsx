@@ -22,11 +22,11 @@ interface CustomTableProps {
 }
 
 const CustomTable: React.FC<CustomTableProps> = ({ title, rows }) => (
-  <table className="w-full border-collapse text-sm md:text-base">
+  <table className="w-full sm:w-lg lg:w-xl xl:w-3xl border-collapse text-sm md:text-base">
     <thead>
       <tr className="text-base md:text-xl">
         <th
-          className="text-left py-4 px-4 font-medium border-b-2 border-(--ice-gray)"
+          className="py-4 px-4 font-medium border-b-2 border-(--ice-gray) text-center"
           colSpan={2}
         >
           {title}
@@ -56,10 +56,10 @@ const Table: React.FC<TableProps> = ({ data }) => {
       <Paragraph size="lg" className="my-4">
         {data.aboutDescription}
       </Paragraph>
-      <div>
+      <div className="flex items-center justify-center">
         <CustomTable title={data.tableTitle} rows={data.tableData} />
       </div>
-      <div className="mt-8">
+      <div className="mt-8 flex items-center justify-center">
         <CustomTable title="Training Programme" rows={data.training} />
       </div>
       {data.note && (

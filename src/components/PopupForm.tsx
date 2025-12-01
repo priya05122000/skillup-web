@@ -151,14 +151,21 @@ const PopupForm: React.FC<PopupFormProps> = ({ setShowEnquiryForm }) => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
             required
           />
-          <Dropdown
+          <FormInput
+            type="text"
+            name="course"
+            placeholder="Course"
+            value={selectedProgram}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSelectedProgram(e.target.value)}
+          />
+          {/* <Dropdown
             options={courseOptions}
             selected={selectedProgram}
             placeholder="Course"
             onSelect={setSelectedProgram}
             openDropdown={setOpenDropdownName}
             openName={openDropdownName}
-          />
+          /> */}
           <Dropdown
             options={countryOptions}
             selected={selectedCountry}

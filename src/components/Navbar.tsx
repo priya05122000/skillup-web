@@ -33,9 +33,9 @@ export const STUDY_ABROAD_COUNTRIES: Country[] = [
 
 // Test Preparation sublinks
 const TEST_PREPARATION_LINKS = [
+  { name: "GMAT", href: "/test-preparation/gmat" },
   { name: "SAT", href: "/test-preparation/sat" },
   { name: "GRE", href: "/test-preparation/gre" },
-  { name: "GMAT", href: "/test-preparation/gmat" },
   { name: "OET", href: "/test-preparation/oet" },
   { name: "TOEFL", href: "/test-preparation/toefl" },
   { name: "PTE", href: "/test-preparation/pte" },
@@ -44,18 +44,22 @@ const TEST_PREPARATION_LINKS = [
 
 // Languages sublinks
 const LANGUAGE_LINKS = [
-  { name: "French", href: "/languages#french" },
-  { name: "German", href: "/languages#german" },
   { name: "Spoken English", href: "/languages#spoken-english" },
+  { name: "German", href: "/languages#german" },
+  { name: "French", href: "/languages#french" },
   { name: "Japanese", href: "/languages#japanese" },
   { name: "Korean", href: "/languages#korean" },
   { name: "Spanish", href: "/languages#spanish" },
 ];
 
 const SERVICE_LINKS = [
-  { name: "Visa Assistance", href: "/services#visa-assistance" },
-  { name: "Test Preparation", href: "/services#test-preparation" },
-  { name: "Language Training", href: "/services#language-training" },
+  { name: "Counselling & Course Guidance", href: "/services#counselling-guidance" },
+  { name: "University/College Application Processing", href: "/services#application-processing" },
+  { name: "Visa Support", href: "/services#visa-support" },
+  { name: "Scholarship Guidance", href: "/services#scholarship-guidance" },
+  { name: "Loan", href: "/services#loan" },
+  { name: "Pre-Departure Help", href: "/services#pre-departure-help" },
+  { name: "Accommodation", href: "/services#accommodation" },
 ];
 
 const Navbar = () => {

@@ -16,20 +16,12 @@ export type Service = {
 
 const services: Service[] = [
   {
-    slug: "study-abroad-counselling",
-    title: "Study Abroad Counselling",
-    briefing: "Personal Guidance for Global Study",
+    slug: "counselling-guidance",
+    title: "Counselling & Course Guidance",
+    briefing: "Personal Guidance",
     image: "/services/study-abroad.jpg",
     description:
-      "Study abroad counselling provides you with personalized guidance to select the right program and university for your global education journey, making the overwhelming process much clearer and more manageable. Expert counsellors help assess your academic interests, strengths, and career aspirations, ensuring every decision aligns with your future goals and maximizes your potential. With professional advice on applications, scholarships, visas, and adapting to a new culture, you can confidently take every step towards international academic success.",
-  },
-  {
-    slug: "course-guidance",
-    title: "Course Guidance",
-    briefing: "Guidance For The Right Course",
-    image: "/services/course.jpg",
-    description:
-      "Course guidance is essential for students planning to study abroad, as it provides expert support in identifying programs that perfectly suit academic and professional aspirations. Skilled counsellors help shortlist the best-fit courses and institutions, while offering valuable advice on securing scholarships and financial aid to make global education affordable. This comprehensive guidance ensures every step—from choosing a major to winning scholarship opportunities—is aligned with your goals, making your study abroad journey rewarding and successful.",
+      "Study abroad counselling offers personalized guidance to help you select the right program and university, simplifying the often overwhelming process and making it more manageable. Expert counsellors assess your academic interests, strengths, and career aspirations to ensure every decision supports your future goals and maximizes your potential. This essential support includes identifying best-fit courses and institutions, providing advice on applications, scholarships, financial aid, visas, and cultural adaptation, enabling you to confidently navigate each step toward a rewarding and successful international education experience.",
   },
   {
     slug: "application-processing",
@@ -56,6 +48,14 @@ const services: Service[] = [
       "Our experts at Skill Up Study Abroad provide dedicated support in checking your eligibility and applying for the best scholarships, making your journey to international education more affordable. By leveraging our extensive experience in study abroad visa and admission services for Indian students, we help you navigate complex funding options and guide you through every application step. This professional assistance gives you the confidence to secure financial aid, reduce costs, and focus on achieving your academic dreams at leading global institutions.",
   },
   {
+    slug: "loan",
+    title: "Loan",
+    briefing: "Flexible Study Abroad Loans",
+    image: "/services/loan.jpg",
+    description:
+      "Skill Up offers flexible loan arrangements to help students fund their studies abroad seamlessly. Our partnerships with banks and financial institutions assist in securing education loans that cover tuition fees, accommodation, travel, and living expenses. Whether you need unsecured loans with quick approval or collateral-based higher loans, we guide you through the application process, negotiate better terms, and ensure you get the financial support needed to focus entirely on your educational journey.",
+  },
+  {
     slug: "pre-departure-help",
     title: "Pre-Departure Help",
     briefing: "Essential Help Before Departure",
@@ -70,14 +70,6 @@ const services: Service[] = [
     image: "/services/accomodation.jpg",
     description:
       "Skill Up ensures seamless accommodation arrangements tailored to your needs while you study abroad. Whether you prefer homestays, shared apartments, or university dormitories, we connect you with safe, comfortable, and convenient housing options. Our dedicated support team assists with location selection, budgeting, and settling-in services to make your new environment welcoming and stress-free, allowing you to focus fully on your academic and cultural experience.",
-  },
-  {
-    slug: "loan",
-    title: "Loan",
-    briefing: "Flexible Study Abroad Loans",
-    image: "/services/loan.jpg",
-    description:
-      "Skill Up offers flexible loan arrangements to help students fund their studies abroad seamlessly. Our partnerships with banks and financial institutions assist in securing education loans that cover tuition fees, accommodation, travel, and living expenses. Whether you need unsecured loans with quick approval or collateral-based higher loans, we guide you through the application process, negotiate better terms, and ensure you get the financial support needed to focus entirely on your educational journey.",
   },
 ];
 
@@ -116,7 +108,6 @@ const Services: React.FC = () => {
             </div>
           </div> */}
 
-
           <div className="bg-(--orange)/10 rounded-md px-4 sm:px-10">
             {services.map((service, idx) => (
               <div
@@ -141,7 +132,6 @@ const Services: React.FC = () => {
                   </div>
 
                   <div className="">
-
                     <Heading
                       level={6}
                       className="mb-2 font-bold uppercase text-(--teal)"

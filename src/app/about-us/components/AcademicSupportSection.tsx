@@ -91,7 +91,7 @@ const AcademicSupportSection: React.FC = () => (
         </Heading>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
-        <div className="h-full w-full sm:h-[400px] lg:h-[550px]">
+        <div className="h-full w-full sm:h-[400px] lg:h-[450px]">
           <Image
             src="/about-us/study.jpeg"
             alt="Students studying on campus"
@@ -137,7 +137,7 @@ const AcademicSupportSection: React.FC = () => (
             </Paragraph>
             <span className="block h-0.5 w-[95%] bg-black group-hover:bg-(--indigo) mt-1 origin-left transition-all duration-500 group-hover:opacity-0 group-hover:scale-x-0"></span>
           </Link> */}
-          <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
+          {/* <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
             <Paragraph
               size="sm"
               className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--white)"
@@ -145,18 +145,18 @@ const AcademicSupportSection: React.FC = () => (
               More About Us <MdArrowOutward />
             </Paragraph>
             <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
-          </button>
+          </button> */}
         </div>
       </div>
     </Section>
 
-    <Section className="mt-10 sm:mt-20">
+    {/* <Section className="mt-10 sm:mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">
         {cards.map((card, idx) => (
           <InfoCard key={card.title} {...card} />
         ))}
       </div>
-    </Section>
+    </Section> */}
   </section>
 );
 

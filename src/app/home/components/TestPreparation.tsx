@@ -60,9 +60,9 @@ const testItems: TestItem[] = [
   },
   {
     slug: "languages",
-    title:"French",
-    description: "French Language Proficiency Test",
-    nav: "/languages#french",
+    title:"Spoken English",
+    description: "Spoken English Proficiency Test",
+    nav: "/languages#spoken-english",
   },
   {
     slug: "languages",

@@ -17,7 +17,7 @@ const DetailSection = ({ data }: { data: ExamData }) => {
     <Section className="bg-(--teal) text-white py-10 md:py-16">
       <div className="grid md:grid-cols-2 gap-10">
         {/* Left Section - Image */}
-        <div className="relative w-full h-80 md:h-[400px] xl:h-[500px] rounded-md overflow-hidden">
+        <div className="relative w-full h-50 md:h-[300px] xl:h-[400px] rounded-md overflow-hidden">
           <Image
             src={data.detailsImage || "/test-prep/default-detail.jpg"}
             alt={"Detail Section Image"}
@@ -35,7 +35,7 @@ const DetailSection = ({ data }: { data: ExamData }) => {
               <Paragraph size="sm" className="mt-4 leading-relaxed">{data.purpose}</Paragraph>
             </div>
           )} */}
-          <Heading level={5} className="mb-4 tracking-wide">
+          <Heading level={6} className="mb-4 tracking-wide">
             The {data.name} Consists of {data.details.length} Main Sections
           </Heading>
 
@@ -49,10 +49,10 @@ const DetailSection = ({ data }: { data: ExamData }) => {
                     : "border-b border-(--light-gray) pb-4"
                 }
               >
-                <Paragraph size="xl" className="font-semibold text-white mb-2">
+                <Paragraph size="lg" className="font-semibold text-white mb-2">
                   {service.id}. {service.title}
                 </Paragraph>
-                <Paragraph className="leading-relaxed">
+                <Paragraph size="sm" className="leading-relaxed">
                   {service.description}
                 </Paragraph>
               </div>
