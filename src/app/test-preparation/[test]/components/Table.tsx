@@ -54,7 +54,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
       <Heading level={4} className="mb-2">
         About the {data.subName || data.name}
       </Heading>
-      <Paragraph size="lg" className="my-4">
+      <Paragraph size="base" className="my-4">
         {data.aboutDescription}
       </Paragraph>
       <div className="flex items-center justify-center">

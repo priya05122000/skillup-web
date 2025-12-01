@@ -173,9 +173,9 @@ const ExploreProgramsSection: React.FC = () => {
           spaceBetween={32}
           slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 2, centeredSlides: false },
-            1024: { slidesPerView: 3, centeredSlides: false },
-            1540: { slidesPerView: 4, centeredSlides: false },
+            500: { slidesPerView: 2, centeredSlides: false },
+            768: { slidesPerView: 3, centeredSlides: false },
+            1100: { slidesPerView: 4, centeredSlides: false },
           }}
           className="py-10"
           onSwiper={(swiper) => {

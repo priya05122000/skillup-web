@@ -108,7 +108,7 @@ const EnquireForm = ({ description, aboutImage }: { description: string; aboutIm
             className="rounded-md mt-4 w-full object-cover h-50 lg:h-70 xl:h-80"
           />
 
-          <Paragraph size="lg" className="mt-4">
+          <Paragraph size="base" className="mt-4">
             {description}
           </Paragraph>
         </div>

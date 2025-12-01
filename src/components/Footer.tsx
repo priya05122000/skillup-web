@@ -44,7 +44,7 @@ const Footer = () => {
     <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10 relative w-full">
       <Section>
         {/* ---- GRID FIXED ---- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70px_200px_220px_auto] xl:grid-cols-[100px_280px_280px_auto] gap-y-12 gap-x-8 mb-4 items-start w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70px_200px_220px_auto] xl:grid-cols-[120px_320px_320px_auto] gap-y-12 gap-x-8 mb-4 items-start w-full">
           {/* Explore */}
           <div className="flex flex-col min-w-[120px] ">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
