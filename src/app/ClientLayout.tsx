@@ -27,6 +27,7 @@ import Footer from "@/components/Footer";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaHeadset } from "react-icons/fa";
+import { BsFilePost } from "react-icons/bs";
 import Link from "next/link";
 import Paragraph from "@/components/Paragraph";
 import PopupForm from "@/components/PopupForm";
@@ -38,6 +39,11 @@ interface ClientLayoutProps {
 }
 
 const CTA_BUTTONS = [
+  {
+    icon: <BsFilePost className="w-7 h-7 shrink-0" />,
+    label: "Brochure",
+    href: "#",
+  },
   {
     icon: <PiPhoneCallFill className="w-7 h-7 shrink-0" />,
     label: "Call",
@@ -225,7 +231,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                     skewColor="bg-(--orange)"
                     className="px-4 py-2"
                   >
-                    {popupSubmitting ? "Subscribing..." : "Subscribe"}
+                    {popupSubmitting ? "Submitting..." : "Submit"}
                   </AnimatedButton>
                 </div>
               </form>

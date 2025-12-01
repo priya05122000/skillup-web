@@ -53,7 +53,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
               openIndex === index ? "max-h-40 opacity-100" : "opacity-0"
             }`}
           >
-            <Paragraph size="base" className="leading-relaxed w-[90%] sm:w-[60%] text-justify">
+            <Paragraph size="sm" className="leading-relaxed w-[90%] sm:w-[60%] text-justify">
               {(() => {
                 const urlRegex = /(https?:\/\/[^\s]+)/g;
                 const parts = faq.answer.split(urlRegex);

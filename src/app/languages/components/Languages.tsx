@@ -95,7 +95,7 @@ const Languages: React.FC = () => {
                                     </div>
 
                                     <div className="">
-                                        <Paragraph size="base" className="text-justify ">
+                                        <Paragraph size="sm" className="text-justify ">
                                             {language.description}
                                         </Paragraph>
                                     </div>

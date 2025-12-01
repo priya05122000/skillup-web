@@ -63,7 +63,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
         <CustomTable title="Training Programme" rows={data.training} />
       </div>
       {data.note && (
-        <Paragraph size="base" className="mt-4 italic text-(--black)/70">
+        <Paragraph size="sm" className="mt-4 italic text-(--black)/70">
           Note: {data.note}
         </Paragraph>
       )}

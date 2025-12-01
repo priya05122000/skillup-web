@@ -45,13 +45,13 @@ const TabContentDisplay: FC<{ data: TabContent }> = ({ data }) => (
       </Heading>
     )}
     {data.subtitle && (
-      <Paragraph size="base" className="text-(--black) font-semibold mb-4">
+      <Paragraph size="sm" className="text-(--black) font-semibold mb-4">
         {data.subtitle}
       </Paragraph>
     )}
     {data.paragraphs.map((text, index) => (
       <Paragraph
-        size="base"
+        size="sm"
         key={index}
         className="text-(--black) leading-relaxed mb-4"
       >

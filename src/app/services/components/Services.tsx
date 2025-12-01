@@ -16,14 +16,6 @@ export type Service = {
 
 const services: Service[] = [
   {
-    slug: "test-preparation",
-    title: "Test Preparation",
-    briefing: "TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE.",
-    image: "/services/test-preparation.jpeg",
-    description:
-      "Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up Study Abroad — your trusted partner for global success. Our expert trainers, personalized preparation plans, and interactive sessions help you master language skills and test strategies with confidence. Whether your goal is to study, work, or settle abroad, Skill Up ensures you achieve your target scores and unlock international opportunities with ease.",
-  },
-  {
     slug: "study-abroad-counselling",
     title: "Study Abroad Counselling",
     briefing: "Personal Guidance for Global Study",
@@ -72,14 +64,6 @@ const services: Service[] = [
       "Benefit from informative pre-departure briefing sessions with Skill Up Study Abroad, specially designed to prepare you for your overseas study adventure. Our expert team equips you with up-to-date information about travel, cultural adaptation, accommodation, safety, and essential steps—so you start your international journey confidently and well-prepared. These sessions cover everything from packing tips to local customs and emergency contacts, ensuring you transition smoothly and make the most of your global education experience. ",
   },
   {
-    slug: "language-support",
-    title: "Languages",
-    briefing: "Spoken English, French & German",
-    image: "/services/languages.jpeg",
-    description:
-      "Skill Up Study Abroad offers language programs for students interested in learning or improving their skills in spoken English, French, and German. With expert guidance, we facilitate access to quality language courses that enhance communication proficiency, opening doors for study and career opportunities abroad. Our tailored approach ensures students develop strong language skills supported by practical learning experiences.",
-  },
-  {
     slug: "accommodation",
     title: "Accommodation",
     briefing: "Seamless Housing Abroad",
@@ -114,7 +98,7 @@ const Services: React.FC = () => {
       <Section>
         <div className="pt-10 sm:pt-20">
           {/* Tabs */}
-          <div className="w-full block mb-10 overflow-x-auto touch-pan-x scroll-smooth scrollbar-thin ">
+          {/* <div className="w-full block mb-10 overflow-x-auto touch-pan-x scroll-smooth scrollbar-thin ">
             <div className="flex rounded-md mb-2 whitespace-nowrap w-max">
               {tabLabels.map((tab) => (
                 <button
@@ -130,7 +114,7 @@ const Services: React.FC = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
 
           <div className="bg-(--orange)/10 rounded-md px-4 sm:px-10">
@@ -164,7 +148,7 @@ const Services: React.FC = () => {
                     >
                       {service.briefing}
                     </Heading>
-                    <Paragraph size="base" className="text-justify mt-2">
+                    <Paragraph size="sm" className="text-justify mt-2">
                       {service.description}
                     </Paragraph>
                   </div>

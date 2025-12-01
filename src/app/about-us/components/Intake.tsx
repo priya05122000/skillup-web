@@ -32,7 +32,7 @@ export default function Intake() {
             </Heading>
 
             {/* Description */}
-            <Paragraph size="base" className="mb-6 leading-relaxed text-justify">
+            <Paragraph size="sm" className="mb-6 leading-relaxed text-justify">
               This is considered the secondary admission period in the UK,
               offering fewer course choices compared to the main September
               intake. It serves as an excellent chance for students who missed
@@ -46,7 +46,7 @@ export default function Intake() {
             </Heading>
 
             {/* Description */}
-            <Paragraph size="base" className="mb-6 leading-relaxed text-justify">
+            <Paragraph size="sm" className="mb-6 leading-relaxed text-justify">
               Known as the main or autumn intake, September is the most popular
               admission period with the widest selection of courses available
               across UK universities. Application timelines for this intake
@@ -60,7 +60,7 @@ export default function Intake() {
             </Heading>
 
             {/* Description */}
-            <Paragraph size="base" className="mb-6 leading-relaxed text-justify">
+            <Paragraph size="sm" className="mb-6 leading-relaxed text-justify">
               May (spring/summer) intake is much less common, with only a select
               number of universities and courses available during this period.
               Institutions such as Coventry University, Northumbria University,

@@ -103,7 +103,7 @@ const Testimonials: React.FC = () => {
             >
               Start Your Journey With Us
             </Heading>
-            <Paragraph size="base" className="mt-4 text-white text-center">
+            <Paragraph size="sm" className="mt-4 text-white text-center">
               Skill Up Study Abroad has empowered countless students to reach their global education goals with expert support every step of the way. Don’t just take our word for it—check out our testimonials and see how we’ve helped others unlock international success.
             </Paragraph>
           </div>
@@ -172,7 +172,7 @@ const Testimonials: React.FC = () => {
                       </span>
                     </div>
                     <hr className="my-4 opacity-10" />
-                    <Paragraph size="base" className="italic">{t.text}</Paragraph>
+                    <Paragraph size="sm" className="italic">{t.text}</Paragraph>
                     <div className="flex items-center gap-1 mt-4">
                       {[...Array(5)].map((_, i) =>
                         i < t.rating ? (

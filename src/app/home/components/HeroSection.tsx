@@ -18,65 +18,57 @@ import { EffectFade, Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const heroButtons = [
   {
-    children: "Apply Now",
+    children: "Free Consultation",
     icon: <MdArrowOutward />,
     bgColor: "bg-(--white)",
     textColor: "text-(--white)",
     hoverTextColor: "group-hover:text-(--teal)",
     skewColor: "bg-(--teal)",
-    onClick: undefined, // will be set in function
+    onClick: undefined,
   },
-  {
-    children: "Chat with Us",
-    icon: <MdOutlineWhatsapp />,
-    bgColor: "bg-(--white)",
-    textColor: "text-(--white)",
-    hoverTextColor: "group-hover:text-(--teal)",
-    skewColor: "bg-(--teal)",
-  },
-  {
-    children: "Brochure",
-    icon: <MdArrowOutward />,
-    bgColor: "bg-(--white)",
-    textColor: "text-(--white)",
-    hoverTextColor: "group-hover:text-(--teal)",
-    skewColor: "bg-(--teal)",
-  },
+  // {
+  //   children: "Chat with Us",
+  //   icon: <MdOutlineWhatsapp />,
+  //   bgColor: "bg-(--white)",
+  //   textColor: "text-(--white)",
+  //   hoverTextColor: "group-hover:text-(--teal)",
+  //   skewColor: "bg-(--teal)",
+  // },
+  // {
+  //   children: "Brochure",
+  //   icon: <MdArrowOutward />,
+  //   bgColor: "bg-(--white)",
+  //   textColor: "text-(--white)",
+  //   hoverTextColor: "group-hover:text-(--teal)",
+  //   skewColor: "bg-(--teal)",
+  // },
 ];
 
 const slides = [
   {
     img: "/home/slider1.jpg",
     title: "Skill Up Study Abroad Mumbai",
-    heading1: "Build your tomorrow ",
-    heading2: "Leading You to Global Universities.",
+    heading1: "Shape your future",
+    heading2: "with a global degree",
     paragraph:
-      "Expand your future at 500+ top-rated universities and colleges worldwide.",
-    buttonText: "Reserve your spot",
-  },
-  {
-    img: "/home/slider2.jpg",
-    title: "Skill Up Study Abroad",
-    heading1: "Learn. Rise. Lead",
-    heading2: "Languages made simple",
-    paragraph: "Improve spoken English, Japanese and others with simple guidance and daily practice.",
-    buttonText: "Book your consultation",
-  },
-  {
-    img: "/home/slider3.jpeg",
-    title: "Skill Up Study Abroad Mumbai",
-    heading1: "Trusted support",
-    heading2: "Guiding your study journey",
-    paragraph: "Services include test preparation, overseas study guidance, university application support, visa assistance and education loan help.",
-    buttonText: "Set up your appointment",
+      "From university selection to visa approval — we guide you every step of the way.",
+    buttonText: "Book free consultation",
   },
   {
     img: "/home/slider4.jpeg",
     title: "Skill Up Study Abroad",
-    heading1: "Smarter Learning Wins",
-    heading2: "Rise To The Top By Learning Smarter",
-    paragraph: "Excel in TOEFL, OET, IELTS, GRE, and PTE",
-    buttonText: "Reserve your spot ",
+    heading1: "Master your test.",
+    heading2: "Unlock your future.",
+    paragraph: "Join result-driven test prep programs designed to help you excel in global exams.",
+    buttonText: "Book a free demo",
+  },
+  {
+    img: "/home/slider3.jpeg",
+    title: "Skill Up Study Abroad Mumbai",
+    heading1: "Master languages.",
+    heading2: "Unlock new opportunities.",
+    paragraph: "Upgrade your language skills for study, work, and life abroad.",
+    buttonText: "Book Free Trial Class",
   },
 ];
 
@@ -84,7 +76,7 @@ const HeroSection: React.FC = () => {
   const enquiryFormContext = useContext(EnquiryFormContext);
   const setShowEnquiryForm = enquiryFormContext?.setShowEnquiryForm;
   const heroButtonsWithClick = heroButtons.map((btn) => {
-    if (btn.children === "Apply Now" && setShowEnquiryForm) {
+    if (btn.children === "Free Consultation" && setShowEnquiryForm) {
       return { ...btn, onClick: () => setShowEnquiryForm(true) };
     }
     if (btn.children === "Chat with Us") {
@@ -146,7 +138,7 @@ const HeroSection: React.FC = () => {
                   <Paragraph size="lg" className="mt-4 text-(--white)/70">
                     {slide.paragraph}
                   </Paragraph>
-                  <div className="my-8  gap-4 hidden sm:flex">
+                  <div className="my-6 gap-4 hidden sm:flex">
                     <AnimatedButton
                       bgColor="bg-(--white)"
                       textColor="text-(--white)"
@@ -165,7 +157,7 @@ const HeroSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute max-w-72 sm:max-w-xl lg:max-w-2xl z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
+      <div className="absolute max-w-72 sm:max-w-72 lg:max-w-xs z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
           {heroButtonsWithClick.map((btn, idx) => (
             <AnimatedButton

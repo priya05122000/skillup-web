@@ -94,7 +94,7 @@ const ContactForm = () => {
             Fill our enquiry form today
           </Heading>
           <Paragraph
-            size="base"
+            size="sm"
             className="mt-8 mb-6 flex items-end gap-2 justify-end"
           >
             Facebook{" "}
@@ -103,7 +103,7 @@ const ContactForm = () => {
             </span>
           </Paragraph>
           <Paragraph
-            size="base"
+            size="sm"
             className=" flex mb-6 items-end gap-2 justify-end"
           >
             Instagram{" "}
@@ -111,7 +111,7 @@ const ContactForm = () => {
               <FaInstagramSquare />
             </span>
           </Paragraph>
-          <Paragraph size="base" className=" flex items-end gap-2 justify-end">
+          <Paragraph size="sm" className=" flex items-end gap-2 justify-end">
             LinkedIn{" "}
             <span className="ml-8 text-3xl text-(--teal)">
               <FaLinkedin />

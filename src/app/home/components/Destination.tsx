@@ -68,7 +68,7 @@ const DestinationCard: React.FC<DestinationItem> = ({
               {label}
             </Paragraph>
             <Paragraph
-              size="base"
+              size="sm"
               className="text-white leading-tight px-4 text-center"
             >
               {desc}

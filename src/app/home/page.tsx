@@ -12,14 +12,14 @@ const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <AboutUs />
-      <Stats />
       <Services />
       <TestPreparation />
       <Destination />
       <Testimonials />
       <Partners />
-      <EnquireForm imageSrc="/home/enquiry.webp"/>
+      <Stats />
+      <AboutUs />
+      <EnquireForm imageSrc="/home/enquiry.webp" />
     </div>
   );
 };

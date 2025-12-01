@@ -105,7 +105,7 @@ const AcademicSupportSection: React.FC = () => (
             Decade of Expertise in International Academic Coaching
           </Heading>
           <Paragraph
-            size="base"
+            size="sm"
             className="text-(--ice-gray) leading-relaxed mt-4"
           >
             Skill Up Study Abroad has established itself as a leading
@@ -132,14 +132,14 @@ const AcademicSupportSection: React.FC = () => (
             href="#"
             className="group inline-flex flex-col items-start uppercase gap-1 font-medium hover:text-(--indigo) mt-5"
           >
-            <Paragraph size="base" className="inline-flex items-center">
+            <Paragraph size="sm" className="inline-flex items-center">
               More About Us <MdArrowOutward size={20} />
             </Paragraph>
             <span className="block h-0.5 w-[95%] bg-black group-hover:bg-(--indigo) mt-1 origin-left transition-all duration-500 group-hover:opacity-0 group-hover:scale-x-0"></span>
           </Link> */}
           <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
             <Paragraph
-              size="base"
+              size="sm"
               className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--white)"
             >
               More About Us <MdArrowOutward />

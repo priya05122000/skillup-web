@@ -1,6 +1,6 @@
 import React from "react";
 
-type ParagraphSize = "xl" | "lg" | "base";
+type ParagraphSize = "xl" | "lg" | "base" | "sm";
 
 interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
@@ -14,6 +14,7 @@ const sizeClasses: Record<ParagraphSize, string> = {
   xl: "text-lg sm:text-xl lg:text-2xl",
   lg: "text-base lg:text-lg",
   base: "text-base",
+  sm: "text-sm",
 };
 
 const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(

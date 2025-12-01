@@ -84,7 +84,7 @@ const Services: React.FC = () => {
         >
           Our Services
         </Heading>
-        <Paragraph size="base" className="mt-4 text-center">
+        <Paragraph size="sm" className="mt-4 text-center">
           Skill Up Study Abroad offers comprehensive overseas education
           services, guiding students seamlessly from university selection to
           admission. Our expert team specializes in student visa services,

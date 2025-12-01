@@ -36,7 +36,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
             onClick={onClick}
         >
             <Paragraph
-                size="base"
+                size="sm"
                 className={`relative font-semibold z-10 rounded-md transition-colors duration-400 flex items-center gap-2 justify-center ${hoverTextColor}`}
             >
                 {hasText ? (
