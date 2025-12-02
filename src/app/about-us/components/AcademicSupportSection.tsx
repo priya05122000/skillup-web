@@ -9,6 +9,7 @@ import Heading from "@/components/Heading";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
+import SectionCenter from "@/components/SectionCenter";
 
 type CardProps = {
   icon: React.ReactElement<{ className?: string }>;
@@ -75,9 +76,7 @@ const InfoCard: React.FC<CardProps> = ({
 
 const AcademicSupportSection: React.FC = () => (
   <section className="py-10 sm:py-20 ">
-
-
-    <Section>
+    <SectionCenter>
       <div className="">
         <Paragraph
           size="lg"
@@ -148,7 +147,7 @@ const AcademicSupportSection: React.FC = () => (
           </button> */}
         </div>
       </div>
-    </Section>
+    </SectionCenter>
 
     {/* <Section className="mt-10 sm:mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">

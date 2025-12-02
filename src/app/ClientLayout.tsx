@@ -47,12 +47,12 @@ const CTA_BUTTONS = [
   {
     icon: <PiPhoneCallFill className="w-7 h-7 shrink-0" />,
     label: "Call",
-    href: "tel:+99304 94883",
+    href: "tel:8920588082",
   },
   {
     icon: <IoLogoWhatsapp className="w-7 h-7 shrink-0" />,
     label: "Whatsapp",
-    href: "https://wa.me/99304 94883",
+    href: "https://wa.me/8920588082",
   },
   {
     icon: <FaHeadset className="w-7 h-7 shrink-0" />,
@@ -102,14 +102,14 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
         body: JSON.stringify({ email }),
       });
       if (res.ok) {
-        toast.success("Subscribed successfully!");
+        toast.success("Demo Request sent successfully!");
         setEmail("");
         setShowPopup(false);
       } else {
-        toast.error("Failed to subscribe. Please try again.");
+        toast.error("Failed to send demo request. Please try again.");
       }
     } catch {
-      toast.error("Failed to subscribe. Please try again.");
+      toast.error("Failed to send demo request. Please try again.");
     }
     setPopupSubmitting(false);
   };
@@ -192,24 +192,14 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
               >
                 <IoClose />
               </button>
-
-              {/* <div className="mb-8 flex justify-center">
-              <img
-                src="/logos/navbarlogo.png"
-                alt="Logo"
-                width={180}
-                height={40}
-                className="w-48 md:w-72"
-              />
-              </div> */}
               <Heading
                 level={5}
                 className="font-bold leading-tight text-center text-(--white) uppercase"
               >
-                Book a Demo
+                Book a Free Consultation
               </Heading>
               <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Book a demo session to experience expert guidance tailored to your study abroad goals.
+                Book a free consultation to experience expert guidance tailored to your study abroad goals.
               </Paragraph>
               <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
                 <div className="flex flex-col sm:flex-row gap-2  sm:items-center">

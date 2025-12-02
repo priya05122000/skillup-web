@@ -47,7 +47,7 @@ const ielts: ExamData = {
       { title: "Modes", values: "Computer Based & Hand-written" },
       { title: "Validity", values: "2 years" },
       { title: "Identity document", values: "Passport" },
-      { title: "Approximate test fee", values: "Rs.17,000 (As on 2024)" },
+      { title: "Approximate test fee", values: "Rs.18,000" },
       {
         title: "Re-attempt/schedule/cancel",
         values: "Possible | Refer to web-site",

@@ -44,7 +44,7 @@ const Footer = () => {
     <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10 relative w-full">
       <Section>
         {/* ---- GRID FIXED ---- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[70px_200px_220px_auto] xl:grid-cols-[120px_320px_320px_auto] gap-y-12 gap-x-8 mb-4 items-start w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[80px_210px_250px_auto] xl:grid-cols-[130px_340px_350px_auto] gap-y-12 gap-x-12 mb-8 items-start w-full">
           {/* Explore */}
           <div className="flex flex-col min-w-[120px] ">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Countries */}
-          <div className="min-w-[120px] ">
+          <div className="min-w-[120px] xl:w-64">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Countries
             </Paragraph>
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="text-xs leading-relaxed min-w-[150px] ">
+          <div className="text-xs leading-relaxed min-w-[150px] lg:w-54 xl:w-60">
             <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Address
             </Paragraph>

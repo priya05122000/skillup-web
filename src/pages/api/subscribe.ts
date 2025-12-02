@@ -27,11 +27,11 @@ export default async function handler(
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_RECEIVER,
-      subject: "📰 New Demo Request - Skillup Study Abroad",
+      subject: "📰 New Free Consultation Request - Skillup Study Abroad",
       html: `
     <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
-      <h2 style="color: #030303; margin-bottom: 10px;">New Demo Request</h2>
-      <p style="font-size: 16px; margin: 8px 0;">A new user has requested a demo.</p>
+      <h2 style="color: #030303; margin-bottom: 10px;">New Free Consultation Request</h2>
+      <p style="font-size: 16px; margin: 8px 0;">A new user has requested a free consultation.</p>
       
       <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 12px 0; border: 1px solid #e0e0e0; width: fit-content;">
         <p style="margin: 0;"><strong>Email:</strong> ${email}</p>
@@ -48,9 +48,9 @@ export default async function handler(
     await transporter.sendMail(mailOptions);
     return res
       .status(200)
-      .json({ message: "Subscription email sent successfully" });
+      .json({ message: "Free consultation request sent successfully" });
   } catch (error) {
-    console.error("Error sending subscription email:", error);
-    return res.status(500).json({ error: "Failed to send subscription email" });
+    console.error("Error sending free consultation request email:", error);
+    return res.status(500).json({ error: "Failed to send free consultation request email" });
   }
 }

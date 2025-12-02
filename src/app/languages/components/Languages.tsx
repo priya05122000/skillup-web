@@ -84,7 +84,7 @@ const Languages: React.FC = () => {
                   </Heading>
                 </div>
                 <div className="lg:w-5/7 xl:w-4/5 flex flex-col sm:flex-row gap-6 justify-center">
-                  <div className="w-full md:w-50 xl:w-80 h-52 shrink-0 ">
+                  <div className="w-full md:w-50 xl:w-80 h-44 shrink-0 ">
                     <Image
                       src={language.image}
                       alt={language.title}
@@ -94,7 +94,7 @@ const Languages: React.FC = () => {
                     />
                   </div>
 
-                  <div className="">
+                  <div className="flex flex-col justify-center">
                     <Paragraph size="sm" className="text-justify ">
                       {language.description}
                     </Paragraph>

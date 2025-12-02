@@ -131,14 +131,14 @@ const Services: React.FC = () => {
                     />
                   </div>
 
-                  <div className="">
-                    <Heading
-                      level={6}
+                  <div className="flex flex-col justify-center">
+                    <Paragraph
+                      size="xl"
                       className="mb-2 font-bold uppercase text-(--teal)"
                     >
                       {service.briefing}
-                    </Heading>
-                    <Paragraph size="sm" className="text-justify mt-2">
+                    </Paragraph>
+                    <Paragraph size="sm" className="text-justify">
                       {service.description}
                     </Paragraph>
                   </div>

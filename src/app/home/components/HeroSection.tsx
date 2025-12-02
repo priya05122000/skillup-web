@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="relative h-[65vh] sm:h-[calc(90vh-80px)] w-full mb-20"
+      className="relative h-[65vh] sm:h-[calc(100vh-80px)] w-full mb-20"
       aria-label="Hero"
     >
       <Swiper
@@ -122,7 +122,7 @@ const HeroSection: React.FC = () => {
                 aria-hidden="true"
               />
             </div>
-            <div className="relative z-10 flex h-full items-start sm:items-center justify-center pt-12 sm:pt-0">
+            <div className="relative z-10 flex h-full items-end sm:items-center justify-center pb-12 sm:pb-0">
               <Section className="text-left text-(--white) w-full ">
                 <div className="max-w-lg lg:max-w-2xl">
                   {/* <Paragraph
@@ -157,7 +157,7 @@ const HeroSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute max-w-72 sm:max-w-72 lg:max-w-xs z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
+      {/* <div className="absolute max-w-72 sm:max-w-72 lg:max-w-xs z-50 bg-(--white)/10 backdrop-blur-md bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 h-auto w-full px-8 py-8 rounded-md border border-(--white)/10 shadow-lg">
         <div className="flex  flex-col gap-4 sm:flex-row justify-evenly z-50">
           {heroButtonsWithClick.map((btn, idx) => (
             <AnimatedButton
@@ -174,7 +174,7 @@ const HeroSection: React.FC = () => {
             </AnimatedButton>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

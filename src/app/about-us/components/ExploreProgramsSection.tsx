@@ -68,7 +68,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
       className="w-full h-70 lg:h-[300px] object-cover"
     />
     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-    <div className="absolute bottom-0 w-full h-20 lg:h-22 xl:h-20  text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border-t border-(--white)/30 bg-(--orange)/50">
+    <div className="absolute bottom-0 w-full h-11 md:h-16 lg:h-11  text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border-t border-(--white)/30 bg-(--orange)/50">
       {/* {isActive ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
         </Heading>
       )} */}
       {/* <div className="backdrop-blur-md px-2 py-1 border border-(--white)/30 bg-(--teal)/70"> */}
-      <Paragraph size="xl" className="text-(--white) font-semibold mb-2 w-full">
+      <Paragraph size="base" className="text-(--white) font-semibold mb-1 w-full">
         {program.title}
       </Paragraph>
       {/* </div> */}

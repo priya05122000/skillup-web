@@ -124,14 +124,14 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50 shadow-lg">
       {/* Left: Social Icons */}
-      <div className="hidden md:flex items-center space-x-6 text-(--white)">
+      <div className="flex items-center space-x-6 text-(--white)">
         {/* <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
           <FaFacebookF className="w-5 h-5" />
         </Link>
         <Link href="#" aria-label="Instagram" className="hover:text-(--white)">
           <FaInstagram className="w-5 h-5" />
         </Link> */}
-        <Link href="/">
+        <Link href="/" className="">
           <Image
             src="/logo/navbar-logo.svg"
             alt="Logo"
@@ -143,12 +143,12 @@ const Navbar = () => {
       </div>
 
       {/* Center: Logo and Menus */}
-      <div className="flex items-center justify-center ">
+      <div className="flex md:items-center md:justify-center ">
         {/* Mobile/tab: only logo and hamburger */}
-        <div className="flex items-center w-full xl:hidden">
+        <div className="flex items-center justify-between w-full xl:hidden">
           {/* Mobile: logo left, hamburger right */}
-          {/* <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
-            <span className="flex items-center justify-center">
+          <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
+            {/* <span className="flex items-center justify-center">
               <Image
                 src="/logo/navbar-logo.svg"
                 alt="Logo"
@@ -156,8 +156,8 @@ const Navbar = () => {
                 height={500}
                 className="h-[60px] w-auto"
               />
-            </span>
-          </Link> */}
+            </span> */}
+          </Link>
           <div className="flex-1 md:hidden" />
           <button
             className="ml-4 text-(--white) md:hidden"
