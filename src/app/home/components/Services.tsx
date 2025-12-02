@@ -49,7 +49,7 @@ const services = [
   {
     slug: "pre-departure-help",
     name: "Pre-Departure<br/>Help",
-    profile_photo_url: "services/pre-departure.jpg",
+    profile_photo_url: "services/departure.png",
     description:
       "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
   },

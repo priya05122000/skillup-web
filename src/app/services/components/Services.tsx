@@ -59,7 +59,7 @@ const services: Service[] = [
     slug: "pre-departure-help",
     title: "Pre-Departure Help",
     briefing: "Essential Help Before Departure",
-    image: "/services/pre-departure.jpg",
+    image: "/services/departure.png",
     description:
       "Benefit from informative pre-departure briefing sessions with Skill Up Study Abroad, specially designed to prepare you for your overseas study adventure. Our expert team equips you with up-to-date information about travel, cultural adaptation, accommodation, safety, and essential steps—so you start your international journey confidently and well-prepared. These sessions cover everything from packing tips to local customs and emergency contacts, ensuring you transition smoothly and make the most of your global education experience. ",
   },

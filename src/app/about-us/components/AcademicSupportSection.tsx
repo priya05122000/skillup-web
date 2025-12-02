@@ -93,10 +93,10 @@ const AcademicSupportSection: React.FC = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
         <div className="h-full w-full sm:h-[400px] lg:h-[450px]">
           <Image
-            src="/about-us/study.jpeg"
+            src="/about-us/education.png"
             alt="Students studying on campus"
             width={1600}
-            height={800}
+            height={1200}
             className="rounded-md shadow-md w-full h-full object-cover object-top"
           />
         </div>

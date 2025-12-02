@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const pte: ExamData = {
   name: "PTE",
-  bannerImage: "/test-prep/pte-banner.jpg",
+  bannerImage: "/test-prep/pte-banner1.jpg",
   bannerSubtitle:
     "Achieve fast and reliable English test results for university entry and visa applications with PTE. Experience flexible testing dates and quick score reports.",
   description:
