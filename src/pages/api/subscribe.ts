@@ -9,10 +9,10 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { email } = req.body;
+  const { mobileNumber } = req.body;
 
-  if (!email) {
-    return res.status(400).json({ error: "Email is required" });
+  if (!mobileNumber) {
+    return res.status(400).json({ error: "Mobile number is required" });
   }
 
   try {
@@ -34,7 +34,7 @@ export default async function handler(
       <p style="font-size: 16px; margin: 8px 0;">A new user has requested a free consultation.</p>
       
       <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 12px 0; border: 1px solid #e0e0e0; width: fit-content;">
-        <p style="margin: 0;"><strong>Email:</strong> ${email}</p>
+        <p style="margin: 0;"><strong>Mobile Number:</strong> ${mobileNumber}</p>
       </div>
 
       <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">

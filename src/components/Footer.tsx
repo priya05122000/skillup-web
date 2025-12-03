@@ -9,7 +9,7 @@ import { link } from "fs";
 
 type NavItem = {
   label: string;
-  href?: string;
+  href: string;
 };
 
 const navItems: NavItem[] = [
@@ -52,9 +52,11 @@ const Footer = () => {
             </Paragraph>
             <div className="text-sm flex flex-col gap-1">
               {navItems.map((item) => (
-                <Paragraph size="sm" className="mr-2 mb-1" key={item.label}>
-                  {item.label}
-                </Paragraph>
+                <Link href={item.href} key={item.label}>
+                  <Paragraph size="sm" className="mr-2 mb-1">
+                    {item.label}
+                  </Paragraph>
+                </Link>
               ))}
             </div>
           </div>

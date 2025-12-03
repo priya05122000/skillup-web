@@ -11,9 +11,9 @@ import React, {
 } from "react";
 export const EnquiryFormContext = createContext<
   | {
-    showEnquiryForm: boolean;
-    setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
-  }
+      showEnquiryForm: boolean;
+      setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
+    }
   | undefined
 >(undefined);
 import { AnimatePresence, motion } from "framer-motion";
@@ -66,7 +66,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [popupSubmitting, setPopupSubmitting] = useState(false);
-  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
 
   useEffect(() => {
@@ -88,8 +88,9 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
     };
   }, [loading]);
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const handleMobileNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setMobileNumber(value);
   };
 
   const handleSubscribe = async (e: FormEvent) => {
@@ -99,11 +100,11 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ mobileNumber }),
       });
       if (res.ok) {
         toast.success("Demo Request sent successfully!");
-        setEmail("");
+        setMobileNumber("");
         setShowPopup(false);
       } else {
         toast.error("Failed to send demo request. Please try again.");
@@ -199,17 +200,18 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                 Book a Free Consultation
               </Heading>
               <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Book a free consultation to experience expert guidance tailored to your study abroad goals.
+                Book a free consultation to experience expert guidance tailored
+                to your study abroad goals.
               </Paragraph>
               <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
                 <div className="flex flex-col sm:flex-row gap-2  sm:items-center">
                   <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="Mobile Number"
                     required
-                    value={email}
-                    onChange={handleEmailChange}
-                    placeholder="Enter your email"
+                    value={mobileNumber}
+                    onChange={handleMobileNumberChange}
+                    placeholder="Enter your Mobile number"
                     className="flex-1 px-4 py-2 rounded border border-white bg-white focus:outline-none"
                   />
                   <AnimatedButton
