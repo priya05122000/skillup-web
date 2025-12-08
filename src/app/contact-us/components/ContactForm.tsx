@@ -12,6 +12,7 @@ import Paragraph from "@/components/Paragraph";
 import toast from "react-hot-toast";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import SectionCenter from "@/components/SectionCenter";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -87,14 +88,14 @@ const ContactForm = () => {
   };
 
   return (
-    <Section className="py-10 sm:py-20">
-      <div className="contact-form grid grid-cols-1 xl:grid-cols-[1fr_3fr] gap-10 xl:gap-20">
+    <SectionCenter className="py-10 sm:py-20">
+      <div className="contact-form grid grid-cols-1 xl:grid-cols-[1fr_3fr] gap-10 xl:gap-38 ">
         <div className="text-end hidden xl:flex flex-col justify-center">
           <Heading level={3} className="font-bold mb-4 uppercase text-(--teal)">
             Fill our enquiry form today
           </Heading>
           <Paragraph
-            size="base"
+            size="sm"
             className="mt-8 mb-6 flex items-end gap-2 justify-end"
           >
             Facebook{" "}
@@ -103,7 +104,7 @@ const ContactForm = () => {
             </span>
           </Paragraph>
           <Paragraph
-            size="base"
+            size="sm"
             className=" flex mb-6 items-end gap-2 justify-end"
           >
             Instagram{" "}
@@ -111,7 +112,7 @@ const ContactForm = () => {
               <FaInstagramSquare />
             </span>
           </Paragraph>
-          <Paragraph size="base" className=" flex items-end gap-2 justify-end">
+          <Paragraph size="sm" className=" flex items-end gap-2 justify-end">
             LinkedIn{" "}
             <span className="ml-8 text-3xl text-(--teal)">
               <FaLinkedin />
@@ -122,8 +123,8 @@ const ContactForm = () => {
           <div className="bg-(--teal) rounded-md sm:bg-(--teal)/80 backdrop-blur-md relative p-10  sm:w-3/4 xl:w-4/5 flex justify-end ">
             <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-[320px] lg:w-[400px] h-[80%] hidden sm:block">
               <div className="relative  w-full h-full">
-                <div className="absolute  right-0 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)] rounded-md   bg-(--teal)"></div>
-                <div className="absolute  left-0 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
+                <div className="absolute right-0 xl:right-10 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)] rounded-md   bg-(--teal)"></div>
+                <div className="absolute left-0 xl:-left-10 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
                   <Image
                     src="/contact/contactform.jpg"
                     alt="Decorative"
@@ -135,14 +136,14 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <div className="sm:w-2/3 flex  items-end">
+            <div className="sm:w-3/5 flex  items-end">
               <div className="w-full">
-                <div className="flex flex-col items-center mb-6">
-                  <span className="text-6xl mb-2 text-white">
+                <div className="flex flex-col items-center mb-4">
+                  <span className="text-5xl text-white">
                     <FaGraduationCap />
                   </span>
                   <Heading
-                    level={4}
+                    level={5}
                     className="text-white font-bold text-center mb-2"
                   >
                     Get in Touch
@@ -176,14 +177,21 @@ const ContactForm = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
                     required
                   />
-                  <Dropdown
+                  <FormInput
+                    type="text"
+                    name="course"
+                    placeholder="Course"
+                    value={selectedProgram}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSelectedProgram(e.target.value)}
+                  />
+                  {/* <Dropdown
                     options={courseOptions}
                     selected={selectedProgram}
                     placeholder="Course"
                     onSelect={setSelectedProgram}
                     openDropdown={setOpenDropdownName}
                     openName={openDropdownName}
-                  />
+                  /> */}
                   <Dropdown
                     options={countryOptions}
                     selected={selectedCountry}
@@ -218,7 +226,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 

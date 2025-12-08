@@ -53,17 +53,17 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
               <div className="grid md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2">
                 {quickFacts.slice(0, 2).map((fact, index) => (
                   <div key={index} className="flex gap-2 items-center">
-                    <Paragraph size="base" className="font-bold">
+                    <Paragraph size="sm" className="font-bold">
                       {fact.label}:
                     </Paragraph>
-                    <Paragraph size="base">{fact.value}</Paragraph>
+                    <Paragraph size="sm">{fact.value}</Paragraph>
                   </div>
                 ))}
               </div>
               <div>
                 {quickFacts.slice(2).map((fact, index) => (
                   <div key={index} className="flex flex-col sm:flex-row mt-2 w-[90%] sm:w-[75%] lg:w-[80%] xl:w-[75%]">
-                    <Paragraph size="base"><span className="font-bold pr-2">{fact.label}:</span>{fact.value}</Paragraph>
+                    <Paragraph size="sm"><span className="font-bold pr-2">{fact.label}:</span>{fact.value}</Paragraph>
                   </div>
                 ))}
               </div>
@@ -76,7 +76,7 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
               </Heading>
               <div className="text-justify">
                 {educationSystem.map((point, index) => (
-                  <Paragraph size="base" key={index} className="block mb-2">
+                  <Paragraph size="sm" key={index} className="block mb-2">
                     <CircleCheckBig
                       className="inline-flex text-(--orange) mr-2"
                       size={18}
@@ -101,14 +101,14 @@ const CountryOverview: FC<CountryOverviewProps> = ({ data }) => {
           <Heading level={6} className="mt-4 my-2">
             Overview
           </Heading>
-          <Paragraph size="base" className="text-justify">
+          <Paragraph size="sm" className="text-justify">
             {data.overview}
           </Paragraph>
 
           <Heading level={6} className="my-2">
             General Information
           </Heading>
-          <Paragraph size="base" className="text-justify">
+          <Paragraph size="sm" className="text-justify">
             {data.general}
           </Paragraph>
 

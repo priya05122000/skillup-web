@@ -46,7 +46,7 @@ const Partners: React.FC = () => {
               <Heading level={4} className="font-bold leading-tight ">
                 Global Network of Universities
               </Heading>
-              <Paragraph size="base" className="mt-4 text-justify">
+              <Paragraph size="sm" className="mt-4 text-justify">
                 Our partnering universities and institutions span key destinations across the globe, opening doors for students. Skill Up Study Abroad works closely with top academic institutions to offer wide-ranging choices and expert guidance. These trusted global alliances ensure world-class educational opportunities and personalized student support.
               </Paragraph>
             </div>

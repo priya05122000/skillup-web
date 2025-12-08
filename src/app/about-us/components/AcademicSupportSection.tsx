@@ -9,6 +9,7 @@ import Heading from "@/components/Heading";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
+import SectionCenter from "@/components/SectionCenter";
 
 type CardProps = {
   icon: React.ReactElement<{ className?: string }>;
@@ -75,9 +76,7 @@ const InfoCard: React.FC<CardProps> = ({
 
 const AcademicSupportSection: React.FC = () => (
   <section className="py-10 sm:py-20 ">
-
-
-    <Section>
+    <SectionCenter>
       <div className="">
         <Paragraph
           size="lg"
@@ -91,12 +90,12 @@ const AcademicSupportSection: React.FC = () => (
         </Heading>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 ">
-        <div className="h-full w-full sm:h-[400px] lg:h-[550px]">
+        <div className="h-full w-full sm:h-[400px] lg:h-[450px]">
           <Image
-            src="/about-us/study.jpeg"
+            src="/about-us/education.png"
             alt="Students studying on campus"
             width={1600}
-            height={800}
+            height={1200}
             className="rounded-md shadow-md w-full h-full object-cover object-top"
           />
         </div>
@@ -105,7 +104,7 @@ const AcademicSupportSection: React.FC = () => (
             Decade of Expertise in International Academic Coaching
           </Heading>
           <Paragraph
-            size="base"
+            size="sm"
             className="text-(--ice-gray) leading-relaxed mt-4"
           >
             Skill Up Study Abroad has established itself as a leading
@@ -132,31 +131,31 @@ const AcademicSupportSection: React.FC = () => (
             href="#"
             className="group inline-flex flex-col items-start uppercase gap-1 font-medium hover:text-(--indigo) mt-5"
           >
-            <Paragraph size="base" className="inline-flex items-center">
+            <Paragraph size="sm" className="inline-flex items-center">
               More About Us <MdArrowOutward size={20} />
             </Paragraph>
             <span className="block h-0.5 w-[95%] bg-black group-hover:bg-(--indigo) mt-1 origin-left transition-all duration-500 group-hover:opacity-0 group-hover:scale-x-0"></span>
           </Link> */}
-          <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
+          {/* <button className="relative mt-8 overflow-hidden px-4 py-2 text-(--white) bg-(--orange) rounded-md cursor-pointer outline-none border-none group">
             <Paragraph
-              size="base"
+              size="sm"
               className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--white)"
             >
               More About Us <MdArrowOutward />
             </Paragraph>
             <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--teal) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
-          </button>
+          </button> */}
         </div>
       </div>
-    </Section>
+    </SectionCenter>
 
-    <Section className="mt-10 sm:mt-20">
+    {/* <Section className="mt-10 sm:mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 ">
         {cards.map((card, idx) => (
           <InfoCard key={card.title} {...card} />
         ))}
       </div>
-    </Section>
+    </Section> */}
   </section>
 );
 

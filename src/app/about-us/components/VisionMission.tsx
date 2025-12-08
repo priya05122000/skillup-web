@@ -17,7 +17,7 @@ const VisionMissionCard: React.FC<CardProps> = ({ icon, title, description }) =>
   <div className="flex flex-col items-center text-white">
     {icon}
     <Heading level={6} className="font-semibold mb-4 text-center">{title}</Heading>
-    <Paragraph size="base" className=" text-center">{description}</Paragraph>
+    <Paragraph size="sm" className=" text-center">{description}</Paragraph>
   </div>
 );
 

@@ -7,6 +7,7 @@ import Section from "@/components/Section";
 import { ExamData } from "../examData";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import SectionCenter from "@/components/SectionCenter";
 
 const FAQAccordion = ({ data }: { data: ExamData }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,7 +32,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
   }
   
   return (
-    <Section className="py-10">
+    <SectionCenter className="py-10">
       {data.faqs.map((faq, index) => (
         <div
           key={index}
@@ -53,7 +54,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
               openIndex === index ? "max-h-40 opacity-100" : "opacity-0"
             }`}
           >
-            <Paragraph size="base" className="leading-relaxed w-[90%] sm:w-[60%] text-justify">
+            <Paragraph size="sm" className="leading-relaxed w-[90%] sm:w-[60%] text-justify">
               {(() => {
                 const urlRegex = /(https?:\/\/[^\s]+)/g;
                 const parts = faq.answer.split(urlRegex);
@@ -78,7 +79,7 @@ const FAQAccordion = ({ data }: { data: ExamData }) => {
           </div>
         </div>
       ))}
-    </Section>
+    </SectionCenter>
   );
 };
 

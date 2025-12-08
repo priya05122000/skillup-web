@@ -6,6 +6,7 @@ import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
 import { ExamData } from "../examData";
+import SectionCenter from "@/components/SectionCenter";
 
 type TableRow = {
   title: string;
@@ -22,11 +23,11 @@ interface CustomTableProps {
 }
 
 const CustomTable: React.FC<CustomTableProps> = ({ title, rows }) => (
-  <table className="w-full border-collapse text-sm md:text-base">
+  <table className="w-full sm:w-lg lg:w-xl xl:w-3xl border-collapse text-sm md:text-base">
     <thead>
       <tr className="text-base md:text-xl">
         <th
-          className="text-left py-4 px-4 font-medium border-b-2 border-(--ice-gray)"
+          className="py-4 px-4 font-medium border-b-2 border-(--ice-gray) text-center"
           colSpan={2}
         >
           {title}
@@ -49,25 +50,25 @@ const CustomTable: React.FC<CustomTableProps> = ({ title, rows }) => (
 
 const Table: React.FC<TableProps> = ({ data }) => {
   return (
-    <Section className="py-10 md:py-20">
+    <SectionCenter className="py-10 md:py-20">
       <Heading level={4} className="mb-2">
         About the {data.subName || data.name}
       </Heading>
-      <Paragraph size="lg" className="my-4">
+      <Paragraph size="base" className="my-4">
         {data.aboutDescription}
       </Paragraph>
-      <div>
+      <div className="flex items-center justify-center">
         <CustomTable title={data.tableTitle} rows={data.tableData} />
       </div>
-      <div className="mt-8">
+      <div className="mt-8 flex items-center justify-center">
         <CustomTable title="Training Programme" rows={data.training} />
       </div>
       {data.note && (
-        <Paragraph size="base" className="mt-4 italic text-(--black)/70">
+        <Paragraph size="sm" className="mt-4 italic text-(--black)/70">
           Note: {data.note}
         </Paragraph>
       )}
-    </Section>
+    </SectionCenter>
   );
 };
 

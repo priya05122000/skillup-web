@@ -12,18 +12,11 @@ import AnimatedButton from "@/components/AnimatedButton";
 
 const services = [
   {
-    slug: "study-abroad-counselling",
-    name: "Study</br/>Abroad<br/>Counselling",
+    slug: "counselling-guidance",
+    name: "Counselling &<br/>Guidance",
     profile_photo_url: "services/study-abroad.jpg",
     description:
       "Get personalized guidance to choose the right program and university for your global education journey, ensuring every step aligns with your academic and career goals.",
-  },
-  {
-    slug: "course-guidance",
-    name: "Course<br/>Guidance",
-    profile_photo_url: "services/course.jpg",
-    description:
-      "Get expert support to identify the best courses and secure scholarships that match your academic goals, making your study abroad journey affordable and successful.",
   },
   {
     slug: "application-processing",
@@ -47,18 +40,25 @@ const services = [
       "Our experts at Skill Up Study Abroad help you check eligibility and apply for the most suitable scholarships to fund your study abroad visa and admission services for Indian students.",
   },
   {
+    slug: "loan",
+    name: "Loan",
+    profile_photo_url: "services/loan.jpg",
+    description:
+      "Skill Up offers flexible study abroad loan options, guiding you through the application process to secure the financial support needed for your international education.",
+  },
+  {
     slug: "pre-departure-help",
     name: "Pre-Departure<br/>Help",
-    profile_photo_url: "services/pre-departure.jpg",
+    profile_photo_url: "services/departure.png",
     description:
       "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
   },
   {
-    slug: "language-support",
-    name: "Languages",
-    profile_photo_url: "services/languages.jpeg",
+    slug: "accommodation",
+    name: "Accommodation",
+    profile_photo_url: "services/accomodation.jpg",
     description:
-      "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
+      "Find the perfect housing solution with Skill Up Study Abroad, offering assistance in securing safe and comfortable accommodation options that suit your needs while studying abroad.",
   },
 ];
 
@@ -76,7 +76,7 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <Section className="relative py-10 sm:py-20 overflow-hidden">
+    <Section className="relative pb-10 sm:pb-20 overflow-hidden">
       <div className="max-w-3xl mx-auto">
         <Heading
           level={4}
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
         >
           Our Services
         </Heading>
-        <Paragraph size="base" className="mt-4 text-center">
+        <Paragraph size="sm" className="mt-4 text-center">
           Skill Up Study Abroad offers comprehensive overseas education
           services, guiding students seamlessly from university selection to
           admission. Our expert team specializes in student visa services,

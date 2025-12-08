@@ -103,7 +103,7 @@ const Testimonials: React.FC = () => {
             >
               Start Your Journey With Us
             </Heading>
-            <Paragraph size="base" className="mt-4 text-white text-center">
+            <Paragraph size="sm" className="mt-4 text-white text-center">
               Skill Up Study Abroad has empowered countless students to reach their global education goals with expert support every step of the way. Don’t just take our word for it—check out our testimonials and see how we’ve helped others unlock international success.
             </Paragraph>
           </div>
@@ -143,9 +143,9 @@ const Testimonials: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="relative flex flex-col w-full items-center  mt-10 lg:mt-0 justify-center">
+            <div className="relative flex flex-col w-full items-center mt-10 lg:mt-0 justify-center">
               <Swiper
-                className="mySwiper w-full h-full sm:my-10"
+                className="mySwiper w-full h-[300px] sm:my-10"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 grabCursor={true}
@@ -172,7 +172,7 @@ const Testimonials: React.FC = () => {
                       </span>
                     </div>
                     <hr className="my-4 opacity-10" />
-                    <Paragraph size="base" className="italic">{t.text}</Paragraph>
+                    <Paragraph size="sm" className="italic">{t.text}</Paragraph>
                     <div className="flex items-center gap-1 mt-4">
                       {[...Array(5)].map((_, i) =>
                         i < t.rating ? (

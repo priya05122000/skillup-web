@@ -23,7 +23,7 @@ const ContactUs = () => {
                 <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-20 text-sm">
                   <div>
                     <div>
-                      <Paragraph size="base" className=" mb-5">
+                      <Paragraph size="sm" className=" mb-5">
                         Whether you have questions, require details, or simply
                         want to connect, reach out to us—we’re always here to
                         help and listen.
@@ -56,7 +56,7 @@ const ContactUs = () => {
                       <Span className="font-semibold text-(--orange)">
                         Address (Seawoods)
                       </Span>
-                      <Paragraph size="base" className="mt-1">
+                      <Paragraph size="sm" className="mt-1">
                         Office No. 10, Shah Heritage,
                         <br />
                         Plot No. 9, Sector 42/A,
@@ -70,7 +70,7 @@ const ContactUs = () => {
                       <Span className="font-semibold text-black/50">
                         Address (Koparkhairane)
                       </Span>
-                      <Paragraph size="base" className="mt-1">
+                      <Paragraph size="sm" className="mt-1">
                         Shop no 3, Anmol Terrace CHS Ltd,
                         <br />
                         Sector 5, Koparkhairane Rd,
@@ -83,7 +83,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <Paragraph size="base" className="font-semibold text-(--orange)">
+                  <Paragraph size="sm" className="font-semibold text-(--orange)">
                     General enquiries
                   </Paragraph>
                 </div>

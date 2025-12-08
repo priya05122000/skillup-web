@@ -41,7 +41,7 @@ const University: FC<UniversityProps> = ({ universities }) => {
             Study Across Global Universities
           </Heading>
           <Paragraph
-            size="base"
+            size="sm"
             className="text-(--gray) leading-relaxed md:w-[75%] lg:w-[95%] text-justify"
           >
             Skill Up Study Abroad connects you with global universities,

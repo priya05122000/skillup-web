@@ -11,9 +11,9 @@ import React, {
 } from "react";
 export const EnquiryFormContext = createContext<
   | {
-    showEnquiryForm: boolean;
-    setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
-  }
+      showEnquiryForm: boolean;
+      setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
+    }
   | undefined
 >(undefined);
 import { AnimatePresence, motion } from "framer-motion";
@@ -27,6 +27,7 @@ import Footer from "@/components/Footer";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaHeadset } from "react-icons/fa";
+import { BsFilePost } from "react-icons/bs";
 import Link from "next/link";
 import Paragraph from "@/components/Paragraph";
 import PopupForm from "@/components/PopupForm";
@@ -39,14 +40,19 @@ interface ClientLayoutProps {
 
 const CTA_BUTTONS = [
   {
+    icon: <BsFilePost className="w-7 h-7 shrink-0" />,
+    label: "Brochure",
+    href: "#",
+  },
+  {
     icon: <PiPhoneCallFill className="w-7 h-7 shrink-0" />,
     label: "Call",
-    href: "tel:+99304 94883",
+    href: "tel:9820588082",
   },
   {
     icon: <IoLogoWhatsapp className="w-7 h-7 shrink-0" />,
     label: "Whatsapp",
-    href: "https://wa.me/99304 94883",
+    href: "https://wa.me/9820588082",
   },
   {
     icon: <FaHeadset className="w-7 h-7 shrink-0" />,
@@ -60,7 +66,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [popupSubmitting, setPopupSubmitting] = useState(false);
-  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
   const [showEnquiryForm, setShowEnquiryForm] = useState(false);
 
   useEffect(() => {
@@ -82,8 +88,9 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
     };
   }, [loading]);
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const handleMobileNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setMobileNumber(value);
   };
 
   const handleSubscribe = async (e: FormEvent) => {
@@ -93,17 +100,17 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ mobileNumber }),
       });
       if (res.ok) {
-        toast.success("Subscribed successfully!");
-        setEmail("");
+        toast.success("Demo Request sent successfully!");
+        setMobileNumber("");
         setShowPopup(false);
       } else {
-        toast.error("Failed to subscribe. Please try again.");
+        toast.error("Failed to send demo request. Please try again.");
       }
     } catch {
-      toast.error("Failed to subscribe. Please try again.");
+      toast.error("Failed to send demo request. Please try again.");
     }
     setPopupSubmitting(false);
   };
@@ -186,34 +193,25 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
               >
                 <IoClose />
               </button>
-
-              {/* <div className="mb-8 flex justify-center">
-              <img
-                src="/logos/navbarlogo.png"
-                alt="Logo"
-                width={180}
-                height={40}
-                className="w-48 md:w-72"
-              />
-              </div> */}
               <Heading
                 level={5}
                 className="font-bold leading-tight text-center text-(--white) uppercase"
               >
-                Book a Demo
+                Book a Free Consultation
               </Heading>
               <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Book a demo session to experience expert guidance tailored to your study abroad goals.
+                Book a free consultation to experience expert guidance tailored
+                to your study abroad goals.
               </Paragraph>
               <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
                 <div className="flex flex-col sm:flex-row gap-2  sm:items-center">
                   <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="Mobile Number"
                     required
-                    value={email}
-                    onChange={handleEmailChange}
-                    placeholder="Enter your email"
+                    value={mobileNumber}
+                    onChange={handleMobileNumberChange}
+                    placeholder="Enter your Mobile number"
                     className="flex-1 px-4 py-2 rounded border border-white bg-white focus:outline-none"
                   />
                   <AnimatedButton
@@ -225,7 +223,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
                     skewColor="bg-(--orange)"
                     className="px-4 py-2"
                   >
-                    {popupSubmitting ? "Subscribing..." : "Subscribe"}
+                    {popupSubmitting ? "Submitting..." : "Submit"}
                   </AnimatedButton>
                 </div>
               </form>

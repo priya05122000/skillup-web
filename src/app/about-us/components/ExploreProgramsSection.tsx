@@ -59,16 +59,16 @@ type ProgramCardProps = {
 };
 
 const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
-  <div className="relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition-all duration-300 mx-6 sm:mx-0">
+  <div className="relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition-all duration-300">
     <Image
       src={program.image}
       alt={program.title}
       height={1000}
       width={1000}
-      className="w-full h-[380px] object-cover"
+      className="w-full h-70 lg:h-[300px] object-cover"
     />
     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent"></div>
-    <div className="absolute bottom-0 w-full h-15 lg:h-22 xl:h-15 text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border-t border-(--white)/30 bg-(--orange)/50">
+    <div className="absolute bottom-0 w-full h-11 md:h-16 lg:h-11  text-(--white) flex justify-between items-end backdrop-blur-md px-4 py-2 border-t border-(--white)/30 bg-(--orange)/50">
       {/* {isActive ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, isActive }) => (
         </Heading>
       )} */}
       {/* <div className="backdrop-blur-md px-2 py-1 border border-(--white)/30 bg-(--teal)/70"> */}
-      <Paragraph size="xl" className="text-(--white) font-semibold mb-2 w-full">
+      <Paragraph size="base" className="text-(--white) font-semibold mb-1 w-full">
         {program.title}
       </Paragraph>
       {/* </div> */}
@@ -123,7 +123,7 @@ const ExploreProgramsSection: React.FC = () => {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full pb-10 sm:pb-20 relative overflow-hidden">
+    <section className="w-full py-10 sm:py-20 relative overflow-hidden">
       <Section>
         <div className="mb-4 md:mb-10 flex flex-col md:flex-row md:justify-between md:items-end gap-4 ">
           <div>
@@ -138,7 +138,7 @@ const ExploreProgramsSection: React.FC = () => {
             </Heading>
           </div>
 
-          <div className="flex justify-end gap-3 mt-2 md:mt-0">
+          {/* <div className="flex justify-end gap-3 mt-2 md:mt-0">
             <button
               className="bg-(--orange) hover:bg-(--teal) text-white w-10 h-10 flex items-center justify-center rounded-full hover:opacity-90 transition cursor-pointer"
               onClick={handlePrev}
@@ -153,39 +153,47 @@ const ExploreProgramsSection: React.FC = () => {
             >
               <ArrowRight className="w-5 h-5" />
             </button>
-          </div>
+          </div> */}
         </div>
-      </Section>
+        {/* <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {programs.map((program) => (
+              <div key={program.id}>
+                <ProgramCard program={program} isActive={false} />
+              </div>
+            ))}
+          </div>
+        </div> */}
 
-      {/* Swiper Carousel */}
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        loop={true}
-        centeredSlides={false}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        spaceBetween={32}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 2, centeredSlides: false },
-          1024: { slidesPerView: 3, centeredSlides: false },
-          1540: { slidesPerView: 4, centeredSlides: false },
-        }}
-        className="py-10"
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-      >
-        {programs.map((program) => (
-          // <SwiperSlide key={program.id}>
-          //   {({ isActive }: { isActive: boolean }) => (
-          //     <ProgramCard program={program} isActive={isActive} />
-          //   )}
-          // </SwiperSlide>
-          <SwiperSlide key={program.id}>
-            <ProgramCard program={program} isActive={false} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          loop={true}
+          centeredSlides={false}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          spaceBetween={32}
+          slidesPerView={1}
+          breakpoints={{
+            500: { slidesPerView: 2, centeredSlides: false },
+            768: { slidesPerView: 3, centeredSlides: false },
+            1100: { slidesPerView: 4, centeredSlides: false },
+          }}
+          className="py-10"
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+        >
+          {programs.map((program) => (
+            // <SwiperSlide key={program.id}>
+            //   {({ isActive }: { isActive: boolean }) => (
+            //     <ProgramCard program={program} isActive={isActive} />
+            //   )}
+            // </SwiperSlide>
+            <SwiperSlide key={program.id}>
+              <ProgramCard program={program} isActive={false} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Section>
     </section>
   );
 };

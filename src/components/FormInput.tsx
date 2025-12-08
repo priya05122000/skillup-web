@@ -11,7 +11,7 @@ const FormInput: FC<FormInputProps> = ({
     type={type}
     name={name}
     placeholder={placeholder}
-    className="w-full px-4 py-2 bg-white text-black focus:outline-none rounded-md"
+    className="w-full px-4 py-1 bg-white text-black focus:outline-none rounded-md"
     {...rest}
   />
 );

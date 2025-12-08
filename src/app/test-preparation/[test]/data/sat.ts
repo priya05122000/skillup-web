@@ -55,10 +55,6 @@ const sat: ExamData = {
       title: "Re-attempt/schedule/cancel",
       values: "Possible | Refer to web-site",
     },
-    {
-      title: "2024 test dates",
-      values: "04.05.24, 01.06.24, 24.08.24, 05.10.24, 02.11.24, 07.12.24",
-    },
   ],
   training: [
     { title: "Training mode", values: "Off-line | On-line" },

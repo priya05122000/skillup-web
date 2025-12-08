@@ -9,7 +9,7 @@ import { link } from "fs";
 
 type NavItem = {
   label: string;
-  href?: string;
+  href: string;
 };
 
 const navItems: NavItem[] = [
@@ -44,24 +44,26 @@ const Footer = () => {
     <footer className="bg-(--teal) text-white pt-10 sm:pt-20 pb-10 relative w-full">
       <Section>
         {/* ---- GRID FIXED ---- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[100px_200px_250px_auto] xl:grid-cols-[140px_220px_400px_auto] gap-y-12 gap-x-8 mb-8 items-start w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[80px_210px_250px_auto] xl:grid-cols-[130px_340px_350px_auto] gap-y-12 gap-x-12 mb-8 items-start w-full">
           {/* Explore */}
           <div className="flex flex-col min-w-[120px] ">
-            <Paragraph size="base" className="font-semibold mb-3 uppercase">
+            <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Explore
             </Paragraph>
             <div className="text-sm flex flex-col gap-1">
               {navItems.map((item) => (
-                <Paragraph size="base" className="mr-2 mb-1" key={item.label}>
-                  {item.label}
-                </Paragraph>
+                <Link href={item.href} key={item.label}>
+                  <Paragraph size="sm" className="mr-2 mb-1">
+                    {item.label}
+                  </Paragraph>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* Countries */}
-          <div className="min-w-[120px] ">
-            <Paragraph size="base" className="font-semibold mb-3 uppercase">
+          <div className="min-w-[120px] xl:w-64">
+            <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Countries
             </Paragraph>
             <div className="text-sm flex flex-wrap gap-2">
@@ -85,11 +87,11 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="text-xs leading-relaxed min-w-[200px] ">
-            <Paragraph size="base" className="font-semibold mb-3 uppercase">
+          <div className="text-xs leading-relaxed min-w-[150px] lg:w-54 xl:w-60">
+            <Paragraph size="sm" className="font-semibold mb-3 uppercase">
               Address
             </Paragraph>
-            <Paragraph size="base" className="mt-2">
+            <Paragraph size="sm" className="mt-2">
               <span className="font-semibold">Navi Mumbai (Seawoods):</span>{" "}
               Office No. 201, Shah Heritage CHS Ltd, Plot No. 9, Sec-42/A, Nerul
               (W), Seawoods, Navi Mumbai, Maharashtra 400706
@@ -111,12 +113,12 @@ const Footer = () => {
                   className="h-16 w-auto"
                 />
               </Link>
-              <Paragraph size="base" className="my-3">
+              <Paragraph size="sm" className="my-3">
                 We offer personalized guidance, visa help, and complete
                 assistance for students wanting to study abroad, ensuring they
                 select the best universities and courses.
               </Paragraph>
-              <div className="flex gap-3 mt-2">
+              {/* <div className="flex gap-3 mt-2">
                 <Link
                   href="#"
                   aria-label="Facebook"
@@ -131,7 +133,7 @@ const Footer = () => {
                 >
                   <FaInstagram className="w-5 h-5" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

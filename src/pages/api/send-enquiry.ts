@@ -29,7 +29,7 @@ export default async function handler(
 
   const mailOptions = {
     from: gmailUser,
-    to: gmailUser,
+    to: gmailReceiver,
     replyTo: email,
     subject: "📩 New Enquiry Form Submission - Skillup Study Abroad",
     html: `
@@ -48,7 +48,8 @@ export default async function handler(
 
   try {
     await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: "Email sent successfully" });
+    console.log(res); // Add this line
+    return res.status(200).json({ message: "Enquiry sent successfully" });
   } catch (error) {
     console.error(error); // Add this line
     return res.status(500).json({ error: "Failed to send email" });

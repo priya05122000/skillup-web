@@ -10,6 +10,7 @@ import Dropdown from "@/components/Dropdown";
 import FormInput from "@/components/FormInput";
 import { CountryOption } from "@/types/forms";
 import { toast } from "react-hot-toast";
+import SectionCenter from "./SectionCenter";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -90,8 +91,8 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
   };
 
   return (
-    <Section className="py-10 sm:py-20">
-      <div className="relative sm:p-10 flex justify-center items-center rounded-md">
+    <SectionCenter className="py-10 sm:py-20">
+      <div className="relative sm:p-8 flex justify-center items-center rounded-md">
         {/* BACKGROUND IMAGE FULL WIDTH */}
         <div className="absolute inset-0">
           <Image
@@ -103,16 +104,16 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
           />
         </div>
         {/* RIGHT FORM CONTAINER */}
-        <div className="relative z-10 w-full max-w-7xl flex justify-center lg:justify-start">
-          <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
+        <div className="relative z-10 w-full max-w-7xl flex justify-center md:justify-start">
+          <div className="w-full sm:w-[250px] md:w-[350px] bg-(--teal)/70 blur- bg-opacity-95 p-6 rounded-md shadow-xl backdrop-blur">
             {/* ICON + HEADING */}
-            <div className="flex flex-col items-center mb-6">
-              <span className="text-6xl mb-2 text-white">
+            <div className="flex flex-col items-center mb-4">
+              <span className="text-5xl text-white">
                 <FaGraduationCap />
               </span>
               <Heading
-                level={5}
-                className="text-white font-bold text-center mb-2"
+                level={6}
+                className="text-white font-bold text-center mb-1"
               >
                 Connect with us
               </Heading>
@@ -144,14 +145,21 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
                 onChange={(e) => setMobile(e.target.value)}
                 required
               />
-              <Dropdown
+              <FormInput
+                type="text"
+                name="course"
+                placeholder="Course"
+                value={selectedProgram}
+                onChange={(e) => setSelectedProgram(e.target.value)}
+              />
+              {/* <Dropdown
                 options={courseOptions}
                 selected={selectedProgram}
                 placeholder="Course"
                 onSelect={setSelectedProgram}
                 openDropdown={setOpenDropdownName}
                 openName={openDropdownName}
-              />
+              /> */}
               <Dropdown
                 options={countryOptions}
                 selected={selectedCountry}
@@ -190,7 +198,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
           </div>
         </div>
       </div>
-    </Section>
+    </SectionCenter>
   );
 };
 

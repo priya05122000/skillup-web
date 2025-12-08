@@ -33,9 +33,9 @@ export const STUDY_ABROAD_COUNTRIES: Country[] = [
 
 // Test Preparation sublinks
 const TEST_PREPARATION_LINKS = [
+  { name: "GMAT", href: "/test-preparation/gmat" },
   { name: "SAT", href: "/test-preparation/sat" },
   { name: "GRE", href: "/test-preparation/gre" },
-  { name: "GMAT", href: "/test-preparation/gmat" },
   { name: "OET", href: "/test-preparation/oet" },
   { name: "TOEFL", href: "/test-preparation/toefl" },
   { name: "PTE", href: "/test-preparation/pte" },
@@ -44,12 +44,28 @@ const TEST_PREPARATION_LINKS = [
 
 // Languages sublinks
 const LANGUAGE_LINKS = [
-  { name: "French", href: "/languages#french" },
-  { name: "German", href: "/languages#german" },
   { name: "Spoken English", href: "/languages#spoken-english" },
+  { name: "German", href: "/languages#german" },
+  { name: "French", href: "/languages#french" },
   { name: "Japanese", href: "/languages#japanese" },
   { name: "Korean", href: "/languages#korean" },
   { name: "Spanish", href: "/languages#spanish" },
+];
+
+const SERVICE_LINKS = [
+  {
+    name: "Counselling & Course Guidance",
+    href: "/services#counselling-guidance",
+  },
+  {
+    name: "University/College Application Processing",
+    href: "/services#application-processing",
+  },
+  { name: "Visa Support", href: "/services#visa-support" },
+  { name: "Scholarship Guidance", href: "/services#scholarship-guidance" },
+  { name: "Loan", href: "/services#loan" },
+  { name: "Pre-Departure Help", href: "/services#pre-departure-help" },
+  { name: "Accommodation", href: "/services#accommodation" },
 ];
 
 const Navbar = () => {
@@ -59,8 +75,28 @@ const Navbar = () => {
     studyAbroad: boolean;
     testPreparation?: boolean;
     languages?: boolean;
-  }>({ main: false, studyAbroad: false, testPreparation: false, languages: false });
+    services?: boolean;
+  }>({
+    main: false,
+    studyAbroad: false,
+    testPreparation: false,
+    languages: false,
+    services: false,
+  });
   const pathname = usePathname();
+
+  const handleMobileDropdown = (
+    dropdown: "services" | "testPreparation" | "languages" | "studyAbroad"
+  ) => {
+    setMenuOpen((prev) => ({
+      ...prev,
+      services: dropdown === "services" ? !prev.services : false,
+      testPreparation:
+        dropdown === "testPreparation" ? !prev.testPreparation : false,
+      languages: dropdown === "languages" ? !prev.languages : false,
+      studyAbroad: dropdown === "studyAbroad" ? !prev.studyAbroad : false,
+    }));
+  };
 
   // Reusable render function for country links
   const renderCountryLinks = (className: string, onClick?: () => void) =>
@@ -68,8 +104,9 @@ const Navbar = () => {
       <Link
         key={country.code}
         href={`/study-abroad/${country.code}`}
-        className={`${className} ${pathname === `/study-abroad/${country.code}` ? "text-(--orange)" : ""
-          }`}
+        className={`${className} ${
+          pathname === `/study-abroad/${country.code}` ? "text-(--orange)" : ""
+        }`}
         onClick={onClick}
       >
         <span
@@ -87,22 +124,31 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between w-full bg-(--teal) px-6 sm:px-8 py-0 h-20 fixed top-0 z-50 shadow-lg">
       {/* Left: Social Icons */}
-      <div className="hidden md:flex items-center space-x-6 text-(--white)">
-        <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
+      <div className="flex items-center space-x-6 text-(--white)">
+        {/* <Link href="#" aria-label="Facebook" className="hover:text-(--white)">
           <FaFacebookF className="w-5 h-5" />
         </Link>
         <Link href="#" aria-label="Instagram" className="hover:text-(--white)">
           <FaInstagram className="w-5 h-5" />
+        </Link> */}
+        <Link href="/" className="">
+          <Image
+            src="/logo/navbar-logo.svg"
+            alt="Logo"
+            width={500}
+            height={500}
+            className="h-[60px] w-auto"
+          />
         </Link>
       </div>
 
       {/* Center: Logo and Menus */}
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex md:items-center md:justify-center ">
         {/* Mobile/tab: only logo and hamburger */}
-        <div className="flex items-center w-full xl:hidden">
+        <div className="flex items-center justify-between w-full xl:hidden">
           {/* Mobile: logo left, hamburger right */}
           <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
-            <span className="flex items-center justify-center">
+            {/* <span className="flex items-center justify-center">
               <Image
                 src="/logo/navbar-logo.svg"
                 alt="Logo"
@@ -110,7 +156,7 @@ const Navbar = () => {
                 height={500}
                 className="h-[60px] w-auto"
               />
-            </span>
+            </span> */}
           </Link>
           <div className="flex-1 md:hidden" />
           <button
@@ -122,7 +168,7 @@ const Navbar = () => {
           </button>
           {/* Tablet: logo and hamburger centered */}
           <div className="hidden md:flex items-center justify-center w-full xl:hidden">
-            <Link href="/" className="flex items-center gap-2 h-20 mx-auto">
+            {/* <Link href="/" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
                   src="/logo/navbar-logo.svg"
@@ -132,7 +178,7 @@ const Navbar = () => {
                   className="h-[60px] w-auto"
                 />
               </span>
-            </Link>
+            </Link> */}
             <button
               className="ml-4 text-(--white)"
               aria-label="Open menu"
@@ -144,7 +190,7 @@ const Navbar = () => {
         </div>
         {/* Desktop: logo, menu links */}
         <div className="hidden xl:flex items-center gap-8 h-20 w-full justify-center">
-          <Link href="/" className="flex items-center gap-2 h-full ">
+          {/* <Link href="/" className="flex items-center gap-2 h-full ">
             <span className=" flex items-center justify-center ">
               <Image
                 src="/logo/navbar-logo.svg"
@@ -154,35 +200,142 @@ const Navbar = () => {
                 className="h-14 w-auto"
               />
             </span>
-          </Link>
+          </Link> */}
           <nav
             className={`flex gap-4  xl:gap-6 h-full text-(--white) text-sm font-normal items-center`}
             aria-label="Main navigation"
           >
             <Link
-              className={`hover:text-(--orange) ${pathname === "/" ? "text-(--orange)" : ""
-                }`}
+              className={`hover:text-(--orange) ${
+                pathname === "/" ? "text-(--orange)" : ""
+              }`}
               href="/"
             >
               <Paragraph size="base">Home</Paragraph>
             </Link>
-            <Link
-              className={`hover:text-(--orange) ${pathname === "/about-us" ? "text-(--orange)" : ""
+
+            <div className="relative group">
+              <Link
+                href="/services"
+                className={`hover:text-(--orange) flex items-center gap-1 ${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/services")
+                    ? "text-(--orange)"
+                    : ""
                 }`}
-              href="/about-us"
-            >
-              <Paragraph size="base">About Us</Paragraph>
-            </Link>
+              >
+                <Paragraph size="base">Global Education Services</Paragraph>
+                <span className="">
+                  <IoIosArrowDown
+                    className={`transition-transform mt-1 ${
+                      menuOpen.services ? "rotate-180" : ""
+                    }`}
+                  />
+                </span>
+              </Link>
+              <div className="absolute left-0 top-full min-w-[250px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
+                <div className="flex flex-col gap-0">
+                  {SERVICE_LINKS.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className={`flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) ${
+                        pathname === service.href ? "text-(--orange)" : ""
+                      }`}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <div className="relative group">
               <button
-                className={`hover:text-(--orange)  flex items-center gap-1 ${typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
-                  }`}
+                className={`hover:text-(--orange)  flex items-center gap-1 ${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/test-preparation")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
+              >
+                <Paragraph size="base">Test Preparation</Paragraph>
+                <span className="">
+                  <IoIosArrowDown
+                    className={`transition-transform mt-1 ${
+                      menuOpen.studyAbroad ? "rotate-180" : ""
+                    }`}
+                  />
+                </span>
+              </button>
+              <div className="absolute left-0 top-full min-w-[250px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
+                <div className="flex flex-col gap-0">
+                  {TEST_PREPARATION_LINKS.map((test) => (
+                    <Link
+                      key={test.name}
+                      href={test.href}
+                      className={`flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) ${
+                        pathname === test.href ? "text-(--orange)" : ""
+                      }`}
+                    >
+                      {test.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <Link
+                href="/languages"
+                className={`hover:text-(--orange) flex items-center gap-1 ${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/languages")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
+              >
+                <Paragraph size="base">Languages</Paragraph>
+                <span className="">
+                  <IoIosArrowDown
+                    className={`transition-transform mt-1 ${
+                      menuOpen.studyAbroad ? "rotate-180" : ""
+                    }`}
+                  />
+                </span>
+              </Link>
+              <div className="absolute left-0 top-full min-w-[250px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
+                <div className="flex flex-col gap-0">
+                  {LANGUAGE_LINKS.map((lang) => (
+                    <Link
+                      key={lang.name}
+                      href={lang.href}
+                      className={`flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) ${
+                        pathname === lang.href ? "text-(--orange)" : ""
+                      }`}
+                    >
+                      {lang.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <button
+                className={`hover:text-(--orange)  flex items-center gap-1 ${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/study-abroad")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
               >
                 <Paragraph size="base">Study Abroad</Paragraph>
                 <span className="">
                   <IoIosArrowDown
-                    className={`transition-transform   ${menuOpen.studyAbroad ? "rotate-180" : ""
-                      }`}
+                    className={`transform transition-transform mt-1 ${
+                      menuOpen.studyAbroad ? "rotate-180" : ""
+                    }`}
                   />
                 </span>
               </button>
@@ -194,65 +347,20 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="relative group">
-              <button
-                className={`hover:text-(--orange)  flex items-center gap-1 ${typeof pathname === "string" && pathname.startsWith("/test-preparation") ? "text-(--orange)" : ""}`}
-              >
-                <Paragraph size="base">Test Preparation</Paragraph>
-                <span className="">
-                  <IoIosArrowDown
-                    className={`transition-transform   ${menuOpen.studyAbroad ? "rotate-180" : ""}`}
-                  />
-                </span>
-              </button>
-              <div className="absolute left-0 top-full min-w-[250px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
-                <div className="flex flex-col gap-0">
-                  {TEST_PREPARATION_LINKS.map((test) => (
-                    <Link
-                      key={test.name}
-                      href={test.href}
-                      className={`flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) ${pathname === test.href ? "text-(--orange)" : ""}`}
-                    >
-                      {test.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="relative group">
-              <Link
-                href="/languages"
-                className={`hover:text-(--orange) flex items-center gap-1 ${typeof pathname === "string" && pathname.startsWith("/languages") ? "text-(--orange)" : ""}`}
-              >
-                <Paragraph size="base">Languages</Paragraph>
-                <span className="">
-                  <IoIosArrowDown className={`transition-transform ${menuOpen.studyAbroad ? "rotate-180" : ""}`} />
-                </span>
-              </Link>
-              <div className="absolute left-0 top-full min-w-[250px] bg-(--white) text-(--teal) shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 z-50">
-                <div className="flex flex-col gap-0">
-                  {LANGUAGE_LINKS.map((lang) => (
-                    <Link
-                      key={lang.name}
-                      href={lang.href}
-                      className={`flex items-center gap-2 px-4 py-2 hover:bg-(--teal) hover:text-(--white) ${pathname === lang.href ? "text-(--orange)" : ""}`}
-                    >
-                      {lang.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+
             <Link
-              className={`hover:text-(--orange) ${pathname === "/services" ? "text-(--orange)" : ""
-                }`}
-              href="/services"
+              className={`hover:text-(--orange) ${
+                pathname === "/about-us" ? "text-(--orange)" : ""
+              }`}
+              href="/about-us"
             >
-              <Paragraph size="base">Services</Paragraph>
+              <Paragraph size="base">About Us</Paragraph>
             </Link>
+
             <Link
-              className={`hover:text-(--orange) ${pathname === "/contact-us" ? "text-(--orange)" : ""
-                }`}
+              className={`hover:text-(--orange) ${
+                pathname === "/contact-us" ? "text-(--orange)" : ""
+              }`}
               href="/contact-us"
             >
               <Paragraph size="base">Contact Us</Paragraph>
@@ -261,10 +369,11 @@ const Navbar = () => {
         </div>
         {/* Mobile menu overlay */}
         <nav
-          className={`fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--white) text-lg font-medium transition-all duration-500 ease-in-out ${menuOpen.main
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-8 pointer-events-none"
-            } overflow-y-auto`} // <-- add overflow-y-auto
+          className={`fixed inset-0 bg-(--teal) bg-opacity-95 flex flex-col items-center justify-center z-50 text-(--white) text-lg font-medium transition-all duration-500 ease-in-out ${
+            menuOpen.main
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-8 pointer-events-none"
+          } overflow-y-auto`}
           style={{ top: 0, left: 0 }}
         >
           <button
@@ -281,82 +390,132 @@ const Navbar = () => {
             <IoMdClose className="w-8 h-8" />
           </button>
           <Link
-            className={`hover:text-(--orange) mb-4 ${pathname === "/" ? "text-(--orange)" : ""
-              }`}
+            className={`hover:text-(--orange) mb-4 ${
+              pathname === "/" ? "text-(--orange)" : ""
+            }`}
             href="/"
             onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
           >
             <Paragraph size="base">Home</Paragraph>
           </Link>
-          <Link
-            className={`hover:text-(--orange) mb-4 ${pathname === "/about-us" ? "text-(--orange)" : ""
-              }`}
-            href="/about-us"
-            onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
-          >
-            <Paragraph size="base">About Us</Paragraph>
-          </Link>
           <div className="mb-4 w-full flex flex-col items-center">
             <button
-              className={`w-full flex justify-center items-center  gap-1 px-4  ${menuOpen.studyAbroad ? "pb-2" : "pb-0"
-                }  bg-transparent text-(--white)  rounded focus:outline-none ${typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
-                }`}
-              onClick={() =>
-                setMenuOpen((prev) => ({
-                  ...prev,
-                  studyAbroad: !prev.studyAbroad,
-                }))
-              }
-              aria-expanded={!!menuOpen.studyAbroad}
-              aria-controls="study-abroad-list"
+              className={`w-full flex justify-center items-center gap-1 px-4 ${
+                menuOpen.services ? "pb-2" : "pb-0"
+              } bg-transparent text-(--white) rounded focus:outline-none ${
+                typeof pathname === "string" && pathname.startsWith("/services")
+                  ? "text-(--orange)"
+                  : ""
+              }`}
+              onClick={() => handleMobileDropdown("services")}
+              aria-expanded={!!menuOpen.services}
+              aria-controls="services-list"
             >
               <Paragraph
                 size="base"
-                className={`${typeof pathname === "string" && pathname.startsWith("/study-abroad") ? "text-(--orange)" : ""
-                  }`}
+                className={`${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/services")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
               >
-                Study Abroad
+                Global Education Services
               </Paragraph>
               <IoIosArrowDown
-                className={`transition-transform   ${menuOpen.studyAbroad ? "rotate-180" : ""
-                  }`}
+                className={`transition-transform ${
+                  menuOpen.services ? "rotate-180" : ""
+                }`}
               />
             </button>
             <div
-              id="study-abroad-list"
-              className={`grid grid-cols-1 items-center overflow-y-auto transition-all duration-300 ${menuOpen.studyAbroad
-                ? "max-h-[300px] opacity-100"
-                : "max-h-0 opacity-0"
-                } `}
+              id="services-list"
+              className={`flex flex-col items-center overflow-y-auto transition-all duration-300 w-full ${
+                menuOpen.services
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
               style={{ scrollbarWidth: "thin" }}
             >
-              {renderCountryLinks(
-                "flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white)",
-                () => setMenuOpen({ main: false, studyAbroad: false })
-              )}
+              {SERVICE_LINKS.map((service) => (
+                <Link
+                  key={service.name}
+                  href={service.href}
+                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${
+                    pathname === service.href ? "text-(--orange)" : ""
+                  }`}
+                  onClick={() =>
+                    setMenuOpen((prev) => ({
+                      ...prev,
+                      main: false,
+                      services: false,
+                      testPreparation: false,
+                      studyAbroad: false,
+                      languages: false,
+                    }))
+                  }
+                >
+                  {service.name}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="mb-4 w-full flex flex-col items-center">
             <button
-              className="w-full flex justify-center items-center gap-1 px-4 bg-transparent text-(--white) rounded focus:outline-none"
-              onClick={() => setMenuOpen((prev) => ({ ...prev, testPreparation: !prev.testPreparation }))}
+              className={`w-full flex justify-center items-center  gap-1 px-4  ${
+                menuOpen.testPreparation ? "pb-2" : "pb-0"
+              }  bg-transparent text-(--white)  rounded focus:outline-none ${
+                typeof pathname === "string" &&
+                pathname.startsWith("/test-preparation")
+                  ? "text-(--orange)"
+                  : ""
+              }`}
+              onClick={() => handleMobileDropdown("testPreparation")}
               aria-expanded={!!menuOpen.testPreparation}
               aria-controls="test-preparation-list"
             >
-              <Paragraph size="base" className={`${typeof pathname === "string" && pathname.startsWith("/test-preparation") ? "text-(--orange)" : ""}`}>Test Preparation</Paragraph>
-              <IoIosArrowDown className={`transition-transform ${menuOpen.testPreparation ? "rotate-180" : ""}`} />
+              <Paragraph
+                size="base"
+                className={`${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/test-preparation")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
+              >
+                Test Preparation
+              </Paragraph>
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  menuOpen.testPreparation ? "rotate-180" : ""
+                }`}
+              />
             </button>
             <div
               id="test-preparation-list"
-              className={`flex flex-col items-center overflow-y-auto transition-all duration-300 w-full ${menuOpen.testPreparation ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`flex flex-col items-center overflow-y-auto transition-all duration-300 w-full ${
+                menuOpen.testPreparation
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
               style={{ scrollbarWidth: "thin" }}
             >
               {TEST_PREPARATION_LINKS.map((test) => (
                 <Link
                   key={test.name}
                   href={test.href}
-                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${pathname === test.href ? "text-(--orange)" : ""}`}
-                  onClick={() => setMenuOpen((prev) => ({ ...prev, main: false, testPreparation: false, studyAbroad: false, languages: false }))}
+                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${
+                    pathname === test.href ? "text-(--orange)" : ""
+                  }`}
+                  onClick={() =>
+                    setMenuOpen((prev) => ({
+                      ...prev,
+                      main: false,
+                      testPreparation: false,
+                      studyAbroad: false,
+                      languages: false,
+                    }))
+                  }
                 >
                   {test.name}
                 </Link>
@@ -367,54 +526,143 @@ const Navbar = () => {
             <button
               type="button"
               className="w-full flex justify-center items-center gap-1 px-4 bg-transparent text-(--white) rounded focus:outline-none"
-              onClick={e => { e.preventDefault(); setMenuOpen((prev) => ({ ...prev, languages: !prev.languages })); }}
+              onClick={() => handleMobileDropdown("languages")}
               aria-expanded={!!menuOpen.languages}
               aria-controls="languages-list"
             >
-              <Paragraph size="base" className={`${typeof pathname === "string" && pathname.startsWith("/languages") ? "text-(--orange)" : ""}`}>Languages</Paragraph>
-              <IoIosArrowDown className={`transition-transform ${menuOpen.languages ? "rotate-180" : ""}`} />
+              <Paragraph
+                size="base"
+                className={`${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/languages")
+                    ? "text-(--orange)"
+                    : ""
+                }`}
+              >
+                Languages
+              </Paragraph>
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  menuOpen.languages ? "rotate-180" : ""
+                }`}
+              />
             </button>
             <div
               id="languages-list"
-              className={`flex flex-col items-center overflow-y-auto transition-all duration-300 w-full ${menuOpen.languages ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}
+              className={`flex flex-col items-center overflow-y-auto transition-all duration-300 w-full ${
+                menuOpen.languages
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
               style={{ scrollbarWidth: "thin" }}
             >
               {LANGUAGE_LINKS.map((lang) => (
                 <Link
                   key={lang.name}
                   href={lang.href}
-                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${pathname === lang.href ? "text-(--orange)" : ""}`}
-                  onClick={() => setMenuOpen((prev) => ({ ...prev, main: false, languages: false, studyAbroad: false, testPreparation: false }))}
+                  className={`flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white) ${
+                    pathname === lang.href ? "text-(--orange)" : ""
+                  }`}
+                  onClick={() =>
+                    setMenuOpen((prev) => ({
+                      ...prev,
+                      main: false,
+                      languages: false,
+                      studyAbroad: false,
+                      testPreparation: false,
+                    }))
+                  }
                 >
                   {lang.name}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="w-full flex flex-col items-center">
-            <Link
-              className={`hover:text-(--orange) mb-4 ${pathname === "/services" ? "text-(--orange)" : ""
-                }`}
-              href="/services"
-              onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
+          <div className="mb-4 w-full flex flex-col items-center">
+            <button
+              className={`w-full flex justify-center items-center  gap-1 px-4  ${
+                menuOpen.studyAbroad ? "pb-2" : "pb-0"
+              }  bg-transparent text-(--white)  rounded focus:outline-none ${
+                typeof pathname === "string" &&
+                pathname.startsWith("/study-abroad")
+                  ? "text-(--orange)"
+                  : ""
+              }`}
+              onClick={() => handleMobileDropdown("studyAbroad")}
+              aria-expanded={!!menuOpen.studyAbroad}
+              aria-controls="study-abroad-list"
             >
-              <Paragraph size="base">Services</Paragraph>
-            </Link>
-            <Link
-              className={`hover:text-(--orange) mb-4 ${pathname === "/contact-us" ? "text-(--orange)" : ""
+              <Paragraph
+                size="base"
+                className={`${
+                  typeof pathname === "string" &&
+                  pathname.startsWith("/study-abroad")
+                    ? "text-(--orange)"
+                    : ""
                 }`}
-              href="/contact-us"
-              onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
+              >
+                Study Abroad
+              </Paragraph>
+              <IoIosArrowDown
+                className={`transition-transform ${
+                  menuOpen.studyAbroad ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              id="study-abroad-list"
+              className={`grid grid-cols-1 items-center overflow-y-auto transition-all duration-300 ${
+                menuOpen.studyAbroad
+                  ? "max-h-[200px] opacity-100"
+                  : "max-h-0 opacity-0"
+              } `}
+              style={{ scrollbarWidth: "thin" }}
             >
-              <Paragraph size="base">Contact Us</Paragraph>
-            </Link>
+              {renderCountryLinks(
+                "flex items-center gap-2 text-xs px-4 py-2 hover:bg-(--teal) hover:text-(--white) rounded w-full justify-center will-change-transform text-(--white)",
+                () => setMenuOpen({ main: false, studyAbroad: false })
+              )}
+            </div>
           </div>
+          <Link
+            className={`hover:text-(--orange) mb-4 ${
+              pathname === "/about-us" ? "text-(--orange)" : ""
+            }`}
+            href="/about-us"
+            onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
+          >
+            <Paragraph size="base">About Us</Paragraph>
+          </Link>
+          <Link
+            className={`hover:text-(--orange) mb-4 ${
+              pathname === "/contact-us" ? "text-(--orange)" : ""
+            }`}
+            href="/contact-us"
+            onClick={() => setMenuOpen({ main: false, studyAbroad: false })}
+          >
+            <Paragraph size="base">Contact Us</Paragraph>
+          </Link>
+          <button
+            className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group"
+            onClick={() => setShowEnquiryForm(true)}
+          >
+            <Paragraph
+              size="base"
+              className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"
+            >
+              Free Consultation
+            </Paragraph>
+            <div className="absolute top-0 -left-[10%] w-[120%] h-full rounded-md bg-(--white) skew-x-30 z-0 transition-transform duration-400 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></div>
+          </button>
         </nav>
       </div>
 
       {/* Right: Free consultation */}
       <div className="hidden xl:flex items-center justify-end h-full ">
-        <button className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group" onClick={() => setShowEnquiryForm(true)}>
+        <button
+          className="relative overflow-hidden px-4 py-2  text-(--dark-yellow)  bg-(--orange) rounded-md cursor-pointer outline-none border-none group"
+          onClick={() => setShowEnquiryForm(true)}
+        >
           <Paragraph
             size="base"
             className="relative font-semibold z-10 rounded-md transition-colors duration-400 group-hover:text-(--white)"

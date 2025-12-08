@@ -29,7 +29,7 @@ const ProgramList: React.FC = () => (
       <Paragraph size="xl" className="font-bold leading-tight ">
       {programs[0].title}
       </Paragraph>
-      <Paragraph size="base" className="mt-2">
+      <Paragraph size="sm" className="mt-2">
       {programs[0].description}
       </Paragraph>
     </Link>
@@ -37,7 +37,7 @@ const ProgramList: React.FC = () => (
       <Paragraph size="xl" className="font-bold leading-tight ">
       {programs[1].title}
       </Paragraph>
-      <Paragraph size="base" className="mt-2">
+      <Paragraph size="sm" className="mt-2">
       {programs[1].description}
       </Paragraph>
     </Link>
@@ -61,7 +61,7 @@ const AboutUs: React.FC = () => {
                   />
                 </div>
             </div>
-            <div className="absolute -bottom-6 sm:-bottom-4 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5 bg-foreground p-2 rounded-md">
+            <div className="absolute -bottom-6 sm:-bottom-8 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5 bg-foreground p-2 rounded-md">
                 <div className="relative h-full ">
                   <Image
                     src="/home/about-us-2.jpg"
@@ -98,7 +98,7 @@ const AboutUs: React.FC = () => {
             <Heading level={4} className="font-bold leading-tight">
               Your Proven Ally in Overseas Education
             </Heading>
-            <Paragraph size="base" className="mt-4 text-justify">
+            <Paragraph size="sm" className="mt-4 text-justify">
               As the best study abroad consultancy in Mumbai, we provide
               comprehensive guidance from international education counseling to
               university admission. Our expert overseas education consultants

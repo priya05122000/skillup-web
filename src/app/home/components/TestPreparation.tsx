@@ -60,9 +60,9 @@ const testItems: TestItem[] = [
   },
   {
     slug: "languages",
-    title:"French",
-    description: "French Language Proficiency Test",
-    nav: "/languages#french",
+    title:"Spoken English",
+    description: "Spoken English Proficiency Test",
+    nav: "/languages#spoken-english",
   },
   {
     slug: "languages",
@@ -98,7 +98,7 @@ const TestCard: React.FC<TestItem> = ({
     ) : (
       <Heading level={5}>{title}</Heading>
     )}
-    <Paragraph size="base" className="mt-2">
+    <Paragraph size="sm" className="mt-2">
       {isExplore ? "Explore" : description}
     </Paragraph>
   </Link>
@@ -124,7 +124,7 @@ const TestPreparation: React.FC = () => {
           >
             Test Preparation
           </Heading>
-          <Paragraph size="base" className="mt-4 text-white text-center">
+          <Paragraph size="sm" className="mt-4 text-white text-center">
             Excel in TOEFL, OET, IELTS, GRE, GMAT, SAT and PTE with Skill Up
             Study Abroad — your trusted partner for global success. Our
             expert trainers, personalized preparation plans, and interactive

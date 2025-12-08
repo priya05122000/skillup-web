@@ -6,8 +6,8 @@ const Dropdown: FC<DropdownProps & DropdownControl> = ({
   selected,
   placeholder,
   onSelect,
-  buttonClass = "w-full px-4 py-2 bg-white text-black rounded-md text-left border border-gray-300 flex items-center justify-between",
-  itemClass = "px-4 py-2 cursor-pointer hover:bg-gray-100",
+  buttonClass = "w-full px-4 py-1 bg-white text-black rounded-md text-left border border-gray-300 flex items-center justify-between",
+  itemClass = "px-4 py-1 cursor-pointer hover:bg-gray-100",
   openDropdown,
   openName,
 }) => {

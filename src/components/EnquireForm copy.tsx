@@ -95,7 +95,7 @@ const EnquireForm: FC = () => {
               className="relative overflow-hidden px-4 py-2 text-(--white) bg-(--white) rounded-md cursor-pointer outline-none border-none group"
             >
               <Paragraph
-                size="base"
+                size="sm"
                 className="relative font-semibold z-10 transition-colors duration-400 inline-flex items-center gap-2 group-hover:text-(--orange)"
               >
                 Submit
