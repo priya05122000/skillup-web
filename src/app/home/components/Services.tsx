@@ -76,7 +76,7 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <Section className="relative py-10 sm:py-20 overflow-hidden">
+    <Section className="relative pb-10 sm:pb-20 overflow-hidden">
       <div className="max-w-3xl mx-auto">
         <Heading
           level={4}

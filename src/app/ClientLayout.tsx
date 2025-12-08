@@ -47,12 +47,12 @@ const CTA_BUTTONS = [
   {
     icon: <PiPhoneCallFill className="w-7 h-7 shrink-0" />,
     label: "Call",
-    href: "tel:8920588082",
+    href: "tel:9820588082",
   },
   {
     icon: <IoLogoWhatsapp className="w-7 h-7 shrink-0" />,
     label: "Whatsapp",
-    href: "https://wa.me/8920588082",
+    href: "https://wa.me/9820588082",
   },
   {
     icon: <FaHeadset className="w-7 h-7 shrink-0" />,
