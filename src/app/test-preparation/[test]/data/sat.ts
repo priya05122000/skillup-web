@@ -3,7 +3,7 @@ import { ExamData } from "../examData";
 const sat: ExamData = {
   name: "SAT",
   subName: "Digital SAT",
-  bannerImage: "/test-prep/sat-banner1.jpg",
+  bannerImage: "/test-prep/sat-banner1.webp",
   bannerSubtitle:
     "Unlock admission to top global universities with a high SAT score. Boost your chances with focused preparation on critical reading, math, and writing skills.",
   description:

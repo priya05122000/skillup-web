@@ -46,7 +46,7 @@ const heroButtons = [
 
 const slides = [
   {
-    img: "/home/slider1.jpg",
+    img: "/home/slider1.webp",
     title: "Skill Up Study Abroad Mumbai",
     heading1: "Shape your future",
     heading2: "with a global degree",
@@ -55,7 +55,7 @@ const slides = [
     buttonText: "Book free consultation",
   },
   {
-    img: "/home/slider4.jpeg",
+    img: "/home/slider4.webp",
     title: "Skill Up Study Abroad",
     heading1: "Master your test.",
     heading2: "Unlock your future.",
@@ -63,7 +63,7 @@ const slides = [
     buttonText: "Book a free demo",
   },
   {
-    img: "/home/slider3.jpeg",
+    img: "/home/slider3.webp",
     title: "Skill Up Study Abroad Mumbai",
     heading1: "Master languages.",
     heading2: "Unlock new opportunities.",

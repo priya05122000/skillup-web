@@ -45,7 +45,7 @@ const cards: CardProps[] = [
 const VisionMission: React.FC = () => (
   <section
     className="relative w-full bg-cover bg-center bg-no-repeat py-10 sm:py-20"
-    style={{ backgroundImage: "url('/about-us/vision-mission.jpg')" }}
+    style={{ backgroundImage: "url('/about-us/vision-mission.webp')" }}
   >
     <div className="absolute inset-0 bg-black/60"></div>
     <Section className="relative">

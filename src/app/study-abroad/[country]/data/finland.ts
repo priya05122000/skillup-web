@@ -3,13 +3,13 @@ import { CountryData } from "../countryData";
 const finland: CountryData = {
   name: "Finland",
   capital: "Helsinki",
-  banner: "/study-abroad/finland/banner.jpg",
+  banner: "/study-abroad/finland/banner.webp",
   bannerTitle: "Study in Finland",
   bannerSubtitle: "Discover Innovation and Excellence in Education, the Finnish Way",
   overview:
     "Finland universities are renowned for their world-class education system, innovative teaching methods, and strong research opportunities. Students experience a balance of academic excellence and practical learning in a safe, modern environment. Studying in Finland offers globally recognized degrees and a pathway to rewarding international careers.",
-  overviewImage: "/study-abroad/finland/finland.jpeg",
-  studentImage:"/study-abroad/finland/students.jpeg",
+  overviewImage: "/study-abroad/finland/finland.webp",
+  studentImage:"/study-abroad/finland/students.webp",
   general:
     "Finland is a Nordic country in Northern Europe known for its vast forests, thousands of lakes, and modern, clean environment. It is a parliamentary republic with Helsinki as its capital, offering a high quality of life and a strong welfare state.",
   temp: "Varies from humid continental in the south to boreal in the north, with cold winters and mild summers",
@@ -85,18 +85,18 @@ const finland: CountryData = {
     }
   ],
   universities: [
-    { id: 1, name: "University 1", logo: "/study-abroad/finland/university1.png" },
-    { id: 2, name: "University 2", logo: "/study-abroad/finland/university2.png" },
-    { id: 3, name: "University 3", logo: "/study-abroad/finland/university3.png" },
-    { id: 4, name: "University 4", logo: "/study-abroad/finland/university4.png" },
-    { id: 5, name: "University 5", logo: "/study-abroad/finland/university5.png" },
-    { id: 6, name: "University 6", logo: "/study-abroad/finland/university6.png" },
-    { id: 7, name: "University 7", logo: "/study-abroad/finland/university7.png" },
-    { id: 8, name: "University 8", logo: "/study-abroad/finland/university8.png" },
-    { id: 9, name: "University 9", logo: "/study-abroad/finland/university9.png" },
-    { id: 10, name: "University 10", logo: "/study-abroad/finland/university10.png" },
-    { id: 11, name: "University 11", logo: "/study-abroad/finland/university11.png" },
-    { id: 12, name: "University 12", logo: "/study-abroad/finland/university12.png" },
+    { id: 1, name: "University 1", logo: "/study-abroad/finland/university1.webp" },
+    { id: 2, name: "University 2", logo: "/study-abroad/finland/university2.webp" },
+    { id: 3, name: "University 3", logo: "/study-abroad/finland/university3.webp" },
+    { id: 4, name: "University 4", logo: "/study-abroad/finland/university4.webp" },
+    { id: 5, name: "University 5", logo: "/study-abroad/finland/university5.webp" },
+    { id: 6, name: "University 6", logo: "/study-abroad/finland/university6.webp" },
+    { id: 7, name: "University 7", logo: "/study-abroad/finland/university7.webp" },
+    { id: 8, name: "University 8", logo: "/study-abroad/finland/university8.webp" },
+    { id: 9, name: "University 9", logo: "/study-abroad/finland/university9.webp" },
+    { id: 10, name: "University 10", logo: "/study-abroad/finland/university10.webp" },
+    { id: 11, name: "University 11", logo: "/study-abroad/finland/university11.webp" },
+    { id: 12, name: "University 12", logo: "/study-abroad/finland/university12.webp" },
   ],
 };
 

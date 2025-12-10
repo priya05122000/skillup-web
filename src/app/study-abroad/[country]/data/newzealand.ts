@@ -5,11 +5,11 @@ const NewZealand: CountryData = {
   bannerSubtitle: "Learn and thrive in New Zealand",
   bannerTitle: "Study in New Zealand",
   capital: "Wellington",
-  banner: "/study-abroad/newzealand/banner.jpg",
+  banner: "/study-abroad/newzealand/banner.webp",
   overview:
     "New Zealand universities offer world-class education with a strong focus on research, innovation, and practical learning. The country has eight public universities known for their high academic standards and international recognition.",
-  overviewImage: "/study-abroad/newzealand/newzealand.jpeg",
-  studentImage: "/study-abroad/newzealand/students.jpeg",
+  overviewImage: "/study-abroad/newzealand/newzealand.webp",
+  studentImage: "/study-abroad/newzealand/students.webp",
   general:
     "New Zealand is a picturesque island nation in the South Pacific known for its diverse landscapes, including mountains, forests, and beaches. The capital city is Wellington, and English and Maori are the official languages.",
   temp: "Mostly temperate maritime with mild temperatures, rainfall distributed throughout the year",
@@ -89,13 +89,13 @@ const NewZealand: CountryData = {
     },
   ],
   universities: [
-    { id: 1, name: "University 1", logo: "/study-abroad/newzealand/university1.png" },
-    { id: 2, name: "University 2", logo: "/study-abroad/newzealand/university2.png" },
-    { id: 3, name: "University 3", logo: "/study-abroad/newzealand/university3.png" },
-    { id: 4, name: "University 4", logo: "/study-abroad/newzealand/university4.png" },
-    { id: 5, name: "University 5", logo: "/study-abroad/newzealand/university5.png" },
-    { id: 6, name: "University 6", logo: "/study-abroad/newzealand/university6.png" },
-    { id: 7, name: "University 7", logo: "/study-abroad/newzealand/university7.png" },
+    { id: 1, name: "University 1", logo: "/study-abroad/newzealand/university1.webp" },
+    { id: 2, name: "University 2", logo: "/study-abroad/newzealand/university2.webp" },
+    { id: 3, name: "University 3", logo: "/study-abroad/newzealand/university3.webp" },
+    { id: 4, name: "University 4", logo: "/study-abroad/newzealand/university4.webp" },
+    { id: 5, name: "University 5", logo: "/study-abroad/newzealand/university5.webp" },
+    { id: 6, name: "University 6", logo: "/study-abroad/newzealand/university6.webp" },
+    { id: 7, name: "University 7", logo: "/study-abroad/newzealand/university7.webp" },
   ],
 };
 

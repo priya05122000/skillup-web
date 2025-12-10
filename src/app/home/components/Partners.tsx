@@ -10,18 +10,18 @@ interface PartnerItem {
 }
 
 const partnerItems: PartnerItem[] = [
-  { src: "/study-abroad/uk/university1.png", alt: "UK University" },
-  { src: "/study-abroad/canada/university1.png", alt: "Canada University" },
-  { src: "/study-abroad/usa/university1.png", alt: "US University" },
-  { src: "/study-abroad/australia/university1.png", alt: "Australia University" },
-  { src: "/study-abroad/ireland/university4.png", alt: "Ireland University" },
-  { src: "/study-abroad/germany/university1.png", alt: "Germany University" },
-  { src: "/study-abroad/italy/university3.png", alt: "Italy University" },
-  { src: "/study-abroad/malta/university3.png", alt: "Malta University" },
-  { src: "/study-abroad/finland/university1.png", alt: "Finland University" },
-  { src: "/study-abroad/france/university1.png", alt: "France University" },
-  { src: "/study-abroad/newzealand/university1.png", alt: "New Zealand University" },
-  { src: "/study-abroad/netherland/university1.png", alt: "Netherlands University" },
+  { src: "/study-abroad/uk/university1.webp", alt: "UK University" },
+  { src: "/study-abroad/canada/university1.webp", alt: "Canada University" },
+  { src: "/study-abroad/usa/university1.webp", alt: "US University" },
+  { src: "/study-abroad/australia/university1.webp", alt: "Australia University" },
+  { src: "/study-abroad/ireland/university4.webp", alt: "Ireland University" },
+  { src: "/study-abroad/germany/university1.webp", alt: "Germany University" },
+  { src: "/study-abroad/italy/university3.webp", alt: "Italy University" },
+  { src: "/study-abroad/malta/university3.webp", alt: "Malta University" },
+  { src: "/study-abroad/finland/university1.webp", alt: "Finland University" },
+  { src: "/study-abroad/france/university1.webp", alt: "France University" },
+  { src: "/study-abroad/newzealand/university1.webp", alt: "New Zealand University" },
+  { src: "/study-abroad/netherland/university1.webp", alt: "Netherlands University" },
 ];
 
 const PartnerLogo: React.FC<PartnerItem> = ({ src, alt }) => (

@@ -5,11 +5,11 @@ const australia: CountryData = {
   bannerTitle: "Study in Australia",
   bannerSubtitle: "Shape Your Future with Australian Education",
   capital: "Canberra",
-  banner: "/study-abroad/australia/banner.jpeg",
+  banner: "/study-abroad/australia/banner.webp",
   overview:
     "Australia is a youthful and lively destination known for its welcoming environment and top-quality education. Study abroad Australia offers the perfect blend of excellent academics and vibrant lifestyle, providing endless career and personal growth opportunities. With a friendly atmosphere and dynamic cities, Australia ensures an enriching experience for international students.​",
-  overviewImage: "/study-abroad/australia/australia.jpeg",
-  studentImage: "/study-abroad/australia/students.jpeg",
+  overviewImage: "/study-abroad/australia/australia.webp",
+  studentImage: "/study-abroad/australia/students.webp",
   general:
     "Australia is the world's sixth-largest country, known for its diverse landscapes ranging from deserts to tropical rainforests. It is a democratic federation with a multicultural population concentrated mostly in urban areas along the eastern and southeastern coasts.",
   temp: "Varied—tropical in the north to temperate in the south",
@@ -88,42 +88,42 @@ const australia: CountryData = {
     {
       id: 1,
       name: "University 1",
-      logo: "/study-abroad/australia/university1.png",
+      logo: "/study-abroad/australia/university1.webp",
     },
     {
       id: 2,
       name: "University 2",
-      logo: "/study-abroad/australia/university2.png",
+      logo: "/study-abroad/australia/university2.webp",
     },
     {
       id: 3,
       name: "University 3",
-      logo: "/study-abroad/australia/university3.png",
+      logo: "/study-abroad/australia/university3.webp",
     },
     {
       id: 4,
       name: "University 4",
-      logo: "/study-abroad/australia/university4.png",
+      logo: "/study-abroad/australia/university4.webp",
     },
     {
       id: 5,
       name: "University 5",
-      logo: "/study-abroad/australia/university5.png",
+      logo: "/study-abroad/australia/university5.webp",
     },
     {
       id: 6,
       name: "University 6",
-      logo: "/study-abroad/australia/university6.png",
+      logo: "/study-abroad/australia/university6.webp",
     },
     {
       id: 7,
       name: "University 7",
-      logo: "/study-abroad/australia/university7.png",
+      logo: "/study-abroad/australia/university7.webp",
     },
     {
       id: 8,
       name: "University 8",
-      logo: "/study-abroad/australia/university8.png",
+      logo: "/study-abroad/australia/university8.webp",
     },
   ],
 };

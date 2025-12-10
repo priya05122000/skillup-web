@@ -12,7 +12,7 @@ const Banner: React.FC = () => {
     >
       <div className="absolute inset-0">
         <Image
-          src="/services/banner.png"
+          src="/services/banner.webp"
           alt="Students collaborating in a modern classroom with laptops"
           fill
           sizes="100vw"

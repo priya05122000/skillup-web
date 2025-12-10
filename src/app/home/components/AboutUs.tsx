@@ -64,7 +64,7 @@ const AboutUs: React.FC = () => {
             <div className="absolute -bottom-6 sm:-bottom-8 right-0 w-[60%] sm:w-[50%] lg:w-[70%] xl:w-[60%] sm:h-3/5 xl:h-3/5 bg-foreground p-2 rounded-md">
                 <div className="relative h-full ">
                   <Image
-                    src="/home/about-us-2.jpg"
+                    src="/home/about-us-2.webp"
                     alt="Student talking with professor outside"
                     width={500}
                     height={350}

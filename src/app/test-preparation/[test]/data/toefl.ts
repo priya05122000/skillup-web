@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const toefl: ExamData = {
   name: "TOEFL",
-  bannerImage: "/test-prep/toefl-banner.jpg",
+  bannerImage: "/test-prep/toefl-banner.webp",
   bannerSubtitle:
     "Demonstrate your English proficiency for academic and professional success with TOEFL. Expand your study and work opportunities internationally.",
   description:

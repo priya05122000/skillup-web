@@ -5,11 +5,11 @@ const usa: CountryData = {
   bannerTitle: "Study in USA",
   bannerSubtitle: "Open New Doors with USA Studies",
   capital: "Washington, D.C.",
-  banner: "/study-abroad/usa/banner.jpg",
+  banner: "/study-abroad/usa/banner.webp",
   overview:
     "The USA education system is a top choice for international students due to its robust economy, diverse campus life, and wide range of flexible and high-quality academic programs. From dynamic cities to stunning national parks, the U.S. promises an enriching experience beyond academics. This blend of cultural diversity, cutting-edge research, and vibrant student environment makes studying in America truly captivating.",
-  overviewImage: "/study-abroad/usa/us.jpeg",
-  studentImage: "/study-abroad/usa/students.jpeg",
+  overviewImage: "/study-abroad/usa/us.webp",
+  studentImage: "/study-abroad/usa/students.webp",
   general:
     "The United States of America is a federal republic consisting of 50 states, with its capital in Washington, D.C. It is the world’s third-largest country by land area and population, known for its diverse culture, strong economy, and democratic system of government.",
   temp: "Cold semi-arid- interior northwest; warm to hot desert & semi-arid-southwest",
@@ -85,14 +85,14 @@ const usa: CountryData = {
     },
   ],
   universities: [
-    { id: 1, name: "University 1", logo: "/study-abroad/usa/university1.png" },
-    { id: 2, name: "University 2", logo: "/study-abroad/usa/university2.png" },
-    { id: 3, name: "University 3", logo: "/study-abroad/usa/university3.png" },
-    { id: 4, name: "University 4", logo: "/study-abroad/usa/university4.png" },
-    { id: 5, name: "University 5", logo: "/study-abroad/usa/university5.png" },
-    { id: 6, name: "University 6", logo: "/study-abroad/usa/university6.png" },
-    { id: 7, name: "University 7", logo: "/study-abroad/usa/university7.png" },
-    { id: 8, name: "University 8", logo: "/study-abroad/usa/university8.png" },
+    { id: 1, name: "University 1", logo: "/study-abroad/usa/university1.webp" },
+    { id: 2, name: "University 2", logo: "/study-abroad/usa/university2.webp" },
+    { id: 3, name: "University 3", logo: "/study-abroad/usa/university3.webp" },
+    { id: 4, name: "University 4", logo: "/study-abroad/usa/university4.webp" },
+    { id: 5, name: "University 5", logo: "/study-abroad/usa/university5.webp" },
+    { id: 6, name: "University 6", logo: "/study-abroad/usa/university6.webp" },
+    { id: 7, name: "University 7", logo: "/study-abroad/usa/university7.webp" },
+    { id: 8, name: "University 8", logo: "/study-abroad/usa/university8.webp" },
   ],
 };
 

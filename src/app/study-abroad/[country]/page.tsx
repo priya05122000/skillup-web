@@ -31,7 +31,7 @@ export default function Page({ params }: PageProps) {
       <University universities={data.universities ?? []} />
       <TabsData tabData={data.tabData} />
       <Navigation />
-      <EnquireForm imageSrc="/study-abroad/abroadform.jpg"/>
+      <EnquireForm imageSrc="/study-abroad/abroadform.webp"/>
     </>
   );
 }

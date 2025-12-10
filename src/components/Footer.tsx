@@ -106,7 +106,7 @@ const Footer = () => {
             <div className="flex flex-col items-start">
               <Link href="/" aria-label="Home">
                 <Image
-                  src="/logo/navbar-logo.svg"
+                  src="/logo/navbar-logo.webp"
                   alt="Logo"
                   width={120}
                   height={60}

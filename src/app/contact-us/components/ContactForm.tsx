@@ -126,7 +126,7 @@ const ContactForm = () => {
                 <div className="absolute right-0 xl:right-10 bottom-0 w-[calc(100%-30px)] h-[calc(100%-30px)] rounded-md   bg-(--teal)"></div>
                 <div className="absolute left-0 xl:-left-10 top-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
                   <Image
-                    src="/contact/contactform.jpg"
+                    src="/contact/contactform.webp"
                     alt="Decorative"
                     width={500}
                     height={500}

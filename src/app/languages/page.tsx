@@ -7,7 +7,7 @@ const page = () => {
         <div>
             <Banner />
             <Languages />
-            <EnquireForm imageSrc="/languages/form.jpg" />
+            <EnquireForm imageSrc="/languages/form.webp" />
         </div>
     )
 }
