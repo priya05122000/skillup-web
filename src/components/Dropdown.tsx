@@ -34,7 +34,7 @@ const Dropdown: FC<DropdownProps & DropdownControl> = ({
         </span>
       </button>
       {isOpen && (
-        <div className="absolute left-0 w-full mt-1 bg-white rounded-md shadow-lg z-20 max-h-60 overflow-auto">
+        <div className="absolute left-0 w-full mt-1 bg-white rounded-md shadow-lg z-20 max-h-25 overflow-auto">
           {(options as any[]).map((opt) => {
             const value = typeof opt === "string" ? opt : (opt as CountryOption).name;
             const key = typeof opt === "string" ? opt : (opt as CountryOption).code;

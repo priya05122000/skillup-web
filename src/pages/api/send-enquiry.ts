@@ -9,16 +9,31 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { fullName, email, mobile, course, country } = req.body;
+  const { fullName, email, mobile, course, country, recaptchaToken } = req.body;
 
-  if (!fullName || !email || !mobile || !course || !country) {
+  if (!recaptchaToken) {
+    return res.status(400).json({ error: "Captcha token missing" });
+  }
+
+  const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
+  const captchaResponse = await fetch(verifyUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+  });
+  const captchaData = await captchaResponse.json();
+  if (!captchaData.success || captchaData.score < 0.5) {
+    return res.status(400).json({ error: "Captcha verification failed. Please try again." });
+  }
+
+  if (!fullName || !mobile) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
   // Configure your SMTP transport (use a real SMTP service in production)
-  const gmailUser = process.env.GMAIL_USER;
-  const gmailReceiver = process.env.GMAIL_RECEIVER;
-  const gmailPass = process.env.GMAIL_APP_PASSWORD;
+  const gmailUser = process.env.EMAIL_USER;
+  const gmailReceiver = process.env.EMAIL_RECEIVER;
+  const gmailPass = process.env.EMAIL_PASS;
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {

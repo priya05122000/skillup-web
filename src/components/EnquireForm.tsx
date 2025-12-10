@@ -11,6 +11,7 @@ import FormInput from "@/components/FormInput";
 import { CountryOption } from "@/types/forms";
 import { toast } from "react-hot-toast";
 import SectionCenter from "./SectionCenter";
+import EnquiryFormFields from "@/components/EnquiryFormFields";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -59,6 +60,28 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
     setSubmitting(true);
     setSuccess(null);
     setError(null);
+
+    // Regex validation
+    const nameRegex = /^[A-Za-z\s]{2,}$/;
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
+    const mobileRegex = /^\+?\d{10,15}$/;
+
+    if (!nameRegex.test(fullName)) {
+      setError("Please enter a valid full name (letters and spaces only).");
+      setSubmitting(false);
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      setSubmitting(false);
+      return;
+    }
+    if (!mobileRegex.test(mobile)) {
+      setError("Please enter a valid mobile number (10-15 digits).");
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const res = await fetch("/api/send-enquiry", {
         method: "POST",
@@ -119,82 +142,7 @@ const EnquireForm: FC<EnquireFormProps> = ({ imageSrc }) => {
               </Heading>
             </div>
             {/* FORM */}
-            <form
-              className="w-full flex flex-col gap-4"
-              onSubmit={handleSubmit}
-            >
-              <FormInput
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
-              <FormInput
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <FormInput
-                type="tel"
-                name="mobile"
-                placeholder="Mobile Number"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                required
-              />
-              <FormInput
-                type="text"
-                name="course"
-                placeholder="Course"
-                value={selectedProgram}
-                onChange={(e) => setSelectedProgram(e.target.value)}
-              />
-              {/* <Dropdown
-                options={courseOptions}
-                selected={selectedProgram}
-                placeholder="Course"
-                onSelect={setSelectedProgram}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              /> */}
-              <Dropdown
-                options={countryOptions}
-                selected={selectedCountry}
-                placeholder="Country"
-                onSelect={setSelectedCountry}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              />
-              <label className="flex items-center gap-2 text-xs text-white">
-                <input
-                  type="checkbox"
-                  required
-                  className="accent-(--orange)"
-                  checked={agree}
-                  onChange={(e) => setAgree(e.target.checked)}
-                />
-                You authorize us to call, email, or SMS you at any time.
-              </label>
-              <AnimatedButton
-                type="submit"
-                bgColor="bg-(--white)"
-                textColor="text-(--white)"
-                hoverTextColor="group-hover:text-(--orange)"
-                skewColor="bg-(--orange)"
-                disabled={submitting}
-              >
-                {submitting ? "Submitting..." : "Submit"}
-              </AnimatedButton>
-              {success && (
-                <Paragraph className="text-green-300 mt-2">{success}</Paragraph>
-              )}
-              {error && (
-                <Paragraph className="text-red-300 mt-2">{error}</Paragraph>
-              )}
-            </form>
+            <EnquiryFormFields />
           </div>
         </div>
       </div>

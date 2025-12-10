@@ -11,15 +11,16 @@ import React, {
 } from "react";
 export const EnquiryFormContext = createContext<
   | {
-      showEnquiryForm: boolean;
-      setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
-    }
+    showEnquiryForm: boolean;
+    setShowEnquiryForm: React.Dispatch<React.SetStateAction<boolean>>;
+  }
   | undefined
 >(undefined);
 import { AnimatePresence, motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import Navbar from "@/components/Navbar";
 import AOSInit from "@/components/AOSInit";
@@ -122,123 +123,132 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
     [showEnquiryForm]
   );
   return (
-    <EnquiryFormContext.Provider value={contextValue}>
-      <AOSInit />
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+      scriptProps={{
+        async: true,
+        defer: true,
+        appendTo: "body",
+      }}
+    >
+      <EnquiryFormContext.Provider value={contextValue}>
+        <AOSInit />
 
-      <Navbar />
+        <Navbar />
 
-      {/* Main content */}
-      <main className="relative z-10 pt-20">{children}</main>
+        {/* Main content */}
+        <main className="relative z-10 pt-20">{children}</main>
 
-      <Footer />
+        <Footer />
 
-      {/* Fixed vertical CTA buttons */}
-      <div className="fixed right-0 top-3/4 transform -translate-y-1/2 flex flex-col gap-4 z-50 w-36 items-end">
-        {CTA_BUTTONS.map((btn) => (
-          <Link
-            key={btn.label}
-            href={btn.href}
-            target={btn.href.startsWith("http") ? "_blank" : undefined}
-            rel={
-              btn.href.startsWith("http") ? "noopener noreferrer" : undefined
-            }
-            className="group relative w-12 hover:w-36 h-12 bg-(--orange) shadow-xl text-(--white) rounded-l-md font-bold flex justify-start items-center p-2 pr-6 duration-700 overflow-hidden cursor-pointer no-underline"
-            onClick={(e) => {
-              if (btn.label === "Enquiry") {
-                e.preventDefault();
-                setShowEnquiryForm(true);
-              } else if (btn.label === "Call" || btn.label === "Whatsapp") {
-                window.open(
-                  btn.href,
-                  btn.label === "Whatsapp" ? "_blank" : "_self"
-                );
+        {/* Fixed vertical CTA buttons */}
+        <div className="fixed right-0 top-2/3 transform -translate-y-1/2 flex flex-col gap-4 z-50 w-36 items-end">
+          {CTA_BUTTONS.map((btn) => (
+            <Link
+              key={btn.label}
+              href={btn.href}
+              target={btn.href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                btn.href.startsWith("http") ? "noopener noreferrer" : undefined
               }
-            }}
-          >
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ repeat: Infinity, duration: 1 }}
-              className="flex items-center"
+              className="group relative w-12 hover:w-36 h-12 bg-(--orange) shadow-xl text-(--white) rounded-l-md font-bold flex justify-start items-center p-2 pr-6 duration-700 overflow-hidden cursor-pointer no-underline"
+              onClick={(e) => {
+                if (btn.label === "Enquiry") {
+                  e.preventDefault();
+                  setShowEnquiryForm(true);
+                } else if (btn.label === "Call" || btn.label === "Whatsapp") {
+                  window.open(
+                    btn.href,
+                    btn.label === "Whatsapp" ? "_blank" : "_self"
+                  );
+                }
+              }}
             >
-              {btn.icon}
-            </motion.span>
-            <span className="origin-left inline-flex duration-100 group-hover:duration-300 group-hover:delay-300 opacity-0 group-hover:opacity-100 border-l-2 border-white ml-2 pl-2 transform scale-x-0 group-hover:scale-x-100 transition-all">
-              {btn.label}
-            </span>
-          </Link>
-        ))}
-      </div>
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ repeat: Infinity, duration: 1 }}
+                className="flex items-center"
+              >
+                {btn.icon}
+              </motion.span>
+              <span className="origin-left inline-flex duration-100 group-hover:duration-300 group-hover:delay-300 opacity-0 group-hover:opacity-100 border-l-2 border-white ml-2 pl-2 transform scale-x-0 group-hover:scale-x-100 transition-all">
+                {btn.label}
+              </span>
+            </Link>
+          ))}
+        </div>
 
-      {/* Popup Modal */}
-      <AnimatePresence>
-        {showPopup && (
-          <motion.div
-            className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/60 p-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
+        {/* Popup Modal */}
+        <AnimatePresence>
+          {showPopup && (
             <motion.div
-              className="bg-(--teal)/40 shadow-2xl p-6 sm:p-10 max-w-lg w-full relative backdrop-blur-md rounded-md"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              className="fixed inset-0 z-100 flex items-center justify-center bg-(--black)/60 p-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <button
-                className="absolute top-2 right-2 cursor-pointer text-xl text-(--bg-grey)"
-                onClick={handleClosePopup}
-                aria-label="Close"
+              <motion.div
+                className="bg-(--teal)/40 shadow-2xl p-6 sm:p-10 max-w-lg w-full relative backdrop-blur-md rounded-md"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <IoClose />
-              </button>
-              <Heading
-                level={5}
-                className="font-bold leading-tight text-center text-(--white) uppercase"
-              >
-                Book a Free Consultation
-              </Heading>
-              <Paragraph size="lg" className="mt-4 text-(--white) text-center">
-                Book a free consultation to experience expert guidance tailored
-                to your study abroad goals.
-              </Paragraph>
-              <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
-                <div className="flex flex-col sm:flex-row gap-2  sm:items-center">
-                  <input
-                    type="text"
-                    name="Mobile Number"
-                    required
-                    value={mobileNumber}
-                    onChange={handleMobileNumberChange}
-                    placeholder="Enter your Mobile number"
-                    className="flex-1 px-4 py-2 rounded border border-white bg-white focus:outline-none"
-                  />
-                  <AnimatedButton
-                    type="submit"
-                    disabled={popupSubmitting}
-                    bgColor="bg-(--white)"
-                    textColor="text-(--white)"
-                    hoverTextColor="group-hover:text-(--teal)"
-                    skewColor="bg-(--orange)"
-                    className="px-4 py-2"
-                  >
-                    {popupSubmitting ? "Submitting..." : "Submit"}
-                  </AnimatedButton>
-                </div>
-              </form>
+                <button
+                  className="absolute top-2 right-2 cursor-pointer text-xl text-(--bg-grey)"
+                  onClick={handleClosePopup}
+                  aria-label="Close"
+                >
+                  <IoClose />
+                </button>
+                <Heading
+                  level={5}
+                  className="font-bold leading-tight text-center text-(--white) uppercase"
+                >
+                  Book a Free Consultation
+                </Heading>
+                <Paragraph size="lg" className="mt-4 text-(--white) text-center">
+                  Book a free consultation to experience expert guidance tailored
+                  to your study abroad goals.
+                </Paragraph>
+                <form onSubmit={handleSubscribe} className="space-y-2 mt-5">
+                  <div className="flex flex-col sm:flex-row gap-2  sm:items-center">
+                    <input
+                      type="text"
+                      name="Mobile Number"
+                      required
+                      value={mobileNumber}
+                      onChange={handleMobileNumberChange}
+                      placeholder="Enter your Mobile number"
+                      className="flex-1 px-4 py-2 rounded border border-white bg-white focus:outline-none"
+                    />
+                    <AnimatedButton
+                      type="submit"
+                      disabled={popupSubmitting}
+                      bgColor="bg-(--white)"
+                      textColor="text-(--white)"
+                      hoverTextColor="group-hover:text-(--teal)"
+                      skewColor="bg-(--orange)"
+                      className="px-4 py-2"
+                    >
+                      {popupSubmitting ? "Submitting..." : "Submit"}
+                    </AnimatedButton>
+                  </div>
+                </form>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
 
-      <AnimatePresence>
-        {showEnquiryForm && (
-          <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
-        )}
-      </AnimatePresence>
-      <Toaster position="top-right" reverseOrder={false} />
-    </EnquiryFormContext.Provider>
+        <AnimatePresence>
+          {showEnquiryForm && (
+            <PopupForm setShowEnquiryForm={setShowEnquiryForm} />
+          )}
+        </AnimatePresence>
+        <Toaster position="top-right" reverseOrder={false} />
+      </EnquiryFormContext.Provider>
+    </GoogleReCaptchaProvider>
   );
 };
 

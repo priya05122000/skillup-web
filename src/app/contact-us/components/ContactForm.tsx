@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import SectionCenter from "@/components/SectionCenter";
+import EnquiryFormFields from "@/components/EnquiryFormFields";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -149,78 +150,8 @@ const ContactForm = () => {
                     Get in Touch
                   </Heading>
                 </div>
-                <form
-                  className="w-full flex flex-col gap-4"
-                  onSubmit={handleSubmit}
-                >
-                  <FormInput
-                    type="text"
-                    name="fullName"
-                    placeholder="Full Name"
-                    value={fullName}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)}
-                    required
-                  />
-                  <FormInput
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                    required
-                  />
-                  <FormInput
-                    type="tel"
-                    name="mobile"
-                    placeholder="Mobile Number"
-                    value={mobile}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
-                    required
-                  />
-                  <FormInput
-                    type="text"
-                    name="course"
-                    placeholder="Course"
-                    value={selectedProgram}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSelectedProgram(e.target.value)}
-                  />
-                  {/* <Dropdown
-                    options={courseOptions}
-                    selected={selectedProgram}
-                    placeholder="Course"
-                    onSelect={setSelectedProgram}
-                    openDropdown={setOpenDropdownName}
-                    openName={openDropdownName}
-                  /> */}
-                  <Dropdown
-                    options={countryOptions}
-                    selected={selectedCountry}
-                    placeholder="Country"
-                    onSelect={setSelectedCountry}
-                    openDropdown={setOpenDropdownName}
-                    openName={openDropdownName}
-                  />
-                  <label className="flex items-center gap-2 text-xs text-white">
-                    <input
-                      type="checkbox"
-                      required
-                      className="accent-(--orange)"
-                      checked={agree}
-                      onChange={(e) => setAgree(e.target.checked)}
-                    />
-                    You authorize us to call, email, or SMS you at any time.
-                  </label>
-                  <AnimatedButton
-                    type="submit"
-                    bgColor="bg-(--white)"
-                    textColor="text-(--white)"
-                    hoverTextColor="group-hover:text-(--orange)"
-                    skewColor="bg-(--orange)"
-                    disabled={submitting}
-                  >
-                    {submitting ? "Submitting..." : "Submit"}
-                  </AnimatedButton>
-                </form>
+                {/* Only render the reusable form fields component here */}
+                <EnquiryFormFields />
               </div>
             </div>
           </div>
