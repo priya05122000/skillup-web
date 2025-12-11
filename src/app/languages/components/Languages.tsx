@@ -17,7 +17,7 @@ const languages: Language[] = [
     slug: "spoken-english",
     title: "Spoken English",
     briefing: "Spoken English",
-    image: "/languages/spoken-english.jpg",
+    image: "/languages/spoken-english.webp",
     description:
       "English is the dominant global language for education, business, and communication. Strong spoken English skills increase your employability and social confidence worldwide.\n\nSkill Up’s spoken English classes develop pronunciation, fluency, and vocabulary through conversation practice, role plays, and real-life scenarios. This training prepares you to excel in interviews, presentations, and everyday communication with ease.",
   },
@@ -25,7 +25,7 @@ const languages: Language[] = [
     slug: "german",
     title: "German",
     briefing: "German",
-    image: "/languages/german.jpg",
+    image: "/languages/german.webp",
     description:
       "German is the language of Europe’s largest economy and a hub for engineering, science, and technology. Mastering German enhances your career prospects in multinational companies and academic institutions.\n\nWidely spoken in Germany, Austria, and Switzerland, German offers access to top universities and research programs. Skill Up’s German courses combine interactive lessons and practical communication skills to ensure you gain linguistic confidence and professional advantage.",
   },
@@ -33,7 +33,7 @@ const languages: Language[] = [
     slug: "french",
     title: "French",
     briefing: "French",
-    image: "/languages/french.jpg",
+    image: "/languages/french.webp",
     description:
       "French is a global language of culture, diplomacy, and international business. Learning French opens doors to study and work in over 29 countries worldwide.\n\nAs one of the official languages of the UN and many international organizations, French is crucial for careers in diplomacy, tourism, and international relations. Skill Up’s French language training focuses on conversational fluency, grammar mastery, and cultural immersion to prepare you for global opportunities.",
   },
@@ -41,7 +41,7 @@ const languages: Language[] = [
     slug: "japanese",
     title: "Japanese",
     briefing: "Japanese",
-    image: "/languages/japanese.jpg",
+    image: "/languages/japanese.webp",
     description:
       "Japanese offers access to one of the world’s largest economies and a unique cultural heritage. Learning Japanese opens career and educational pathways in technology, trade, and tourism.\n\nJapan’s strong economic ties with India and global influence make Japanese a valuable asset. Skill Up’s Japanese training covers speaking, writing, and cultural nuances to help you communicate effectively and expand your global network.",
   },
@@ -49,7 +49,7 @@ const languages: Language[] = [
     slug: "korean",
     title: "Korean",
     briefing: "Korean",
-    image: "/languages/korean.jpg",
+    image: "/languages/korean.webp",
     description:
       "Korean is a strategic language tied to South Korea’s booming economy and cultural exports. Learning Korean can open doors in technology, entertainment, and international business.\n\nSouth Korea’s strong ties with India and educational scholarships make Korean a sought-after language. Skill Up offers structured Korean lessons emphasizing vocabulary, pronunciation, and grammar to help you succeed academically and professionally.",
   },
@@ -57,7 +57,7 @@ const languages: Language[] = [
     slug: "spanish",
     title: "Spanish",
     briefing: "Spanish",
-    image: "/languages/spanish.jpg",
+    image: "/languages/spanish.webp",
     description:
       "Spanish is one of the most widely spoken languages globally, with rich cultural and business significance. Proficiency in Spanish boosts your opportunities across the Americas and Europe.\n\nSkill Up’s Spanish language courses focus on practical communication and comprehensive grammar skills, preparing you for travel, work, or study in Spanish-speaking countries. Spanish fluency enhances cross-cultural connections and international career growth.",
   },

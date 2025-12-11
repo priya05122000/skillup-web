@@ -6,6 +6,7 @@ import AnimatedButton from "@/components/AnimatedButton";
 import FormInput from "@/components/FormInput";
 import Dropdown from "@/components/Dropdown";
 import { CountryOption } from "@/types/forms";
+import EnquiryFormFields from "@/components/EnquiryFormFields";
 
 const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
 const countryOptions: CountryOption[] = [
@@ -80,38 +81,7 @@ const EnquireFormModal: FC<EnquireFormModalProps> = ({ open, onClose, context = 
                             </Heading>
                         </div>
                         <form className="w-full flex flex-col gap-4">
-                            <FormInput type="text" name="fullName" placeholder="Full Name" />
-                            <FormInput type="email" name="email" placeholder="Email" />
-                            <FormInput type="tel" name="mobile" placeholder="Mobile Number" />
-                            <Dropdown
-                                options={courseOptions}
-                                selected={selectedProgram}
-                                placeholder="Course"
-                                onSelect={setSelectedProgram}
-                                openDropdown={setOpenDropdownName}
-                                openName={openDropdownName}
-                            />
-                            <Dropdown
-                                options={countryOptions}
-                                selected={selectedCountry}
-                                placeholder="Country"
-                                onSelect={setSelectedCountry}
-                                openDropdown={setOpenDropdownName}
-                                openName={openDropdownName}
-                            />
-                            <label className="flex items-center gap-2 text-xs text-white">
-                                <input type="checkbox" required className="accent-(--orange)" />
-                                You authorize us to call, email, or SMS you at any time.
-                            </label>
-                            <AnimatedButton
-                                type="submit"
-                                bgColor="bg-(--white)"
-                                textColor="text-(--white)"
-                                hoverTextColor="group-hover:text-(--orange)"
-                                skewColor="bg-(--orange)"
-                            >
-                                Submit
-                            </AnimatedButton>
+                            <EnquiryFormFields onSuccess={onClose} />
                         </form>
                     </motion.div>
                 </motion.div>

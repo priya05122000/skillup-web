@@ -1,213 +1,52 @@
 "use client";
-import Section from "@/components/Section";
+import React from "react";
+import Image from "next/image";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
-import React, { useState } from "react";
-import { FaGraduationCap } from "react-icons/fa6";
-import AnimatedButton from "@/components/AnimatedButton";
-import Dropdown from "@/components/Dropdown";
-import FormInput from "@/components/FormInput";
-import { CountryOption } from "@/types/forms";
-import { toast } from "react-hot-toast";
-import Image from "next/image";
 import SectionCenter from "@/components/SectionCenter";
+import EnquiryFormFields from "@/components/EnquiryFormFields";
 
-const courseOptions = ["MBBS", "Nursing", "Pharmacy", "Dental", "Other"];
-const countryOptions: CountryOption[] = [
-  { name: "Canada", code: "canada" },
-  { name: "Australia", code: "australia" },
-  { name: "Ireland", code: "ireland" },
-  { name: "Germany", code: "germany" },
-  { name: "United States", code: "usa" },
-  { name: "Denmark", code: "denmark" },
-  { name: "Bulgaria", code: "bulgaria" },
-  { name: "Malaysia", code: "malaysia" },
-  { name: "Russia", code: "russia" },
-  { name: "Singapore", code: "singapore" },
-  { name: "United Kingdom", code: "uk" },
-  { name: "New Zealand", code: "new-zealand" },
-  { name: "Sweden", code: "sweden" },
-  { name: "Switzerland", code: "switzerland" },
-  { name: "Italy", code: "italy" },
-  { name: "South Korea", code: "south-korea" },
-  { name: "France", code: "france" },
-  { name: "Netherlands", code: "netherlands" },
-  { name: "UAE", code: "uae" },
-  { name: "Phillipines", code: "phillipines" },
-];
+interface EnquireFormProps {
+  description: string;
+  aboutImage: string;
+}
 
-const EnquireForm = ({ description, aboutImage }: { description: string; aboutImage: string }) => {
-  const [selectedProgram, setSelectedProgram] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState("");
-  const [openDropdownName, setOpenDropdownName] = useState("");
-
-  // Form state
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [agree, setAgree] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setSuccess(null);
-    setError(null);
-    try {
-      const res = await fetch("/api/send-enquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName,
-          email,
-          mobile,
-          course: selectedProgram,
-          country: selectedCountry,
-        }),
-      });
-      if (res.ok) {
-        toast.success("Your enquiry has been sent!");
-        setFullName("");
-        setEmail("");
-        setMobile("");
-        setSelectedProgram("");
-        setSelectedCountry("");
-        setAgree(false);
-      } else {
-        setError("Failed to send enquiry. Please try again.");
-        console.error("Failed to send enquiry:", await res.text());
-        console.error(error);
-      }
-    } catch {
-      setError("Failed to send enquiry. Please try again.");
-    }
-    setSubmitting(false);
-  };
-
-  return (
-    <SectionCenter className="py-10 md:py-20">
-      <div className="flex flex-col sm:flex-row gap-6">
-        <div className="w-full sm:w-1/2 lg:w-3/5">
-          <Paragraph
-            size="lg"
-            className="font-bold uppercase text-(--teal)"
-          >
-            Train Smart, Score High
-          </Paragraph>
-          <Heading level={4} className="font-bold leading-tight">
-            Expert Prep. Proven Results
-          </Heading>
-
-          <Image
-            src={aboutImage}  
-            alt="Contact Image"
-            width={1000}
-            height={1000}
-            className="rounded-md mt-4 w-full object-cover h-50 lg:h-70 xl:h-80"
-          />
-
-          <Paragraph size="base" className="mt-4">
-            {description}
-          </Paragraph>
-        </div>
-        <div className="relative z-10 w-full sm:w-1/2 lg:w-2/5 flex h-fit">
-          <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 blur- bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
-            {/* ICON + HEADING */}
-            <div className="flex flex-col items-center mb-4">
-              <span className="text-5xl mb-2 text-white">
-                <FaGraduationCap />
-              </span>
-              <Heading
-                level={6}
-                className="text-white font-bold text-center mb-2"
-              >
-                Connect with us
-              </Heading>
-            </div>
-            {/* FORM */}
-            <form
-              className="w-full flex flex-col gap-4"
-              onSubmit={handleSubmit}
-            >
-              <FormInput
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
-              <FormInput
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <FormInput
-                type="tel"
-                name="mobile"
-                placeholder="Mobile Number"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                required
-              />
-              <FormInput
-                type="text"
-                name="course"
-                placeholder="Course"
-                value={selectedProgram}
-                onChange={(e) => setSelectedProgram(e.target.value)}
-              />
-              {/* <Dropdown
-                options={courseOptions}
-                selected={selectedProgram}
-                placeholder="Course"
-                onSelect={setSelectedProgram}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              /> */}
-              <Dropdown
-                options={countryOptions}
-                selected={selectedCountry}
-                placeholder="Country"
-                onSelect={setSelectedCountry}
-                openDropdown={setOpenDropdownName}
-                openName={openDropdownName}
-              />
-              <label className="flex items-center gap-2 text-xs text-white">
-                <input
-                  type="checkbox"
-                  required
-                  className="accent-(--orange)"
-                  checked={agree}
-                  onChange={(e) => setAgree(e.target.checked)}
-                />
-                You authorize us to call, email, or SMS you at any time.
-              </label>
-              <AnimatedButton
-                type="submit"
-                bgColor="bg-(--white)"
-                textColor="text-(--white)"
-                hoverTextColor="group-hover:text-(--orange)"
-                skewColor="bg-(--orange)"
-                disabled={submitting}
-              >
-                {submitting ? "Submitting..." : "Submit"}
-              </AnimatedButton>
-              {success && (
-                <Paragraph className="text-green-300 mt-2">{success}</Paragraph>
-              )}
-              {error && (
-                <Paragraph className="text-red-300 mt-2">{error}</Paragraph>
-              )}
-            </form>
+const EnquireForm: React.FC<EnquireFormProps> = ({ description, aboutImage }) => (
+  <SectionCenter className="py-10 md:py-20">
+    <div className="flex flex-col sm:flex-row gap-6">
+      <div className="w-full sm:w-1/2 lg:w-3/5">
+        <Paragraph size="lg" className="font-bold uppercase text-(--teal)">
+          Train Smart, Score High
+        </Paragraph>
+        <Heading level={4} className="font-bold leading-tight">
+          Expert Prep. Proven Results
+        </Heading>
+        <Image
+          src={aboutImage}
+          alt="Contact Image"
+          width={1000}
+          height={1000}
+          className="rounded-md mt-4 w-full object-cover h-50 lg:h-70 xl:h-80"
+        />
+        <Paragraph size="base" className="mt-4">
+          {description}
+        </Paragraph>
+      </div>
+      <div className="relative z-10 w-full sm:w-1/2 lg:w-2/5 flex h-fit">
+        <div className="w-full sm:w-[350px] md:w-[500px] bg-(--teal)/70 bg-opacity-95 p-10 rounded-md shadow-xl backdrop-blur">
+          <div className="flex flex-col items-center mb-4">
+            <span className="text-5xl mb-2 text-white">
+              <i className="fa-solid fa-graduation-cap" />
+            </span>
+            <Heading level={6} className="text-white font-bold text-center mb-2">
+              Connect with us
+            </Heading>
           </div>
+          <EnquiryFormFields />
         </div>
       </div>
-    </SectionCenter>
-  );
-};
+    </div>
+  </SectionCenter>
+);
 
 export default EnquireForm;

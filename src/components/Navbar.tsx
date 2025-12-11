@@ -133,7 +133,7 @@ const Navbar = () => {
         </Link> */}
         <Link href="/" className="">
           <Image
-            src="/logo/navbar-logo.svg"
+            src="/logo/navbar-logo.webp"
             alt="Logo"
             width={500}
             height={500}
@@ -150,7 +150,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center gap-2 h-20 md:hidden">
             {/* <span className="flex items-center justify-center">
               <Image
-                src="/logo/navbar-logo.svg"
+                src="/logo/navbar-logo.webp"
                 alt="Logo"
                 width={500}
                 height={500}
@@ -171,7 +171,7 @@ const Navbar = () => {
             {/* <Link href="/" className="flex items-center gap-2 h-20 mx-auto">
               <span className="flex items-center justify-center">
                 <Image
-                  src="/logo/navbar-logo.svg"
+                  src="/logo/navbar-logo.webp"
                   alt="Logo"
                   width={500}
                   height={500}
@@ -193,7 +193,7 @@ const Navbar = () => {
           {/* <Link href="/" className="flex items-center gap-2 h-full ">
             <span className=" flex items-center justify-center ">
               <Image
-                src="/logo/navbar-logo.svg"
+                src="/logo/navbar-logo.webp"
                 alt="Logo"
                 width={500}
                 height={500}

@@ -133,3 +133,8 @@ body {
   background: #007777 !important;
   opacity: 1;
 }
+
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

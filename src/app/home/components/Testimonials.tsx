@@ -113,7 +113,7 @@ const Testimonials: React.FC = () => {
               <div className="w-[200px] sm:w-[350px] lg:w-[300px] xl:w-[350px] h-[300px] sm:h-[450px] relative isolate">
                 <div className="absolute inset-0 z-40">
                   <Image
-                    src="/home/review1.jpeg"
+                    src="/home/review1.webp"
                     alt="Students high-fiving in front of university"
                     width={400}
                     height={300}
@@ -122,7 +122,7 @@ const Testimonials: React.FC = () => {
                 </div>
                 <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/3 z-50">
                   <Image
-                    src="/home/review2.jpeg"
+                    src="/home/review2.webp"
                     alt="Students high-fiving in front of university"
                     width={200}
                     height={250}
@@ -145,7 +145,7 @@ const Testimonials: React.FC = () => {
             </div>
             <div className="relative flex flex-col w-full items-center mt-10 lg:mt-0 justify-center">
               <Swiper
-                className="mySwiper w-full h-[300px] sm:my-10"
+                className="mySwiper w-full h-[380px] sm:h-[300px] sm:my-10"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 grabCursor={true}

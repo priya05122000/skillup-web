@@ -14,49 +14,49 @@ const services = [
   {
     slug: "counselling-guidance",
     name: "Counselling &<br/>Guidance",
-    profile_photo_url: "services/study-abroad.jpg",
+    profile_photo_url: "services/study-abroad.webp",
     description:
       "Get personalized guidance to choose the right program and university for your global education journey, ensuring every step aligns with your academic and career goals.",
   },
   {
     slug: "application-processing",
     name: "University/College<br/>Application<br/>Processing",
-    profile_photo_url: "services/university.jpeg",
+    profile_photo_url: "services/university.webp",
     description:
       "Enjoy expert guidance with Skill Up Study Abroad  through every step of your university or college application for a smooth, error-free admission experience.",
   },
   {
     slug: "visa-support",
     name: "Visa<br/>Support",
-    profile_photo_url: "services/visa.jpg",
+    profile_photo_url: "services/visa.webp",
     description:
       "Get dedicated assistance with your visa application, from document preparation to interview guidance, ensuring a hassle-free process with student visa consultants in Mumbai.",
   },
   {
     slug: "scholarship-guidance",
     name: "Scholarship<br/>Guidance",
-    profile_photo_url: "services/scholarship.jpg",
+    profile_photo_url: "services/scholarship.webp",
     description:
       "Our experts at Skill Up Study Abroad help you check eligibility and apply for the most suitable scholarships to fund your study abroad visa and admission services for Indian students.",
   },
   {
     slug: "loan",
     name: "Loan",
-    profile_photo_url: "services/loan.jpg",
+    profile_photo_url: "services/loan.webp",
     description:
       "Skill Up offers flexible study abroad loan options, guiding you through the application process to secure the financial support needed for your international education.",
   },
   {
     slug: "pre-departure-help",
     name: "Pre-Departure<br/>Help",
-    profile_photo_url: "services/departure.png",
+    profile_photo_url: "services/departure.webp",
     description:
       "Benefit from detailed briefing sessions with Skill Up Study Abroad that equip you with essential information before you begin your overseas study journey.",
   },
   {
     slug: "accommodation",
     name: "Accommodation",
-    profile_photo_url: "services/accomodation.jpg",
+    profile_photo_url: "services/accomodation.webp",
     description:
       "Find the perfect housing solution with Skill Up Study Abroad, offering assistance in securing safe and comfortable accommodation options that suit your needs while studying abroad.",
   },

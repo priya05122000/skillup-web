@@ -19,7 +19,7 @@ const DetailSection = ({ data }: { data: ExamData }) => {
         <div className="flex justify-center items-center">
           <div className="relative w-full h-50 md:h-[300px] xl:h-[400px] rounded-md overflow-hidden">
             <Image
-              src={data.detailsImage || "/test-prep/default-detail.jpg"}
+              src={data.detailsImage || "/test-prep/default-detail.webp"}
               alt={"Detail Section Image"}
               height={600}
               width={800}

@@ -2,7 +2,7 @@ import { ExamData } from "../examData";
 
 const ielts: ExamData = {
   name: "IELTS",
-  bannerImage: "/test-prep/ielts-banner.jpg",
+  bannerImage: "/test-prep/ielts-banner.webp",
   bannerSubtitle:
     "Secure your place in English-speaking countries with IELTS scores widely accepted by universities and immigration. Build language confidence for study, work, and migration.",
   description:

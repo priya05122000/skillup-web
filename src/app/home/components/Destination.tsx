@@ -14,25 +14,25 @@ interface DestinationItem {
 
 const destinations: DestinationItem[] = [
   {
-    src: "/study-abroad/canada/canada.jpeg",
+    src: "/study-abroad/canada/canada.webp",
     alt: "MBBS Programs",
     label: "Canada",
     desc: "World-class education and  diverse cultural experiences.",
   },
   {
-    src: "/study-abroad/ireland/ireland.jpeg",
+    src: "/study-abroad/ireland/ireland.webp",
     alt: "Nursing Courses",
     label: "Ireland",
     desc: "Vibrant culture and excellent global career opportunities.",
   },
   {
-    src: "/study-abroad/uk/uk.jpeg",
+    src: "/study-abroad/uk/uk.webp",
     alt: "Pharmacy Studies",
     label: "UK",
     desc: "Diverse course options and strong student support. ",
   },
   {
-    src: "/study-abroad/australia/australia.jpeg",
+    src: "/study-abroad/australia/australia.webp",
     alt: "Dental Programs",
     label: "Australia",
     desc: "Vibrant multicultural experiences for international students.",

@@ -19,7 +19,7 @@ const HomePage = () => {
       <Partners />
       <Stats />
       <AboutUs />
-      <EnquireForm imageSrc="/home/homeform.jpg" />
+      <EnquireForm imageSrc="/home/homeform.webp" />
     </div>
   );
 };

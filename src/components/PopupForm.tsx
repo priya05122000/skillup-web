@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import Paragraph from "./Paragraph";
+import EnquiryFormFields from "@/components/EnquiryFormFields";
 
 import { CountryOption } from "@/types/forms";
 
@@ -126,81 +127,8 @@ const PopupForm: React.FC<PopupFormProps> = ({ setShowEnquiryForm }) => {
           </Heading>
         </div>
 
-        <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
-          <FormInput
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            value={fullName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)}
-            required
-          />
-          <FormInput
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-            required
-          />
-          <FormInput
-            type="tel"
-            name="mobile"
-            placeholder="Mobile Number"
-            value={mobile}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMobile(e.target.value)}
-            required
-          />
-          <FormInput
-            type="text"
-            name="course"
-            placeholder="Course"
-            value={selectedProgram}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSelectedProgram(e.target.value)}
-          />
-          {/* <Dropdown
-            options={courseOptions}
-            selected={selectedProgram}
-            placeholder="Course"
-            onSelect={setSelectedProgram}
-            openDropdown={setOpenDropdownName}
-            openName={openDropdownName}
-          /> */}
-          <Dropdown
-            options={countryOptions}
-            selected={selectedCountry}
-            placeholder="Country"
-            onSelect={setSelectedCountry}
-            openDropdown={setOpenDropdownName}
-            openName={openDropdownName}
-          />
-          <label className="flex items-center gap-2 text-xs text-white">
-            <input
-              type="checkbox"
-              checked={agree}
-              onChange={(e) => setAgree(e.target.checked)}
-              required
-              className="accent-(--orange)"
-            />
-            You authorize us to call, email, or SMS you at any time.
-          </label>
-          <AnimatedButton
-            type="submit"
-            bgColor="bg-(--white)"
-            textColor="text-(--white)"
-            hoverTextColor="group-hover:text-(--orange)"
-            skewColor="bg-(--orange)"
-            className="px-4 py-2"
-            disabled={submitting}
-          >
-            {submitting ? "Submitting..." : "Submit"}
-          </AnimatedButton>
-          {success && (
-            <Paragraph className="text-green-300 mt-2">{success}</Paragraph>
-          )}
-          {error && (
-            <Paragraph className="text-red-300 mt-2">{error}</Paragraph>
-          )}
+        <form className="w-full flex flex-col gap-4">
+          <EnquiryFormFields onSuccess={() => setShowEnquiryForm(false)} />
         </form>
       </motion.div>
     </motion.div>

@@ -108,7 +108,7 @@ const TestPreparation: React.FC = () => {
   return (
     <div
       className="bg-cover bg-top relative py-10 sm:py-20"
-      style={{ backgroundImage: "url('/home/exam-prep.jpg')" }}
+      style={{ backgroundImage: "url('/home/exam-prep.webp')" }}
     >
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       {/* <div
