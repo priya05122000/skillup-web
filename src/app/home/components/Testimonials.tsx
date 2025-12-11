@@ -145,7 +145,7 @@ const Testimonials: React.FC = () => {
             </div>
             <div className="relative flex flex-col w-full items-center mt-10 lg:mt-0 justify-center">
               <Swiper
-                className="mySwiper w-full h-[300px] sm:my-10"
+                className="mySwiper w-full h-[380px] sm:h-[300px] sm:my-10"
                 modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 grabCursor={true}
