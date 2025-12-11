@@ -127,9 +127,8 @@ const PopupForm: React.FC<PopupFormProps> = ({ setShowEnquiryForm }) => {
           </Heading>
         </div>
 
-        <form className="w-full flex flex-col gap-4">
-          <EnquiryFormFields onSuccess={() => setShowEnquiryForm(false)} />
-        </form>
+        {/* Remove outer form, just render EnquiryFormFields */}
+        <EnquiryFormFields onSuccess={() => setShowEnquiryForm(false)} />
       </motion.div>
     </motion.div>
   );

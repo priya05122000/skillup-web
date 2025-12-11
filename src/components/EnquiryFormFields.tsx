@@ -100,7 +100,7 @@ const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({ onSuccess, button
             return;
         }
         const captchaToken = await executeRecaptcha("enquiry_form");
-        console.log("🟢 Captcha Token Generated:", captchaToken);
+        // console.log("🟢 Captcha Token Generated:", captchaToken);
 
         try {
             const res = await fetch("/api/send-enquiry", {
@@ -225,7 +225,7 @@ const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({ onSuccess, button
                 {submitting ? "Submitting..." : buttonText}
             </AnimatedButton>
             {/* {success && <Paragraph className="text-white mt-2">{success}</Paragraph>} */}
-            {error && <Paragraph className="text-red-900 mt-2">{error}</Paragraph>}
+            {error && <Paragraph className="text-(--red) mt-2">{error}</Paragraph>}
         </form>
     );
 };
