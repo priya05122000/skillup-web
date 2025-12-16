@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import { verifyRecaptcha } from "./utils/verifyRecaptcha";
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,24 +10,32 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { mobileNumber } = req.body;
+  const { mobileNumber, recaptchaToken } = req.body;
 
   if (!mobileNumber) {
     return res.status(400).json({ error: "Mobile number is required" });
+  }
+  if (!recaptchaToken) {
+    return res.status(400).json({ error: "Captcha token missing" });
+  }
+
+  const captchaResult = await verifyRecaptcha(recaptchaToken);
+  if (!captchaResult.success) {
+    return res.status(400).json({ error: captchaResult.error || "Captcha verification failed. Please try again." });
   }
 
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: process.env.GMAIL_RECEIVER,
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_RECEIVER,
       subject: "📰 New Free Consultation Request - Skillup Study Abroad",
       html: `
     <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">

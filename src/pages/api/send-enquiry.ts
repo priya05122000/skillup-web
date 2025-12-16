@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import { verifyRecaptcha } from "./utils/verifyRecaptcha";
 
 export default async function handler(
   req: NextApiRequest,
@@ -15,16 +16,9 @@ export default async function handler(
     return res.status(400).json({ error: "Captcha token missing" });
   }
 
-  const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
-  const captchaResponse = await fetch(verifyUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-  });
-  console.log("🟢 Captcha Verification Response Status:", captchaResponse);
-  const captchaData = await captchaResponse.json();
-  if (!captchaData.success || captchaData.score < 0.5) {
-    return res.status(400).json({ error: "Captcha verification failed. Please try again." });
+  const captchaResult = await verifyRecaptcha(recaptchaToken);
+  if (!captchaResult.success) {
+    return res.status(400).json({ error: captchaResult.error || "Captcha verification failed. Please try again." });
   }
 
   if (!fullName || !mobile) {
