@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="relative h-[65vh] sm:h-[calc(100vh-80px)] w-full mb-20"
+      className="relative h-[65vh] sm:h-[calc(100vh-80px)] w-full"
       aria-label="Hero"
     >
       <Swiper
