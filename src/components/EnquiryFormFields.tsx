@@ -100,7 +100,7 @@ const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({ onSuccess, button
             return;
         }
         const captchaToken = await executeRecaptcha("enquiry_form");
-        // console.log("🟢 Captcha Token Generated:", captchaToken);
+        console.log("🟢 Captcha Token Generated:", captchaToken);
 
         try {
             const res = await fetch("/api/send-enquiry", {
