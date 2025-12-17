@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "standalone",
   images: {
     disableStaticImages: true,
+    unoptimized: true,
     qualities: [100, 80],
     remotePatterns: [
       {

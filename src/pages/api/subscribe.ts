@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
-import { verifyRecaptcha } from "./utils/verifyRecaptcha";
+import { verifyRecaptcha } from "@/utils/verifyRecaptcha";
 
 export default async function handler(
   req: NextApiRequest,
