@@ -106,13 +106,12 @@ const ContactUs = () => {
                         +91-98205 88082
                       </a>
                     </Paragraph>
-                    <Paragraph size="lg" className="mt-1">
+                    {/* <Paragraph size="lg" className="mt-1">
                       <a href="tel:+919930180955" className="hover:underline">
                         +91-99301 80955
                       </a>
-                    </Paragraph>
+                    </Paragraph> */}
                   </div>
-
                 </div>
 
                 <div className="grid lg:grid-cols-2 xl:gap-20 xl:mt-8">

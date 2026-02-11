@@ -170,7 +170,7 @@ const Footer = () => {
             </Link>
           </Span>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 xl:mt-0 ">
+          <div className="flex flex-col  sm:items-center sm:flex-row gap-2 sm:gap-4 mt-4 xl:mt-0 ">
             <div>
                 <Link
                 href="tel:+919820588082"
@@ -179,13 +179,13 @@ const Footer = () => {
                 >
                 +91-98205 88082
                 </Link>
-              <Link
+              {/* <Link
                 href="tel:+919930180955"
                 className="flex items-center gap-1 text-sm"
                 aria-label="Call 09930180955"
               >
                 +91-99301 80955
-              </Link>
+              </Link> */}
             </div>
             <div>
               <a
