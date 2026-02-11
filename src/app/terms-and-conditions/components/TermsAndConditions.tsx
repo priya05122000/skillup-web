@@ -2,8 +2,6 @@
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Section from "@/components/Section";
-import Link from "next/link";
-import ParagraphList from "@/components/ParagraphList";
 
 const TermsAndConditions = () => {
   return (

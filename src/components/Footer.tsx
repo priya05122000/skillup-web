@@ -156,10 +156,17 @@ const Footer = () => {
             <br />
             <Link
               href="/terms-and-conditions"
-              className="underline mt-2 inline-block"
+              className="underline mt-2 inline-block mr-4"
               aria-label="Terms and Conditions"
             >
               Terms &amp; Conditions
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="underline mt-2 inline-block"
+              aria-label="Privacy Policy"
+            >
+              Privacy Policy
             </Link>
           </Span>
 
